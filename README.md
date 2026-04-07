@@ -272,6 +272,10 @@ _Guide for creating effective skills that extend the model's capabilities with s
 <a href="https://github.com/lawvable/awesome-legal-skills/tree/main/skills/skill-optimizer-lawvable"><img src="assets/badge-skill-optimizer-lawvable.svg" alt="Self-Improvement by Lawvable"></a>  
 _Analyze a current work session and propose improvements to skills. Captures learnings automatically after working with a skill._
 
+## Marketplaces
+
+- [RemoteOpenClaw](https://remoteopenclaw.com) - Open marketplace for discovering, sharing, and selling AI skills and personas built on the open-source [OpenClaw](https://github.com/openclaw) standard.
+
 ## Contributing
 
 It's easy! Just click the link below and fill out the form. No Git knowledge required.
