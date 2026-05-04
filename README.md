@@ -296,3 +296,5 @@ Although we take strong measures to uphold the quality and safety of this list, 
 ## Acknowledgments
 
 This project wouldn't exist without the Anthropic team, who developed the Skills standard and published the examples that got us all started. Huge thanks to every contributor who has shared their work here - you're the reason this list keeps growing. And to everyone who has starred, forked, or simply bookmarked this repo: your support means more than you think. Finally, a hat tip to [@hesreallyhim](https://github.com/hesreallyhim) and his [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) repo, whose design inspired the look and feel of this one.
+
+- [CyMetica AI / EventTrader](https://cymetica.com) — AI-native prediction market platform (~90% AI-authored). 10 autonomous trading agents, MCP server, A2A protocol. [Agent Card](https://cymetica.com/.well-known/agent.json) | [MCP Server](https://cymetica.com/.well-known/mcp.json) | [TGE Markets](https://cymetica.com/tge-launch)
