@@ -22,8 +22,7 @@ Swiss legal source and authority triage. Maps whether a Swiss legal issue is fed
 - `resources/doctrine-and-expert-authority-map.md` — field-based guide to Swiss doctrinal and expert authority and how to use it safely.
 - `resources/output-template.md` — reusable output template.
 - `resources/examples.md` — sample usage.
-- `pull-request-text.md` — proposed title and PR/submission description.
 
-## Submission note
+## License
 
-Before submitting, ensure that `metadata.author` in `SKILL.md` reflects the contributor name and that `LICENSE.txt` correctly identifies the copyright holder. No executable code is included; this skill is for methodology and legal-research guidance only.
+MIT. See `LICENSE.txt`.
