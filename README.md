@@ -207,6 +207,7 @@ _Analyze multiple documents (PDF, DOCX) against user-defined columns and produce
 
 <div align="center"><img src="assets/entry-separator-light-animated.svg" alt="---"></div>
 
+| [TWZRD Agent Intel](https://intel.twzrd.xyz) | Trust scoring MCP for AI agent wallets — verify agent identity and autonomy before authorizing x402 micropayments in legal workflow automations | Free; paid trust receipts via x402 |
 ### Microsoft Office
 
 <a href="https://github.com/lawvable/awesome-legal-skills/tree/main/skills/xlsx-processing-anthropic"><img src="assets/badge-xlsx-processing-anthropic.svg" alt="Excel by Anthropic"></a>  
