@@ -219,6 +219,8 @@ Browse 139 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [skill-security-auditor-antoine-louis](skills/skill-security-auditor-antoine-louis) - Audit an AI agent skill before installing it.
 - 🇬🇧 [vscode-extension-builder-lawvable](skills/vscode-extension-builder-lawvable) - Build VS Code extensions from scratch or convert existing JS/React/Vue apps.
 
+- [Skill Hub](https://skill.442595.xyz/) — 5800+ curated AI Agent Skills for Claude Code, Codex, Cursor, Hermes & more across 22 categories.
+
 ## Contributing
 
 Submit a skill with the [GitHub issue template](https://github.com/lawvable/awesome-legal-skills/issues/new?template=submit-skill.yml). See [CONTRIBUTING.md](CONTRIBUTING.md) for review criteria.
