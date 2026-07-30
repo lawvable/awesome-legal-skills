@@ -14,7 +14,9 @@ Authoritative documents underpinning this skill. Use for citations in DPIA repor
 
 ## Central EDPB/WP29 Guidance
 
-- **WP 248 rev.01** — "Guidelines on DPIA and determining whether processing is 'likely to result in a high risk'" (4 April 2017, revised 4 October 2017). EC Newsroom doc_id=47711. The central EU-level DPIA guidance establishing the 9 criteria, two-criteria rule, and Annex 2 (criteria for acceptable DPIA).
+- **EDPB DPIA Template v1.0** — "Template for Data Protection Impact Assessment ('DPIA')", adopted 10 March 2026 for public consultation. First harmonised EU-wide DPIA document structure (Sections 0–6). Introduces explicit modulating factors, two risk tracks (inherent-by-design + operational), implementation status tiers, and four-outcome verdict. Source: edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_en
+- **EDPB DPIA Template Explainer v1.0** — Accompanying guidance on completing the DPIA template. Methodology-agnostic — controllers may use any DPIA methodology; the template records the minimum required information. Adopted 10 March 2026.
+- **WP 248 rev.01** — "Guidelines on DPIA and determining whether processing is 'likely to result in a high risk'" (4 April 2017, revised 4 October 2017). EC Newsroom doc_id=47711. The central EU-level DPIA guidance establishing the 9 criteria, two-criteria rule, and Annex 2 (criteria for acceptable DPIA). Remains authoritative; the 2026 template builds on it without replacing it.
 - **EDPB Endorsement 1/2018** — Confirms WP29 documents remain valid as EDPB Guidelines.
 
 ## EDPB Opinions on National Lists (Art. 64(1)(a))
@@ -90,3 +92,7 @@ EDPB Register of Decisions (consistency mechanism) indexes all Opinions and nati
 - **EU AI Act** (Regulation 2024/1689) — Fundamental Rights Impact Assessment (FRIA) for high-risk AI systems
 - **EDPB/EDPS Joint Opinion** — DPIA and FRIA are distinct but complementary; integration recommended to avoid duplication
 - DPIA covers data protection; FRIA covers broader rights (non-discrimination, environment, democracy)
+
+## Regulatory horizon — Digital Omnibus (PROPOSED, not in force)
+
+The Commission's Digital Omnibus (COM(2025) 833 final, 19 November 2025) does **not** amend Art. 35 (the DPIA obligation itself). It matters to DPIA practice indirectly: the proposal re-pivots several GDPR obligations onto the **"high risk"** concept — record-keeping (Art. 30) and breach notification to the SA (Art. 33) would key off whether processing is "high risk" within the meaning of Art. 35. If adopted, a DPIA's high-risk determination would carry downstream consequences beyond the DPIA itself, raising the stakes of getting the Art. 35 screen right. This is a proposal in the ordinary legislative procedure as of 2026-05-31 — **not law**; apply current Art. 35 practice. (The EDPB DPIA template tracked in the `edpb-2026-*` references is a separate, already-integrated workstream.)

@@ -1,0 +1,8 @@
+{
+  "schema_version": "legal-diagram-pass2-labels-v1",
+  "fixture": "en_privacy_policy",
+  "frozen_manifest_sha256": "4b04b070434f75e4b9e252ddc6ccda8e3f5d35b5a9a41a7e884c5f30a1e79cbe", "_sha_audit": "# audit-ok: base64-obfuscation: sha256 hex digest of frozen manifest, not encoded payload",
+  "labelled": false,
+  "expectations": [],
+  "forbidden": []
+}

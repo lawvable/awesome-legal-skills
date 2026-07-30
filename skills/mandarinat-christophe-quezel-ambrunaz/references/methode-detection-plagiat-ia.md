@@ -44,15 +44,15 @@
 ### 2. Recherche de similitudes textuelles (web_search)
 
 **Pour les passages suspects (identifiés par l'analyse stylistique) :**
-1. Extraire une phrase significative (10-15 mots) du passage suspect
-2. Rechercher cette phrase exacte via web_search (entre guillemets)
-3. Si résultat : noter la source et le degré de correspondance
-4. Répéter pour 3-5 phrases du même passage
+1. Extraire du passage suspect un **n-gramme distinctif** : une suite de 6 à 10 mots peu banale (tournure rare, collocation inhabituelle, enchaînement spécifique), de préférence sans nom propre trivial.
+2. Rechercher ce n-gramme via web_search **sans guillemets et sans opérateur de recherche exacte** : les moteurs actuels dégradent fortement (voire ignorent) la recherche d'expression exacte entre guillemets, de sorte qu'une requête « phrase exacte » renvoie souvent zéro résultat alors que la source existe. Une requête en mots-clés sur un n-gramme distinctif retrouve la source de façon plus robuste.
+3. Si une source ressort : ouvrir la page et **comparer le texte** mot à mot avec le passage suspect (la correspondance se vérifie à la lecture, pas au seul fait que le moteur ait répondu).
+4. Répéter pour 3 à 5 n-grammes distinctifs du même passage, idéalement dispersés.
 
 **Interprétation :**
-- Correspondance exacte avec une source non citée → indice fort de plagiat
-- Correspondance partielle (reformulation légère) → indice moyen
-- Aucune correspondance → pas d'indice (mais pas de certitude d'originalité)
+- Correspondance textuelle forte avec une source non citée → indice fort de plagiat
+- Correspondance partielle (reformulation légère, mêmes idées et même structure) → indice moyen
+- Aucune correspondance → pas d'indice (mais pas de certitude d'originalité ; l'absence de résultat peut tenir aux limites du moteur)
 
 ### 3. Analyse des références
 

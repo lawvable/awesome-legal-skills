@@ -1,0 +1,1 @@
+This skill builds a structured audit trail of an AI-assisted task: what the tool was asked to do, what materials it was given, what it produced, how the output was verified, and what was ultimately relied upon. It documents the workflow for supervision and later review without ruling on privilege or disclosure, so the record stays accurate rather than self-serving.

@@ -1,6 +1,6 @@
 # DPIA Risk Scoring Methodology
 
-5×5 semi-quantitative risk assessment matrix. Risks are assessed from the **data subject's perspective** per Recital 75 GDPR and EDPB Guidelines WP 248 rev.01.
+5×5 semi-quantitative risk assessment matrix. Risks are assessed from the **data subject's perspective** per Recital 75 GDPR, EDPB Guidelines WP 248 rev.01, and the EDPB DPIA Template v1.0 (March 2026).
 
 ---
 
@@ -89,15 +89,99 @@ Risk Score = Likelihood × Severity
 | **7–12** | **High** | Action required. Significant mitigation needed before processing can proceed. Document justification if residual risk remains at this level. |
 | **13–25** | **Very High** | Processing may not be permissible without fundamental redesign. Art. 36 prior consultation with the SA is likely required if residual risk remains at this level after all feasible mitigations. |
 
+**Acceptability caveat (EDPB 2026, fn. 9):** A risk may be deemed non-acceptable even at low likelihood if the potential severity is very high. Extremely serious consequences for data subjects can make a risk unacceptable regardless of how rarely the event is expected to occur.
+
+---
+
+## Modulating Factors
+
+Modulating factors are characteristics that increase or decrease the likelihood or severity of a risk **without being the primary source of the corresponding threat** (EDPB Template 2026, §37). They adjust the baseline L×S score to reflect real-world context.
+
+**Mechanism:** A modulating factor can shift the final risk level ±1 tier from the raw L×S score. This is not a formula multiplier — it is a documented, justified contextual adjustment.
+
+### Aggravating factors (upward)
+- Very large number of affected data subjects
+- High data sensitivity (Art. 9 categories, financial, biometric)
+- Data subjects in dependency or vulnerability (children, patients, workers, migrants)
+- High exposure to external adversaries (public-facing systems, high-value targets)
+- Cross-border processing increasing jurisdictional complexity
+
+### Mitigating factors (downward)
+- Effective design choices from Section 2.3 measures (encryption, access controls, pseudonymization)
+- Narrow scope limiting blast radius
+- Strong operational controls with demonstrated effectiveness
+- Low attractiveness of data to adversaries
+
+### Application
+For each risk in the register, document applicable modulating factors and whether they warrant an adjustment. Most risks will not be adjusted — modulating factors are the exception, not the rule. Always justify: "Adjusted from High to Very High because data subjects are children in a dependency relationship with the controller."
+
+---
+
+## Two Risk Tracks
+
+The EDPB 2026 template distinguishes two categories of risk. Both are assessed using the same L×S + modulating factors methodology and appear together in the risk register.
+
+### Track A — Inherent-by-Design Risks
+
+Risks that exist **when everything works exactly as designed and all actors follow the rules**. These flow from the personal data processed, the purpose, and the nature/scope/context of the processing.
+
+Sources: data types collected, retention periods, scope of profiling, breadth of sharing, use of unique identifiers, algorithmic design choices.
+
+Examples: linking risk from combining datasets, identification risk from data granularity, profiling bias inherent to algorithm design, disclosure risk from data sharing arrangements, inaccuracy from processing scope.
+
+Maps to: EDPB Template Section 3.1 and most entries in `risk-catalog.md`.
+
+### Track B — Operational Risks
+
+Risks from **non-default, accidental, unlawful, or abnormal events** — when something deviates from the intended, compliant state.
+
+Must identify at minimum three standard threat vectors:
+1. **Illegitimate access** — unauthorized disclosure, exfiltration, insider abuse
+2. **Undesired modification** — data corruption, injection, accidental overwrite
+3. **Data disappearance** — deletion, ransomware, system failure, retention expiry error
+
+Sources: software bugs, misconfigurations, wrong access rights, operational errors (wrong recipient, wrong dataset, forgotten de-provisioning), unpatched vulnerabilities, insider abuse, external attacks (phishing, ransomware).
+
+Maps to: EDPB Template Section 4.1.a and Track B entries in `risk-catalog.md`.
+
+### Combined Assessment
+
+Both tracks feed into a single inherent risk assessment table (EDPB Section 4.1.c). Track labels in the risk register enable reviewers to distinguish design-inherent concerns from security/operational ones.
+
+---
+
+## Risk Register Format
+
+| Risk ID | Track | Description | Rights Category | L | S | Score | Modulating Factors | Adjusted Level | Status |
+|---------|-------|-------------|-----------------|---|---|-------|--------------------|----------------|--------|
+
+- **Track:** A (inherent-by-design) or B (operational)
+- **Modulating Factors:** Brief note of applicable aggravating/mitigating factors, or "—" if none
+- **Adjusted Level:** Final risk level after modulating factor adjustment (Low / Medium / High / Very High)
+- **Status:** For the residual risk register: implementation status of the corresponding mitigation (Planned / Partially Implemented / Implemented)
+
+---
+
+## DPIA Verdict
+
+Four outcomes per EDPB 2026 template (Section 6):
+
+| Verdict | Meaning |
+|---------|---------|
+| **APPROVED** | All residual risks are acceptable. No Art. 36(5) consultation requirement. Processing may proceed. |
+| **CONDITIONALLY APPROVED** | Processing may proceed only after specified conditions are met. List each condition with a cross-reference to the relevant mitigation in the action plan. |
+| **CONSULT SA** | Residual risk remains high despite all feasible mitigations (Art. 36(1)), or national law requires SA consultation/prior authorization (Art. 36(5)). Processing must not begin until SA response is received or the statutory period has elapsed. |
+| **REJECTED** | Processing must be abandoned. Risks are unacceptable, required tests cannot be passed, or the DPO/SA has advised against proceeding. |
+
 ---
 
 ## Scoring Discipline
 
 1. **Always justify scores with reference to the anchor descriptions.** "Likelihood 3 because precedent exists in the sector (X incident at comparable organization) and current access controls are standard but not hardened."
 
-2. **Score pre-mitigation first, then re-score after mitigations.** This shows the effect of safeguards and makes the DPIA defensible.
+2. **Score inherent risk first, then re-score as residual risk after additional mitigations.** This shows the effect of safeguards and makes the DPIA defensible. Inherent risk assumes the baseline set of planned measures; residual risk reflects the level after additional mitigations have been applied.
 
-3. **Mitigations primarily reduce likelihood.** Encryption, access controls, and pseudonymization reduce the probability of the risk materializing. They rarely reduce severity — if the risk does materialize despite safeguards, the impact on the data subject is often unchanged.
+3. **Mitigations primarily reduce likelihood.** Encryption, access controls, and pseudonymization reduce the probability of the risk materializing. They rarely reduce severity — if the risk does materialize despite safeguards, the impact on the data subject is often unchanged. Note: mitigations that are already part of the baseline design are reflected in the inherent risk score; only *additional* mitigations (Section 4.2) affect the residual risk score.
 
 4. **Severity is largely inherent to the data and context.** The sensitivity of data, vulnerability of subjects, and nature of the service determine severity. Mitigations can sometimes reduce severity (e.g., data minimization means less data exposed if breached), but the effect is smaller than on likelihood.
 

@@ -1,0 +1,1 @@
+Guide for drafting dismissal notifications compliant with French labor law. Use when the user asks to draft, prepare, create or edit a termination letter, particularly for serious misconduct, gross misconduct, or personal grounds. The skill guides the collection of precise information and the drafting of a legally sound notification with all mandatory elements under French law.

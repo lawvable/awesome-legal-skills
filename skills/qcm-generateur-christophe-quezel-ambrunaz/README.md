@@ -1,0 +1,1 @@
+AI-assisted generation of MCQs (multiple-choice questionnaires) with export to Moodle (GIFT, XML), Wooclap (Excel), Kahoot!, and Word. Supports light MCQs (gamified) and in-depth MCQs (evaluative), with single-answer and multiple-answer formats.

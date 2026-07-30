@@ -1,0 +1,1 @@
+Audits AI-assisted legal, compliance, governance, and institutional decisions before reliance to determine whether the responsible human or institution has enough access to the evidence, reasoning basis, uncertainty, authority, and review path to genuinely own the decision rather than merely approve, sign, or transmit it.

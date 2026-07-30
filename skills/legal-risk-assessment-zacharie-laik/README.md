@@ -1,0 +1,1 @@
+Use for Legal Risk Analysis with Goodlegal MCP

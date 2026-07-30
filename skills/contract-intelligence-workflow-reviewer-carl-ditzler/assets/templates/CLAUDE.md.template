@@ -1,0 +1,71 @@
+# Contract Review Workspace Memory
+
+Use `.contract-review/` as the system of record for reusable contract-review configuration.
+
+## Organization Defaults
+
+- Organization:
+- Default represented party:
+- Default legal team or user role:
+- Default risk posture:
+- Typical contract types:
+
+## Playbook And Sources
+
+- Primary playbook source:
+- Standard template source:
+- Prior-deal source:
+- Approved clause-bank source:
+- Playbook upload allowed:
+- Approved cloud playbook sources:
+- Save derived playbook Markdown:
+- Save normalized playbook YAML:
+
+## Approval Routing
+
+- Legal:
+- Finance:
+- Security:
+- Privacy:
+- Procurement:
+- Product or Engineering:
+- Compliance:
+- Insurance or Risk:
+- Executive:
+
+## Connector Aliases
+
+- Alias:
+  - Type:
+  - Approved locations:
+  - Allowed uses:
+
+## Workflow Tools
+
+- Tool alias:
+  - Destination:
+  - Allowed actions:
+  - Restricted actions:
+
+## Memory Rules
+
+- Persist allowed:
+- Persist prohibited:
+- Contract retention:
+- Counterparty memory allowed:
+
+## Sub-Agent Rules
+
+- Sub-agents allowed:
+- Maximum parallel agents:
+- Delegable tasks:
+
+## Research And Drafting Preferences
+
+- Approved research sources:
+- Citation expectations:
+- Preferred summary style:
+- Preferred drafting style:
+- Preferred payload formats:
+
+Do not store raw contract text, personal data, or full contract-specific legal analysis here unless the user explicitly instructs you to do so.

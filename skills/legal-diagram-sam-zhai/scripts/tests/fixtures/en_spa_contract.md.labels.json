@@ -1,0 +1,58 @@
+{
+  "expected_type": "gantt",
+  "expected_type_with_intent": {
+    "intent": "deal timeline phases and deadlines",
+    "type": "gantt"
+  },
+  "fields": {
+    "parties": [
+      "Northgate Acquisitions Corp.",
+      "Riverview Holdings Ltd.",
+      "Clearstone Capital Inc."
+    ],
+    "entities": [
+      "Maplewood Technologies Ltd."
+    ],
+    "deadlines": [
+      "no later than January 22, 2026",
+      "at or before Closing",
+      "on or before February 20, 2026",
+      "prior to Closing",
+      "within 5 business days after written notice",
+      "10 business days after receipt of such notice to cure the inaccuracy"
+    ],
+    "obligations": [
+      "Purchaser shall pay the Purchase Price of $12,500,000",
+      "Purchaser shall pay deposit of $1,250,000 no later than January 22, 2026",
+      "Purchaser shall pay balance of $11,250,000 at Closing by wire transfer",
+      "Purchaser shall deliver closing deliveries at or before Closing",
+      "Vendor shall cause Maplewood Technologies Ltd. to operate in ordinary course until Closing",
+      "Vendor shall provide due diligence information within 5 business days after written notice",
+      "Vendor shall indemnify Purchaser from losses arising from breach of representations and warranties",
+      "Guarantor unconditionally guarantees Purchaser's payment obligations up to the Purchase Price",
+      "Northgate Acquisitions Corp. shall deliver a certified resolution of the board of directors approving the transaction",
+      "Northgate Acquisitions Corp. shall deliver an executed officer's certificate confirming representations and warranties are true and correct as of the Closing Date",
+      "Northgate Acquisitions Corp. shall deliver evidence of financing satisfactory to the Vendor",
+      "Vendor agrees to sell all issued and outstanding shares of Maplewood Technologies Ltd.",
+      "Purchaser agrees to purchase all issued and outstanding shares of Maplewood Technologies Ltd.",
+      "The Vendor shall not be required to first pursue any remedy against the Purchaser before enforcing this guarantee against the Guarantor"
+    ],
+    "conditions": [
+      "representations and warranties of Vendor true and correct in all material respects as of Closing Date",
+      "no material adverse change with respect to business of Maplewood Technologies Ltd.",
+      "all regulatory approvals obtained on or before February 20, 2026",
+      "Vendor shall have delivered all closing documents under Article 5",
+      "Purchaser shall have paid deposit prior to Closing"
+    ],
+    "transfers": [
+      "A deposit of $1,250,000 shall be paid by the Purchaser to the Vendor's solicitors in trust",
+      "The balance of $11,250,000 shall be paid by the Purchaser to the Vendor at Closing by wire transfer of immediately available funds"
+    ],
+    "legal_authorities": [
+      "Competition Act (Canada)"
+    ],
+    "documents": [
+      "Schedule No. 4"
+    ]
+  }
+}

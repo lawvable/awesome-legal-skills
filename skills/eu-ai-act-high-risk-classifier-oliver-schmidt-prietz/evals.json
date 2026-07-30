@@ -1,0 +1,155 @@
+{
+  "skill_name": "ai-act-high-risk",
+  "evals": [
+    {
+      "id": 0,
+      "name": "annex-i-machinery-safety-function",
+      "prompt": "Hi, we are a German GmbH building an AI-based computer-vision system that detects human presence inside an industrial robot cell. The provider's documented intended purpose is to trigger a safe stop or speed reduction whenever a person enters the cell, to prevent injury. The system is sold as a safety component of machinery covered by Regulation (EU) 2023/1230. The machinery requires third-party conformity assessment under that regulation. Please run the high-risk assessment under Art. 6 AI Act.",
+      "expected_output": "Verdict: HIGH-RISK under Art. 6(1) + Annex I (Section A — Machinery Regulation (EU) 2023/1230). Basis: safety function (Art. 3(14) intent-based prong) — prevention of physical harm to persons. Third-party conformity assessment required by the Machinery Regulation. Effective date: 2 August 2028 (per AI Omnibus). Full Chapter III applies.",
+      "assertions": [
+        "Identifies AI system status under Art. 3(1)",
+        "Classifies as HIGH-RISK under Art. 6(1)",
+        "Cites Annex I Section A (NLF-based legislation)",
+        "Cites Machinery Regulation (EU) 2023/1230",
+        "Identifies safety function (intent-based prong) per Art. 3(14)",
+        "Confirms third-party conformity assessment requirement",
+        "Effective date is 2 August 2028 (Omnibus-postponed for Annex I)",
+        "States full Chapter III applies (Section A consequence)"
+      ],
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "annex-i-lift-failure-based",
+      "prompt": "We are a lift manufacturer. We have integrated an AI system that manages door-closing timing and obstacle detection in our passenger lifts. The provider's documented intended purpose is efficient lift operation and user experience. The lift is covered by Directive 2014/33/EU on lifts (Annex I Section A). The lift requires third-party conformity assessment under that directive. Run the high-risk classification.",
+      "expected_output": "Verdict: HIGH-RISK under Art. 6(1) + Annex I (Section A — Lifts Directive 2014/33/EU). Basis: failure or malfunctioning prong (Art. 3(14) consequences-based) — efficiency is the intent, but failure injuring persons satisfies the second prong (per Commission Guidelines Annex I ¶46). Third-party conformity assessment required. Effective date: 2 August 2028. Full Chapter III applies.",
+      "assertions": [
+        "Recognises efficiency intent does NOT defeat safety-component status",
+        "Applies the failure-or-malfunctioning prong (Art. 3(14) consequences-based)",
+        "Cites Commission Guidelines Annex I ¶46 worked example",
+        "Classifies as HIGH-RISK under Art. 6(1)",
+        "Cites Lifts Directive 2014/33/EU",
+        "Effective date is 2 August 2028"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "annex-i-smart-thermostat-not-high-risk",
+      "prompt": "We sell a connected smart thermostat in the EU. Our provider documentation states the intended purpose is to enhance user comfort and energy efficiency by learning household routines and optimising temperature settings. The device is covered by the Radio Equipment Directive 2014/53/EU (Annex I Section A). Please assess high-risk status.",
+      "expected_output": "Verdict: NOT HIGH-RISK. Reasoning: the AI is integrated into a regulated product (radio equipment) but does NOT fulfil a safety function (intent is comfort/efficiency, not safety) AND failure or malfunctioning would result in inconvenience or higher energy bills, not endangerment of health/safety/property. Per Commission Guidelines Annex I ¶48 and ¶49. Note the borderline case: if the thermostat were designed with a safety function (e.g., child-lock, vulnerable-user protection) or where a failure could endanger persons, the classification would change.",
+      "assertions": [
+        "Verdict is NOT HIGH-RISK",
+        "Cites Commission Guidelines ¶48 (smart appliances default)",
+        "Cites ¶49 (smart thermostat specific example)",
+        "Notes the borderline trigger condition (child-lock / vulnerable users)",
+        "Does NOT mention Annex III (correctly out of scope for product-only intent)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "annex-iii-cv-screening-clear-high-risk",
+      "prompt": "Our HR-tech startup sells a CV-screening tool to EU enterprises. The system uses NLP to extract skills, experience, and education from candidate PDFs; produces an embedding for each candidate; ranks candidates against the job description; and outputs a shortlist of top 10. The intended purpose is to assist hiring managers in selecting candidates. We are based in Berlin. Please assess high-risk status.",
+      "expected_output": "Verdict: HIGH-RISK under Art. 6(2) + Annex III Nr. 4(a) (Employment — recruitment/selection of natural persons). Art. 6(3) exception: NOT available because the system performs profiling of natural persons (evaluating personal aspects per Art. 4(4) GDPR — skills, experience, fit), which triggers the profiling re-exception of Art. 6(3) last sentence. Effective date: 2 December 2027 (per AI Omnibus).",
+      "assertions": [
+        "Classifies as HIGH-RISK under Art. 6(2)",
+        "Cites Annex III Nr. 4 (Employment)",
+        "Identifies the use case as recruitment/selection (Nr. 4(a))",
+        "Considers Art. 6(3) exception",
+        "Excludes Art. 6(3) exception via profiling re-exception (Art. 6(3) last sentence)",
+        "Cites Art. 4(4) GDPR profiling definition",
+        "Effective date is 2 December 2027 (Omnibus-postponed for Annex III)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "annex-iii-with-art-6-3-exception",
+      "prompt": "We deploy a small AI tool that takes recruiter-written feedback notes about candidates after interviews and polishes the language (grammar, tone, structure) before they are stored in our HR system. The recruiters have already made their assessment; the AI does not score, rank, or compare candidates. Please assess.",
+      "expected_output": "Verdict: NOT HIGH-RISK (exempt under Art. 6(3)(b)). Reasoning: the AI improves the result of a previously completed human activity (recruiter-drafted feedback). It does not perform profiling of natural persons because it does not evaluate personal aspects — it only edits text. Art. 6(3)(b) exception applies. However: documentation duty under Art. 6(4) and registration under Art. 49(2) still apply.",
+      "assertions": [
+        "Identifies Annex III Nr. 4 (Employment) as the prima facie use case",
+        "Applies Art. 6(3) limb (b) — improvement of previously completed human activity",
+        "Profiling re-exception NOT triggered (no evaluation of personal aspects)",
+        "Verdict: NOT HIGH-RISK / exempt",
+        "Flags Art. 6(4) documentation duty",
+        "Flags Art. 49(2) EU database registration duty"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "annex-iii-negative-spam-filter",
+      "prompt": "We have an email spam filter that uses ML to classify incoming emails as spam or not. The intended purpose is to reduce unwanted email noise. We deploy it internally for our 200 employees. Please assess for AI Act high-risk status.",
+      "expected_output": "Verdict: NOT HIGH-RISK. Reasoning: no match against any Annex III area (this is operational productivity, not employment evaluation, not biometrics, not critical infrastructure). No Annex I product status. The Art. 6(3) exception does not even need to be considered because the system never reaches Annex III at Step 4a. May still be subject to Art. 50 transparency or limited-risk obligations — route to ai-act-classifier for the broader tier analysis.",
+      "assertions": [
+        "Verdict: NOT HIGH-RISK",
+        "Explicitly checks each of the 8 Annex III areas and rejects each",
+        "Does NOT incorrectly classify as Annex III Nr. 4 (employment) merely because employees use it",
+        "Confirms no Annex I product status (no Union harmonisation legislation match)",
+        "Notes that limited-risk transparency duties under Art. 50 may still apply",
+        "Routes back to ai-act-classifier for broader tier analysis"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "art-25-trap-fine-tuned-gpai",
+      "prompt": "We are an enterprise customer. We took a general-purpose LLM from a major provider, fine-tuned it on our internal hiring data, gave it a system prompt that frames it as our internal recruiter assistant, and integrated it into our hiring pipeline so it screens incoming candidates and produces a 1-10 fit score with reasoning. We are calling the result 'TalentBot'. Are we a provider? Is this high-risk?",
+      "expected_output": "Verdict: HIGH-RISK under Art. 6(2) + Annex III Nr. 4(a) (Employment — recruitment/selection). Art. 25 trap triggered — by modifying the intended purpose of a non-high-risk GPAI system to perform high-risk recruitment screening, the user becomes a PROVIDER of a high-risk AI system under Art. 25(1)(c). Full Chapter III obligations apply. Effective date: 2 December 2027. Route to ai-act-roles for role determination, then ai-act-obligations for full obligation matrix.",
+      "assertions": [
+        "Identifies the system as high-risk under Annex III Nr. 4",
+        "Identifies Art. 25(1)(c) trap (modifying intended purpose to high-risk use)",
+        "States user becomes a PROVIDER of a high-risk AI system",
+        "States full Chapter III obligations apply",
+        "Routes to ai-act-roles and ai-act-obligations",
+        "Profiling re-exception applies (rejecting Art. 6(3))"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "annex-iii-biometric-categorisation-grayzone",
+      "prompt": "Our retail analytics company offers an AI camera system installed at store entrances. It estimates the age and gender of each entering customer and categorises them as 'young male', 'young female', 'middle-aged male', etc., to provide store managers with footfall analytics. No identification, no individual tracking — only category counts. Please assess high-risk status.",
+      "expected_output": "Verdict: HIGH-RISK under Art. 6(2) + Annex III Nr. 1(b) (Biometric categorisation according to sensitive or protected attributes). Age and gender are biometric categorisation attributes. Note: NOT Art. 5(1)(g) prohibited (which covers categorisation by political opinion, trade union membership, religious beliefs, racial origin, sexual orientation, etc. — none of which appear here). Art. 6(3) exception unavailable because profiling of natural persons is involved (Art. 4(4) GDPR). Effective date: 2 December 2027.",
+      "assertions": [
+        "Identifies Annex III Nr. 1 (Biometrics) match",
+        "Specifically cites Nr. 1(b) biometric categorisation",
+        "Distinguishes from Art. 5(1)(g) prohibited categorisation",
+        "Notes profiling of natural persons triggers re-exception",
+        "Verdict: HIGH-RISK",
+        "Considers Art. 50 transparency duty"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "post-cutoff-stress-omnibus-timeline",
+      "prompt": "Quick question — we're using your skill to evaluate an Annex III system. What is the effective date for high-risk obligations under Annex III? Is it 2 August 2026?",
+      "expected_output": "The effective date for Annex III (Art. 6(2)) high-risk obligations is 2 December 2027, NOT 2 August 2026. The original Art. 113 date was 2 August 2026, but the AI Omnibus 2026 postponed it. The Annex I (Art. 6(1)) date was similarly postponed from 2 August 2027 to 2 August 2028. The Art. 111(2) legacy cut-off was also moved from 2 August 2026 to 2 December 2027.",
+      "assertions": [
+        "States the correct postponed date: 2 December 2027",
+        "Explicitly REJECTS 2 August 2026 as the operative date",
+        "Cites the AI Omnibus as the source of the postponement",
+        "Also mentions the Annex I postponement (2 Aug 2028)",
+        "Also mentions the Art. 111(2) legacy cut-off shift"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "wrong-answer-rejection-smart-thermostat-always-high-risk",
+      "prompt": "We sell smart thermostats. Our compliance lead said all smart home AI is high-risk under Annex I because thermostats are covered by the Radio Equipment Directive which is in Annex I. Can you confirm we are high-risk?",
+      "expected_output": "No — this is a common misconception. Coverage by Annex I legislation is a NECESSARY but NOT SUFFICIENT condition for high-risk under Art. 6(1). The system must ALSO be a safety component (under either the safety-function prong or the failure-based prong of Art. 3(14)) AND the product must require third-party conformity assessment. A standard smart thermostat whose intended purpose is comfort/efficiency, with no safety function and no health/safety-endangering failure mode, is NOT a safety component. Per Commission Guidelines Annex I ¶¶48–49, smart thermostats are explicitly cited as non-safety-component examples. Verdict: NOT HIGH-RISK in the standard case. Borderline: child-lock or vulnerable-user scenarios per ¶48 footnote 5.",
+      "assertions": [
+        "REJECTS the user's framing that Annex I coverage alone makes a system high-risk",
+        "Explains the cumulative-conditions structure (¶27)",
+        "Cites Commission Guidelines ¶48 and ¶49 explicitly",
+        "States verdict: NOT HIGH-RISK in the standard case",
+        "Notes the borderline scenarios from ¶48 footnote 5"
+      ],
+      "files": []
+    }
+  ]
+}

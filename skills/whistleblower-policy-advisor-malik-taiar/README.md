@@ -1,0 +1,1 @@
+Guide for (a) auditing an existing whistleblower system or (b) drafting a compliant reporting policy from a provided template. Covers EU Directive 2019/1937, the amended Sapin II law (Waserman 2022), Decree 2022-1284, CNIL guidelines, public sector requirements, and duty of vigilance.

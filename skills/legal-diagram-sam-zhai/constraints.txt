@@ -1,0 +1,17 @@
+Jinja2==3.1.6
+MarkupSafe==3.0.2
+PyMuPDF==1.24.14
+cffi==2.0.0
+charset-normalizer==3.4.7
+cryptography==48.0.0
+et-xmlfile==2.0.0
+lxml==5.3.0
+openpyxl==3.1.5
+pdfminer.six==20221105
+pdfplumber==0.10.4
+pillow==11.0.0
+pycparser==3.0
+pypdfium2==4.30.0
+python-docx==1.1.2
+python-pptx==1.0.2
+typing-extensions==4.12.2

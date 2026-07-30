@@ -1,0 +1,1 @@
+Use this skill when asked to analyze how Iceland has implemented an EU directive or regulation into national law, identify gaps between EU/EEA law and Icelandic implementation, or assess Iceland's compliance with EEA obligations. Triggers on questions about EEA transposition, ESA infringement, or EU-Iceland legal gaps.

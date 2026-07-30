@@ -1,0 +1,1 @@
+Audits legal AI outputs and workflows for honest compression: unnecessary complexity, false simplicity, excessive caveats, hidden uncertainty and poor cost per legally acceptable output.

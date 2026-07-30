@@ -1,0 +1,1 @@
+PageRank-based jurisprudential authority analysis for Argentine case law (CSJN, federal courts). Peer-reviewed methodology published in JCLLT (DOI: 10.47852/bonviewJCLLT62027951). Ranks precedents by citation network influence with temporal decay.

@@ -1,0 +1,80 @@
+Skill « gouvernance-emetteurs-cotes »
+Copyright (c) 2026 Gillan Saleh
+
+Cette œuvre est mise à disposition selon les termes de la licence
+Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les
+Mêmes Conditions 4.0 International (CC BY-NC-SA 4.0).
+
+================================================================================
+RÉSUMÉ NON CONTRAIGNANT (le texte intégral fait seul foi — voir ci-dessous)
+================================================================================
+
+Vous êtes autorisé·e à :
+  - Partager : copier, distribuer et communiquer l'œuvre par tous moyens et
+    sous tous formats.
+  - Adapter : remixer, transformer et créer à partir de l'œuvre.
+
+L'auteure ne peut retirer ces autorisations tant que vous respectez les termes
+de la licence.
+
+Selon les conditions suivantes :
+  - Attribution (BY) — Vous devez créditer l'œuvre, intégrer un lien vers la
+    licence et indiquer si des modifications ont été effectuées. Vous devez
+    indiquer ces informations par tous les moyens raisonnables, sans toutefois
+    suggérer que l'auteure vous soutient ou soutient la façon dont vous avez
+    utilisé son œuvre. Crédit à porter : « Gillan Saleh ».
+  - Pas d'Utilisation Commerciale (NC) — Vous n'êtes pas autorisé·e à faire un
+    usage commercial de cette œuvre, de tout ou partie du matériel la composant,
+    ni à l'utiliser à des fins principalement destinées à un avantage commercial
+    ou à une compensation financière.
+  - Partage dans les Mêmes Conditions (SA) — Dans le cas où vous effectuez un
+    remix, que vous transformez ou créez à partir du matériel composant l'œuvre
+    originale, vous devez diffuser l'œuvre modifiée dans les mêmes conditions,
+    c'est-à-dire avec la même licence avec laquelle l'œuvre originale a été
+    diffusée.
+
+Pas de restrictions complémentaires — Vous n'êtes pas autorisé·e à appliquer des
+conditions légales ou des mesures techniques qui restreindraient légalement
+autrui à utiliser l'œuvre dans les conditions décrites par la licence.
+
+================================================================================
+TEXTE INTÉGRAL DE LA LICENCE
+================================================================================
+
+Le texte juridique complet et officiel de la licence Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International est disponible à l'adresse
+suivante et fait seul foi :
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.fr
+
+Un résumé accessible (« Deed ») est consultable à l'adresse :
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr
+
+En utilisant, copiant, modifiant ou distribuant cette œuvre, vous acceptez
+d'être lié·e par les termes de cette licence.
+
+================================================================================
+PRÉCISIONS PROPRES À CE SKILL
+================================================================================
+
+1. Périmètre. La présente licence couvre l'ensemble des fichiers produits par
+   l'auteure et composant le skill : le fichier SKILL.md, les index analytiques
+   (index_*.md), les fichiers de référence (references/, code-afep-medef-
+   references.md, recurrences_nominatives.md) et la présente documentation
+   (README, NOTICES, LICENSE).
+
+2. Sources tierces. Le skill est un ensemble d'INDEX ANALYTIQUES renvoyant à des
+   documents sources (rapports AMF, rapports et guides du HCGE, Code AFEP-MEDEF,
+   rapport sénatorial, textes légaux et européens). Ces documents sources
+   demeurent la propriété de leurs auteurs et éditeurs respectifs et ne sont pas
+   couverts par la présente licence. Voir le fichier NOTICES.md.
+
+3. Usage non commercial. La condition « Pas d'Utilisation Commerciale » interdit
+   notamment l'intégration du skill, de ses index ou de ses productions dérivées
+   dans une offre payante, un service commercial ou tout dispositif à finalité
+   principalement commerciale, sans autorisation écrite préalable de l'auteure.
+
+4. Absence de garantie. L'œuvre est fournie « en l'état », sans garantie d'aucune
+   sorte. Le skill produit des analyses documentaires à vocation scientifique et
+   ne constitue ni un conseil juridique, ni un conseil en investissement.

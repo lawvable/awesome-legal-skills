@@ -1,0 +1,190 @@
+{
+  "skill_name": "tia",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're an Austrian company. Maria, a customer in Vienna, fills in a form on our German online shop to order goods. We pass her order details to our US fulfilment partner (a separate company we contract with). That partner is DPF-certified, but its certification scope covers only its cloud/IT services — not its logistics operations. For delivery, the partner also shares Maria's address with a sub-processor in the UAE for last-mile coordination. Walk me through: (a) is the disclosure to the US partner a Chapter V transfer, (b) does the DPF cover it, and (c) what about the UAE leg?",
+      "expected_output": "(a) YES — the Austrian company → US partner disclosure is a Chapter V transfer (all three EDPB Guidelines 05/2021 criteria met). Maria → the Austrian company is direct collection, NOT a transfer (Examples 1–3). (b) DPF does NOT automatically cover it: the DPF only covers processing within the certified organisation's stated certification SCOPE. Because the partner's DPF certification covers its cloud/IT services and NOT its logistics/fulfilment operations, the fulfilment processing falls outside the adequacy basis — the Austrian company needs an Art. 46 tool (SCCs) + a full TIA for the fulfilment leg (per us-non-dpf.md). Always verify the exact certification scope at dataprivacyframework.gov. (c) The US partner → UAE sub-processor disclosure is a SEPARATE onward Chapter V transfer requiring its own assessment (precision point 3). UAE has no adequacy; it needs its own Art. 46 tool + TIA (per ae.md — note the DIFC/ADGM-vs-mainland distinction). The Austrian controller remains responsible under Art. 28 for the onward chain.",
+      "files": [],
+      "expectations": [
+        "Identifies the Austrian co → US partner disclosure as a Chapter V transfer, distinguishing direct collection (Maria, Examples 1–3) from onward disclosure",
+        "Correctly states the DPF does NOT cover the fulfilment processing because it falls outside the partner's certified scope (DPF scope carve-out, precision point 4)",
+        "Requires verifying the certification scope at dataprivacyframework.gov",
+        "Routes the fulfilment leg to Art. 46 + full TIA (us-non-dpf.md) rather than treating DPF as blanket coverage",
+        "Identifies the US → UAE leg as a SEPARATE onward transfer requiring its own assessment (precision point 3)",
+        "References the UAE profile (ae.md) and the DIFC/ADGM-vs-mainland distinction",
+        "Notes the Austrian controller's continuing Art. 28 responsibility for the onward chain",
+        "Cites EDPB Guidelines 05/2021"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our French employee George travels to Brazil for a one-week conference. (1) From his hotel in São Paulo, he logs into our company's internal CRM (hosted in Paris) to update a customer record. (2) Separately, when his laptop breaks, he hires a local São Paulo IT-repair company (a separate business) and gives them temporary access to the CRM to diagnose the problem. For each, is it a Chapter V transfer? Produce a transfer qualification finding.",
+      "expected_output": "(1) NOT a Chapter V transfer. Per EDPB Guidelines 05/2021 Example 8, an employee accessing their own employer's data while travelling is part of the controller — Criterion 2 (disclosure to a separate controller/processor) fails. Chapter V does not apply, but Art. 5/24/32 security obligations remain (device, network, observation risks). (2) IS a Chapter V transfer. The local São Paulo IT company is a SEPARATE entity (a processor) in a third country — all three criteria are met. The French controller must put an Art. 28 processor contract + an Art. 46 tool (e.g., SCCs) in place and run a TIA for Brazil (per br.md), or rely on an Art. 49 derogation; ad hoc emergency access with no safeguard is a Chapter V breach. The Transfer Qualification Finding should document, per scenario: the failing/satisfied criterion, whether Chapter V applies, the mechanism required, and (for (1)) the residual Art. 5/24/32 obligations.",
+      "files": [],
+      "expectations": [
+        "Scenario (1): correctly NOT a Chapter V transfer; cites EDPB Guidelines 05/2021 Example 8; Criterion 2 fails (employee is part of the controller)",
+        "Scenario (2): correctly IS a Chapter V transfer (the local IT company is a separate processor in a third country)",
+        "Distinguishes the two scenarios on Criterion 2 rather than treating both the same",
+        "For (2): requires an Art. 28 contract + an Art. 46 tool (or Art. 49) + a Brazil TIA; flags unprotected ad hoc access as a breach",
+        "Notes Art. 5/24/32 still apply to scenario (1)",
+        "Produces a structured Transfer Qualification Finding with named fields (failing/satisfied criterion, Chapter V applicability, mechanism, residual obligations)",
+        "References br.md for the scenario (2) assessment"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're a German manufacturer transferring HR data of EU employees to our Japanese subsidiary for centralised HR management. Japan has an EU adequacy decision. The Japanese subsidiary then forwards some of that HR data to a payroll-processing vendor in the Philippines. Do we need a full TIA for the Japan leg, and what about the Philippines?",
+      "expected_output": "Japan leg: NO full TIA. Japan benefits from the EU adequacy decision (Commission Implementing Decision (EU) 2019/419). Lightweight assessment: document the decision and — crucially — note that it is conditioned on the PPC Supplementary Rules (binding rules issued by Japan's Personal Information Protection Commission under the APPI that apply specifically to EU-origin personal data), and that the decision's scope excludes certain operators/processing — confirm the subsidiary and the HR processing fall within scope. Set a monitoring trigger for the periodic adequacy review. Philippines leg: the Japan → Philippines onward transfer is a SEPARATE Chapter V transfer (precision point 3), and Japan's adequacy does NOT extend to it. The Philippines has no EU adequacy; the Japanese subsidiary (or the German controller, who remains responsible) must put an Art. 46 tool + TIA in place for the Philippines leg, or rely on an Art. 49 derogation. Use the generic-assessment.md questionnaire for the Philippines (no dedicated profile).",
+      "files": [],
+      "expectations": [
+        "Japan leg: NO full TIA — adequacy fast-track; cites Commission Implementing Decision (EU) 2019/419",
+        "Names the PPC Supplementary Rules under the APPI as the condition on Japan adequacy (not just generic 'supplementary rules')",
+        "Notes the adequacy decision's scope limits (excludes certain operators/processing) and the need to confirm scope",
+        "Identifies the Japan → Philippines leg as a SEPARATE onward transfer that adequacy does NOT cover (precision point 3)",
+        "Routes the Philippines leg to Art. 46 + TIA (or Art. 49), using the generic-assessment.md questionnaire",
+        "Notes the German controller's continuing responsibility for the onward chain",
+        "Sets a monitoring trigger for the adequacy review"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're a German company that wants to use a US-based vendor listed as DPF-certified. But the vendor is primarily a telecommunications carrier, and we noticed its last DPF recertification was 14 months ago. Can we rely on its DPF certification, and what must our assessment cover?",
+      "expected_output": "Be cautious — do NOT assume DPF coverage. Two issues: (1) Scope/eligibility: the DPF only covers organisations subject to FTC or Department of Transportation jurisdiction. Telecommunications common carriers (and GLBA-covered banks) fall OUTSIDE FTC jurisdiction and generally CANNOT validly rely on the DPF for the carrier-regulated activities (per us-dpf.md). If this vendor's relevant processing is common-carrier activity, the DPF may not cover it — you would need SCCs + a full TIA (us-non-dpf.md). (2) Currency: DPF status must be ACTIVELY maintained (annual recertification) and can lapse between certifications; a 14-month-old recertification suggests the certification may have lapsed. Verify current 'Active' status at dataprivacyframework.gov on the date of assessment. If DPF validly applies: lightweight assessment documenting DPF as primary mechanism, EO 14086 reliance, political fragility (it can be rescinded — name the Latombe / Schrems III challenge as a standing monitoring trigger), and SCCs as fallback. Basis: Implementing Decision (EU) 2023/1795.",
+      "files": [],
+      "expectations": [
+        "Does NOT assume blanket DPF coverage; flags the FTC/DoT jurisdiction carve-out (telecom common carriers / GLBA banks fall outside FTC jurisdiction and may not validly rely on DPF) per precision point 4 / us-dpf.md",
+        "Flags that the 14-month-old recertification may mean the certification has LAPSED; requires verifying current 'Active' status at dataprivacyframework.gov",
+        "Routes to SCCs + full TIA (us-non-dpf.md) if DPF does not validly cover the processing",
+        "If DPF applies: lightweight assessment documenting EO 14086 reliance + political fragility + SCCs fallback",
+        "Names the Latombe / Schrems III challenge as a standing monitoring trigger",
+        "Cites Implementing Decision (EU) 2023/1795"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "We're an Italian retailer using a US-based marketing analytics SaaS (NOT DPF-certified). They process our customer event data (page views, purchases, email open rates) including IP addresses. We have SCCs Module 2 (controller-to-processor) signed. What does our TIA need to cover, and what supplementary measures should we adopt?",
+      "expected_output": "Full TIA required (SCCs to non-DPF US). Step 3 must assess: FISA 702 (insufficient on guarantees A/B; concerns C/D), EO 12333 (insufficient all four), CLOUD Act (adequate process, concerns on B/C/D), EO 14086 (improves but limited to DPF). Conclusion likely (2) — supplementary measures needed. Suggested measures: TM-1 encryption with exporter-held keys for the customer event data (where the SaaS doesn't need to read plaintext — many analytics functions work on hashed/pseudonymised identifiers), TM-2 pseudonymisation (hash IPs and identifiers in EEA before sending), CM-1 transparency obligation, CM-2 challenge clause, OM-3 government request handling policy. Effectiveness assessment: if the SaaS must access plaintext for its core functions (analytics on actual content), TM-1/TM-2 may be insufficient — consider whether an EU alternative is feasible.",
+      "files": [],
+      "expectations": [
+        "Identifies this as full TIA required (SCCs to non-DPF US)",
+        "Lists FISA 702, EO 12333, CLOUD Act, EO 14086 as relevant US surveillance laws",
+        "Applies the four essential guarantees to FISA 702 with appropriate ratings",
+        "Suggests TM-1 (encryption with exporter-held keys) and TM-2 (pseudonymisation) as primary measures",
+        "Includes CM-1 (transparency) and CM-2 (challenge) contractual measures",
+        "Honestly assesses 'when NOT effective' — if SaaS must access plaintext, measures may be insufficient",
+        "Considers IP addresses as personal data requiring pseudonymisation/hashing",
+        "References the country profile (us-non-dpf.md) and the EDPB six-step methodology"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "We're considering moving our customer data warehouse to a Chinese cloud provider (Alibaba Cloud). The data includes EU customer records (names, addresses, purchase history). Should we proceed with SCCs + supplementary measures, or is this a non-starter?",
+      "expected_output": "This is likely a non-starter for EU customer data. Step 3 Block B applied to Chinese law: National Intelligence Law 2017 (Art. 7 obliges any organisation to cooperate with intelligence work — insufficient on all four essential guarantees), Cybersecurity Law 2017 (compelled assistance), National Security Law 2015, PIPL Art. 41 (CAC approval for foreign requests). All four essential guarantees rated insufficient. Step 4: supplementary measures (encryption with EEA-held keys, pseudonymisation, split processing) are unlikely to close the gaps if the importer can be compelled to assist intelligence operations regardless of contractual measures. Step 3 conclusion: typically (2) with insufficient measures → suspend OR restructure. Recommendation: do not proceed; consider EU sovereign cloud or non-China alternative.",
+      "files": [],
+      "expectations": [
+        "Identifies this as high-risk / likely non-starter",
+        "Lists National Intelligence Law 2017, Cybersecurity Law, National Security Law, PIPL Art. 41 as relevant",
+        "Applies the four essential guarantees and rates them insufficient",
+        "Honestly assesses supplementary measures as unlikely to close the gaps (importer can be compelled regardless of contractual measures)",
+        "Recommends suspension or restructuring (not 'proceed with measures')",
+        "Suggests EU sovereign cloud or non-China alternative",
+        "References country profile (cn.md) and EDPB six-step methodology",
+        "Does NOT recommend a permissive outcome with boilerplate measures"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "We operate a global social media platform. EU users and US users must be able to exchange content (messages, posts, shared media) for the service to work — that's the whole point. Can we rely on Art. 49(1)(b) (contract performance) for the routine US data transfers, or is the EDPB position that this is too systematic for Art. 49?",
+      "expected_output": "BOTH views must be presented honestly. EDPB Guidelines 2/2018 position: Art. 49(1)(b) is for non-systematic transfers; 'necessary' means strictly necessary; routine transfers should rely on Art. 46. BROADER VIEW: OLG München (21 U 3882/25 e, 11 May 2026) accepted Art. 49(1)(b) for exactly this fact pattern — a global social media platform where EU and US users must interact, technical blockades between continents would be incompatible with the service architecture, and the contract is inherently international. Reported remarks of Judge von Danwitz (Schrems II rapporteur) support a broader Art. 49 reading. Practical recommendation: rely on Art. 46 (SCCs) + TIA + supplementary measures as the primary basis (regulatory baseline), and document Art. 49(1)(b) as a fallback citing OLG München. Document both the EDPB position and the judicial counter-position; let the practitioner make an informed risk-appetite choice.",
+      "files": [],
+      "expectations": [
+        "Presents BOTH the EDPB position and the OLG München broader view honestly",
+        "Cites OLG München (21 U 3882/25 e, 11 May 2026) by case reference",
+        "Mentions Judge von Danwitz's reported remarks on Art. 49 underuse",
+        "Recommends Art. 46 SCCs as primary basis (regulatory baseline) with Art. 49(1)(b) as documented fallback",
+        "Does NOT take a one-sided position favouring only the EDPB or only the broader view",
+        "Notes the practitioner's choice depends on risk appetite for SA challenge",
+        "References art49-derogations.md"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "We're a small German legal firm (12 lawyers) using a niche Indian legal-research tool (a small company in Mumbai) for occasional case research. We send them anonymised case summaries — typically no client identifiers, just legal questions. Volume is ~50 queries/month. Is the full Chinese-style suspension verdict really needed here, or is this a defensible CNIL option (3) scenario?",
+      "expected_output": "This is a CNIL Step 3 option (3) candidate ('no reason to believe the problematic law will apply to this transfer in practice'). Justification: the data is anonymised / non-identifying case summaries, not personal data of high interest to Indian authorities. The importer is a small niche firm with no profile that would attract Section 69 IT Act or Telegraph Act access. Volume is low. The realistic risk of Indian intelligence interest in this specific data is minimal. HOWEVER: option (3) requires substantive documentation — not boilerplate. Document: (a) the data minimisation (anonymisation), (b) the importer's profile and request history (none), (c) the practical risk assessment. Recommend a light supplementary measure layer (TM-1 encryption in transit, OM-3 request handling policy) as defence-in-depth even if not strictly required for the gap-closing analysis. Set a 12-month review.",
+      "files": [],
+      "expectations": [
+        "Identifies this as a CNIL Step 3 option (3) scenario, NOT a suspension verdict",
+        "Acknowledges that the conservative (China-style) 'cannot supplement' approach is wrong here",
+        "Requires substantive documentation for option (3) — not boilerplate",
+        "Justifies based on: data type (non-identifying), importer profile (small niche firm), realistic risk (low)",
+        "Recommends light supplementary measures as defence-in-depth (TM-1, OM-3) even though not strictly required",
+        "Notes that if the data type or importer profile changed, the conclusion would change",
+        "Sets a 12-month review trigger",
+        "References country profile (in.md)"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "We're a French company sending data to a UK-based processor (UK has adequacy). The UK processor uses a sub-processor in Singapore for some operational tasks. Is the Singapore leg a separate transfer requiring its own assessment?",
+      "expected_output": "YES — the onward transfer from the UK processor to the Singapore sub-processor is a separate Chapter V transfer that requires its own assessment. The original France→UK transfer is covered by adequacy (lightweight assessment). The UK→Singapore transfer is a new transfer where the UK processor is the exporter and the Singapore sub-processor is the importer. Singapore has no adequacy; the UK processor must use an Art. 46 mechanism (SCCs likely) and conduct a TIA for the Singapore leg. The French controller remains responsible under Art. 28 for ensuring the UK processor's onward transfer is compliant. The skill should produce TWO TIA artefacts: one lightweight for France→UK (adequacy), and one full TIA for UK→Singapore.",
+      "files": [],
+      "expectations": [
+        "Correctly identifies the UK→Singapore transfer as a separate Chapter V transfer",
+        "Notes that each hop in the chain requires its own assessment",
+        "Distinguishes France→UK (adequacy, lightweight) from UK→Singapore (Art. 46 + TIA)",
+        "Identifies the UK processor as exporter and the Singapore sub-processor as importer for the second leg",
+        "Notes the French controller's continuing responsibility under Art. 28",
+        "Recommends two TIA artefacts (one per leg)",
+        "References the country profiles (uk-post-adequacy.md and sg.md)"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "I have a RoPA sidecar JSON from our compliance tool. It contains 47 controller_activities. Can you identify which ones need a TIA and walk me through the prioritisation? The sidecar is structured per the RoPA interchange schema v1.5.",
+      "expected_output": "RoPA import workflow: (1) Parse the sidecar's controller_activities[] and processor_activities[]. (2) Filter entries where transfers[] contains third-country destinations (not within EEA, not under adequacy). (3) For each, extract: activity_id (UUID), destination country, mechanism in place, data categories, importer, purpose, sub-processor chains. (4) Build a transfer registry. (5) Prioritise: high-risk countries first (US non-DPF, China, Russia), then adequacy countries (lightweight), then medium-risk (Singapore, Brazil, UK if any complexity). (6) For each transfer, run the 6-step pipeline. (7) Emit a delta file per assessment for RoPA re-ingestion (conforming to inbound schema v1.0). Workspace at skills/tia-workspace/<org-slug>/.",
+      "files": [],
+      "expectations": [
+        "Identifies the RoPA import workflow correctly",
+        "Filters controller_activities and processor_activities for third-country transfers",
+        "Excludes EEA and adequacy-covered destinations from the full-TIA queue",
+        "Builds a transfer registry with UUIDs preserved from RoPA activity_id",
+        "Prioritises high-risk destinations first",
+        "Plans to emit per-assessment delta files conforming to RoPA inbound schema v1.0",
+        "References interchange-delta.md and the RoPA inbound schema",
+        "Uses workspace pattern (skills/tia-workspace/<org-slug>/)"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "We've decided to use encryption as our supplementary measure for our US cloud transfer. The cloud provider needs to be able to read the data to perform its function — they're a CRM that displays customer records to our sales team and runs search/filter operations on the customer database. Can encryption close the gap?",
+      "expected_output": "NO — encryption with exporter-held keys does NOT close the gap in this scenario. The supplementary measures catalog's 'when NOT effective' condition for TM-1 applies: the importer MUST decrypt to process. A CRM that displays records and runs search/filter operations needs plaintext access. Encryption in transit is baseline hygiene but doesn't address Section 702 / CLOUD Act exposure. Honest verdict: this transfer cannot proceed as structured. Options: (a) restructure — move the CRM to an EU-based alternative, (b) use a CRM with confidential computing / homomorphic-encryption support (genuine end-to-end encryption with importer-side enclaves), (c) accept the residual risk and document it explicitly. Do NOT 'paper over' the gap with technically irrelevant encryption.",
+      "files": [],
+      "expectations": [
+        "Honestly concludes encryption does NOT close the gap in this scenario",
+        "Applies the TM-1 'when NOT effective' condition correctly",
+        "Identifies that the importer needs plaintext for the service to function",
+        "Distinguishes transport encryption (baseline) from gap-closing encryption (exporter-held keys, importer cannot decrypt)",
+        "Recommends restructuring (EU alternative) or genuine confidential computing as real options",
+        "Refuses to 'paper over' the gap with measures that do not actually address it",
+        "References supplementary-measures.md TM-1 'when NOT effective' guidance"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Our German company uses a Danish processor (so an EU processor, not a transfer). However, the Danish processor is a subsidiary of a US parent company. We've read that there might be a 'Chapter V via Art. 28' issue here. What should we be doing?",
+      "expected_output": "This is the EDPB Guidelines 05/2021 Example 12 scenario. The disclosure from the German controller to the Danish processor is NOT a Chapter V transfer (Criterion 3 fails — the Danish processor is in the EEA). HOWEVER: the Danish processor's exposure to US extraterritorial law (e.g., CLOUD Act via its US parent, FISA 702 if it's deemed an ECSP) creates risk that compliance with a US government access request WOULD become a Chapter V transfer if it happens. The controller must, per Art. 28, only engage processors that provide 'sufficient guarantees.' Required actions: (1) Assess the Danish processor's exposure to US extraterritorial law. (2) Verify contractual safeguards on government access requests (notification, challenge, narrow-cooperation commitments). (3) Verify technical safeguards (encryption, key management, processing locations, sub-processor chains). (4) Document the assessment under Art. 28 due diligence — not a Chapter V TIA, but Art. 28 due diligence. (5) Monitor: if the processor receives a US government access request, it WOULD trigger Chapter V; ensure notification clauses are in place.",
+      "files": [],
+      "expectations": [
+        "Identifies this as the EDPB Guidelines 05/2021 Example 12 scenario explicitly",
+        "Correctly concludes this is NOT a Chapter V transfer (Criterion 3 fails — Danish processor in EEA)",
+        "Identifies the risk: compliance with extraterritorial access request would BECOME a transfer",
+        "Frames the required assessment as Art. 28 due diligence, not Chapter V TIA",
+        "Lists required actions: extraterritorial exposure assessment, contractual safeguards, technical safeguards, documentation, monitoring",
+        "Recommends notification clauses for government access requests",
+        "References transfer-qualification.md Example 12",
+        "Does NOT incorrectly classify this as a Chapter V transfer"
+      ]
+    }
+  ]
+}

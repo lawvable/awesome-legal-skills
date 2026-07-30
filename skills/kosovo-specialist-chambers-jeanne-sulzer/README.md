@@ -1,0 +1,1 @@
+Verification-first methodology for the Kosovo Specialist Chambers and Specialist Prosecutor's Office (The Hague, applying Kosovo law). Citations are verified against scp-ks.org before use; appeal registry numbers are cited only once confirmed. Covers Thaçi et al., Mustafa, Pjetër Shala and Gucati & Haradinaj. Research aid, not legal advice.

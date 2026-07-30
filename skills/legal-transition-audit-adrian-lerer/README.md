@@ -1,0 +1,1 @@
+Audits the transition from legal AI output to reliance, recommendation, execution, or real-world commitment. Use it before an AI-generated analysis, memo, contract review, compliance finding, or workflow output is acted upon to check whether authority, evidence, mandate, uncertainty, procedure, and review conditions remain sufficient.

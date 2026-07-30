@@ -1,0 +1,1 @@
+Verification-first methodology for the ICTY, the ICTR and the Residual Mechanism (IRMCT). Citations are verified against irmct.org, the Case Law and Unified Court Records databases, and legal-tools.org. Handles the IT/ICTR to MICT case-number transition (Karadžić, Mladić) and the protective-measures rule. Research aid, not legal advice.

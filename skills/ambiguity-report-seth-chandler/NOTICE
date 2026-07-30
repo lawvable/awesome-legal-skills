@@ -1,0 +1,40 @@
+Ambiguity Report
+Copyright 2026 Seth J. Chandler (https://legaled.ai)
+
+Licensed under the Apache License, Version 2.0. A copy of the License is included
+in the file LICENSE and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+ORIGIN
+
+This skill is original work. It was first distributed as one half of the "ambiguity-audit"
+plugin, alongside the analysis skill now published as "ambiguity-stress-test" (originally
+"interpretive-ambiguity-stress-test"). This release renders a completed audit; it does not
+perform the analysis. The two are complementary but neither requires the other — this skill
+accepts any structured or semi-structured ambiguity analysis, however produced.
+
+---
+
+BUNDLED CODE
+
+Two Python renderers are included, scripts/generate_site.py and scripts/generate_latex.py.
+Both target Python 3 and import only from the standard library (argparse, html, json, os,
+pathlib, re, shutil, sys). Neither makes network calls, spawns subprocesses, evaluates
+dynamic code, or writes outside the output directory named by the caller.
+
+Generated websites reference Google Fonts by URL, so a rendered page loads those fonts from
+an external service when opened in a browser. The font tokens in the spec can be overridden
+with a local stack where that is unwanted.
+
+---
+
+DISCLAIMER
+
+Deliverables produced by this skill are formatted presentations of an analysis supplied to
+it. They are not legal advice. This skill does not verify the analysis it renders, does not
+check citations, and does not confirm that any authority relied upon remains good law.
+Users remain responsible for the accuracy of the underlying audit and for confirming that
+quoted source material may properly be published or shared.

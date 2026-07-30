@@ -1,0 +1,1 @@
+“Verification-first” methodology for the Special Criminal Court of the Central African Republic, a hybrid court seated in Bangui. Every citation is verified against JusticeInfo, FIDH, HRW, and legal-tools.org; the official sites often return a 403 error. Covers the Paoua case, the word “notamment” in Article 3, and complementarity with the ICC. Research aid, not legal advice.

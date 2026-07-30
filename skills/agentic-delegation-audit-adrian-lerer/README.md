@@ -1,0 +1,1 @@
+Use when a lawyer, legal team, or client needs to assess AI agents that can act on someone's behalf: send messages, search, draft, file, pay, delete, connect to accounts, use tools, or rely on external data. Produces a practical delegation, oversight, accountability, and control audit for legal operations.

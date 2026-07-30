@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "gantt",
+    "rationale": "gantt selected based on: deadlines.",
+    "alternatives": [
+      "flowchart",
+      "requirementDiagram"
+    ],
+    "confidence": 0.54,
+    "grouping_suggested": false,
+    "grouping_axis": null
+  },
+  "with_intent": {
+    "intent": "liste d'obligations et délais de livraison",
+    "result": {
+      "recommended_type": "requirementDiagram",
+      "rationale": "requirementDiagram selected based on: obligations, conditions.",
+      "alternatives": [
+        "gantt",
+        "flowchart"
+      ],
+      "confidence": 0.64,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

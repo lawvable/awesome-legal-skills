@@ -1,0 +1,1 @@
+Edit, query, and transform Word documents (.docx) with the SuperDoc CLI. Use when the user asks to read, search, modify, format, comment, track changes, or review changes in .docx files. Triggers on any task involving Word documents — text replacement, redlining, contract markup, template filling, bulk edits, content extraction, or document review.

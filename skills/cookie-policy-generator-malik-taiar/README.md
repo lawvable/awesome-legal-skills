@@ -1,0 +1,1 @@
+Guide for drafting cookie policies compliant with GDPR and the ePrivacy Directive. Includes CNIL 2020 recommendations, a reference template, and best practices. Use when drafting or revising a cookie policy for a website or application.

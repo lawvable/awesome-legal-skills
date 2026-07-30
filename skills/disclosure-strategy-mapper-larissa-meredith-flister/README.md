@@ -1,0 +1,1 @@
+This skill maps disclosure strategy from a case summary, pleading, chronology, or early case theory: the document categories that will matter, likely custodians, adverse material, evidential gaps, search themes, and the risks worth confronting early.

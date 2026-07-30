@@ -1,0 +1,19 @@
+[project]
+name = "legal-cite"
+version = "0.1.0"
+description = "MCP server: weryfikacja brzmienia przepisu PL/UE z oficjalnego źródła (api.sejm.gov.pl, EUR-Lex)"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2",
+    "httpx>=0.27",
+]
+
+[project.scripts]
+legal-cite = "legal_cite.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["legal_cite"]

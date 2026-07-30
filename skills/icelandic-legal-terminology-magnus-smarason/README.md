@@ -1,0 +1,1 @@
+Use this skill when asked to translate, explain, or map Icelandic legal terms to English (or vice versa). Triggers on requests involving Icelandic legal vocabulary, legal translation, understanding Icelandic statutes or court decisions, or cross-referencing Icelandic and common law concepts.

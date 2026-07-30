@@ -1,0 +1,1 @@
+Toolkit for comprehensive PDF reading and creation with visual quality control. Use to work with PDFs (.pdf files) for: (1) Reading or extracting content from existing PDFs, (2) Creating new PDF documents with professional formatting, (3) Generating reports, documents, or layouts that require precise typography and design, or any other PDF reading or generation tasks.

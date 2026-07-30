@@ -1,0 +1,1 @@
+Optimizes Claude for proofreading French texts, whether literary, technical, or professional. Grammar and spelling checks, detection of barbarisms, and stylistic suggestions.

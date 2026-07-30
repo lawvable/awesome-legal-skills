@@ -1,0 +1,46 @@
+{
+  "expected_type": "requirementDiagram",
+  "expected_type_with_intent": {
+    "intent": "compliance obligations and notice periods",
+    "type": "requirementDiagram"
+  },
+  "fields": {
+    "parties": [
+      "Sandbourne Industries Inc.",
+      "Jordan Fairweather"
+    ],
+    "obligations": [
+      "Employer shall employ Employee as Director of Operations",
+      "Employer shall pay base salary of $185,000 per annum semi-monthly",
+      "Employer shall pay target bonus of 20% of base salary no later than March 31 each year",
+      "Employer shall provide written notice of termination without cause",
+      "Employee shall provide no less than 30 days prior written notice of resignation",
+      "Employee must immediately notify Employer of unauthorized disclosure of Confidential Information",
+      "Employee shall report directly to the Chief Executive Officer and perform duties assigned from time to time",
+      "Employee shall devote substantially all working time to duties and shall not engage in outside employment that conflicts with obligations without prior written consent",
+      "During the notice period, Employee shall continue to perform duties and cooperate with the transition of responsibilities",
+      "Employer shall first provide Employee with written notice specifying the alleged deficiency before terminating for cause based on performance",
+      "Employee shall have 15 business days after receipt of written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+      "During the term of employment and for a period of 12 months following termination, Employee shall not solicit any customer of Sandbourne Industries Inc. with whom Employee had material contact during the 24 months preceding termination",
+      "During the term of employment and for a period of 6 months following termination, Employee shall not solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc.",
+      "Employee agrees to keep confidential all Confidential Information of Sandbourne Industries Inc. both during and after the term of employment",
+      "Employer shall make all deductions required by law, including income tax, Canada Pension Plan contributions, and Employment Insurance premiums",
+      "Employer shall provide Employee with group benefits coverage, including extended health, dental, and life insurance"
+    ],
+    "deadlines": [
+      "target bonus of 20% of base salary payable no later than March 31 of each calendar year following the performance year",
+      "no less than 30 days prior written notice (employee resignation)",
+      "no later than the effective date of termination (notice of termination without cause)",
+      "15 business days after receipt of such written notice to cure the deficiency",
+      "Employer may terminate for cause if Employee fails to cure within 15-business-day period"
+    ],
+    "conditions": [
+      "Employee remaining employed as of bonus payment date",
+      "material breach of Agreement by Employee",
+      "willful misconduct, fraud, or dishonesty in performance of duties",
+      "conviction of a criminal offence",
+      "failure to cure performance deficiency within 15-business-day cure period",
+      "Employer provides written notice specifying performance deficiency before termination for cause"
+    ]
+  }
+}

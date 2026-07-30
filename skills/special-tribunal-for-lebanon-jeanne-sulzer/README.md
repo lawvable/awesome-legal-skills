@@ -1,0 +1,1 @@
+Verification-first methodology for the Special Tribunal for Lebanon. Citations are verified against the STL legacy archive and legal-tools.org. Covers the Ayyash et al. case, the two contempt cases (STL-14-05 New TV/Al-Khayat and STL-14-06 Akhbar Beirut/Al-Amin), and the 2011 terrorism decision. Research aid, not legal advice.

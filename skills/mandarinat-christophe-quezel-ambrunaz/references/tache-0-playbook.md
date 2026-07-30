@@ -4,11 +4,11 @@
 
 ## Nature
 
-Document de cadrage interne à la session. Le playbook oriente toutes les tâches 1-5 en aval. Il n'est pas livré comme fichier Word sauf demande explicite de l'utilisateur ou complexité justifiant un livrable autonome.
+Document de cadrage interne à la session. Le playbook oriente toutes les tâches 1-6 en aval. Il n'est pas livré comme fichier Word sauf demande explicite de l'utilisateur ou complexité justifiant un livrable autonome.
 
 ## Déclenchement
 
-**Systématique** avant toute tâche 1-5, SAUF si les deux conditions cumulatives suivantes sont réunies :
+**Systématique** avant toute tâche 1-6, SAUF si les deux conditions cumulatives suivantes sont réunies :
 1. La qualification juridique est univoque (un seul régime applicable, aucune hésitation possible)
 2. Une seule branche du droit est impliquée
 
@@ -66,6 +66,7 @@ Le playbook une fois produit :
 2. Fournit les points d'attention pour la relecture (tâche 2) et la mise à jour (tâche 4)
 3. Cadre les questions juridiques pour les sujets et corrigés (tâche 3)
 4. Structure les contenus de cours (tâche 5)
+5. Identifie les axes des exercices pour les fiches de TD (tâche 6). Pour la Variante A (thème de fiches non précisé), le playbook s'exécute après la validation du découpage thématique, non avant.
 
 Passer directement à l'exécution de la tâche demandée sans interruption.
 
@@ -89,4 +90,4 @@ ARTICULATION : Traiter Q1 en premier (détermination du régime) car Q2-Q3 en d�
 
 ## Limites
 
-Le playbook est un cadrage rapide, pas une recherche exhaustive. Il ne vise pas à couvrir l'intégralité du droit applicable mais à identifier les axes structurants et les points d'attention. La recherche approfondie relève des tâches 1-5 en aval.
+Le playbook est un cadrage rapide, pas une recherche exhaustive. Il ne vise pas à couvrir l'intégralité du droit applicable mais à identifier les axes structurants et les points d'attention. La recherche approfondie relève des tâches 1-6 en aval.

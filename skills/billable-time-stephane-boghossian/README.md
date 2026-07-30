@@ -1,0 +1,5 @@
+When your bar comes asking "show me how you billed AI-assisted work" — and ABA 512, Florida 24-1, California, New York, and DC all have opinions out — you need an artifact that survives review. billable-time produces it.
+
+From your Claude Code session logs, it drafts reviewable time entries plus a printable HTML audit packet with: SHA-256 chain of evidence (source files + matter.yml + active disclosure pack + verifiable artifact self-hash), attorney identity and signature block, a bar-opinion disclosure pack with starter language for five jurisdictions, and content-aware deterministic narratives derived from filename and tool shape — never from prompt text by default.
+
+The tool refuses to bill on its own. --strict mode refuses to ship the artifact if any audit invariant fails (broad routes, missing attorney, missing/unverified disclosure). Comes as a Node CLI and a self-contained browser version (no backend; JSONL never leaves the page). 15 invariant tests verify the contract. AGPL-3.0.

@@ -185,7 +185,7 @@ The KRITIS-Dachgesetz (CER Directive implementation) addresses physical resilien
 - KRITIS-Dachgesetz covers physical security; BSIG-neu covers cybersecurity
 - KRITIS operators are automatically besonders wichtige Einrichtungen under BSIG-neu
 - Some entities may be subject to both KRITIS-Dachgesetz (physical resilience) and BSIG-neu (cyber resilience)
-- The KRITIS-Dachgesetz is expected to enter into force in 2026 — track separately
+- The KRITIS-Dachgesetz **entered into force on 17 March 2026** — track separately
 
 ---
 

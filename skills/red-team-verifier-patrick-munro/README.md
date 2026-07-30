@@ -1,0 +1,1 @@
+Adversarial verification for AI-generated legal content with systematic fact-checking, source validation, and quality control. Use when verifying legal documents, fact-checking regulatory content, performing red team review, or quality assurance before distribution to clients or stakeholders.

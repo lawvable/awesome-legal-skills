@@ -1,0 +1,1 @@
+LGPD guidance for processing operations in Brazil. Covers legal bases (Articles 7 and 11), DPIA, incidents (Articles 48-49), data subject rights (Article 18), and international transfers. Triggers: LGPD, DPIA, ANPD, data protection, personal data, consent, data protection officer, Brazil DPO, data incident, legitimate interest.

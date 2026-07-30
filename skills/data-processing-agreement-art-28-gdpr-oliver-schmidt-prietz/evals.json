@@ -1,0 +1,141 @@
+{
+  "skill_name": "dpa-art28",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "REVIEW_QUICK — Vendor sent us this DPA. Page 4 has the standard 'processor will treat data confidentially' line but no reference to confidentiality obligations binding on personnel, no commitment that staff are subject to NDA or statutory duty of confidence. Audit clause says we can audit once per year with 90 days' notice and at our cost. Sub-processor list has 'major cloud providers' — no specific names. Deletion clause says 'data will be deleted or returned at controller's choice within 60 days'. No SCCs incorporated. The processor is in Singapore. Sign or push back?",
+      "expected_output": "REVIEW_QUICK output. Multiple Art. 28(3) defects: (a) confidentiality scope is too narrow — Art. 28(3)(b) requires processor to ensure persons authorised to process the personal data are committed to confidentiality or under appropriate statutory obligation of confidentiality. The vendor's clause is unverifiable. (b) Sub-processors not specifically named (Annex 3 issue) — Art. 28(2)/(4) flow-through requires specific authorisation OR general authorisation with notification and objection mechanism. (c) Singapore = third country, NO adequacy decision (Singapore is NOT in the adequacy list as of last reference), SCCs Module 2 required + TIA. (d) Deletion clause OK on face but verify retention carve-outs for legal obligations. Recommendation: DO NOT SIGN. Push back on confidentiality, sub-processor naming, and require SCCs + TIA.",
+      "files": [],
+      "expectations": [
+        "Recognises mode as REVIEW_QUICK and structures output accordingly (executive summary + (a)-(h) table + top 3 issues + recommendation)",
+        "Produces an Art. 28(3)(a)–(h) coverage table marking each obligation PASS / WEAK / GAP / DEFECT with one-line reason",
+        "Identifies the confidentiality clause as failing Art. 28(3)(b) — must bind persons, not just 'treat confidentially'",
+        "Identifies sub-processor naming gap as failing Art. 28(2) flow-through — Annex 3 must list specific names or use general-authorisation mechanism",
+        "Identifies Singapore as a third country with NO adequacy decision — SCCs Module 2 required",
+        "Recommends TIA (Transfer Impact Assessment) for the Singapore transfer in addition to SCCs",
+        "Provides a recommendation: DO NOT SIGN AS-IS — not 'sign with caveats' given multiple Art. 28(3) defects",
+        "Flags audit clause as WEAK — 90-day notice + once-per-year + at controller's cost may need negotiation",
+        "Notes default posture is 'sign with documented residual risk' or 'request changes', never 'sign as-is' with these gaps"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "REVIEW_NEG — The processor's draft includes this breach notification clause: 'Processor shall notify Controller of any personal data breach within a reasonable timeframe.' This is a Tier 1 commercial DPA. Push back?",
+      "expected_output": "Yes, push back hard. 'Reasonable timeframe' is unenforceable and inconsistent with Art. 28(3)(f) + Art. 33(2) requirement that processor notify controller WITHOUT UNDUE DELAY. Standard practice: 24 hours or 48 hours fixed (24 typical for B2B SaaS where the controller has its own 72-hour Art. 33 deadline). Negotiation fallback: 48 hours absolute maximum, 24 hours preferred. Combined with: definition of 'personal data breach' tracking Art. 4(12) GDPR, content requirements per Art. 33(3) included in initial notification (or escalating tranches), single point of contact specified.",
+      "files": [],
+      "expectations": [
+        "Recognises mode as REVIEW_NEG and provides detailed pushback rather than just flagging the issue",
+        "Cites Art. 28(3)(f) AND Art. 33(2) — processor's duty to notify controller without undue delay",
+        "States 'reasonable timeframe' is unenforceable and inconsistent with the WITHOUT UNDUE DELAY standard",
+        "Recommends 24h or 48h fixed timeframe — gives the controller margin against its own 72h Art. 33 deadline",
+        "References the controller's own Art. 33(1) 72-hour deadline to the supervisory authority as the driver",
+        "Recommends defining 'personal data breach' tracking Art. 4(12) GDPR",
+        "Recommends Art. 33(3) content requirements be included in initial notification or escalating tranches",
+        "Provides a documented negotiation fallback (24h preferred, 48h maximum) — not just an ideal position",
+        "Recommends single point of contact named in the notification clause"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "DRAFT — Please draft a STRICT-tier (Tier 2 — 2021/915 unmodified) DPA in German. Controller: AppMakers GmbH, Munich. Processor: a US-based AI-feature vendor (no specific name yet — placeholder). Sub-processor: an AWS-based EU region only, but with US parent. Processing: customer support data (names, emails, support-ticket content) classified as standard personal data. Duration: 3 years renewable. International transfer in scope (US processor). What do I get?",
+      "expected_output": "Tier 2 strict DPA in German, incorporating 2021/915 unmodified. Includes: (1) complete main body in German legal register ('Verantwortlicher', 'Auftragsverarbeiter'); (2) Annex 1 populated with subject matter, duration (3 years), nature, purpose, data types, categories of data subjects, controller's rights/obligations — concrete, not placeholder; (3) Annex 2 TOMs scaffold (flagged as open item if user has not provided actual TOMs); (4) Annex 3 sub-processors — AWS EU region listed by name, location, processing activity; (5) Annex 4 transfers — SCCs Module 2 incorporated with module-specific Annexes I.A/I.B/I.C/II/III; TIA flagged as required separate exercise; (6) Drafting notes section. Bilingual not requested — DE only.",
+      "files": [],
+      "expectations": [
+        "Selects Tier 2 (Strict — 2021/915 unmodified) and structures DPA accordingly",
+        "Produces complete main body in German legal register (Verantwortlicher / Auftragsverarbeiter, not 'Controller' / 'Processor')",
+        "Populates Annex 1 (processing description) with the concrete information from intake — not generic placeholders",
+        "Provides Annex 2 TOMs scaffold and explicitly flags it as an open item requiring processor's actual TOMs",
+        "Annex 3 lists AWS EU region by name + location + processing activity (not 'major cloud providers' boilerplate)",
+        "Annex 4 incorporates SCCs Module 2 (Controller-to-Processor) — correct module for this scenario",
+        "SCCs Annexes I.A / I.B / I.C / II / III are addressed in Annex 4 — not just 'parties agree to use SCCs'",
+        "Flags TIA (Transfer Impact Assessment) as a required separate exercise — references TIA Skill if available",
+        "Includes Drafting Notes section listing scenario assumptions and open items",
+        "Does NOT include English bilingual columns since user requested DE only"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "REDLINE — Counterparty sent us a DPA that mixes Art. 28 processor obligations with Master Services Agreement clauses (pricing, IP, indemnity for IP infringement). They also include a clause saying 'In the event of a breach of this Agreement, Processor's liability is capped at 6 months of fees paid.' Redline this for the controller's side.",
+      "expected_output": "Redline output. Key issues: (1) DPA-vs-MSA boundary — pricing, IP, and IP-infringement indemnity belong in the MSA, not the DPA. Recommend separating into two instruments. (2) The 6-month-fee liability cap improperly limits Art. 82 GDPR liability — Art. 82 establishes a strict liability regime; processors cannot contractually cap GDPR liability vis-à-vis data subjects (third-party rights). Between parties, the cap can be negotiated but should reflect risk asymmetry. Push back: either remove the cap from data-protection liability OR cap should be at minimum 12 months and explicitly excludes Art. 82 statutory liability to data subjects + regulatory fines + breach-related costs. Provide cover memo with rationale + counterparty pushback expectations.",
+      "files": [],
+      "expectations": [
+        "Identifies the DPA-vs-MSA boundary issue — pricing, IP, and IP indemnity do NOT belong in the DPA",
+        "Recommends separating into two instruments (MSA for commercial terms, DPA for Art. 28 obligations)",
+        "Identifies the liability cap as problematic vis-à-vis Art. 82 GDPR (statutory liability to data subjects)",
+        "States that contractual caps cannot limit data-subject claims under Art. 82 (third-party rights)",
+        "Recommends excluding regulatory fines and breach-related costs from the cap explicitly",
+        "Produces a redline format with additions in bold, deletions in strikethrough, reproducing counterparty's clause numbering",
+        "Produces a cover memo with rationale + counterparty pushback expectations + fallback positions",
+        "Recommends a side letter for residual gaps not worth re-opening the main DPA over",
+        "Maintains controller-favorable perspective throughout (per user's request)"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "JOINT_CONTROLLER — Two companies are running a co-branded marketing campaign. Each markets independently to its own customer base, then they share campaign-attribution data (which leads came from which channel) and jointly decide the attribution model. They've sent me a DPA to review. Is this actually an Art. 28 processor relationship or something else?",
+      "expected_output": "This is a Joint Controller (Art. 26 GDPR) scenario, NOT processor-controller. Indicators: both parties determine purposes (joint marketing campaign), both contribute data, both determine the means (attribution model jointly decided). Per EDPB Guidelines 07/2020 on controller/processor, joint decision over purpose + means = joint controllership. Papering this as Art. 28 is a substantive defect. Switch mode to JOINT_CONTROLLER. Output: roles analysis citing EDPB 07/2020, JCA main body (Art. 26 arrangement), allocation matrix (who handles DSARs, breach notification, security, DPIA, complaints, audits), Art. 26(2) public summary made available to data subjects, recital noting data subjects can exercise rights against either party irrespective of allocation.",
+      "files": [],
+      "expectations": [
+        "Detects this is JOINT_CONTROLLER not processor — surfaces the roles screen early",
+        "Cites Art. 26 GDPR as the correct legal basis, not Art. 28",
+        "Cites EDPB Guidelines 07/2020 on controllers/processors by name as the anchor for the analysis",
+        "Identifies the indicators: both parties determining purposes AND means (joint attribution decision)",
+        "States that papering JC as Art. 28 is a substantive defect, not a drafting style choice",
+        "Switches to JCA template — produces JCA main body, not DPA main body",
+        "Produces an allocation matrix covering DSARs, breach notification (to authority + data subjects), security, DPIA, transfers, complaints, audits",
+        "Produces an Art. 26(2) public summary made available to data subjects (often via privacy notice)",
+        "Includes recital noting data subjects can exercise rights against EITHER party irrespective of allocation",
+        "Recommends the user re-paper the relationship rather than amending the DPA cosmetically"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "REVIEW_NEG — The processor's audit clause states: 'Controller may audit Processor's compliance with this Agreement once every 3 years, with 6 months' written notice, provided that Controller bears all costs, and provided that the audit shall not be conducted by Controller's competitor.' Walk me through what's wrong and how to push back.",
+      "expected_output": "Multiple Art. 28(3)(h) issues. Art. 28(3)(h) requires processor to allow for and contribute to audits AND inspections. 3-year cycle is far too low — annual is standard, with right to additional audits for breach incidents or material concerns. 6 months' notice is far too long — 30 days is standard, with shorter notice (1-2 weeks) for incident-driven audits. Cost allocation: controller bears its own costs for routine audits; processor bears costs where audit finds material non-compliance. Competitor restriction: acceptable in limited form (named-competitor list) but cannot exclude qualified independent third-party auditors. Fallback negotiation: annual audit, 30-day notice, independent third-party-auditor option, breach-triggered additional audits allowed, named-competitor restriction only.",
+      "files": [],
+      "expectations": [
+        "Cites Art. 28(3)(h) as the controlling provision — audit AND inspection rights",
+        "Identifies the 3-year cycle as too low — annual is standard practice",
+        "Identifies 6-month notice as too long — 30 days standard, 1-2 weeks for incident-driven",
+        "Pushes back on the all-cost-on-controller framing — material non-compliance findings shift cost to processor",
+        "Notes competitor restriction can be acceptable as a named list but cannot exclude independent third-party auditors",
+        "Provides concrete fallback positions: annual + 30-day + third-party-auditor option + breach-triggered additional audits",
+        "Recognises this as REVIEW_NEG output (clause-by-clause analysis with risk tier and proposed fix)",
+        "Notes confidentiality protections for the auditor are reasonable (limit scope, protect TOMs detail, NDA)"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Multi-jurisdictional DPA — Controller is in Germany, processor is in Ireland (EEA), but the processor uses a sub-processor in the US for one specific feature. What's the Chapter V analysis and what SCC modules apply where?",
+      "expected_output": "Chapter V analysis required for the US sub-processor only — controller-to-processor (DE→IE) is intra-EEA, no SCCs needed. For the IE processor → US sub-processor leg: Module 3 (Processor-to-Processor) of SCCs 2021/914 applies. Alternative: controller may sign Module 2 directly with the US sub-processor if data flows pass through the IE processor pseudonymously, but Module 3 is the standard route. TIA required. Annex 4 of the main DPA should incorporate Module 3 by reference. Sub-processor's Annexes I.A/I.B/I.C/II/III must be completed for the US sub-processor.",
+      "files": [],
+      "expectations": [
+        "States no SCCs needed for the controller-to-processor (DE→IE) leg — intra-EEA",
+        "Identifies the IE-processor → US-sub-processor leg as requiring SCCs",
+        "Cites SCCs Module 3 (Processor-to-Processor) per Commission Decision 2021/914 as the correct module",
+        "Distinguishes Module 2 (Controller-to-Processor) from Module 3 (Processor-to-Processor) explicitly",
+        "States TIA is required for the US sub-processor leg",
+        "Annex 4 incorporation: SCCs Module 3 referenced + Annexes I.A/I.B/I.C/II/III completed for the US sub-processor",
+        "Notes 2021/915 (Art. 28) and 2021/914 (Chapter V) are different instruments — both may be relevant",
+        "Recommends documenting the data-flow map so each leg's basis is traceable in audit"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Public-sector DPA — A German Bundesland (federal state) authority is the controller, and we are an IT-services processor (private sector). They've handed us a draft 'Auftragsverarbeitungsvertrag' that uses some unusual language and references § 17 Landesdatenschutzgesetz. What are the German public-sector peculiarities I need to be aware of compared to a standard private-sector AVV?",
+      "expected_output": "German public-sector AVVs have particularities: (1) Landesdatenschutzgesetz (state DP law) applies alongside DSGVO — state-level acts (e.g., BayDSG, BlnDSG, NDSG) often have specific Art. 28-AVV requirements; § 17 LDSG cited likely covers AVV content. (2) Some Bundesländer require the controller's specific consent to sub-processor changes (not general authorisation). (3) Public-sector controllers may not consent to limitation of liability beyond statutory caps. (4) Audit and inspection rights are often broader — public-sector entities frequently retain unrestricted audit. (5) IT-Planungsrat / KRITIS framework may overlay if the authority's services qualify. (6) Language is German; bilingual is uncommon. Recommend reading the specific Landesdatenschutzgesetz before redlining and engaging qualified counsel familiar with public-sector contracts.",
+      "files": [],
+      "expectations": [
+        "Identifies that German public-sector AVVs are subject to Landesdatenschutzgesetz alongside DSGVO",
+        "Cites at least one Bundesland-specific DP act (BayDSG, BlnDSG, NDSG, etc.) — not just 'German DP law'",
+        "Notes that public-sector controllers often require specific (not general) sub-processor authorisation",
+        "Notes that public-sector entities may not validly consent to liability limitations beyond statutory caps",
+        "Notes audit/inspection rights are typically broader for public-sector controllers",
+        "Flags potential IT-Planungsrat / KRITIS overlay if the authority's services qualify",
+        "Recommends German language for the AVV (bilingual uncommon in public-sector contracts)",
+        "Recommends qualified counsel familiar with public-sector contracting before redlining",
+        "Recognises the user is processor-side and tailors guidance accordingly"
+      ]
+    }
+  ]
+}

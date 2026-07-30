@@ -1,0 +1,30 @@
+# Changelog — Special Panels Timor-Leste skill
+
+## [1.0.1] — 2026-06-02
+
+### Fixed
+- Corrected the SCU caseload figures throughout: **391 persons indicted** across 95 indictments (not "~800"), ~88 tried in ~55 trials, **84 convictions and 4 acquittals**, ~339 remaining at large. Verified against the UN Commission of Experts report and ICTJ.
+- Corrected the **Wiranto** SCU indictment date to **24 February 2003** (was 22 February).
+
+## [1.0.0] — initial release
+
+### Added
+- `SKILL.md` — entry point, verification-first discipline, institutional architecture (UNTAET Regulation 2000/15 of 6 June 2000, operational 2000-20 May 2006 at Dili District Court, 2 international + 1 Timorese judges, SCU prosecution under DPGSC, SCIT successor mechanism 2008-2012 under UNMIT), source hierarchy with distributed Tier 1 archives (JSMP, UC Berkeley HRC, UN UNTAET, legal-tools.org, ETAN), citation format, audit mode, sensitive contexts including structural impunity at senior commander level
+- `references/foundational-texts.md` — UNTAET Regulation 1999/1 (continuity of law), 2000/11 (court organization), **2000/15 (SPSC establishment — operative substantive/jurisdictional instrument with 19 sections)**, 2000/16 (SCU establishment), 2000/30 (Transitional Rules of Criminal Procedure, Section 29A plea negotiation), 2001/10 (CAVR establishment with Section 23 Community Reconciliation Procedures), MOU UNTAET-Indonesia 5-6 April 2000 (largely inoperative), Constitution of Timor-Leste 20 May 2002, Indonesian Penal Code subsidiary application
+- `references/authoritative-sources.md` — Tier 1 with distributed archives (JSMP jsmp.tl Tier 1-in-practice, UC Berkeley HRC most comprehensive digital repository, UN UNTAET archives, legal-tools.org ICC mirror, ETAN comprehensive NGO archive), Tier 2 academic (Caitlin Reiger ICTJ 2006 principal retrospective, Suzannah Linton LJIL articles, Sylvia de Bertodano Romano-et-al-eds-OUP-2004, Hansjörg Strohmeyer AJIL UNTAET advisor account, David Cohen East-West Center 2006 *Indifference and Accountability*, Megan Hirst and Howard Varney ICTJ 2005), CAVR Final Report ("Chega!" October 2005) as foundational historical documentation, multilingual proceedings (Indonesian, Tetum/Tetun, Portuguese, English), archival fragility note
+- `references/citation-format.md` — citation modes (foundational texts, SPSC judgments, CAVR materials, UN documents), case-number conventions (XX/YYYY serial-year), institutional acronyms (UNAMET, INTERFET, UNTAET, UNMISET, UNOTIL, UNMIT, SPSC, SCU, SCIT, DPGSC, CAVR), institutional milestones timeline, approximate SPSC outcomes (~800 indictees, ~85 tried, ~85 convictions, ~3 acquittals — disparity reflecting Indonesia non-cooperation)
+- `references/verification-workflow.md` — fallback ladder with anticipated longer verification times due to archival distribution, **7 SPSC-specific traps**: (1) SPSC vs Indonesian Ad Hoc Human Rights Court on East Timor (Jakarta) ; (2) SPSC vs proposed-but-never-established international tribunal — SPSC is hybrid jurisdiction created by UNTAET Regulation 2000/15 (administrative law) not UNSC resolution ; (3) structural impunity at senior commander level (only ~85 of ~800 indictees tried) ; (4) SPSC closed 20 May 2006; SCIT successor 2008-2012 had only investigative not prosecutorial mandate ; (5) CAVR truth commission distinct from SPSC criminal proceedings ; (6) UN mission acronym discipline (UNAMET/INTERFET/UNTAET/UNMISET/UNOTIL/UNMIT) ; (7) "East Timor" pre-independence vs "Timor-Leste" post-2002
+- `references/jurisprudence-map.md` — 10 sections: Los Palos as first major CAH judgment (11 December 2001), sexual violence jurisprudence (Cardoso Lolotoe), command/superior responsibility under Section 15 with Wiranto indictment as iconic unrealized prosecution, JCE following Tadić, plea negotiation under Section 29A as distinctive procedural feature, murder as ordinary crime alongside international crimes (unusual configuration), Indonesian Penal Code subsidiary application, sentencing 25-year cap, Wiranto Indictment 24 February 2003 as documented record without judicial finding, CAVR Community Reconciliation Procedures (~1,371 cases) as complementary mechanism
+- `examples/example-verification.md` — verifying the Los Palos case (Joni Marques et al., Case No. 09/2000, 11 December 2001) as first major SPSC crimes-against-humanity judgment, with proper acknowledgment of structural impunity context
+- `examples/example-audit.md` — two audits (Wiranto incorrectly described as "tried at the East Timor Tribunal" — Trap 1; SPSC mischaracterised as "international tribunal established by UN Security Council" — Trap 2)
+
+### Skill scope at v1.0.0
+- Covers SPSC entire operational period (2000-2006) plus SCIT successor mechanism (2008-2012) and post-2012 dormant institutional state
+- Encodes verification-first methodology adapted for distributed archival reality
+- Specifically equips the user to handle the **institutional uniqueness** (UN transitional administration creates hybrid jurisdiction within national judicial system), the **structural impunity context** at senior commander level, the **plea negotiation procedural distinctiveness**, the **CAVR-SPSC complementarity**, and the **archival distribution** (JSMP, Berkeley, UN, legal-tools.org, ETAN)
+
+### Known limitations
+- The SPSC's archival fragility means some judgments are difficult to access; the skill flags this and encourages partial verification with transparent disclosure when full text unavailable
+- The Indonesian Ad Hoc Human Rights Court on East Timor (Jakarta proceedings) is flagged as distinct but not covered by this skill — it would warrant a separate skill if/when added
+- The relationship between SPSC criminal accountability and the broader post-1999 transitional justice landscape (CAVR truth commission, Commission of Truth and Friendship Indonesia-Timor-Leste of 2008, Timor-Leste constitutional/political settlements) is referenced but not exhaustively mapped
+- Some Tetum-language judgment texts may not be readily accessible in digital form

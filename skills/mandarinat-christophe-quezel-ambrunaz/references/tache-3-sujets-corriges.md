@@ -182,7 +182,7 @@ Application du droit positif à une situation factuelle. Raisonnement syllogisti
 - Classer par ordre logique
 
 ### Syllogisme juridique (structure invariable par problème)
-1. **Majeure** : règle de droit applicable (article, jurisprudence), citée avec précision
+1. **Majeure** : règle de droit applicable (article, jurisprudence), citée avec précision, **dans sa rédaction en vigueur à la date des faits de l'énoncé** (et non à la date du jour, cf. §7 du SKILL.md). Déterminer explicitement cette date pivot ; si l'énoncé est muet, la fixer par hypothèse signalée ou raisonner sur le droit positif actuel en le précisant.
 2. **Mineure** : application aux faits spécifiques — vérifier chaque condition
 3. **Conclusion** : solution opérationnelle (« X peut / ne peut pas… »)
 
@@ -252,6 +252,8 @@ Restitution synthétisée et organisée du contenu d'un dossier documentaire. **
 - Apport personnel : INTERDIT
 - Sources utilisables : UNIQUEMENT les documents du dossier
 - Volume : 4 pages maximum (~1500-2000 mots)
+
+> **Constitution du dossier (sujet à créer).** Lorsque la skill doit *fabriquer* le dossier documentaire (et non traiter un dossier fourni), le borner à des **documents réels et reproductibles** : textes officiels (Légifrance via OpenLegi), décisions de justice intégralement accessibles, rapports publics. Proscrire l'insertion de doctrine sous paywall ou de pièces dont le texte intégral ne peut être ni vérifié ni reproduit — un dossier de note de synthèse suppose que chaque document soit lisible in extenso par le candidat. Chaque document inséré est tracé selon la règle anti-hallucination (existence et contenu vérifiés).
 
 ### Plan
 - 2 parties (I/II), chacune en 2 sous-parties (A/B)

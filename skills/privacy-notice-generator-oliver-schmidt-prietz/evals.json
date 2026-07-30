@@ -1,0 +1,78 @@
+{
+  "skill_name": "privacy-notice-eu",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draft a privacy notice for our SaaS product in English. We're a B2B SaaS company in Ireland — TaskFlow Ltd, 12 Lower Hatch St, Dublin 2, registration 654321. We process customer account data (email, name, company), usage logs, payment data (via Stripe, processor), support tickets, and we use Google Analytics 4 (with anonymise IP) for marketing. Customers are in EU and UK. We send transactional emails via SendGrid (US, DPF certified). DPO: dpo@taskflow.io. We do not use AI in the product currently.",
+      "expected_output": "Draft privacy notice for SaaS — Website/App notice type. Covers all Art. 13 mandatory disclosures: controller identity, DPO contact, purposes and Art. 6 legal bases (mostly 6(1)(b) contract for service, 6(1)(f) for analytics, consent for marketing emails), recipients (Stripe, SendGrid, Google), Chapter V transfer mechanisms for US recipients (DPF or SCCs), retention periods specific to each purpose, all data-subject rights including Art. 21 right to object presented separately, complaint right to Irish DPC, no AI/automated decisions. English, .docx-formatted.",
+      "files": [],
+      "expectations": [
+        "Identifies notice type as Website / App (SaaS sub-type) and adapts section map accordingly",
+        "Identifies jurisdiction as Ireland with Irish DPC (Data Protection Commission) as supervisory authority",
+        "Covers all Art. 13 mandatory disclosures (controller identity, DPO, purposes + bases, recipients, transfers, retention, rights, complaint right)",
+        "Cites specific article references — Art. 6(1)(b) for contract, Art. 6(1)(f) for legitimate interests, Art. 6(1)(a) for consent — rather than vague language",
+        "Presents Art. 21 right to object prominently and separately from other rights",
+        "Addresses the US transfers (SendGrid, Google) with the correct mechanism (DPF for DPF-certified recipients, SCCs otherwise)",
+        "States specific retention periods with justification rather than 'as long as necessary' boilerplate",
+        "Recommends delivery via the docx skill with A4 formatting, header/footer, table of contents",
+        "Recommends legal review before publication explicitly",
+        "Does NOT include AI/automated decisions section since none in scope, and does NOT include irrelevant sections (e.g., children's data) unless prompted"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Erstelle eine Datenschutzerklärung auf Deutsch für unseren Personalbereich (Bewerber-Datenschutz). Wir sind die TechCorp GmbH, Friedrichstraße 88, 10117 Berlin, Geschäftsführer Max Mustermann, HRB 12345 B. Bewerbungen kommen über unser Karriereportal (Personio). Wir bewahren Bewerberdaten 6 Monate nach Absage auf. Talentpool nur mit ausdrücklicher Einwilligung. Wir prüfen Daten nur intern — keine externen Background-Checks. Datenschutzbeauftragte: dsb@techcorp.de.",
+      "expected_output": "Bewerber-Datenschutz auf Deutsch. § 26 Abs. 1 BDSG als Hauptrechtsgrundlage (Bewerbungsverfahren = Anbahnung Beschäftigungsverhältnis). Talentpool als Art. 6(1)(a) DSGVO Einwilligung — separate Einwilligung erforderlich, eindeutig getrennt vom Bewerbungsverfahren. Aufbewahrung 6 Monate nach Absage (AGG-Klagefrist 2 Monate + Puffer für Beweissicherung). Berliner Beauftragte für Datenschutz und Informationsfreiheit (BlnBDI) als Aufsichtsbehörde. Personio als Auftragsverarbeiter — Art. 28 DPA erforderlich. Keine Sektion zu Cookies oder Kindern (für Bewerber irrelevant).",
+      "files": [],
+      "expectations": [
+        "Recognises notice type as Applicant / Recruiting (Bewerber) and adapts section map",
+        "Cites § 26 Abs. 1 BDSG as primary legal basis for the application process (Anbahnung)",
+        "Treats talent pool as separate Art. 6(1)(a) consent — explicitly distinct from the application process",
+        "Specifies the 6-month retention with justification (AGG-Klagefrist 2 Monate + Puffer)",
+        "Identifies BlnBDI (Berliner Beauftragte) as the correct supervisory authority for Berlin-based controller",
+        "Flags Personio as an Art. 28 processor requiring a DPA",
+        "Omits sections irrelevant to applicant notices (cookies, children's data) per the type section map",
+        "Output is in German with formal Sie-form, not raw machine translation",
+        "Includes Art. 13/14 mandatory disclosures regardless of type",
+        "Recommends legal review before publication"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Here is our existing English privacy notice [imagined attached]. Review it for Art. 13/14 coverage gaps. We're a B2C e-commerce company in France — Maison du Café SARL, Paris. We sell online to French and Belgian customers. We use Stripe for payments and Klaviyo for email marketing (US-based, no DPF). Notice was drafted in 2022.",
+      "expected_output": "Gap analysis output. Critical gaps to flag: (1) SCCs needed for Klaviyo since not DPF-certified — current notice likely silent or generic; (2) CNIL as supervisory authority must be named correctly; (3) Art. 21 right to object must be prominent and separate; (4) Belgian customers — CNIL or APD? With main establishment in France, CNIL is lead under one-stop-shop; (5) French marketing consent rules (Art. L.34-5 CPCE + LIL); (6) cookie consent must comply with CNIL doctrine. Notice is 4 years old — recommend full refresh.",
+      "files": [],
+      "expectations": [
+        "Recognises this as a review task, not a draft task",
+        "Identifies jurisdiction as France with CNIL as supervisory authority",
+        "Cross-references Art. 13/14 mandatory disclosures checklist against the existing notice",
+        "Flags SCCs requirement for Klaviyo (US, no DPF) as a Chapter V gap",
+        "Cites L.34-5 CPCE for French marketing-consent rules",
+        "Addresses the Belgian customer angle — main establishment in France, so CNIL leads under one-stop-shop, but Belgian APD may receive complaints from Belgian data subjects",
+        "References CNIL cookie doctrine for the consent banner",
+        "Notes that a 2022 notice is likely outdated (DPF post-Schrems, AI Act transparency obligations) and recommends a full refresh",
+        "Recommends Art. 21 separate and prominent presentation",
+        "Provides a structured gap list, not just a narrative critique"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're a Swiss company — SwissCo AG, Zurich — selling consumer fitness apps in both Switzerland and the EU (DE/FR/IT markets). We collect health-related data (workouts, heart-rate, sleep). We need a privacy notice that addresses both Swiss nFADP and GDPR. What approach should I take, and what are the key cross-border considerations?",
+      "expected_output": "Swiss-EU cross-border notice. Approach: single notice referencing both Swiss nFADP (revised Federal Act on Data Protection) and GDPR. Languages: minimum DE + FR; consider IT for Ticino. Notice must address: Art. 9 special-category health data → dual basis Art. 6 + Art. 9(2), most likely Art. 9(2)(a) explicit consent for fitness data. Multi-jurisdictional supervisory authorities — Swiss FDPIC + relevant EU DPAs. Note nFADP information duties similar to Art. 13/14 GDPR but no consent requirement for general processing. Likely DPIA required given health data + scale.",
+      "expected_output_note": "test the multi-jurisdictional/Swiss handling",
+      "files": [],
+      "expectations": [
+        "Recognises the Swiss-EU cross-border scenario and applies the documented decision tree",
+        "Recommends a single notice referencing BOTH Swiss nFADP and GDPR rather than two separate notices",
+        "Identifies the language requirements (minimum DE + FR, IT if Ticino in scope)",
+        "Identifies the data as Art. 9 special-category health data — requires Art. 6 + Art. 9(2) dual legal basis",
+        "Most likely Art. 9(2)(a) explicit consent for fitness data — a higher bar than ordinary consent",
+        "Names Swiss FDPIC (Federal Data Protection and Information Commissioner) alongside relevant EU DPAs",
+        "Notes that nFADP has information duties similar to Art. 13/14 GDPR but different consent posture",
+        "Flags DPIA likely required under Art. 35 GDPR (health data + large-scale + 2+ EDPB criteria)",
+        "Identifies governing-language clause as needed for a multi-language notice",
+        "Recommends legal review by counsel competent in both Swiss and EU data-protection law"
+      ]
+    }
+  ]
+}

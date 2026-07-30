@@ -1,0 +1,69 @@
+{
+  "skill_name": "nis2-navigator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're a German cloud-hosting provider, 80 employees, €15M turnover, balance sheet €8M. Based in Munich, serving German SMEs. Are we in scope for NIS2 and how should we classify?",
+      "expected_output": "In scope. Annex I (digital infrastructure — cloud computing service provider). Medium-sized enterprise per Art. 3(1)–(2) (≥50 employees triggers medium). Annex I + medium = important entity (not essential — essential requires Annex I + large). BSI registration required under § 33 BSIG-neu; deadline was 6 March 2026, so likely overdue. § 30 BSIG-neu separately governs the Art. 21 risk-management measures the entity must implement. CIR 2024/2690 applies — additional binding requirements beyond Art. 21.",
+      "files": [],
+      "expectations": [
+        "Identifies the sector as Annex I (digital infrastructure — cloud computing service provider)",
+        "Classifies as medium-sized enterprise based on ≥50 employees (OR turnover >€10M AND balance sheet >€10M)",
+        "Classifies as important entity (Annex I + medium), explicitly NOT essential",
+        "States BSI registration is required under § 33 BSIG-neu with deadline 6 March 2026 (§ 30 BSIG-neu covers risk-management measures separately)",
+        "Flags that CIR 2024/2690 applies — additional binding requirements for digital infrastructure entities",
+        "Mentions the BSI Betroffenheitsprüfung (betroffenheitspruefung-nis-2.bsi.de) as a complementary scope check",
+        "Does NOT misclassify as essential (a common error — essential requires Annex I + large)",
+        "Notes that for German entities Art. 21 risk-management measures map to § 30 BSIG-neu (distinct from § 33 BSIG-neu BSI registration)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Run an Art. 21 gap analysis on us. We're an important entity (mid-sized German logistics company, ~150 employees). Our current state: written info-sec policy exists but last reviewed 18 months ago. Incident response plan is informal — security lead handles it. No business continuity plan tested in 2 years. Supply chain security: ad hoc questionnaires for new vendors only. No formal supplier audits. MFA enforced for all admin and remote access. Encryption at rest and in transit for customer data. Security awareness training annual mandatory. Backups daily, tested quarterly. Access control via SSO with role-based permissions. Score us across the 10 measures and tell me the priorities.",
+      "expected_output": "0–4 maturity scoring across all 10 measures from Art. 21(2)(a)–(j). Expected scores: (a) Risk analysis & IS policies 2; (b) Incident handling 1; (c) Business continuity 1; (d) Supply chain 1; (e) Network/IS dev/maint 2-3; (f) Effectiveness assessment 0-1; (g) Cyber hygiene & training 3; (h) Cryptography 3-4; (i) HR security & access control 3; (j) MFA & secure comms 4. Overall ~20/40, Needs Improvement. Top priorities: business continuity, supply chain, effectiveness assessment.",
+      "files": [],
+      "expectations": [
+        "Produces a maturity score (0-4) for each of the 10 measures Art. 21(2)(a)-(j)",
+        "Uses the documented scale: 0 Non-existent, 1 Ad hoc, 2 Defined, 3 Managed, 4 Optimized",
+        "Produces an overall score out of 40 with traffic-light rating (🔴 ≤15, 🟡 16-29, 🟢 ≥30)",
+        "Justifies each score with reasoning so it can be challenged, rather than asserting opaquely",
+        "Identifies P1/P2/P3 priorities using the documented framework — important entity priorities differ from essential",
+        "Identifies the maturity-1 measures (incident handling, business continuity, supply chain) as P2 short-term priorities and any maturity-0 measure (e.g., effectiveness assessment) as P1 immediate priority per the documented important-entity priority matrix",
+        "References ISO 27001:2022 Annex A controls where applicable",
+        "Does NOT inflate scores — rewards documentary evidence and consistency, not aspirational policy"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Draft me a management briefing for our German board on NIS2 management body obligations. We're an essential entity. I need them to understand their personal exposure under German law specifically.",
+      "expected_output": "Management briefing structured around Art. 20 NIS2 + § 38 BSIG-neu. Must cover: (1) approval of risk management measures Art. 20(1) / § 38(1) BSIG; (2) mandatory regular cybersecurity training Art. 20(2) / § 38(3) BSIG — explicitly not delegable; (3) personal liability for damages from non-compliance under § 38(2) BSIG — German-specific; (4) oversight cannot be delegated to CISO, execution can. Should frame this as 'transforms abstract compliance into something personal'.",
+      "files": [],
+      "expectations": [
+        "Structures around Art. 20 NIS2 AND § 38 BSIG-neu (both EU and German references)",
+        "Identifies the four documented obligations: approval, training, oversight, liability",
+        "States training is NOT DELEGABLE — board members must personally undergo it",
+        "Flags § 38(2) BSIG personal liability for damages from non-compliance — German-specific personal exposure",
+        "Distinguishes oversight (cannot delegate) from execution (can delegate to CISO)",
+        "Notes that the personal-liability angle is often the most persuasive part for management",
+        "Recommends BSI-Standards 200-2/200-3 as implementation resources for German entities",
+        "Output is in a briefing format suitable to present to a board (concise, structured)"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "How do we register with the BSI under BSIG-neu? We're a German important entity, missed the original deadline. Walk me through it.",
+      "expected_output": "BSI registration walkthrough under § 33 BSIG-neu (registration provision; § 30 BSIG-neu separately governs Art. 21 risk-management measures). Original deadline was 6 March 2026 (now overdue). Registration via BSI's online portal. Must provide entity details, sector, sub-sector, contact persons (24/7 reachable), services in scope. For overdue registrations: register immediately, note that enforcement intensity for important entities is reactive but missing registration is itself a violation. Mention the BSI Betroffenheitsprüfung as the prerequisite scope-confirmation step.",
+      "files": [],
+      "expectations": [
+        "Cites § 33 BSIG-neu (German national NIS2 registration provision) as the legal basis — distinct from § 30 BSIG-neu which governs risk-management measures",
+        "States the registration deadline was 6 March 2026 and the entity is overdue",
+        "Walks through the data points required: sector, sub-sector, contact persons (24/7), services in scope",
+        "Mentions the BSI online portal / Betroffenheitsprüfung as the prerequisite scope check",
+        "Notes that missing registration is itself a violation under BSIG-neu, even before any incident",
+        "Distinguishes important-entity (reactive supervision) from essential-entity (proactive supervision) enforcement posture",
+        "Recommends documenting the registration outcome and 24/7 contact arrangements",
+        "Recommends qualified counsel for the formal submission rather than treating as purely administrative"
+      ]
+    }
+  ]
+}

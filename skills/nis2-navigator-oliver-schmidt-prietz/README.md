@@ -1,88 +1,118 @@
-# NIS2 Navigator
+# NIS2 Compliance Navigator — Deployment Guide
 
-**Version:** 1.0.0-beta  
-**License:** AGPL-3.0  
-**Author:** Oliver Schmidt-Prietz (OneZero Legal)  
-**Type:** Claude Skill
+> 📄 **[View the interactive skill page →](https://oliverschmidtprietz.github.io/NIS2-Navigator/)**
 
-> ⚠️ **Beta Release** — This is a v1 beta. The skill is functional and built on verified official sources, but has not yet undergone formal evaluation testing. Feedback, corrections, and contributions are welcome.
+See [CHANGELOG.md](CHANGELOG.md) for version history.
 
-## What It Does
+## Overview
 
-NIS2 Navigator is a Claude Skill that runs a structured NIS2 compliance assessment in approximately 20 minutes, producing three deliverables:
+NIS2 Compliance Navigator — scope classification, Art. 21 gap analysis, and compliance roadmap under EU Directive 2022/2555:
 
-1. **Scope Classification** — Determines whether an entity falls under NIS2 and classifies it as essential or important, based on Annex I/II sector mapping, size thresholds, group structures, and special-status rules
-2. **Art. 21 Gap Analysis** — Scores all 10 risk management measures on a 0–4 maturity scale (max 40 points), with lightweight ISO 27001:2022 Annex A references per measure
-3. **Compliance Roadmap** — Prioritized remediation plan (P1/P2/P3) with concrete actions, effort estimates, and a management body briefing template
-
-## Jurisdiction Coverage
-
-| Jurisdiction | Depth | Status |
-|---|---|---|
-| **EU Directive** | Full | Baseline for all assessments |
-| **Germany (BSIG-neu)** | Deep | In force since 6 Dec 2025 |
-| **Italy (D.Lgs. 138/2024)** | High-level profile | In force since 16 Oct 2024 |
-| **Austria (NISG 2026)** | High-level profile | Transposed, enters force 1 Oct 2026 |
-| **France (Loi Résilience)** | High-level profile | Pending — expected H2 2026 |
-| **Netherlands (Cbw)** | High-level profile | Pending — expected Q2 2026 |
-| **Spain (Ley de Ciberseguridad)** | High-level profile | Pending — still in draft |
-
-The EU-level assessment (scope + gap analysis + roadmap) works for entities in any Member State. The jurisdiction profiles add national specifics where transposition diverges from the Directive.
-
-## Official Sources
-
-Built on and referencing:
-
-- EU Directive 2022/2555 (NIS2)
-- Commission Implementing Regulation (EU) 2024/2690
-- ENISA Technical Implementation Guidance (June 2025)
-- BSI #nis2know Infopakete and Roadmap
-- BSI-Standards 200-1/200-2/200-3
-- BSI Betroffenheitsprüfung (scope self-assessment tool)
-- BSI RUN maturity methodology
-- ANSSI ReCyF (March 2026)
-- National transposition laws for covered jurisdictions
+- **Scope & classification** — Annex I / Annex II + essential vs. important entity determination
+- **Art. 21 gap analysis** with 0–4 maturity scoring across the 10 risk-management measures
+- **ISO 27001 cross-references** for each measure to leverage existing certification work
+- **Compliance roadmap** with prioritisation framework (legal exposure, dependency, quick wins)
+- **Deep German BSIG-neu coverage** — § 30 BSIG registration, NIS2UmsuCG specifics
+- **Profiles for IT, FR, NL, AT, ES** — country-specific entity-type taxonomies and supervisory authorities
+- **Management briefing template** (Art. 20 / § 38 BSIG) for board-level liability
+- **Incident reporting framework** with timelines and escalation paths
+- **Supply chain security** considerations integrated throughout
+- **Final assessment report** consolidating scope, gaps, and roadmap
 
 ## File Structure
 
 ```
 nis2-navigator/
-├── SKILL.md                            Main workflow (225 lines)
-├── README.md                           This file
-├── LICENSE.txt                         AGPL-3.0
+├── SKILL.md                              # Main skill instructions (deploy this)
+├── CHANGELOG.md                          # Version history
 └── references/
-    ├── regulatory-sources.md           EU and BSI source catalog
-    ├── sector-classification.md        Annex I/II mapping, size thresholds
-    ├── art21-measures.md               10 measures, scoring criteria, ISO refs
-    ├── germany-nis2umsucg.md           German BSIG-neu deep dive
-    ├── eu-jurisdiction-profiles.md     IT, FR, NL, AT, ES profiles
-    └── templates.md                    Report, executive summary, mgmt briefing
+    ├── sector-classification.md          # Annex I / II sector taxonomy + entity-size rules
+    ├── art21-measures.md                 # The 10 risk-management measures (Art. 21(2)(a)-(j))
+    ├── germany-nis2umsucg.md             # § 30 BSIG, NIS2UmsuCG, BSI registration
+    ├── eu-jurisdiction-profiles.md       # IT, FR, NL, AT, ES — entity taxonomy + SA contacts
+    ├── regulatory-sources.md             # Official EU + Member State source catalog
+    └── templates.md                      # Output templates (gap analysis, roadmap, briefing)
 ```
 
-## Installation
+## Deployment
 
-Install the `.skill` package in Claude, or copy the folder into your Claude Skills directory.
+### Claude.ai (User Skills)
 
-## Limitations (v1 Beta)
+1. Go to **Settings → Profile → Custom Skills** (or equivalent)
+2. Upload the entire `nis2-navigator/` folder structure
+3. The skill will auto-trigger on "NIS2", "BSIG", "BSIG-neu", "NIS2UmsuCG", "Annex I/II", "essential entity", or "Art. 21 gap analysis"
 
-- **Not legal advice.** The skill produces structured compliance guidance, not legal opinions. Results should be validated by qualified counsel.
-- **Non-German jurisdictions are high-level only.** The profiles highlight key national differences but do not provide the same depth as the German coverage.
-- **Transposition status is a moving target.** France, Netherlands, and Spain had not completed transposition at time of writing (March 2026). The skill includes a web search trigger on activation to check for updates.
-- **No IEC 62443 / OT coverage.** Industrial/OT environments are not addressed in v1. Planned for v2.
-- **No formal eval testing yet.** The skill has been built iteratively with subject-matter input but has not been run through the skill-creator evaluation framework.
+### Claude Code / Custom MCP Setup
 
-## Changelog
+1. Copy the `nis2-navigator/` folder to your skills directory:
+   ```bash
+   cp -r nis2-navigator/ /path/to/your/skills/user/nis2-navigator/
+   ```
+2. Ensure the skill is registered in your configuration
 
-### v1.0.0-beta (March 2026)
-- Initial release
-- Full EU Directive coverage (scope, Art. 21 gap analysis, roadmap)
-- Deep German BSIG-neu integration (BSI registration, § 30/32/34/38, reporting channels, Nachweispflicht)
-- High-level jurisdiction profiles for IT, FR, NL, AT, ES
-- CIR 2024/2690 detection for digital infrastructure entities
-- DORA lex specialis handling
-- Commission January 2026 amendment proposal flagged for awareness
-- Management body liability briefing template
+## Usage
 
-## Disclaimer
+### Quick Start
 
-This skill is provided as-is under the AGPL-3.0 license. It does not constitute legal advice. The author accepts no liability for compliance decisions made based on this tool's output. Always verify with qualified legal counsel.
+Describe your organisation:
+
+> "We're a German cloud-services provider with 80 employees and €15M turnover.
+> Do we fall under NIS2? If yes, give me a gap analysis against Art. 21 and a
+> 12-month roadmap."
+
+The skill will classify scope, run the gap analysis, and produce a phased roadmap.
+
+### Trigger Phrases
+
+- "NIS2" / "NIS-2" / "BSIG" / "BSIG-neu" / "NIS2UmsuCG"
+- "Essential entity" / "Important entity" / "Annex I/II"
+- "Art. 21 gap analysis" / "NIS2 readiness" / "Cybersecurity compliance assessment"
+- "BSI registration" / "§ 30 BSIG"
+- "Cyberbeveiligingswet" / "Loi Résilience" / "decreto legislativo 138"
+
+### Workflow
+
+| Phase | Description |
+|-------|-------------|
+| **Session Init** | Disclaimer, web search for recent developments, jurisdiction focus selection |
+| **Phase 1: Scope & Classification** | Annex I/II routing, essential vs. important, jurisdiction-specific overlays (~5 min) |
+| **Phase 2: Art. 21 Gap Analysis** | 0–4 maturity scoring across the 10 measures with ISO 27001 anchors (~15 min) |
+| **Phase 3: Compliance Roadmap** | Prioritisation framework + Germany-specific items + Art. 20 / § 38 BSIG management briefing |
+| **Output** | Final Assessment Report consolidating scope, gaps, and roadmap |
+
+## Capabilities Summary
+
+| Feature | Description |
+|---------|-------------|
+| Scope Classification | Annex I/II + essential/important + jurisdiction-specific overlays |
+| Art. 21 Gap Analysis | 0–4 maturity scoring across all 10 measures |
+| ISO 27001 Crossref | Each measure mapped to ISO 27001 controls |
+| Roadmap Prioritisation | Legal-exposure-aware sequencing with quick-win identification |
+| Germany Deep Coverage | § 30 BSIG, NIS2UmsuCG, BSI registration workflow |
+| EU Profiles | IT, FR, NL, AT, ES — entity taxonomy + SA contacts |
+| Management Briefing | Art. 20 / § 38 BSIG board-level liability briefing template |
+| Final Report | Audit-ready assessment report consolidating all phases |
+
+## Regulatory Basis
+
+| Document | Reference |
+|----------|-----------|
+| NIS2 Directive | EU Directive 2022/2555 |
+| Art. 21 | 10 risk-management measures |
+| Art. 23 | Incident reporting obligations |
+| Art. 20 | Management body responsibilities |
+| Annex I / II | Sector and entity-type taxonomy |
+| BSIG-neu (DE) | German NIS2UmsuCG transposition, § 30, § 38 |
+| ISO 27001 | Risk-management measure crossref |
+
+## License & Disclaimer
+
+This skill provides structured NIS2 compliance guidance based on EU Directive 2022/2555 and national transposition laws. It is not legal advice. Final compliance decisions should involve your organisation's CISO / Information Security Officer and qualified legal counsel experienced in cybersecurity regulation.
+
+Licensed under AGPL-3.0.
+
+> **Quality assurance:** this skill ships with evaluation tests in the `evals/` folder, which I run to check its outputs against expected results.
+
+---
+
+*Created by Oliver Schmidt-Prietz — [OneZero Legal](https://onezero.legal)*

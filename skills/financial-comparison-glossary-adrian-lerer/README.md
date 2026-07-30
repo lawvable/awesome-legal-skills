@@ -1,0 +1,1 @@
+Use when a calculator, financial model, investor memo, due diligence report, risk review, dashboard, or client-facing explanation needs clear distinctions between accounting and finance concepts such as cash flow vs profit, EBIT vs EBITDA, CapEx vs OpEx, debt vs equity, market value vs book value, ROI vs ROE, assets vs liabilities, and accounting vs finance.

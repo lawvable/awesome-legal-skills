@@ -1,0 +1,184 @@
+{
+  "skill_name": "ai-act-transparency",
+  "evals": [
+    {
+      "id": 0,
+      "name": "provider-chatbot-imagegen-clear",
+      "prompt": "We're an EU-based SaaS company about to launch (September 2026) a customer-facing product with two AI features: a conversational support chatbot, and an image generator that creates marketing visuals from text prompts. We build and place the product on the market under our own brand. Which Article 50 transparency duties apply to us, what exactly must we implement, and by when? What's our penalty exposure if we get it wrong?",
+      "expected_output": "Role: provider. Two duties trigger. Art. 50(1) — interaction disclosure for the chatbot: proactive disclosure that the user is interacting with an AI system at the start of interaction (not buried in ToS, not a generic 'assistant' label), unless obvious to the average consumer. Art. 50(2) — synthetic-content marking for the image generator: the statutory floor is machine-readable marking + detectability, effective/interoperable/robust/reliable as far as technically feasible; the Code of Practice operationalises this as a LAYERED solution — signed + time-stamped metadata (C2PA de-facto) PLUS an imperceptible watermark — with detection as half the duty (free of charge, per technique). No single technique meets all four criteria. Effective date: 2 August 2026 with no transition; because the product is newly placed (Sept 2026, after 2 Aug 2026) the legacy grace to 2 Dec 2026 does NOT apply. Penalty: Tier 2, up to EUR 15,000,000 or 3% of worldwide annual turnover (Art. 99(4)(g)). The Code is a voluntary compliance route; adherence is not conclusive evidence of compliance.",
+      "files": [],
+      "expectations": [
+        "Identifies the role as PROVIDER (builds and places the system on the market under its own brand)",
+        "Triggers Art. 50(1) interaction disclosure for the chatbot, with proactive at-start disclosure (not buried in ToS)",
+        "Triggers Art. 50(2) synthetic-content marking for the image generator",
+        "Distinguishes the statutory floor (machine-readable + detectable, four criteria as far as technically feasible) from the Code's layered architecture (signed metadata + imperceptible watermark), rather than presenting two layers as the statutory mandate",
+        "States no single technique meets all four statutory criteria (effectiveness, interoperability, robustness, reliability) and that detection is part of the duty",
+        "States the effective date is 2 August 2026 with no transition, and that a newly-placed (post-2-Aug-2026) system has NO legacy grace",
+        "States the penalty band correctly: EUR 15,000,000 or 3% worldwide annual turnover (Art. 99(4)/(4)(g))",
+        "WRONG-ANSWER REJECTION: does NOT cite the EUR 35,000,000 / 7% band (that is Art. 5 prohibited practices, not Art. 50)",
+        "WRONG-ANSWER REJECTION: does NOT treat Code of Practice adherence as conclusive proof of compliance",
+        "POST-CUTOFF CONTENT: references the final Code of Practice on Transparency of AI-Generated Content (10 June 2026) and its layered / no-single-technique framing"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "deployer-marketing-deepfake-judgment",
+      "prompt": "Our marketing agency uses a third-party AI tool to generate a hyper-realistic synthetic 'brand spokesperson' — a person who doesn't exist — to front a video ad campaign for a client. We didn't build the AI tool, we just use it. Do we have any Article 50 obligations, or is that on the tool vendor? Can we rely on the 'artistic/creative' exception since it's a creative campaign?",
+      "expected_output": "Role: deployer (you use the tool under your own authority). Step 1 — is it a deepfake? Apply the Art. 3(60) four-element test (draft Guidelines para. 107): appreciable resemblance; capable of existing in reality; persons/objects/places/entities/events; and would falsely appear authentic judged against the actual audience. A photorealistic INVENTED person is IN scope precisely because such a person plausibly could exist — a fictional likeness does not by itself escape the regime. So the synthetic spokesperson is a deepfake. Step 2 — exception? The artistic/creative/satirical/fictional limitation has NO blanket pass for marketing: the draft Guidelines (para. 114) exclude content that is primarily commercial and recognisable as such, so a persuasive product spot needs ordinary full disclosure; only an evidently creative/fictional ad might qualify case-by-case, and even then the exception softens the FORM of disclosure only, not personality/IP rights. So as deployer you must clearly label the content as AI-generated/manipulated (the capitalised 'AI' acronym is the mandatory core; use the official EU icon set; persistent placement for video, embed by default, accessible). Separately, the tool VENDOR (provider) owes the distinct Art. 50(2) machine-readable marking duty — the provider's marking does not discharge your deployer labelling duty, and vice versa. Effective 2 August 2026, no transition. Penalty: Tier 2 (EUR 15M / 3%).",
+      "files": [],
+      "expectations": [
+        "Identifies the agency's role as DEPLOYER",
+        "Applies the Art. 3(60) / four-element deepfake test rather than asserting 'synthetic person = deepfake' categorically, and concludes a photorealistic invented person IS a deepfake because it is capable of existing",
+        "States the artistic/creative/fictional exception gives marketing NO blanket pass: primarily-commercial content needs full disclosure (Guidelines para. 114), only an evidently creative/fictional ad might qualify case-by-case",
+        "Specifies deployer labelling with the 'AI' acronym / official EU icon set, persistent placement for video, and accessibility",
+        "Distinguishes the deployer's Art. 50(4) human-facing labelling from the provider/vendor's Art. 50(2) machine-readable marking as separate duties on separate parties",
+        "States the provider's 50(2) marking does not discharge the deployer's 50(4) labelling duty",
+        "States the effective date 2 August 2026 and Tier 2 penalty (EUR 15M / 3%)",
+        "WRONG-ANSWER REJECTION: does NOT treat a primarily-commercial marketing campaign as automatically within the artistic/fictional exception",
+        "WRONG-ANSWER REJECTION: does NOT assert marketing can NEVER be artistic (the test is evidently-creative/fictional + not-primarily-commercial), and does NOT tell the agency it has no obligations because it didn't build the tool",
+        "POST-CUTOFF CONTENT: references the four-element deepfake gloss (Guidelines para. 107) and the official EU labelling icon set finalised with the June 2026 Code"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "legacy-imagegen-grace-period-date",
+      "prompt": "We placed our generative image product on the EU market in March 2026 — before the AI Act's transparency rules kick in. When does the machine-readable watermarking obligation under Art. 50(2) actually bite for us, given we're a 'legacy' system? And do we have to go back and watermark all the images our users already generated and posted online?",
+      "expected_output": "Because the system was placed on the market before 2 August 2026, it is a legacy system and benefits from the Digital Omnibus grace: the Art. 50(2) marking obligation bites on 2 December 2026 rather than 2 August 2026 (the Omnibus cut the grace from six months to three). STATUS: this is now close to settled — the Digital Omnibus ('Omnibus VII') was adopted by the European Parliament (June 2026) and received the Council's final green light on 29 June 2026; it is awaiting Official Journal publication ('shortly') and enters into force on the third day after publication. So 2 December 2026 is near-settled, not merely 'politically agreed'. Caveat: until the OJ text is published, the statutory 2 August 2026 date formally still stands for legacy systems — recommend a quick live OJ / law-tracker check, but do not overstate the residual risk. Do NOT confuse 2 Dec 2026 with 2 February 2027 — that is the Code's separate watermark-detection interoperability milestone (and was the Commission's superseded original proposal). No retrospective marking: content generated and made available before 2 August 2026 does not need to be marked/labelled retrospectively. Note 50(1)/(3)/(4) are unaffected by the grace and apply from 2 August 2026 with no transition.",
+      "files": [],
+      "expectations": [
+        "Identifies the system as a legacy system (placed on the market before 2 August 2026) eligible for the Digital Omnibus grace",
+        "States the legacy 50(2) marking date as 2 December 2026",
+        "States the current status accurately: the Omnibus is ADOPTED (EP June 2026 + Council final green light 29 June 2026) and awaiting OJ publication, entering into force the third day after — i.e. near-settled, not merely 'politically agreed' or 'may not happen'",
+        "Notes the residual caveat that until OJ publication the statutory 2 August 2026 date formally still governs legacy systems, and recommends a live OJ/law-tracker check",
+        "States that content already public before 2 August 2026 does NOT need retrospective marking (voluntary only)",
+        "Distinguishes 2 December 2026 (legacy marking) from 2 February 2027 (Code interoperability milestone / superseded original proposal)",
+        "Notes 50(1)/(3)/(4) are unaffected and apply from 2 August 2026 with no transition",
+        "WRONG-ANSWER REJECTION: does NOT present 2 December 2026 as still merely 'politically agreed', 'conditional', or 'may not happen' (that framing is now stale post 29 June 2026 Council adoption)",
+        "WRONG-ANSWER REJECTION: does NOT require retrospective watermarking of already-published content",
+        "POST-CUTOFF CONTENT: references the Digital Omnibus 2 Dec 2026 grace and its Council-adopted / awaiting-OJ status as of mid-2026"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "agentic-self-disclosure-grayzone",
+      "prompt": "We're building an autonomous AI agent that acts on a user's behalf — it phones and emails third parties (restaurants, clinics, suppliers) to make bookings and negotiate appointments. The third parties it contacts don't know in advance they're dealing with an AI. Do we have an Art. 50(1) disclosure obligation toward those third parties, even though our 'user' knows it's an AI? Is this even settled law?",
+      "expected_output": "Yes, Art. 50(1) applies and the obligation runs toward the third parties the agent interacts with, not only the user. Per the Commission's draft Art. 50 Guidelines (para. 28), where a provider cannot reliably determine whether an autonomous agent will interact with a natural person, the agent must self-disclose its artificial nature in every situation where such interaction is reasonably foreseeable — a 'disclose where plausible' default. The 'obvious from the circumstances' exemption is judged against the average consumer and is unlikely to be met for third parties who are cold-contacted by phone/email and have no contextual cue that they are dealing with an AI (especially if the agent sounds human). Note the negative catalogue (para. 35): a generic 'assistant' reference or disclosure buried in terms would not satisfy 50(1). So the agent should identify itself as an AI at the start of each such interaction. Caveat on settled law: the AI Act itself does not use the word 'agent'; this self-disclosure reading comes from the DRAFT Guidelines (8 May 2026), which are non-binding — only the CJEU can authoritatively interpret Art. 50. Recommend a web-check on whether the Guidelines have been finalised.",
+      "files": [],
+      "expectations": [
+        "States Art. 50(1) applies and the disclosure duty runs toward the third parties the agent contacts, not only the user",
+        "Cites the draft Commission Guidelines para. 28 agentic self-disclosure standard (disclose in every reasonably-foreseeable human interaction)",
+        "Applies the average-consumer obviousness test and concludes it is unlikely to be met for cold-contacted third parties",
+        "Recommends the agent self-identify as an AI at the start of each such interaction",
+        "Flags that the Act does not use the word 'agent' and that the Guidelines are DRAFT and non-binding (CJEU authoritative)",
+        "Recommends a web-check on whether the Guidelines have been finalised",
+        "WRONG-ANSWER REJECTION: does NOT conclude the duty is satisfied merely because the user knows they are using an AI",
+        "WRONG-ANSWER REJECTION: does NOT present the agentic self-disclosure reading as settled black-letter law",
+        "POST-CUTOFF CONTENT: references the draft Art. 50 Guidelines (8 May 2026) and the para. 28 agentic self-disclosure interpretation"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "translation-engine-in-scope",
+      "prompt": "We provide an AI machine-translation API — it takes a document in one language and returns it in another. We're not 'generating' new content, just translating existing text, so Article 50(2) marking doesn't apply to us, right? We place the API on the EU market under our own name.",
+      "expected_output": "Not right — a translation engine IS in scope of Art. 50(2). Role: provider. The draft Commission Guidelines (para. 54) expressly name 'a translation engine' as an in-scope single-purpose generative tool: Art. 50(2) captures any AI system generating or manipulating synthetic audio/image/video/text and is NOT limited to general-purpose models. Machine translation produces new synthetic text, so its outputs must be marked in a machine-readable format and detectable. The assistive-function / no-substantial-alteration exemption does not rescue it — that exemption is for trivial in-place fixes (spell-check, grammar) that preserve the user's own work, not for producing a new translated text. Under the Code route, free-form text over 200 tokens must be watermarked (the earlier 'provenance certificate' text route was dropped); detection may be restricted to verified expert users for text. Effective 2 August 2026 (or 2 December 2026 if the API was a legacy system on the market before 2 Aug 2026). Penalty band: EUR 15M / 3% (Art. 99(4)).",
+      "files": [],
+      "expectations": [
+        "Concludes AI machine translation IS in scope of Art. 50(2) (not out of scope)",
+        "Cites the draft Guidelines para. 54 (translation engine named as an in-scope single-purpose tool; 50(2) is not GPAI-specific)",
+        "Explains the assistive-function / no-substantial-alteration exemption does NOT apply because translation produces new synthetic text",
+        "References the Code's text-marking rule (watermark free-form text > 200 tokens; provenance-certificate route dropped)",
+        "WRONG-ANSWER REJECTION: does NOT treat AI translation as an out-of-scope 'language transfer' / assistive function",
+        "POST-CUTOFF CONTENT: references the draft Guidelines para. 54 in-scope translation example and/or the 200-token text-watermark rule"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "coding-assistant-source-code-exemption",
+      "prompt": "We build an AI coding assistant for professional developers. It generates source code (including inline comments and docstrings), and it can also generate standalone README files and marketing-style product descriptions on request. What are our Article 50 obligations for the code versus the other text it produces?",
+      "expected_output": "Split the outputs. Art. 50(2): the draft Guidelines (para. 64) EXEMPT source-code outputs — source code proper, including inline comments and docstrings that form part of the code artefact, is out of scope of the marking duty. But standalone documentation (README files, marketing-style product descriptions, natural-language explanations generated separately) is text in the ordinary sense and RE-ENTERS Art. 50(2), so those outputs need machine-readable marking (and, under the Code, watermarking of free-form text over 200 tokens). Design disclosures around that line rather than a blanket 'we only generate code' framing. Art. 50(1): for a developer-only assistant used by professional engineers who know they are using an AI tool, the interaction may be plausibly 'obvious', reducing the disclosure burden — but the boundary is fact-specific and this reading is from the draft Guidelines (non-binding). Effective 2 August 2026. Recommend confirming the source-code boundary against the final Guidelines / supervisory practice.",
+      "files": [],
+      "expectations": [
+        "States source-code output (incl. inline comments/docstrings) is EXEMPT from Art. 50(2) marking (Guidelines para. 64)",
+        "States standalone documentation (README, marketing copy, separately-generated NL explanations) RE-ENTERS Art. 50(2) and must be marked",
+        "Notes the developer-only assistant may be plausibly 'obvious' for Art. 50(1) purposes (fact-specific)",
+        "Flags that the source-code carve-out is from the DRAFT Guidelines and should be confirmed against the final text",
+        "WRONG-ANSWER REJECTION: does NOT claim all output is exempt just because it is a 'code tool'",
+        "POST-CUTOFF CONTENT: references the Guidelines para. 64 source-code exemption and its documentation boundary"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "non-high-risk-biometric-age-estimation",
+      "prompt": "Our retail chain uses an AI camera system that estimates shoppers' age range and gender to tailor in-store digital advertising. Our vendor confirmed it's screened out of the AI Act's high-risk category. So we don't have any Article 50 obligation, correct?",
+      "expected_output": "Incorrect — Art. 50(3) still applies. Role: deployer. First run the Art. 5 gate: inferring age range and gender for advertising is generally NOT a prohibited sensitive-characteristics categorisation under Art. 5(1)(g) (which targets race, political opinions, trade-union membership, religious/philosophical beliefs, sex life or sexual orientation) — so it is a permitted use (note: inferring ethnicity/race WOULD be prohibited). Because it is permitted, the Art. 50(3) notice duty is owed. Crucially, the draft Guidelines (para. 98) confirm 50(3) covers ALL biometric categorisation, INCLUDING systems outside the high-risk classification and applies in addition to any Annex III / Art. 5 analysis — so 'screened out of high-risk' does NOT remove the 50(3) obligation. You must inform the natural persons exposed to the system of its operation, and coordinate with GDPR (Art. 13/14 information duties; likely an Art. 35 DPIA for systematic monitoring of a public space). Effective 2 August 2026. Penalty band EUR 15M / 3%.",
+      "files": [],
+      "expectations": [
+        "Identifies role as deployer and that an Art. 50(3) notice IS owed",
+        "Runs the Art. 5 gate and concludes age/gender-for-ads is a permitted (non-sensitive) categorisation, while noting ethnicity/race would be prohibited under Art. 5(1)(g)",
+        "Cites that 50(3) covers all biometric categorisation including non-high-risk systems and applies additively (Guidelines para. 98) — 'screened out of high-risk' does not remove the duty",
+        "Requires informing exposed persons and coordinating with GDPR (Art. 13/14; DPIA where applicable)",
+        "WRONG-ANSWER REJECTION: does NOT conclude there is no Article 50 obligation because the system is not high-risk",
+        "POST-CUTOFF CONTENT: references the Guidelines para. 98 breadth point (all biometric categorisation, incl. non-high-risk)"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "workplace-emotion-recognition-prohibited",
+      "prompt": "We want to deploy an AI system that reads our call-centre employees' emotions from their voice in real time to score their 'engagement'. We'll put up a clear notice telling staff the system is running, to satisfy the Article 50(3) transparency duty. Is a notice enough?",
+      "expected_output": "No — a notice is not enough, because this use is PROHIBITED, not merely subject to transparency. Emotion recognition in the WORKPLACE is prohibited under Art. 5(1)(f) (the exceptions are narrow — medical or safety reasons — and employee 'engagement' scoring is neither). The Art. 5 prohibition governs: an Art. 50(3) notice CANNOT cure a prohibited practice. So the correct answer is that the system may not be deployed for this purpose at all, not that you add a disclosure. Note the fine band flips here: violating the Art. 5 prohibition sits in the TOP band — up to EUR 35,000,000 or 7% of worldwide annual turnover (Art. 99(3)) — which is higher than the Art. 50 band (EUR 15M / 3%). (Separately, the Digital Omnibus also added new Art. 5 prohibitions on non-consensual intimate/CSAM deepfakes — different area, same 'prohibition governs' logic.) Recommend qualified counsel before any deployment.",
+      "files": [],
+      "expectations": [
+        "Concludes a 50(3) notice is NOT sufficient because workplace emotion recognition is PROHIBITED under Art. 5(1)(f)",
+        "States the Art. 5 prohibition governs and a 50(3) notice cannot cure a prohibited use",
+        "Correctly applies the HIGHER fine band here (EUR 35M / 7%, Art. 99(3)) because this is an Art. 5 violation, not an Art. 50 breach",
+        "Notes the narrow medical/safety exceptions to 5(1)(f) and that engagement scoring does not qualify",
+        "WRONG-ANSWER REJECTION: does NOT advise that adding a 50(3) notice makes the deployment compliant",
+        "WRONG-ANSWER REJECTION: does NOT apply the EUR 15M / 3% Art. 50 band to the Art. 5 violation"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "pure-upscaling-out-of-scope",
+      "prompt": "Our photo app uses AI only to upscale resolution, reduce noise, and auto-correct colour and lighting on the user's own real photographs. No generation, no faces added or swapped. Do we have to apply Article 50(2) machine-readable marking to the output?",
+      "expected_output": "Generally no — pure enhancement of the user's own genuine content falls within the assistive-function / no-substantial-alteration exemption to Art. 50(2). The draft Guidelines (para. 109) treat AI-supported colour correction, noise reduction, lighting adjustment, re-scaling and file compression as typically NOT turning content into synthetic/deepfake content, because they improve rather than generate and do not substantially alter the input data provided by the deployer or its semantics. So marking is not required for these operations. Boundaries to watch: the moment the app does something GENERATIVE — inpainting/generative fill of missing regions, adding or swapping a face, synthesising new background — that output is in scope and must be marked (50(2)), and if it produces a deepfake the deployer also owes 50(4) labelling. Substantive AI editing of journalistic images can also cross the line. So the exemption is operation-specific, not an app-wide free pass.",
+      "files": [],
+      "expectations": [
+        "Concludes pure upscaling/denoise/colour-correction is OUT of scope of 50(2) via the assistive-function / no-substantial-alteration exemption",
+        "Cites that minor technical edits (colour, noise, lighting, rescale, compression) typically do not create synthetic/deepfake content (Guidelines para. 109)",
+        "Flags the boundary: generative operations (inpainting, face swap, synthetic background) ARE in scope and a face-swap deepfake also triggers 50(4)",
+        "WRONG-ANSWER REJECTION: does NOT require machine-readable marking for pure enhancement of genuine content",
+        "POST-CUTOFF CONTENT: references the Guidelines para. 109 minor-technical-edits breathing room"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "platform-mere-distribution-not-deployer",
+      "prompt": "We run a social media platform. Our users upload AI-generated videos, some of which are deepfakes. Are we, as the platform, the 'deployer' who has to label those deepfakes under Article 50(4)?",
+      "expected_output": "No — a platform whose role is limited to disseminating/transmitting third-party AI content is NOT a deployer within the meaning of Art. 50. The draft Guidelines (para. 12) confirm that actors limited to distribution or transmission (including online platforms) are not deployers; the 50(4) labelling duty stays with the DEPLOYER — the user/actor with authority over the AI's use who publishes the deepfake. So the obligation runs to your uploading users, not to you as mere host. Caveats: you are encouraged (and, if a Code signatory, committed) to help PRESERVE markings as content travels, and other regimes may bite (e.g. DSA obligations, the Code's uniformity/contractual expectations). If the platform itself generates or materially shapes the content under its own authority, that analysis changes — then it could be a deployer. This 'mere distribution' reading is from the draft Guidelines (non-binding).",
+      "files": [],
+      "expectations": [
+        "Concludes the platform is NOT a deployer for third-party content it merely hosts/transmits (Guidelines para. 12)",
+        "States the 50(4) labelling duty stays with the deploying user (the actor with authority over the AI's use)",
+        "Notes the platform is nonetheless encouraged to preserve markings and that other regimes (e.g. DSA) may apply",
+        "Notes the analysis changes if the platform itself generates/materially shapes content under its own authority",
+        "WRONG-ANSWER REJECTION: does NOT label the platform a deployer merely for hosting/transmitting third-party AI content",
+        "POST-CUTOFF CONTENT: references the Guidelines para. 12 'mere distribution' finding"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "public-interest-text-editorial-control",
+      "prompt": "We're an online news outlet. We use AI to draft some articles on matters of public interest, but every AI-drafted piece is reviewed and signed off by a named human editor who takes editorial responsibility before we publish. Do we have to slap an 'AI-generated' label on those articles under Article 50(4)?",
+      "expected_output": "Likely no label is required for the published text IF the human-review/editorial-control exception is properly met — but there are conditions. Art. 50(4)'s text limb covers AI-generated/manipulated text published to inform the public on matters of public interest; the exception applies where the content has undergone human review or editorial control and a natural or legal person holds editorial responsibility for the publication. Your named-editor sign-off can satisfy this. Under the Code (Section 2, Commitment 4), a deployer that is NOT an editorially regulated media service provider must put a POLICY in place naming the person with editorial responsibility (name, role, contact) and publish those contact details; if you are a media service provider under the European Media Freedom Act, you may rely on your existing editorial procedures. Note the exception is limited to TEXT — it does not extend to audio/image/video deepfakes, which must still be labelled. It also does not touch Art. 50(2): if a provider's generative tool produced the text, that provider's machine-readable marking duty is unaffected. This is a draft-Guidelines/Code reading; the exception is construed narrowly.",
+      "files": [],
+      "expectations": [
+        "Concludes the 50(4) text labelling duty can be dis-applied where genuine human review / editorial control with a responsible person is in place",
+        "States the exception is limited to TEXT and does not cover audio/image/video deepfakes",
+        "References the Code Commitment 4 editorial-responsibility policy (name/role/contact, published) and the European Media Freedom Act carve-out for media service providers",
+        "Notes the exception does not affect the provider's separate Art. 50(2) marking duty",
+        "WRONG-ANSWER REJECTION: does NOT claim the exception also exempts audio/image/video deepfakes",
+        "POST-CUTOFF CONTENT: references the Code Section 2 Commitment 4 editorial-responsibility requirements"
+      ]
+    }
+  ]
+}

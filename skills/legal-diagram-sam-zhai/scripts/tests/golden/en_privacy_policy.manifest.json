@@ -1,0 +1,5117 @@
+{
+  "extraction_result": {
+    "matter_name": "en_privacy_policy",
+    "matter_type": "privacy",
+    "input_source": "en_privacy_policy.md",
+    "truncated": false,
+    "extraction_warnings": [],
+    "signal_map": {
+      "extractor.events.dated_event": 0.42,
+      "extractor": 0.84,
+      "extractor.parties.privacy_operator": 0.8,
+      "extractor.legal_authorities.act_citation": 0.8,
+      "extractor.conditions.trigger_condition": 0.49,
+      "extractor.communications.notice_communication": 0.66,
+      "extractor.parties.service_provider": 0.78,
+      "extractor.obligations.positive_obligation": 0.84,
+      "extractor.conditions.dependency": 0.51,
+      "extractor.decision_points.veto_right": 0.66,
+      "extractor.relationships.control_authority": 0.63,
+      "extractor.controls.privacy_control": 0.8,
+      "extractor.obligations.continuing_duty": 0.81,
+      "extractor.conditions.default_remedy": 0.58,
+      "extractor.deadlines.relative_deadline": 0.64
+    },
+    "hierarchy": [
+      {
+        "id": "H-privacypolicy",
+        "label": "Privacy Policy",
+        "parent": null,
+        "depth": 0,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-privacypolicy-dataflowsandthirdpartytransfers",
+        "label": "Data Flows and Third-Party Transfers",
+        "parent": "H-privacypolicy",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-privacypolicy-legalbasesandconsent",
+        "label": "Legal Bases and Consent",
+        "parent": "H-privacypolicy",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-privacypolicy-securitycontrols",
+        "label": "Security Controls",
+        "parent": "H-privacypolicy",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-privacypolicy-retention",
+        "label": "Retention",
+        "parent": "H-privacypolicy",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-privacypolicy-individualrights",
+        "label": "Individual Rights",
+        "parent": "H-privacypolicy",
+        "depth": 1,
+        "source": "deterministic"
+      }
+    ],
+    "extraction_hints": [
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "**Effective Date:** March 1, 2026",
+        "confidence": 0.42,
+        "anchor": "§1#1",
+        "span": [
+          1,
+          1
+        ],
+        "context_heading": "Privacy Policy",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Example Digital Services Inc. collects the following categories of personal information from users of our platform",
+        "confidence": 0.48,
+        "anchor": "§2#1",
+        "span": [
+          5,
+          5
+        ],
+        "context_heading": "Privacy Policy > Information We Collect",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "**Account data**: name, email address, password hash, account creation date",
+        "confidence": 0.66,
+        "anchor": "§2#2",
+        "span": [
+          6,
+          6
+        ],
+        "context_heading": "Privacy Policy > Information We Collect",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "**Communications data**: customer support tickets, email correspondence",
+        "confidence": 0.66,
+        "anchor": "§2#5",
+        "span": [
+          9,
+          9
+        ],
+        "context_heading": "Privacy Policy > Information We Collect",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "We collect personal information directly from users upon account registration and indirectly through automated tracking technologies on our platform",
+        "confidence": 0.42,
+        "anchor": "§2#6",
+        "span": [
+          10,
+          10
+        ],
+        "context_heading": "Privacy Policy > Information We Collect",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Example Digital Services Inc. relies on the following legal bases for processing personal information",
+        "confidence": 0.48,
+        "anchor": "§3#1",
+        "span": [
+          12,
+          12
+        ],
+        "context_heading": "Privacy Policy > Legal Bases and Consent",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "dependency",
+        "suggested_field": "conditions",
+        "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+        "confidence": 0.44,
+        "anchor": "§3#4",
+        "span": [
+          15,
+          15
+        ],
+        "context_heading": "Privacy Policy > Legal Bases and Consent",
+        "docx_style": null,
+        "matched_signals": [
+          "dependency"
+        ]
+      },
+      {
+        "hint_type": "veto_right",
+        "suggested_field": "decision_points",
+        "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+        "confidence": 0.66,
+        "anchor": "§3#4",
+        "span": [
+          15,
+          15
+        ],
+        "context_heading": "Privacy Policy > Legal Bases and Consent",
+        "docx_style": null,
+        "matched_signals": [
+          "veto_right"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "Users may withdraw consent to marketing communications at any time by clicking the unsubscribe link in any marketing email or by contacting privacy@example.org",
+        "confidence": 0.66,
+        "anchor": "§3#5",
+        "span": [
+          16,
+          16
+        ],
+        "context_heading": "Privacy Policy > Legal Bases and Consent",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Example Digital Services Inc. uses collected personal information for the following purposes",
+        "confidence": 0.48,
+        "anchor": "§4#1",
+        "span": [
+          18,
+          18
+        ],
+        "context_heading": "Privacy Policy > How We Use Personal Information",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "To send marketing communications where the user has given express consent",
+        "confidence": 0.49,
+        "anchor": "§4#6",
+        "span": [
+          23,
+          23
+        ],
+        "context_heading": "Privacy Policy > How We Use Personal Information",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Example Digital Services Inc. transfers personal information to the following third parties",
+        "confidence": 0.48,
+        "anchor": "§5#1",
+        "span": [
+          26,
+          26
+        ],
+        "context_heading": "Privacy Policy > Data Flows and Third-Party Transfers",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "dependency",
+        "suggested_field": "conditions",
+        "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+        "confidence": 0.44,
+        "anchor": "§5#6",
+        "span": [
+          31,
+          31
+        ],
+        "context_heading": "Privacy Policy > Data Flows and Third-Party Transfers",
+        "docx_style": null,
+        "matched_signals": [
+          "dependency"
+        ]
+      },
+      {
+        "hint_type": "control_authority",
+        "suggested_field": "relationships",
+        "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+        "confidence": 0.58,
+        "anchor": "§5#6",
+        "span": [
+          31,
+          31
+        ],
+        "context_heading": "Privacy Policy > Data Flows and Third-Party Transfers",
+        "docx_style": null,
+        "matched_signals": [
+          "control_authority_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+        "confidence": 0.48,
+        "anchor": "§6#1",
+        "span": [
+          33,
+          33
+        ],
+        "context_heading": "Privacy Policy > Security Controls",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "control_authority",
+        "suggested_field": "relationships",
+        "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+        "confidence": 0.63,
+        "anchor": "§6#1",
+        "span": [
+          33,
+          33
+        ],
+        "context_heading": "Privacy Policy > Security Controls",
+        "docx_style": null,
+        "matched_signals": [
+          "control_authority_signal",
+          "heading_prior"
+        ]
+      },
+      {
+        "hint_type": "control_authority",
+        "suggested_field": "relationships",
+        "snippet": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication",
+        "confidence": 0.63,
+        "anchor": "§6#3",
+        "span": [
+          35,
+          35
+        ],
+        "context_heading": "Privacy Policy > Security Controls",
+        "docx_style": null,
+        "matched_signals": [
+          "control_authority_signal",
+          "heading_prior"
+        ]
+      },
+      {
+        "hint_type": "dependency",
+        "suggested_field": "conditions",
+        "snippet": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+        "confidence": 0.51,
+        "anchor": "§6#5",
+        "span": [
+          37,
+          37
+        ],
+        "context_heading": "Privacy Policy > Security Controls",
+        "docx_style": null,
+        "matched_signals": [
+          "dependency",
+          "legal_action_object"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+        "confidence": 0.58,
+        "anchor": "§6#6",
+        "span": [
+          38,
+          38
+        ],
+        "context_heading": "Privacy Policy > Security Controls",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Account data is retained for the duration of the user's account and for 7 years following account closure",
+        "confidence": 0.48,
+        "anchor": "§7#1",
+        "span": [
+          40,
+          40
+        ],
+        "context_heading": "Privacy Policy > Retention",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "relative_deadline",
+        "suggested_field": "deadlines",
+        "snippet": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+        "confidence": 0.64,
+        "anchor": "§8#1",
+        "span": [
+          42,
+          42
+        ],
+        "context_heading": "Privacy Policy > Individual Rights",
+        "docx_style": null,
+        "matched_signals": [
+          "relative_deadline",
+          "deadline_signal",
+          "trigger_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "Email: privacy@example.org",
+        "confidence": 0.66,
+        "anchor": "§9#1",
+        "span": [
+          45,
+          45
+        ],
+        "context_heading": "Privacy Policy > Contact",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "name": "Example Digital Services Inc",
+        "role": "operator",
+        "type": "party"
+      },
+      {
+        "name": "Example Payments Corp",
+        "role": "service provider",
+        "type": "party"
+      },
+      {
+        "name": "Stacklayer Cloud Inc",
+        "role": "service provider",
+        "type": "party"
+      },
+      {
+        "name": "Insightful Analytics Ltd",
+        "role": "service provider",
+        "type": "party"
+      },
+      {
+        "name": "Meridian Support Systems Inc",
+        "role": "service provider",
+        "type": "party"
+      }
+    ],
+    "entities": [],
+    "events": [],
+    "deadlines": [],
+    "phases": [],
+    "tasks": [],
+    "obligations": [
+      {
+        "id": "OBL-0001",
+        "description": "Users must expressly consent to the collection and use of their personal information for marketing communications by checking an opt-in box at registration",
+        "party": "**Consent**: Users",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0002",
+        "description": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+        "party": "Employees with access to personal information",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0003",
+        "description": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+        "party": "We",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0004",
+        "description": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+        "party": "Example Digital Services Inc",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": "within 30 days of"
+      }
+    ],
+    "controls": [
+      {
+        "id": "CTRL-0001",
+        "description": "All personal information is encrypted at rest using AES-256 and in transit using TLS 1.3",
+        "obligation_id": "unlinked",
+        "owner": null,
+        "evidence_documents": [],
+        "audit_status": null,
+        "audit_date": null
+      },
+      {
+        "id": "CTRL-0002",
+        "description": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication",
+        "obligation_id": "unlinked",
+        "owner": null,
+        "evidence_documents": [],
+        "audit_status": null,
+        "audit_date": null
+      },
+      {
+        "id": "CTRL-0003",
+        "description": "Our platform undergoes annual penetration testing conducted by an independent third party",
+        "obligation_id": "unlinked",
+        "owner": null,
+        "evidence_documents": [],
+        "audit_status": null,
+        "audit_date": null
+      },
+      {
+        "id": "CTRL-0004",
+        "description": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+        "obligation_id": "unlinked",
+        "owner": null,
+        "evidence_documents": [],
+        "audit_status": null,
+        "audit_date": null
+      },
+      {
+        "id": "CTRL-0005",
+        "description": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+        "obligation_id": "unlinked",
+        "owner": null,
+        "evidence_documents": [],
+        "audit_status": null,
+        "audit_date": null
+      }
+    ],
+    "conditions": [],
+    "relationships": [],
+    "ownership_links": [],
+    "states": [],
+    "transitions": [],
+    "decision_points": [],
+    "process_steps": [],
+    "investigation_steps": [],
+    "communications": [],
+    "concepts": [],
+    "risk_items": [],
+    "negotiation_issues": [],
+    "transfers": [],
+    "claim_classes": [],
+    "data_flows": [],
+    "witnesses": [],
+    "legal_authorities": [
+      {
+        "citation": "Personal Information Protection and Electronic Documents Act",
+        "authority_type": "statute",
+        "jurisdiction": null,
+        "hierarchy_level": null,
+        "cites": [],
+        "anchor": null
+      },
+      {
+        "citation": "Income Tax Act (Canada)",
+        "authority_type": "statute",
+        "jurisdiction": null,
+        "hierarchy_level": null,
+        "cites": [],
+        "anchor": null
+      }
+    ],
+    "ip_assets": [],
+    "documents": []
+  },
+  "extraction_hints": [
+    {
+      "id": "H0",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "**Effective Date:** March 1, 2026",
+      "confidence": 0.42,
+      "anchor": "§1#1",
+      "context_heading": "Privacy Policy"
+    },
+    {
+      "id": "H1",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Example Digital Services Inc. collects the following categories of personal information from users of our platform",
+      "confidence": 0.48,
+      "anchor": "§2#1",
+      "context_heading": "Privacy Policy > Information We Collect"
+    },
+    {
+      "id": "H2",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "**Account data**: name, email address, password hash, account creation date",
+      "confidence": 0.66,
+      "anchor": "§2#2",
+      "context_heading": "Privacy Policy > Information We Collect"
+    },
+    {
+      "id": "H3",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "**Communications data**: customer support tickets, email correspondence",
+      "confidence": 0.66,
+      "anchor": "§2#5",
+      "context_heading": "Privacy Policy > Information We Collect"
+    },
+    {
+      "id": "H4",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "We collect personal information directly from users upon account registration and indirectly through automated tracking technologies on our platform",
+      "confidence": 0.42,
+      "anchor": "§2#6",
+      "context_heading": "Privacy Policy > Information We Collect"
+    },
+    {
+      "id": "H5",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Example Digital Services Inc. relies on the following legal bases for processing personal information",
+      "confidence": 0.48,
+      "anchor": "§3#1",
+      "context_heading": "Privacy Policy > Legal Bases and Consent"
+    },
+    {
+      "id": "H6",
+      "hint_type": "dependency",
+      "suggested_field": "conditions",
+      "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+      "confidence": 0.44,
+      "anchor": "§3#4",
+      "context_heading": "Privacy Policy > Legal Bases and Consent"
+    },
+    {
+      "id": "H7",
+      "hint_type": "veto_right",
+      "suggested_field": "decision_points",
+      "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+      "confidence": 0.66,
+      "anchor": "§3#4",
+      "context_heading": "Privacy Policy > Legal Bases and Consent"
+    },
+    {
+      "id": "H8",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "Users may withdraw consent to marketing communications at any time by clicking the unsubscribe link in any marketing email or by contacting privacy@example.org",
+      "confidence": 0.66,
+      "anchor": "§3#5",
+      "context_heading": "Privacy Policy > Legal Bases and Consent"
+    },
+    {
+      "id": "H9",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Example Digital Services Inc. uses collected personal information for the following purposes",
+      "confidence": 0.48,
+      "anchor": "§4#1",
+      "context_heading": "Privacy Policy > How We Use Personal Information"
+    },
+    {
+      "id": "H10",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "To send marketing communications where the user has given express consent",
+      "confidence": 0.49,
+      "anchor": "§4#6",
+      "context_heading": "Privacy Policy > How We Use Personal Information"
+    },
+    {
+      "id": "H11",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Example Digital Services Inc. transfers personal information to the following third parties",
+      "confidence": 0.48,
+      "anchor": "§5#1",
+      "context_heading": "Privacy Policy > Data Flows and Third-Party Transfers"
+    },
+    {
+      "id": "H12",
+      "hint_type": "dependency",
+      "suggested_field": "conditions",
+      "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+      "confidence": 0.44,
+      "anchor": "§5#6",
+      "context_heading": "Privacy Policy > Data Flows and Third-Party Transfers"
+    },
+    {
+      "id": "H13",
+      "hint_type": "control_authority",
+      "suggested_field": "relationships",
+      "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+      "confidence": 0.58,
+      "anchor": "§5#6",
+      "context_heading": "Privacy Policy > Data Flows and Third-Party Transfers"
+    },
+    {
+      "id": "H14",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+      "confidence": 0.48,
+      "anchor": "§6#1",
+      "context_heading": "Privacy Policy > Security Controls"
+    },
+    {
+      "id": "H15",
+      "hint_type": "control_authority",
+      "suggested_field": "relationships",
+      "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+      "confidence": 0.63,
+      "anchor": "§6#1",
+      "context_heading": "Privacy Policy > Security Controls"
+    },
+    {
+      "id": "H16",
+      "hint_type": "control_authority",
+      "suggested_field": "relationships",
+      "snippet": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication",
+      "confidence": 0.63,
+      "anchor": "§6#3",
+      "context_heading": "Privacy Policy > Security Controls"
+    },
+    {
+      "id": "H17",
+      "hint_type": "dependency",
+      "suggested_field": "conditions",
+      "snippet": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+      "confidence": 0.51,
+      "anchor": "§6#5",
+      "context_heading": "Privacy Policy > Security Controls"
+    },
+    {
+      "id": "H18",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+      "confidence": 0.58,
+      "anchor": "§6#6",
+      "context_heading": "Privacy Policy > Security Controls"
+    },
+    {
+      "id": "H19",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Account data is retained for the duration of the user's account and for 7 years following account closure",
+      "confidence": 0.48,
+      "anchor": "§7#1",
+      "context_heading": "Privacy Policy > Retention"
+    },
+    {
+      "id": "H20",
+      "hint_type": "relative_deadline",
+      "suggested_field": "deadlines",
+      "snippet": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+      "confidence": 0.64,
+      "anchor": "§8#1",
+      "context_heading": "Privacy Policy > Individual Rights"
+    },
+    {
+      "id": "H21",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "Email: privacy@example.org",
+      "confidence": 0.66,
+      "anchor": "§9#1",
+      "context_heading": "Privacy Policy > Contact"
+    }
+  ],
+  "coverage": {
+    "populated_fields": [
+      "parties",
+      "obligations",
+      "controls",
+      "legal_authorities"
+    ],
+    "hint_only_fields": [
+      "communications",
+      "conditions",
+      "deadlines",
+      "decision_points",
+      "events",
+      "relationships"
+    ],
+    "absent_fields": [
+      "entities",
+      "phases",
+      "tasks",
+      "ownership_links",
+      "states",
+      "transitions",
+      "process_steps",
+      "investigation_steps",
+      "concepts",
+      "risk_items",
+      "negotiation_issues",
+      "transfers",
+      "claim_classes",
+      "data_flows",
+      "witnesses",
+      "ip_assets",
+      "documents"
+    ],
+    "signal_map": {
+      "extractor.events.dated_event": 0.42,
+      "extractor": 0.84,
+      "extractor.parties.privacy_operator": 0.8,
+      "extractor.legal_authorities.act_citation": 0.8,
+      "extractor.conditions.trigger_condition": 0.49,
+      "extractor.communications.notice_communication": 0.66,
+      "extractor.parties.service_provider": 0.78,
+      "extractor.obligations.positive_obligation": 0.84,
+      "extractor.conditions.dependency": 0.51,
+      "extractor.decision_points.veto_right": 0.66,
+      "extractor.relationships.control_authority": 0.63,
+      "extractor.controls.privacy_control": 0.8,
+      "extractor.obligations.continuing_duty": 0.81,
+      "extractor.conditions.default_remedy": 0.58,
+      "extractor.deadlines.relative_deadline": 0.64
+    }
+  },
+  "matter_type_evidence": {
+    "candidates": {
+      "litigation": 0.3,
+      "compliance": 0.3
+    },
+    "signals": []
+  },
+  "candidate_manifest": {
+    "schema_version": "legal-diagram-candidates",
+    "structure_metrics": {
+      "headings": 9,
+      "lists": 22,
+      "tables": 0,
+      "paragraphs": 15,
+      "blocks": 46,
+      "table_rows": 0
+    },
+    "warning_codes": [],
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "**Effective Date:** March 1, 2026",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            33
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0001",
+        "snippet": "This Privacy Policy describes how Example Digital Services Inc. collects, uses, discloses, and protects personal information in accordance with the Personal Information Protection and Electronic Documents Act, S.C",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "3",
+          "anchor": "§1#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            216
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.8,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "This Privacy Policy describes how Example Digital Services Inc. collects, uses, discloses, and protects personal information in accordance with the Personal Information Protection and Electronic Documents Act, S.C",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "3",
+          "anchor": "§1#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            216
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy"
+        ],
+        "candidate_fields": [
+          "legal_authorities"
+        ],
+        "confidence": 0.8,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "Example Digital Services Inc. collects the following categories of personal information from users of our platform",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "5",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            117
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0004",
+        "snippet": "**Account data**: name, email address, password hash, account creation date",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "6",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            76
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "**Payment data**: billing address, last four digits of payment card (full card data processed by our PCI-DSS certified payment processor, Example Payments Corp.)",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "8",
+          "anchor": "§2#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0006",
+        "snippet": "**Communications data**: customer support tickets, email correspondence",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "9",
+          "anchor": "§2#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            72
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "We collect personal information directly from users upon account registration and indirectly through automated tracking technologies on our platform",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "10",
+          "anchor": "§2#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "9",
+          "11"
+        ]
+      },
+      {
+        "id": "E0008",
+        "snippet": "Example Digital Services Inc. relies on the following legal bases for processing personal information",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "12",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            104
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0009",
+        "snippet": "**Consent**: Users must expressly consent to the collection and use of their personal information for marketing communications by checking an opt-in box at registration",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "13",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            169
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "12",
+          "14"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "15",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            155
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0011",
+        "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "15",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            155
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "decision_points"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "Users may withdraw consent to marketing communications at any time by clicking the unsubscribe link in any marketing email or by contacting privacy@example.org",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "16",
+          "anchor": "§3#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "Example Digital Services Inc. uses collected personal information for the following purposes",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "18",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "How We Use Personal Information"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            95
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "How We Use Personal Information"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "To send marketing communications where the user has given express consent",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "23",
+          "anchor": "§4#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "How We Use Personal Information"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            74
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "How We Use Personal Information"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.49,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "Example Digital Services Inc. transfers personal information to the following third parties",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "26",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0016",
+        "snippet": "**Example Payments Corp.**: receives payment data for payment processing",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "27",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            65
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "26",
+          "28"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "**Stacklayer Cloud Inc.**: hosts our platform infrastructure and database servers in Canada",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "28",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            92
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "27",
+          "29"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "**Insightful Analytics Ltd.**: receives pseudonymised usage data for aggregate analytics",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "29",
+          "anchor": "§5#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            89
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "28",
+          "30"
+        ]
+      },
+      {
+        "id": "E0019",
+        "snippet": "**Meridian Support Systems Inc.**: receives communications data for customer support ticketing",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "30",
+          "anchor": "§5#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            95
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "29",
+          "31"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "31",
+          "anchor": "§5#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            240
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "31",
+          "anchor": "§5#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            240
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "33",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "32",
+          "34"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "33",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.63,
+        "neighboring_context_ids": [
+          "32",
+          "34"
+        ]
+      },
+      {
+        "id": "E0024",
+        "snippet": "All personal information is encrypted at rest using AES-256 and in transit using TLS 1.3",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "34",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            89
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "controls"
+        ],
+        "confidence": 0.73,
+        "neighboring_context_ids": [
+          "33",
+          "35"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "35",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "controls"
+        ],
+        "confidence": 0.73,
+        "neighboring_context_ids": [
+          "34",
+          "36"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "35",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.63,
+        "neighboring_context_ids": [
+          "34",
+          "36"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "Our platform undergoes annual penetration testing conducted by an independent third party",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "36",
+          "anchor": "§6#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            90
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "controls"
+        ],
+        "confidence": 0.73,
+        "neighboring_context_ids": [
+          "35",
+          "37"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "37",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.7,
+        "neighboring_context_ids": [
+          "36",
+          "38"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "37",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.51,
+        "neighboring_context_ids": [
+          "36",
+          "38"
+        ]
+      },
+      {
+        "id": "E0030",
+        "snippet": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "37",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "controls"
+        ],
+        "confidence": 0.73,
+        "neighboring_context_ids": [
+          "36",
+          "38"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "38",
+          "anchor": "§6#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            165
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.81,
+        "neighboring_context_ids": [
+          "37",
+          "39"
+        ]
+      },
+      {
+        "id": "E0032",
+        "snippet": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "38",
+          "anchor": "§6#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            165
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "controls"
+        ],
+        "confidence": 0.8,
+        "neighboring_context_ids": [
+          "37",
+          "39"
+        ]
+      },
+      {
+        "id": "E0033",
+        "snippet": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "38",
+          "anchor": "§6#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            165
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "37",
+          "39"
+        ]
+      },
+      {
+        "id": "E0034",
+        "snippet": "Account data is retained for the duration of the user's account and for 7 years following account closure",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "40",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Retention"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            269
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Retention"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "39",
+          "41"
+        ]
+      },
+      {
+        "id": "E0035",
+        "snippet": "Payment records are retained for 10 years as required by the Income Tax Act (Canada)",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "40",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Retention"
+          ],
+          "table_coords": null,
+          "char_span": [
+            270,
+            355
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Retention"
+        ],
+        "candidate_fields": [
+          "legal_authorities"
+        ],
+        "confidence": 0.8,
+        "neighboring_context_ids": [
+          "39",
+          "41"
+        ]
+      },
+      {
+        "id": "E0036",
+        "snippet": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "42",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Individual Rights"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            252
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Individual Rights"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.84,
+        "neighboring_context_ids": [
+          "41",
+          "43"
+        ]
+      },
+      {
+        "id": "E0037",
+        "snippet": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "42",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Individual Rights"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            252
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Individual Rights"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.64,
+        "neighboring_context_ids": [
+          "41",
+          "43"
+        ]
+      },
+      {
+        "id": "E0038",
+        "snippet": "Email: privacy@example.org",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "45",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Contact"
+          ],
+          "table_coords": null,
+          "char_span": [
+            115,
+            150
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Contact"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "44",
+          "46"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "id": "C0000",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "March 1, 2026",
+          "description": "**Effective Date:** March 1, 2026"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0000"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            33
+          ]
+        }
+      },
+      {
+        "id": "C0001",
+        "target_field": "parties",
+        "frame_type": "privacy_operator",
+        "normalized_value": {
+          "name": "Example Digital Services Inc",
+          "role": "operator",
+          "type": "party"
+        },
+        "signals": [
+          "privacy_operator",
+          "defined_term"
+        ],
+        "anti_signals": [],
+        "confidence": 0.8,
+        "evidence_ids": [
+          "E0001"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "3",
+          "anchor": "§1#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            216
+          ]
+        }
+      },
+      {
+        "id": "C0002",
+        "target_field": "legal_authorities",
+        "frame_type": "act_citation",
+        "normalized_value": {
+          "citation": "Personal Information Protection and Electronic Documents Act",
+          "authority_type": "statute",
+          "jurisdiction": null
+        },
+        "signals": [
+          "act_citation",
+          "citation_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.8,
+        "evidence_ids": [
+          "E0002"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "3",
+          "anchor": "§1#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            216
+          ]
+        }
+      },
+      {
+        "id": "C0003",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Example Digital Services Inc. collects the following categories of personal information from users of our platform",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0003"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "5",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            117
+          ]
+        }
+      },
+      {
+        "id": "C0004",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "**Account data**: name, email address, password hash, account creation date",
+          "delivery_method": "email"
+        },
+        "signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0004"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "6",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            76
+          ]
+        }
+      },
+      {
+        "id": "C0016",
+        "target_field": "parties",
+        "frame_type": "service_provider",
+        "normalized_value": {
+          "name": "Example Payments Corp",
+          "role": "service provider",
+          "type": "party"
+        },
+        "signals": [
+          "service_provider"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0005",
+          "E0016"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "27",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            65
+          ]
+        }
+      },
+      {
+        "id": "C0006",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "**Communications data**: customer support tickets, email correspondence",
+          "delivery_method": "email"
+        },
+        "signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0006"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "9",
+          "anchor": "§2#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            72
+          ]
+        }
+      },
+      {
+        "id": "C0007",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "We collect personal information directly from users upon account registration and indirectly through automated tracking technologies on our platform",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0007"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "10",
+          "anchor": "§2#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        }
+      },
+      {
+        "id": "C0008",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Example Digital Services Inc. relies on the following legal bases for processing personal information",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0008"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "12",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            104
+          ]
+        }
+      },
+      {
+        "id": "C0009",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "**Consent**: Users",
+          "description": "Users must expressly consent to the collection and use of their personal information for marketing communications by checking an opt-in box at registration",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0009"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "13",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            169
+          ]
+        }
+      },
+      {
+        "id": "C0010",
+        "target_field": "conditions",
+        "frame_type": "dependency",
+        "normalized_value": {
+          "description": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+          "responsible_party": null
+        },
+        "signals": [
+          "dependency"
+        ],
+        "anti_signals": [],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0010"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "15",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            155
+          ]
+        }
+      },
+      {
+        "id": "C0011",
+        "target_field": "decision_points",
+        "frame_type": "veto_right",
+        "normalized_value": {
+          "question": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+          "yes_path": "permitted/approved",
+          "no_path": "blocked/not approved"
+        },
+        "signals": [
+          "veto_right"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0011"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "15",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            155
+          ]
+        }
+      },
+      {
+        "id": "C0012",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "Users may withdraw consent to marketing communications at any time by clicking the unsubscribe link in any marketing email or by contacting privacy@example.org",
+          "delivery_method": "email"
+        },
+        "signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0012"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "16",
+          "anchor": "§3#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0013",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Example Digital Services Inc. uses collected personal information for the following purposes",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0013"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "18",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "How We Use Personal Information"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            95
+          ]
+        }
+      },
+      {
+        "id": "C0014",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "To send marketing communications where the user has given express consent",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.49,
+        "evidence_ids": [
+          "E0014"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "23",
+          "anchor": "§4#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "How We Use Personal Information"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            74
+          ]
+        }
+      },
+      {
+        "id": "C0015",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Example Digital Services Inc. transfers personal information to the following third parties",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0015"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "26",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        }
+      },
+      {
+        "id": "C0017",
+        "target_field": "parties",
+        "frame_type": "service_provider",
+        "normalized_value": {
+          "name": "Stacklayer Cloud Inc",
+          "role": "service provider",
+          "type": "party"
+        },
+        "signals": [
+          "service_provider"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0017"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "28",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            92
+          ]
+        }
+      },
+      {
+        "id": "C0018",
+        "target_field": "parties",
+        "frame_type": "service_provider",
+        "normalized_value": {
+          "name": "Insightful Analytics Ltd",
+          "role": "service provider",
+          "type": "party"
+        },
+        "signals": [
+          "service_provider"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0018"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "29",
+          "anchor": "§5#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            89
+          ]
+        }
+      },
+      {
+        "id": "C0019",
+        "target_field": "parties",
+        "frame_type": "service_provider",
+        "normalized_value": {
+          "name": "Meridian Support Systems Inc",
+          "role": "service provider",
+          "type": "party"
+        },
+        "signals": [
+          "service_provider"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0019"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "30",
+          "anchor": "§5#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            95
+          ]
+        }
+      },
+      {
+        "id": "C0020",
+        "target_field": "conditions",
+        "frame_type": "dependency",
+        "normalized_value": {
+          "description": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+          "responsible_party": null
+        },
+        "signals": [
+          "dependency"
+        ],
+        "anti_signals": [],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0020"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "31",
+          "anchor": "§5#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            240
+          ]
+        }
+      },
+      {
+        "id": "C0021",
+        "target_field": "relationships",
+        "frame_type": "control_authority",
+        "normalized_value": {
+          "from_entity": "unspecified",
+          "to_entity": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc",
+          "type": "control_or_authority",
+          "description": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements"
+        },
+        "signals": [
+          "control_authority_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0021"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "31",
+          "anchor": "§5#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            240
+          ]
+        }
+      },
+      {
+        "id": "C0022",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Example Digital Services Inc. maintains the following technical and organizational controls",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0022"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "33",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        }
+      },
+      {
+        "id": "C0023",
+        "target_field": "relationships",
+        "frame_type": "control_authority",
+        "normalized_value": {
+          "from_entity": "unspecified",
+          "to_entity": "Example Digital Services Inc",
+          "type": "control_or_authority",
+          "description": "Example Digital Services Inc. maintains the following technical and organizational controls"
+        },
+        "signals": [
+          "control_authority_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.63,
+        "evidence_ids": [
+          "E0023"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "33",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        }
+      },
+      {
+        "id": "C0024",
+        "target_field": "controls",
+        "frame_type": "privacy_control",
+        "normalized_value": {
+          "description": "All personal information is encrypted at rest using AES-256 and in transit using TLS 1.3",
+          "owner": null,
+          "obligation_id": "unlinked",
+          "evidence_documents": []
+        },
+        "signals": [
+          "privacy_control",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.73,
+        "evidence_ids": [
+          "E0024"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "34",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            89
+          ]
+        }
+      },
+      {
+        "id": "C0025",
+        "target_field": "controls",
+        "frame_type": "privacy_control",
+        "normalized_value": {
+          "description": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication",
+          "owner": null,
+          "obligation_id": "unlinked",
+          "evidence_documents": []
+        },
+        "signals": [
+          "privacy_control",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.73,
+        "evidence_ids": [
+          "E0025"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "35",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        }
+      },
+      {
+        "id": "C0026",
+        "target_field": "relationships",
+        "frame_type": "control_authority",
+        "normalized_value": {
+          "from_entity": "unspecified",
+          "to_entity": "unspecified",
+          "type": "control_or_authority",
+          "description": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication"
+        },
+        "signals": [
+          "control_authority_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.63,
+        "evidence_ids": [
+          "E0026"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "35",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        }
+      },
+      {
+        "id": "C0027",
+        "target_field": "controls",
+        "frame_type": "privacy_control",
+        "normalized_value": {
+          "description": "Our platform undergoes annual penetration testing conducted by an independent third party",
+          "owner": null,
+          "obligation_id": "unlinked",
+          "evidence_documents": []
+        },
+        "signals": [
+          "privacy_control",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.73,
+        "evidence_ids": [
+          "E0027"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "36",
+          "anchor": "§6#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            90
+          ]
+        }
+      },
+      {
+        "id": "C0028",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employees with access to personal information",
+          "description": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.7,
+        "evidence_ids": [
+          "E0028"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "37",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        }
+      },
+      {
+        "id": "C0029",
+        "target_field": "conditions",
+        "frame_type": "dependency",
+        "normalized_value": {
+          "description": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+          "responsible_party": null
+        },
+        "signals": [
+          "dependency",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.51,
+        "evidence_ids": [
+          "E0029"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "37",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        }
+      },
+      {
+        "id": "C0030",
+        "target_field": "controls",
+        "frame_type": "privacy_control",
+        "normalized_value": {
+          "description": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+          "owner": null,
+          "obligation_id": "unlinked",
+          "evidence_documents": []
+        },
+        "signals": [
+          "privacy_control",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.73,
+        "evidence_ids": [
+          "E0030"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "37",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        }
+      },
+      {
+        "id": "C0031",
+        "target_field": "obligations",
+        "frame_type": "continuing_duty",
+        "normalized_value": {
+          "party": "We",
+          "description": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+          "kind": "continuing_duty",
+          "deadline": null
+        },
+        "signals": [
+          "continuing_duty",
+          "obligation_strength",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.81,
+        "evidence_ids": [
+          "E0031"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "38",
+          "anchor": "§6#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            165
+          ]
+        }
+      },
+      {
+        "id": "C0032",
+        "target_field": "controls",
+        "frame_type": "privacy_control",
+        "normalized_value": {
+          "description": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+          "owner": null,
+          "obligation_id": "unlinked",
+          "evidence_documents": []
+        },
+        "signals": [
+          "privacy_control",
+          "heading_prior",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.8,
+        "evidence_ids": [
+          "E0032"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "38",
+          "anchor": "§6#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            165
+          ]
+        }
+      },
+      {
+        "id": "C0033",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0033"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "38",
+          "anchor": "§6#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            165
+          ]
+        }
+      },
+      {
+        "id": "C0034",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Account data is retained for the duration of the user's account and for 7 years following account closure",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0034"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "40",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Retention"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            269
+          ]
+        }
+      },
+      {
+        "id": "C0035",
+        "target_field": "legal_authorities",
+        "frame_type": "act_citation",
+        "normalized_value": {
+          "citation": "Income Tax Act (Canada)",
+          "authority_type": "statute",
+          "jurisdiction": null
+        },
+        "signals": [
+          "act_citation",
+          "citation_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.8,
+        "evidence_ids": [
+          "E0035"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "40",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Retention"
+          ],
+          "table_coords": null,
+          "char_span": [
+            270,
+            355
+          ]
+        }
+      },
+      {
+        "id": "C0036",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Example Digital Services Inc",
+          "description": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+          "kind": "positive_obligation",
+          "deadline": "within 30 days of"
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.84,
+        "evidence_ids": [
+          "E0036"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "42",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Individual Rights"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            252
+          ]
+        }
+      },
+      {
+        "id": "C0037",
+        "target_field": "deadlines",
+        "frame_type": "relative_deadline",
+        "normalized_value": {
+          "date_or_timing": "within 30 days of",
+          "description": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+          "party": "Example Digital Services Inc"
+        },
+        "signals": [
+          "relative_deadline",
+          "deadline_signal",
+          "trigger_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.64,
+        "evidence_ids": [
+          "E0037"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "42",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Individual Rights"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            252
+          ]
+        }
+      },
+      {
+        "id": "C0038",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "Email: privacy@example.org",
+          "delivery_method": "email"
+        },
+        "signals": [
+          "notice_signal",
+          "delivery_method_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0038"
+        ],
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "45",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Contact"
+          ],
+          "table_coords": null,
+          "char_span": [
+            115,
+            150
+          ]
+        }
+      }
+    ],
+    "promotion_decisions": [
+      {
+        "candidate_id": "C0000",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0001",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0001"
+      },
+      {
+        "candidate_id": "C0002",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0002"
+      },
+      {
+        "candidate_id": "C0003",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0004",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0016",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0016"
+      },
+      {
+        "candidate_id": "C0006",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0007",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0008",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0009",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0001"
+      },
+      {
+        "candidate_id": "C0010",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0011",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0012",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0013",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0014",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0015",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0017",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0017"
+      },
+      {
+        "candidate_id": "C0018",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0018"
+      },
+      {
+        "candidate_id": "C0019",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0019"
+      },
+      {
+        "candidate_id": "C0020",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0021",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0022",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0023",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0024",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "CTRL-0001"
+      },
+      {
+        "candidate_id": "C0025",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "CTRL-0002"
+      },
+      {
+        "candidate_id": "C0026",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0027",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "CTRL-0003"
+      },
+      {
+        "candidate_id": "C0028",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0002"
+      },
+      {
+        "candidate_id": "C0029",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0030",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "CTRL-0004"
+      },
+      {
+        "candidate_id": "C0031",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0003"
+      },
+      {
+        "candidate_id": "C0032",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "CTRL-0005"
+      },
+      {
+        "candidate_id": "C0033",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0034",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0035",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0035"
+      },
+      {
+        "candidate_id": "C0036",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0004"
+      },
+      {
+        "candidate_id": "C0037",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0038",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      }
+    ]
+  },
+  "llm_enrichment": {
+    "mode": "json_patch_only",
+    "read_policy": {
+      "high_confidence": "no_reread",
+      "medium_confidence": "snippet_only",
+      "low_confidence": "snippet_plus_neighboring_block",
+      "contradiction_or_missing_role_date": "heading_section_window"
+    },
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "**Effective Date:** March 1, 2026",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            33
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "Example Digital Services Inc. collects the following categories of personal information from users of our platform",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "5",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            117
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0004",
+        "snippet": "**Account data**: name, email address, password hash, account creation date",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "6",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            76
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0006",
+        "snippet": "**Communications data**: customer support tickets, email correspondence",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "9",
+          "anchor": "§2#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            72
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "We collect personal information directly from users upon account registration and indirectly through automated tracking technologies on our platform",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "10",
+          "anchor": "§2#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Information We Collect"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Information We Collect"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "9",
+          "11"
+        ]
+      },
+      {
+        "id": "E0008",
+        "snippet": "Example Digital Services Inc. relies on the following legal bases for processing personal information",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "12",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            104
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "15",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            155
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0011",
+        "snippet": "**Legitimate interests**: Usage analytics and platform security monitoring are conducted under our legitimate interests, subject to users' right to object",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "15",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            155
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "decision_points"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "Users may withdraw consent to marketing communications at any time by clicking the unsubscribe link in any marketing email or by contacting privacy@example.org",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "16",
+          "anchor": "§3#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Legal Bases and Consent"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Legal Bases and Consent"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "Example Digital Services Inc. uses collected personal information for the following purposes",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "18",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "How We Use Personal Information"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            95
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "How We Use Personal Information"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "To send marketing communications where the user has given express consent",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "23",
+          "anchor": "§4#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "How We Use Personal Information"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            74
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "How We Use Personal Information"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.49,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "Example Digital Services Inc. transfers personal information to the following third parties",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "26",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "31",
+          "anchor": "§5#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            240
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "Personal information is not transferred outside Canada except to Stacklayer Cloud Inc.'s disaster recovery facilities in the United States, which are subject to equivalent contractual protections under cross-border data transfer agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "31",
+          "anchor": "§5#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Data Flows and Third-Party Transfers"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            240
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Data Flows and Third-Party Transfers"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "33",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "32",
+          "34"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "Example Digital Services Inc. maintains the following technical and organizational controls",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "33",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            94
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.63,
+        "neighboring_context_ids": [
+          "32",
+          "34"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "Access to personal data systems is restricted to authorized personnel and enforced by role-based access controls and multi-factor authentication",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "35",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.63,
+        "neighboring_context_ids": [
+          "34",
+          "36"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "Employees with access to personal information are required to complete privacy training annually and are subject to confidentiality agreements",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "37",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.51,
+        "neighboring_context_ids": [
+          "36",
+          "38"
+        ]
+      },
+      {
+        "id": "E0033",
+        "snippet": "We maintain an incident response plan requiring notification to the Office of the Privacy Commissioner of Canada within 72 hours of discovery of a reportable breach",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "38",
+          "anchor": "§6#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Security Controls"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            165
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Security Controls"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "37",
+          "39"
+        ]
+      },
+      {
+        "id": "E0034",
+        "snippet": "Account data is retained for the duration of the user's account and for 7 years following account closure",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "40",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Retention"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            269
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Retention"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "39",
+          "41"
+        ]
+      },
+      {
+        "id": "E0037",
+        "snippet": "Example Digital Services Inc. shall respond to such requests within 30 days of receipt",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "42",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Individual Rights"
+          ],
+          "table_coords": null,
+          "char_span": [
+            163,
+            252
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Individual Rights"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.64,
+        "neighboring_context_ids": [
+          "41",
+          "43"
+        ]
+      },
+      {
+        "id": "E0038",
+        "snippet": "Email: privacy@example.org",
+        "source_ref": {
+          "source": "en_privacy_policy.md",
+          "block_id": "45",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Privacy Policy",
+            "Contact"
+          ],
+          "table_coords": null,
+          "char_span": [
+            115,
+            150
+          ]
+        },
+        "heading_path": [
+          "Privacy Policy",
+          "Contact"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "44",
+          "46"
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0000",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0000"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0003",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0003"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0004",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.66,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0004"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0006",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.66,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0006"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0007",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0007"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0008",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0008"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0010",
+        "field": "conditions",
+        "frame_type": "dependency",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0010"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0011",
+        "field": "decision_points",
+        "frame_type": "veto_right",
+        "confidence": 0.66,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0011"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0012",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.66,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0012"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0013",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0013"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0014",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.49,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0014"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0015",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0015"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0020",
+        "field": "conditions",
+        "frame_type": "dependency",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0020"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0021",
+        "field": "relationships",
+        "frame_type": "control_authority",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0021"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0022",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0022"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0023",
+        "field": "relationships",
+        "frame_type": "control_authority",
+        "confidence": 0.63,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0023"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0026",
+        "field": "relationships",
+        "frame_type": "control_authority",
+        "confidence": 0.63,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0026"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0029",
+        "field": "conditions",
+        "frame_type": "dependency",
+        "confidence": 0.51,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0029"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0033",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0033"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0034",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0034"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0037",
+        "field": "deadlines",
+        "frame_type": "relative_deadline",
+        "confidence": 0.64,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0037"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0038",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.66,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0038"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "targets": [
+          "OBL-0001",
+          "OBL-0002",
+          "OBL-0003",
+          "OBL-0004"
+        ],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "null_field_classification",
+        "field": "obligations[].risk_level",
+        "instruction": "Classify each obligation high/medium/low from language."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H0"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §1#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H1"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §2#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H2"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §2#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H3"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §2#5."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H4"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §2#6."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H5"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §3#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H6"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §3#4."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H7"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "decision_points",
+        "instruction": "Resolve hint into decision_points from snippet at §3#4."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H8"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §3#5."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H9"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §4#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H10"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §4#6."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H11"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §5#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H12"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §5#6."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H13"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "relationships",
+        "instruction": "Resolve hint into relationships from snippet at §5#6."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H14"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §6#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H15"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "relationships",
+        "instruction": "Resolve hint into relationships from snippet at §6#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H16"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "relationships",
+        "instruction": "Resolve hint into relationships from snippet at §6#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H17"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §6#5."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H18"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §6#6."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H19"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H20"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "deadlines",
+        "instruction": "Resolve hint into deadlines from snippet at §8#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H21"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §9#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "implicit_inference",
+        "field": "decision_points",
+        "instruction": "Scan obligations, conditions, and process_steps for if/then logic."
+      },
+      {
+        "targets": [
+          "OBL-0001",
+          "OBL-0002",
+          "OBL-0003",
+          "OBL-0004"
+        ],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "cross_linking",
+        "field": "controls[].obligation_id",
+        "instruction": "Link each control to the obligation it satisfies by proximity/id."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "directed_inference",
+        "field": "data_flows",
+        "instruction": "Profile 'privacy' active (score 1.0); 'data_flows' is absent. Populate data_flows from a bounded read of the source around supporting spans only; every added entity carries evidence_id and source_ref. No textual support: leave empty and add an extraction_warning."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "directed_inference",
+        "field": "risk_items",
+        "instruction": "Profile 'privacy' active (score 1.0); 'risk_items' is absent. Populate risk_items from a bounded read of the source around supporting spans only; every added entity carries evidence_id and source_ref. No textual support: leave empty and add an extraction_warning."
+      }
+    ]
+  },
+  "profile_signals": {
+    "privacy": 1.0,
+    "litigation": 0.0,
+    "governance": 0.0,
+    "risk_assessment": 0.0
+  },
+  "language_profile": {
+    "dominant": "en",
+    "override": null,
+    "blocks": {
+      "en": 19,
+      "fr": 0,
+      "und": 27
+    },
+    "char_share": {
+      "en": 1.0,
+      "fr": 0.0
+    }
+  }
+}

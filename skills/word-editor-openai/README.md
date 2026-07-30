@@ -1,0 +1,1 @@
+Toolkit for comprehensive document reading and creation with visual quality control. Use to work with Word documents (.docx files) for: (1) Reading or extracting content from existing DOCX files, (2) Creating new Word documents with professional formatting, (3) Editing documents requiring precise typography and layout, or any other DOCX reading or generation tasks.

@@ -2,6 +2,40 @@
 
 **Formula:** `SE = (DPC × EI) + CB`
 
+> **Role of this methodology:** the ENISA score is structured **decision support**. It informs — but never replaces — the statutory tests in Art. 33(1) ("unlikely to result in a risk") and Art. 34(1) ("likely to result in a high risk"). Every score must be bridged to a written Art. 33/34 conclusion (see §4a).
+
+---
+
+## 0. Rapid Orientation Trees (Common Simple Scenarios)
+
+For experienced DPOs who want a rapid preliminary check before the full workflow:
+
+```
+ENCRYPTED DEVICE LOST
+├── Encryption current (e.g., AES-256)? → NO → Full assessment needed
+├── Key secure and stored separately? → NO → Full assessment needed
+├── Backup exists? → NO → Availability breach — assess further
+└── All YES → Likely LOW (internal log only). Confirm with full assessment if >100 subjects.
+
+MISDIRECTED EMAIL (single recipient)
+├── Recalled/deleted before read? → YES, confirmed → Likely LOW (internal log)
+├── Contains Art. 9 data? → YES → Full assessment needed (likely HIGH)
+├── Contains financial data? → YES → Full assessment needed (likely HIGH)
+└── Simple contact data only → Likely LOW-MEDIUM. Document and assess.
+
+RANSOMWARE
+├── Exfiltration evidence? → YES → Full assessment needed (likely HIGH/VERY HIGH)
+├── Backup restored <24h? → YES, no exfiltration → Assess availability impact
+└── No backup / extended downtime → Full assessment needed (likely HIGH)
+
+PHISHING (credentials compromised)
+├── Scope limited to single account? → Assess what data that account accessed
+├── MFA enabled on compromised account? → YES → Reduced risk, still assess
+└── Admin/privileged account? → Full assessment needed immediately
+```
+
+**Note:** The decision trees provide preliminary orientation only. Always complete the full ENISA assessment plus the Art. 33/34 Legal Bridge for the definitive classification and documentation.
+
 ---
 
 ## 1. Data Processing Context (DPC): 1-4
@@ -107,12 +141,56 @@ Points are **ADDITIVE** — multiple circumstances can apply.
 
 ### Calculate: `SE = (DPC × EI) + CB`
 
-| SE Score | Level | Impact Description | Notification Required |
-|----------|-------|--------------------|-----------------------|
-| **< 2** | LOW | Minor inconveniences (time re-entering info, annoyance) | Internal log only (Art. 33(5)) |
-| **2 – < 3** | MEDIUM | Significant inconveniences overcome with difficulty (extra costs, denial of services, stress) | Notify SA (Art. 33) |
-| **3 – < 4** | HIGH | Significant consequences with serious difficulty (misappropriation, blacklisting, property damage, job loss) | Notify SA + Data Subjects (Art. 33 & 34) |
-| **≥ 4** | VERY HIGH | Significant/irreversible consequences (financial distress, long-term harm, death risk) | Notify SA + Data Subjects + Consider public communication |
+| SE Score | Level | Impact Description | Presumptive action (subject to Art. 33/34 legal test) |
+|----------|-------|--------------------|--------------------------------------------------------|
+| **< 2** | LOW | Minor inconveniences (time re-entering info, annoyance) | Presumption: internal log only (Art. 33(5)) |
+| **2 – < 3** | MEDIUM | Significant inconveniences overcome with difficulty (extra costs, denial of services, stress) | Presumption: notify SA (Art. 33) |
+| **3 – < 4** | HIGH | Significant consequences with serious difficulty (misappropriation, blacklisting, property damage, job loss) | Presumption: notify SA + data subjects (Art. 33 & 34) |
+| **≥ 4** | VERY HIGH | Significant/irreversible consequences (financial distress, long-term harm, death risk) | Presumption: notify SA + subjects + consider public communication |
+
+The score creates a **presumption or recommendation, not an automatic legal duty**. The statutory triggers remain Art. 33(1) and Art. 34(1).
+
+---
+
+## 4a. The Legal Bridge (score → facts → conclusion)
+
+Every assessment must translate the score into the legal tests, in writing:
+
+```
+LEGAL BRIDGE
+ENISA score:      [SE value + level]
+Key facts:        [what happened, to whose data, at what scale]
+Safeguards:       [in place before the breach / applied after]
+Likely impact:    [likelihood & severity of consequences for individuals]
+→ Art. 33(1):     [NOTIFY SA / NO — unlikely to result in a risk, because …]
+→ Art. 34(1):     [NOTIFY SUBJECTS / NO — no high risk, because … /
+                   NO — exception Art. 34(3)(a)/(b)/(c) applies, because …]
+```
+
+**Worked bridge example** (continuing Example 1, ransomware with backup, SE = 3.75 HIGH):
+
+> ENISA score: 3.75 (HIGH) — presumption: notify SA + subjects.
+> Key facts: hospital ransomware; health data of 5,000 patients encrypted by attacker; backup restored within 24h; no exfiltration evidence so far, but forensic review incomplete.
+> Safeguards: offline backups (effective); data at rest unencrypted (gap).
+> Likely impact: temporary unavailability materialised (care delays possible); confidentiality impact unconfirmed but plausible given attacker access — for Art. 9 data, plausible disclosure cannot be ruled "unlikely".
+> → Art. 33(1): NOTIFY SA — cannot conclude "unlikely to result in a risk" while exfiltration is unexcluded and availability was lost for 24h.
+> → Art. 34(1): NOTIFY SUBJECTS — high risk is likely if disclosure occurred; given Art. 9 data and ongoing forensics, communicate now and supplement, rather than wait. No Art. 34(3) exception: data was not encrypted at rest (a), no subsequent measure eliminates the disclosure risk (b), individual communication is feasible (c).
+
+**Divergence rule:** if the legal conclusion departs from the score's presumption — in either direction — the reasons must be stated in the bridge and recorded in the Internal Compliance Log. A LOW score with vulnerable subjects and credible threat context can still require notification; a MEDIUM score where access is forensically excluded may justify non-notification, documented.
+
+---
+
+## 4b. Borderline Score Guidance
+
+Scores near thresholds require extra scrutiny:
+
+| Score Range | Guidance |
+|-------------|----------|
+| **1.8 – 2.0** | Document thoroughly why you believe LOW is justified; SA may disagree |
+| **2.8 – 3.0** | Consider whether any uncaptured factors push into HIGH; lean conservative |
+| **3.8 – 4.0** | Assess whether public communication is warranted even below 4.0 threshold |
+
+When a score is within 0.25 of a threshold, explicitly note this in the assessment and recommend the user discuss the borderline classification with their DPO or legal counsel.
 
 ---
 
@@ -162,7 +240,7 @@ IF Encrypted + No Backup:
 - **EI:** 0.75 (names + patient IDs)
 - **CB:** 0.25 (temporal unavailability) + 0.50 (malicious) = 0.75
 - **SE:** (4 × 0.75) + 0.75 = 3.75 → **HIGH**
-- **Verdict:** Notify SA + Subjects
+- **Presumptive verdict (confirm via Art. 33/34 bridge — see §4a):** Notify SA + Subjects
 
 ### Example 2: Misdirected Email
 - **Scenario:** Single email with salary info sent to wrong employee, recalled within 1 hour
@@ -170,7 +248,7 @@ IF Encrypted + No Backup:
 - **EI:** 1.00 (full name + salary)
 - **CB:** 0.25 (limited known recipient) + 0 (accidental) = 0.25
 - **SE:** (3 × 1.00) + 0.25 = 3.25 → **HIGH**
-- **Verdict:** Notify SA + Subject (but EDPB cases may suggest lower if truly contained)
+- **Presumptive verdict (confirm via Art. 33/34 bridge):** Notify SA + Subject — but the bridge may justify less if disclosure is verifiably contained (cf. EDPB mispostal cases)
 
 ### Example 3: Lost Encrypted Laptop
 - **Scenario:** Laptop with 200 customer records, full disk encryption, key not compromised
@@ -178,7 +256,7 @@ IF Encrypted + No Backup:
 - **EI:** 0.25 (encryption renders negligible)
 - **CB:** 0 (data not actually accessed)
 - **SE:** (1 × 0.25) + 0 = 0.25 → **LOW**
-- **Verdict:** Internal log only
+- **Presumptive verdict (confirm via Art. 33/34 bridge):** Internal log only
 
 ---
 

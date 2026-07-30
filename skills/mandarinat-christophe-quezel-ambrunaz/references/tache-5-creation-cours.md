@@ -29,7 +29,7 @@ Cadrage juridique du thème. Identifier les axes structurants, les questions-cl�
 Suivre intégralement la séquence de recherche du §3 du SKILL.md :
 - Textes normatifs (OpenLegi)
 - Jurisprudence suprême puis fond (OpenLegi)
-- Doctrine (HAL + web_search) — **minimum 15 sources doctrinales** pour un cours complet
+- Doctrine (`scripts/doctrine_search.py` multi-sources + web_search) — **minimum 15 sources doctrinales** pour un cours complet, chacune avec identifiant vérifiable (DOI/HAL/URL)
 - Droit comparé (LegalDataHunter) si pertinent pour le thème
 
 **Objectif spécifique** : identifier non seulement l'état du droit mais aussi les problématiques pédagogiques (ce que les étudiants comprennent mal, les confusions fréquentes, les points de controverse).

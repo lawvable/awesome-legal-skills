@@ -1,0 +1,3734 @@
+{
+  "extraction_result": {
+    "matter_name": "bilingual_contract",
+    "matter_type": "deal",
+    "input_source": "bilingual_contract.md",
+    "truncated": false,
+    "extraction_warnings": [],
+    "signal_map": {
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor": 0.96,
+      "extractor.events.dated_event": 0.42,
+      "extractor.obligations.continuing_duty": 0.83,
+      "extractor.obligations.positive_obligation": 0.96,
+      "extractor.deadlines.hard_deadline": 0.77,
+      "extractor.transfers.payment_flow": 0.86,
+      "extractor.deadlines.relative_deadline": 0.71,
+      "extractor.obligations.negative_obligation": 0.93,
+      "extractor.decision_points.consent_required": 0.71,
+      "extractor.relationships.control_authority": 0.63,
+      "extractor.conditions.trigger_condition": 0.55,
+      "extractor.deadlines.notice_period": 0.79,
+      "extractor.conditions.default_remedy": 0.65,
+      "extractor.communications.notice_communication": 0.44
+    },
+    "hierarchy": [
+      {
+        "id": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels",
+        "label": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+        "parent": null,
+        "depth": 0,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels-partiesparties",
+        "label": "Parties / Parties",
+        "parent": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels-grantoflicenceoctroidelalicence",
+        "label": "Grant of licence / Octroi de la licence",
+        "parent": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels-royaltiesredevances",
+        "label": "Royalties / Redevances",
+        "parent": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels-deliverylivraison",
+        "label": "Delivery / Livraison",
+        "parent": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels-assignmentcession",
+        "label": "Assignment / Cession",
+        "parent": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels-terminationresiliation",
+        "label": "Termination / Résiliation",
+        "parent": "H-softwarelicenceanddistributionagreementcontratdelicenceetdedistributiondelogiciels",
+        "depth": 1,
+        "source": "deterministic"
+      }
+    ],
+    "extraction_hints": [
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "This Agreement takes effect on June 1, 2026",
+        "confidence": 0.42,
+        "anchor": "§2#1",
+        "span": [
+          2,
+          2
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Parties / Parties",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "La présente convention prend effet le 1er juin 2026",
+        "confidence": 0.42,
+        "anchor": "§2#2",
+        "span": [
+          3,
+          3
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Parties / Parties",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "confidence": 0.42,
+        "anchor": "§4#1",
+        "span": [
+          8,
+          8
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Royalties / Redevances",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "confidence": 0.42,
+        "anchor": "§4#2",
+        "span": [
+          9,
+          9
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Royalties / Redevances",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "control_authority",
+        "suggested_field": "relationships",
+        "snippet": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+        "confidence": 0.63,
+        "anchor": "§6#2",
+        "span": [
+          15,
+          15
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Assignment / Cession",
+        "docx_style": null,
+        "matched_signals": [
+          "control_authority_signal",
+          "heading_prior"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "confidence": 0.55,
+        "anchor": "§7#1",
+        "span": [
+          17,
+          17
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Termination / Résiliation",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "confidence": 0.44,
+        "anchor": "§7#1",
+        "span": [
+          17,
+          17
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Termination / Résiliation",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+        "confidence": 0.58,
+        "anchor": "§7#2",
+        "span": [
+          18,
+          18
+        ],
+        "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Termination / Résiliation",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "name": "Aurora Software Inc",
+        "role": "licensor",
+        "type": "party"
+      },
+      {
+        "name": "Boreal Distribution Ltd",
+        "role": "distributor",
+        "type": "party"
+      }
+    ],
+    "entities": [],
+    "events": [],
+    "deadlines": [
+      {
+        "date": "June 30, 2026",
+        "description": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "party": "Distributor",
+        "consequence": null
+      },
+      {
+        "date": "2026-06-30",
+        "description": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "party": "unspecified",
+        "consequence": null
+      },
+      {
+        "date": "within 10 business days after",
+        "description": "The Licensor shall deliver the master software package to the Distributor within 10 business days after the date on which this Agreement takes effect",
+        "party": "Licensor",
+        "consequence": null
+      },
+      {
+        "date": "dans les 10 jours ouvrables suivant la date de prise d’effet de la présente conv",
+        "description": "La Concédante doit livrer le progiciel maître à la Distributrice dans les 10 jours ouvrables suivant la date de prise d’effet de la présente convention",
+        "party": "unspecified",
+        "consequence": null
+      },
+      {
+        "date": "60 days prior written notice",
+        "description": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "party": "Either party",
+        "consequence": null
+      },
+      {
+        "date": "moyennant un préavis écrit de 60 jours transmis à l’autre partie",
+        "description": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+        "party": "unspecified",
+        "consequence": null
+      }
+    ],
+    "phases": [],
+    "tasks": [],
+    "obligations": [
+      {
+        "id": "OBL-0001",
+        "description": "The Licensor grants to the Distributor an exclusive licence to distribute the licensed software in Canada maintain the confidentiality of all technical documentation that the Licensor delivers under this Agreement",
+        "party": "Licensor grants to the Distributor an exclusive licence to distribute the licensed software in Canada",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0002",
+        "description": "the Distributor shall maintain the confidentiality of all technical documentation that the Licensor delivers under this Agreement",
+        "party": "Distributor",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0003",
+        "description": "la Distributrice doit maintenir la confidentialité de toute la documentation technique que la Concédante remet",
+        "party": "la Distributrice",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0004",
+        "description": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026 remit quarterly sales reports to the Licensor",
+        "party": "Distributor",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": "June 30, 2026"
+      },
+      {
+        "id": "OBL-0005",
+        "description": "the Distributor shall remit quarterly sales reports to the Licensor",
+        "party": "Distributor",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0006",
+        "description": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026 transmettre à la Concédante des rapports de ventes trimestriels",
+        "party": "La Distributrice",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": "2026-06-30"
+      },
+      {
+        "id": "OBL-0007",
+        "description": "la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "party": "la Distributrice",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0008",
+        "description": "The Licensor shall deliver the master software package to the Distributor within 10 business days after the date on which this Agreement takes effect",
+        "party": "Licensor",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": "within 10 business days after"
+      },
+      {
+        "id": "OBL-0009",
+        "description": "La Concédante doit livrer le progiciel maître à la Distributrice dans les 10 jours ouvrables suivant la date de prise d’effet de la présente convention",
+        "party": "La Concédante",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0010",
+        "description": "The Distributor shall not assign this Agreement without the prior written consent of the Licensor, and any purported assignment made without that consent is void",
+        "party": "Distributor",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0011",
+        "description": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+        "party": "La Distributrice",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0012",
+        "description": "the parties shall settle all outstanding royalties before the effective date of termination",
+        "party": "parties",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0013",
+        "description": "les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+        "party": "les parties",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      }
+    ],
+    "controls": [],
+    "conditions": [
+      {
+        "id": "COND-0001",
+        "description": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "responsible_party": "Either party",
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      }
+    ],
+    "relationships": [],
+    "ownership_links": [],
+    "states": [],
+    "transitions": [],
+    "decision_points": [
+      {
+        "question": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+        "yes_path": "permitted/approved",
+        "no_path": "blocked/not approved"
+      }
+    ],
+    "process_steps": [],
+    "investigation_steps": [],
+    "communications": [],
+    "concepts": [],
+    "risk_items": [],
+    "negotiation_issues": [],
+    "transfers": [
+      {
+        "from_party": "Distributor",
+        "to_party": "unspecified",
+        "description": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "amount": 250000.0,
+        "sequence_order": null,
+        "mechanism": null,
+        "triggered_by": null
+      },
+      {
+        "from_party": "unspecified",
+        "to_party": "unspecified",
+        "description": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "amount": 250000.0,
+        "sequence_order": null,
+        "mechanism": null,
+        "triggered_by": null
+      }
+    ],
+    "claim_classes": [],
+    "data_flows": [],
+    "witnesses": [],
+    "legal_authorities": [],
+    "ip_assets": [],
+    "documents": []
+  },
+  "extraction_hints": [
+    {
+      "id": "H0",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "This Agreement takes effect on June 1, 2026",
+      "confidence": 0.42,
+      "anchor": "§2#1",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Parties / Parties"
+    },
+    {
+      "id": "H1",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "La présente convention prend effet le 1er juin 2026",
+      "confidence": 0.42,
+      "anchor": "§2#2",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Parties / Parties"
+    },
+    {
+      "id": "H2",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+      "confidence": 0.42,
+      "anchor": "§4#1",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Royalties / Redevances"
+    },
+    {
+      "id": "H3",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+      "confidence": 0.42,
+      "anchor": "§4#2",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Royalties / Redevances"
+    },
+    {
+      "id": "H4",
+      "hint_type": "control_authority",
+      "suggested_field": "relationships",
+      "snippet": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+      "confidence": 0.63,
+      "anchor": "§6#2",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Assignment / Cession"
+    },
+    {
+      "id": "H5",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+      "confidence": 0.55,
+      "anchor": "§7#1",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Termination / Résiliation"
+    },
+    {
+      "id": "H6",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+      "confidence": 0.44,
+      "anchor": "§7#1",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Termination / Résiliation"
+    },
+    {
+      "id": "H7",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+      "confidence": 0.58,
+      "anchor": "§7#2",
+      "context_heading": "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels > Termination / Résiliation"
+    }
+  ],
+  "coverage": {
+    "populated_fields": [
+      "parties",
+      "deadlines",
+      "obligations",
+      "conditions",
+      "decision_points",
+      "transfers"
+    ],
+    "hint_only_fields": [
+      "communications",
+      "events",
+      "relationships"
+    ],
+    "absent_fields": [
+      "entities",
+      "phases",
+      "tasks",
+      "controls",
+      "ownership_links",
+      "states",
+      "transitions",
+      "process_steps",
+      "investigation_steps",
+      "concepts",
+      "risk_items",
+      "negotiation_issues",
+      "claim_classes",
+      "data_flows",
+      "witnesses",
+      "legal_authorities",
+      "ip_assets",
+      "documents"
+    ],
+    "signal_map": {
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor": 0.96,
+      "extractor.events.dated_event": 0.42,
+      "extractor.obligations.continuing_duty": 0.83,
+      "extractor.obligations.positive_obligation": 0.96,
+      "extractor.deadlines.hard_deadline": 0.77,
+      "extractor.transfers.payment_flow": 0.86,
+      "extractor.deadlines.relative_deadline": 0.71,
+      "extractor.obligations.negative_obligation": 0.93,
+      "extractor.decision_points.consent_required": 0.71,
+      "extractor.relationships.control_authority": 0.63,
+      "extractor.conditions.trigger_condition": 0.55,
+      "extractor.deadlines.notice_period": 0.79,
+      "extractor.conditions.default_remedy": 0.65,
+      "extractor.communications.notice_communication": 0.44
+    }
+  },
+  "matter_type_evidence": {
+    "candidates": {},
+    "signals": []
+  },
+  "candidate_manifest": {
+    "schema_version": "legal-diagram-candidates",
+    "structure_metrics": {
+      "headings": 8,
+      "lists": 0,
+      "tables": 0,
+      "paragraphs": 14,
+      "blocks": 22,
+      "table_rows": 0
+    },
+    "warning_codes": [],
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "Aurora Software Inc. (\"Licensor\") has its head office in Toronto, Ontario",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            129,
+            203
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0001",
+        "snippet": "Boreal Distribution Ltd. (\"Distributor\") has its head office in Laval, Québec",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            204,
+            282
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "This Agreement takes effect on June 1, 2026",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            283,
+            327
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "Aurora Software Inc., ci-après désignée la « Concédante », a son siège social à Toronto (Ontario)",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "3",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            142,
+            240
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0004",
+        "snippet": "Boreal Distribution Ltd., ci-après désignée la « Distributrice », a son siège social à Laval (Québec)",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "3",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            241,
+            343
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "La présente convention prend effet le 1er juin 2026",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "3",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            344,
+            396
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0006",
+        "snippet": "The Licensor grants to the Distributor an exclusive licence to distribute the licensed software in Canada, and the Distributor shall maintain the confidentiality of all technical documentation that the Licensor delivers under this Agreement",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Grant of licence / Octroi de la licence"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            241
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Grant of licence / Octroi de la licence"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.75,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "The Licensor grants to the Distributor an exclusive licence to distribute the licensed software in Canada, and the Distributor shall maintain the confidentiality of all technical documentation that the Licensor delivers under this Agreement",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Grant of licence / Octroi de la licence"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            241
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Grant of licence / Octroi de la licence"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0008",
+        "snippet": "La Concédante accorde à la Distributrice une licence exclusive de distribution du logiciel sous licence au Canada, et la Distributrice doit maintenir la confidentialité de toute la documentation technique que la Concédante remet en vertu de la présente convention",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "6",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Grant of licence / Octroi de la licence"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            264
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Grant of licence / Octroi de la licence"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0009",
+        "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.91,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0011",
+        "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.86,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0016",
+        "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0019",
+        "snippet": "The Licensor shall deliver the master software package to the Distributor within 10 business days after the date on which this Agreement takes effect",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "11",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            150
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Delivery / Livraison"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.96,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "The Licensor shall deliver the master software package to the Distributor within 10 business days after the date on which this Agreement takes effect",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "11",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            150
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Delivery / Livraison"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "La Concédante doit livrer le progiciel maître à la Distributrice dans les 10 jours ouvrables suivant la date de prise d’effet de la présente convention",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "12",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            152
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Delivery / Livraison"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.9,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "La Concédante doit livrer le progiciel maître à la Distributrice dans les 10 jours ouvrables suivant la date de prise d’effet de la présente convention",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "12",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            152
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Delivery / Livraison"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "The Distributor shall not assign this Agreement without the prior written consent of the Licensor, and any purported assignment made without that consent is void",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "14",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            162
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Assignment / Cession"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.93,
+        "neighboring_context_ids": [
+          "13",
+          "15"
+        ]
+      },
+      {
+        "id": "E0024",
+        "snippet": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "15",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            185
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Assignment / Cession"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.93,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "15",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            185
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Assignment / Cession"
+        ],
+        "candidate_fields": [
+          "decision_points"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "15",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            185
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Assignment / Cession"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.63,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.76,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.79,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0030",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.65,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0032",
+        "snippet": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "18",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            226
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0033",
+        "snippet": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "18",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            226
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.79,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0034",
+        "snippet": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "18",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            226
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "id": "C0000",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Aurora Software Inc",
+          "role": "licensor",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0000",
+          "E0003"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            129,
+            203
+          ]
+        }
+      },
+      {
+        "id": "C0001",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Boreal Distribution Ltd",
+          "role": "distributor",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0001",
+          "E0004"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            204,
+            282
+          ]
+        }
+      },
+      {
+        "id": "C0002",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "June 1, 2026",
+          "description": "This Agreement takes effect on June 1, 2026"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0002"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            283,
+            327
+          ]
+        }
+      },
+      {
+        "id": "C0005",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-06-01",
+          "description": "La présente convention prend effet le 1er juin 2026"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0005"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "3",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            344,
+            396
+          ]
+        }
+      },
+      {
+        "id": "C0006",
+        "target_field": "obligations",
+        "frame_type": "continuing_duty",
+        "normalized_value": {
+          "party": "Licensor grants to the Distributor an exclusive licence to distribute the licensed software in Canada",
+          "description": "The Licensor grants to the Distributor an exclusive licence to distribute the licensed software in Canada maintain the confidentiality of all technical documentation that the Licensor delivers under this Agreement",
+          "kind": "continuing_duty",
+          "deadline": null
+        },
+        "signals": [
+          "continuing_duty",
+          "obligation_strength",
+          "conjunct_split",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.75,
+        "evidence_ids": [
+          "E0006"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Grant of licence / Octroi de la licence"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            241
+          ]
+        }
+      },
+      {
+        "id": "C0007",
+        "target_field": "obligations",
+        "frame_type": "continuing_duty",
+        "normalized_value": {
+          "party": "Distributor",
+          "description": "the Distributor shall maintain the confidentiality of all technical documentation that the Licensor delivers under this Agreement",
+          "kind": "continuing_duty",
+          "deadline": null
+        },
+        "signals": [
+          "continuing_duty",
+          "obligation_strength",
+          "conjunct_split",
+          "known_party_subject",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0007"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Grant of licence / Octroi de la licence"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            241
+          ]
+        }
+      },
+      {
+        "id": "C0008",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "la Distributrice",
+          "description": "la Distributrice doit maintenir la confidentialité de toute la documentation technique que la Concédante remet",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "conjunct_split",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0008"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "6",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Grant of licence / Octroi de la licence"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            264
+          ]
+        }
+      },
+      {
+        "id": "C0009",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Distributor",
+          "description": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026 remit quarterly sales reports to the Licensor",
+          "kind": "positive_obligation",
+          "deadline": "June 30, 2026"
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "conjunct_split",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.91,
+        "evidence_ids": [
+          "E0009"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0010",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Distributor",
+          "description": "the Distributor shall remit quarterly sales reports to the Licensor",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "conjunct_split",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0010"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0011",
+        "target_field": "deadlines",
+        "frame_type": "hard_deadline",
+        "normalized_value": {
+          "date_or_timing": "June 30, 2026",
+          "description": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+          "party": "Distributor"
+        },
+        "signals": [
+          "hard_deadline",
+          "deadline_signal",
+          "trigger_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0011"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0012",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "Distributor",
+          "to_party": "unspecified",
+          "amount_text": "$250,000.00",
+          "description": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+          "timing": "June 30, 2026"
+        },
+        "signals": [
+          "payment_signal",
+          "known_party_subject",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.86,
+        "evidence_ids": [
+          "E0012"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0013",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "June 30, 2026",
+          "description": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0013"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0014",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La Distributrice",
+          "description": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026 transmettre à la Concédante des rapports de ventes trimestriels",
+          "kind": "positive_obligation",
+          "deadline": "2026-06-30"
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "conjunct_split",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0014"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        }
+      },
+      {
+        "id": "C0015",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "la Distributrice",
+          "description": "la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "conjunct_split",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0015"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        }
+      },
+      {
+        "id": "C0016",
+        "target_field": "deadlines",
+        "frame_type": "hard_deadline",
+        "normalized_value": {
+          "date_or_timing": "2026-06-30",
+          "description": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+          "party": null
+        },
+        "signals": [
+          "hard_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0016"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        }
+      },
+      {
+        "id": "C0017",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "amount_text": "250 000,00 $",
+          "description": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+          "timing": "2026-06-30",
+          "amount": 250000.0
+        },
+        "signals": [
+          "payment_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.72,
+        "evidence_ids": [
+          "E0017"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        }
+      },
+      {
+        "id": "C0018",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-06-30",
+          "description": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0018"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        }
+      },
+      {
+        "id": "C0019",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Licensor",
+          "description": "The Licensor shall deliver the master software package to the Distributor within 10 business days after the date on which this Agreement takes effect",
+          "kind": "positive_obligation",
+          "deadline": "within 10 business days after"
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.96,
+        "evidence_ids": [
+          "E0019"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "11",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            150
+          ]
+        }
+      },
+      {
+        "id": "C0020",
+        "target_field": "deadlines",
+        "frame_type": "relative_deadline",
+        "normalized_value": {
+          "date_or_timing": "within 10 business days after",
+          "description": "The Licensor shall deliver the master software package to the Distributor within 10 business days after the date on which this Agreement takes effect",
+          "party": "Licensor"
+        },
+        "signals": [
+          "relative_deadline",
+          "deadline_signal",
+          "trigger_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0020"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "11",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            150
+          ]
+        }
+      },
+      {
+        "id": "C0021",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La Concédante",
+          "description": "La Concédante doit livrer le progiciel maître à la Distributrice dans les 10 jours ouvrables suivant la date de prise d’effet de la présente convention",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.9,
+        "evidence_ids": [
+          "E0021"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "12",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            152
+          ]
+        }
+      },
+      {
+        "id": "C0022",
+        "target_field": "deadlines",
+        "frame_type": "relative_deadline",
+        "normalized_value": {
+          "date_or_timing": "dans les 10 jours ouvrables suivant la date de prise d’effet de la présente conv",
+          "description": "La Concédante doit livrer le progiciel maître à la Distributrice dans les 10 jours ouvrables suivant la date de prise d’effet de la présente convention",
+          "party": null
+        },
+        "signals": [
+          "relative_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0022"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "12",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Delivery / Livraison"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            152
+          ]
+        }
+      },
+      {
+        "id": "C0023",
+        "target_field": "obligations",
+        "frame_type": "negative_obligation",
+        "normalized_value": {
+          "party": "Distributor",
+          "description": "The Distributor shall not assign this Agreement without the prior written consent of the Licensor, and any purported assignment made without that consent is void",
+          "kind": "negative_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "negative_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.93,
+        "evidence_ids": [
+          "E0023"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "14",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            162
+          ]
+        }
+      },
+      {
+        "id": "C0024",
+        "target_field": "obligations",
+        "frame_type": "negative_obligation",
+        "normalized_value": {
+          "party": "La Distributrice",
+          "description": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+          "kind": "negative_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "negative_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.93,
+        "evidence_ids": [
+          "E0024"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "15",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            185
+          ]
+        }
+      },
+      {
+        "id": "C0025",
+        "target_field": "decision_points",
+        "frame_type": "consent_required",
+        "normalized_value": {
+          "question": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+          "yes_path": "permitted/approved",
+          "no_path": "blocked/not approved"
+        },
+        "signals": [
+          "consent_required",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0025"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "15",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            185
+          ]
+        }
+      },
+      {
+        "id": "C0026",
+        "target_field": "relationships",
+        "frame_type": "control_authority",
+        "normalized_value": {
+          "from_entity": "unspecified",
+          "to_entity": "unspecified",
+          "type": "control_or_authority",
+          "description": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle"
+        },
+        "signals": [
+          "control_authority_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.63,
+        "evidence_ids": [
+          "E0026"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "15",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            185
+          ]
+        }
+      },
+      {
+        "id": "C0027",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "parties",
+          "description": "the parties shall settle all outstanding royalties before the effective date of termination",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "conjunct_split",
+          "explicit_modal",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.76,
+        "evidence_ids": [
+          "E0027"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        }
+      },
+      {
+        "id": "C0028",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+          "responsible_party": "Either party"
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0028"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        }
+      },
+      {
+        "id": "C0029",
+        "target_field": "deadlines",
+        "frame_type": "notice_period",
+        "normalized_value": {
+          "date_or_timing": "60 days prior written notice",
+          "description": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+          "party": "Either party"
+        },
+        "signals": [
+          "notice_period",
+          "deadline_signal",
+          "trigger_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.79,
+        "evidence_ids": [
+          "E0029"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        }
+      },
+      {
+        "id": "C0030",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+          "responsible_party": "Either party"
+        },
+        "signals": [
+          "default_remedy_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.65,
+        "evidence_ids": [
+          "E0030"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        }
+      },
+      {
+        "id": "C0031",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0031"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        }
+      },
+      {
+        "id": "C0032",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "les parties",
+          "description": "les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "conjunct_split",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0032"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "18",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            226
+          ]
+        }
+      },
+      {
+        "id": "C0033",
+        "target_field": "deadlines",
+        "frame_type": "notice_period",
+        "normalized_value": {
+          "date_or_timing": "moyennant un préavis écrit de 60 jours transmis à l’autre partie",
+          "description": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+          "party": null
+        },
+        "signals": [
+          "notice_period",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.79,
+        "evidence_ids": [
+          "E0033"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "18",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            226
+          ]
+        }
+      },
+      {
+        "id": "C0034",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0034"
+        ],
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "18",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            226
+          ]
+        }
+      }
+    ],
+    "promotion_decisions": [
+      {
+        "candidate_id": "C0000",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0000"
+      },
+      {
+        "candidate_id": "C0001",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0001"
+      },
+      {
+        "candidate_id": "C0002",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0005",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0006",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0001"
+      },
+      {
+        "candidate_id": "C0007",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0002"
+      },
+      {
+        "candidate_id": "C0008",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0003"
+      },
+      {
+        "candidate_id": "C0009",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0004"
+      },
+      {
+        "candidate_id": "C0010",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0005"
+      },
+      {
+        "candidate_id": "C0011",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0011"
+      },
+      {
+        "candidate_id": "C0012",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0012"
+      },
+      {
+        "candidate_id": "C0013",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0014",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0006"
+      },
+      {
+        "candidate_id": "C0015",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0007"
+      },
+      {
+        "candidate_id": "C0016",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0016"
+      },
+      {
+        "candidate_id": "C0017",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0017"
+      },
+      {
+        "candidate_id": "C0018",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0019",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0008"
+      },
+      {
+        "candidate_id": "C0020",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0020"
+      },
+      {
+        "candidate_id": "C0021",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0009"
+      },
+      {
+        "candidate_id": "C0022",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0022"
+      },
+      {
+        "candidate_id": "C0023",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0010"
+      },
+      {
+        "candidate_id": "C0024",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0011"
+      },
+      {
+        "candidate_id": "C0025",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0025"
+      },
+      {
+        "candidate_id": "C0026",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0027",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0012"
+      },
+      {
+        "candidate_id": "C0028",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0029",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0029"
+      },
+      {
+        "candidate_id": "C0030",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0001"
+      },
+      {
+        "candidate_id": "C0031",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0032",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0013"
+      },
+      {
+        "candidate_id": "C0033",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0033"
+      },
+      {
+        "candidate_id": "C0034",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      }
+    ]
+  },
+  "llm_enrichment": {
+    "mode": "json_patch_only",
+    "read_policy": {
+      "high_confidence": "no_reread",
+      "medium_confidence": "snippet_only",
+      "low_confidence": "snippet_plus_neighboring_block",
+      "contradiction_or_missing_role_date": "heading_section_window"
+    },
+    "evidence_packets": [
+      {
+        "id": "E0002",
+        "snippet": "This Agreement takes effect on June 1, 2026",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            283,
+            327
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "La présente convention prend effet le 1er juin 2026",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "3",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Parties / Parties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            344,
+            396
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Parties / Parties"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026, and the Distributor shall remit quarterly sales reports to the Licensor",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "8",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026, et la Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "9",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Royalties / Redevances"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            194
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Royalties / Redevances"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante, et toute cession effectuée sans ce consentement est nulle",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "15",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Assignment / Cession"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            185
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Assignment / Cession"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.63,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "Either party may terminate this Agreement upon 60 days prior written notice to the other party, and the parties shall settle all outstanding royalties before the effective date of termination",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "17",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            192
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0034",
+        "snippet": "Chaque partie peut résilier la présente convention moyennant un préavis écrit de 60 jours transmis à l’autre partie, et les parties doivent payer toutes les redevances impayées avant la date de prise d’effet de la résiliation",
+        "source_ref": {
+          "source": "bilingual_contract.md",
+          "block_id": "18",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+            "Termination / Résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            226
+          ]
+        },
+        "heading_path": [
+          "Software Licence and Distribution Agreement / Contrat de licence et de distribution de logiciels",
+          "Termination / Résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0002",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0002"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0005",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0005"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0013",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0013"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0018",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0018"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0026",
+        "field": "relationships",
+        "frame_type": "control_authority",
+        "confidence": 0.63,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0026"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0028",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0028"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0031",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0031"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0034",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0034"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "targets": [
+          "OBL-0001",
+          "OBL-0002",
+          "OBL-0003",
+          "OBL-0004",
+          "OBL-0005",
+          "OBL-0006",
+          "OBL-0007",
+          "OBL-0008",
+          "OBL-0009",
+          "OBL-0010",
+          "OBL-0011",
+          "OBL-0012",
+          "OBL-0013"
+        ],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "null_field_classification",
+        "field": "obligations[].risk_level",
+        "instruction": "Classify each obligation high/medium/low from language."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H0"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §2#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H1"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §2#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H2"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §4#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H3"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §4#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H4"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "relationships",
+        "instruction": "Resolve hint into relationships from snippet at §6#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H5"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H6"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H7"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "implicit_inference",
+        "field": "decision_points",
+        "instruction": "Scan obligations, conditions, and process_steps for if/then logic."
+      }
+    ]
+  },
+  "profile_signals": {
+    "privacy": 0.33,
+    "litigation": 0.0,
+    "governance": 0.0,
+    "risk_assessment": 0.0
+  },
+  "language_profile": {
+    "dominant": "fr",
+    "override": null,
+    "blocks": {
+      "en": 7,
+      "fr": 7,
+      "und": 8
+    },
+    "char_share": {
+      "en": 0.47,
+      "fr": 0.53
+    }
+  }
+}

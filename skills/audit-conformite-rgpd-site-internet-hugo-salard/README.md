@@ -1,0 +1,5 @@
+GDPR compliance audit of a website by a GDPR practitioner/DPO. Systematic assessment using a 10-section checklist: legal notice, hosting provider, forms, newsletter, privacy policy, cookies, passwords, trackers, processors and transfers outside the EU, and accessibility of data subject rights, plus a 22-item appendix covering Articles 13/14 GDPR.
+
+Produces a structured report (Markdown, optional .docx) with an overall compliance level, blocking issues, points requiring attention, priority recommendations, and cited regulatory sources (LCEN, GDPR, ePrivacy, CNIL decisions, EDPB, DPF).
+
+Tool-agnostic: automated browsing or fallback copy-paste mode. 7 decision trees for edge cases. The practitioner validates all statuses before the report is sent to the client. Technical analysis only, no legal advice.

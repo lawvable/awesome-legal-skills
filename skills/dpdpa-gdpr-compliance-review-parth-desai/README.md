@@ -1,0 +1,1 @@
+Performs structured compliance review, clause redlining, and drafting suggestions for legal documents (privacy policies, data processing agreements, vendor and SaaS contracts) against India's DPDPA 2023 and the EU GDPR. Flags clauses as compliant, at-risk, or non-compliant with reasoning, and proposes ready-to-use model replacement language.

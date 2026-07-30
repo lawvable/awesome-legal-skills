@@ -70,11 +70,20 @@ Toutes les AAI listées sur : https://www.legifrance.gouv.fr/contenu/menu/autour
 
 ## Sources doctrinales fiables
 
+### `doctrine_search.py` — Recherche multi-sources (outil principal)
+Le script `scripts/doctrine_search.py` interroge en un appel plusieurs bases ouvertes et retourne, pour chaque référence, un **identifiant vérifiable** (DOI, identifiant HAL, URL) :
+- **HAL** (`api.archives-ouvertes.fr`) — archive ouverte FR, domaine droit.
+- **OpenAlex** (`api.openalex.org`) — graphe bibliographique mondial, riche en DOI.
+- **Isidore** (`api.isidore.science`) — moteur SHS francophone (CNRS / Huma-Num).
+- **Crossref** (`api.crossref.org`) — registre DOI, utilisé pour résoudre et dédoublonner par DOI.
+
+Le script dédoublonne par DOI puis par titre normalisé, et signale les sources injoignables (`sources_failed`) sans bloquer. Il constitue l'outil de première intention pour la doctrine ; HAL ciblé (`hal_search.py`) et web_search le complètent.
+
 ### HAL — Accès structuré via API
 **HAL** (Hyper Articles en Ligne) est l'archive ouverte nationale française gérée par le CCSD (CNRS). L'API permet un accès structuré aux métadonnées et, lorsque disponible, au texte intégral des publications en droit.
 
 - **Point d'entrée API** : `https://api.archives-ouvertes.fr/search/`
-- **Accès** : Via `scripts/hal_search.py`
+- **Accès** : Via `scripts/doctrine_search.py` (multi-sources) ou `scripts/hal_search.py` (HAL ciblé, notes d'arrêt par pourvoi)
 - **Guide d'utilisation** : `references/guide-hal.md`
 - **Couverture en droit** : ~227 000 documents (articles, ouvrages, chapitres, thèses, communications)
 - **Fiabilité** : Les métadonnées HAL sont fiables (dépôts vérifiés par les auteurs et les laboratoires). Les citations formatées (`citationFull_s`) peuvent être utilisées directement.
@@ -91,10 +100,11 @@ Toutes les AAI listées sur : https://www.legifrance.gouv.fr/contenu/menu/autour
 
 Toujours privilégier ces sources lors des recherches juridiques. Ordre de priorité pour l'accès :
 1. **OpenLegi** (accès direct aux bases officielles — fiable par défaut)
-2. **HAL API** (accès structuré à la doctrine — métadonnées fiables, citations formatées) — voir `references/guide-hal.md`
-3. **LegalDataHunter** (droit étranger et comparé — 90+ pays) — voir `references/guide-legaldatahunter.md`
-4. **Sites officiels listés ci-dessus** (via web_search/web_fetch)
-5. **Sources doctrinales web** (via web_search : Cairn, Persée, OpenEdition)
+2. **`doctrine_search.py`** (recherche doctrinale multi-sources — HAL + OpenAlex + Isidore, identifiant vérifiable) — voir `references/guide-hal.md`
+3. **HAL API ciblé** (`hal_search.py` — notes d'arrêt par pourvoi, recherche par auteur)
+4. **LegalDataHunter** (droit étranger et comparé — 90+ pays) — voir `references/guide-legaldatahunter.md`
+5. **Sites officiels listés ci-dessus** (via web_search/web_fetch)
+6. **Sources doctrinales web** (via web_search : Cairn, Persée, OpenEdition)
 
 En cas de conflit entre sources, respecter la hiérarchie des normes :
 1. Textes législatifs et réglementaires en vigueur

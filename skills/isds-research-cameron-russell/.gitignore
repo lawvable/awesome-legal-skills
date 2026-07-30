@@ -1,0 +1,17 @@
+# User state, not skill code — created on first run by fetch_icsid_award.py
+scripts/user-config.json
+
+# Freshness-check cache — created by query_unctad_excel.py
+scripts/.freshness-cache.json
+
+# UNCTAD's full-data Excel is deliberately NOT redistributed with this repo:
+# UNCTAD's Terms of Use permit personal, non-commercial use but bar
+# redistribution/derivative compilations. Each user downloads their own copy
+# from UNCTAD (free) — see README "Get the UNCTAD data (required)".
+data/
+
+# macOS Finder metadata
+.DS_Store
+
+# Python bytecode
+__pycache__/

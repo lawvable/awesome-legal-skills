@@ -1,0 +1,34 @@
+# Drafter notes: art4-2-safety-handbrake-notice
+
+The Art. 4(2) safety/security handbrake is the least-litigated and most-misunderstood restriction in Ch II. The mistake to avoid is using it as a back-door for commercial concerns that should have been pursued under the Art. 4(6)-(8) trade-secret regime, or as a unilateral refusal mechanism. Art. 4(2) is bilateral and conditional.
+
+## Substantive risks of using the template
+
+- **Art. 4(2) is contractual, not unilateral.** The text says "users and data holders may contractually restrict or prohibit." A data holder cannot unilaterally invoke Art. 4(2) to refuse a data request; it requires agreement with the user. Where the user does not agree, the matter is a dispute under Art. 4(3), which leads to competent-authority complaint or dispute settlement. The data holder's "refusal" under Art. 4(2) third sentence is a refusal to share pending the contractual restriction taking effect; it is not a unilateral block.
+- **The conjunction at the end of Art. 4(2).** Two conditions are required. First, the processing must be capable of undermining security requirements laid down in Union or national law. Second, that undermining must result in a serious adverse effect on the health, safety or security of natural persons. "Security requirement" without "serious adverse effect on natural persons" is insufficient. Cybersecurity exposure to the data holder's own systems, without a path to harm to natural persons, does not meet the second limb. The template forces both elements into sections 3 and 4.
+- **The security requirements must be in Union or national law.** Internal policies, contracts with suppliers, voluntary standards not incorporated into law: none of these are Art. 4(2) security requirements. The drafter must cite specific law. The Cyber Resilience Act (Regulation (EU) 2024/2847), NIS2 (Directive (EU) 2022/2555), sectoral safety regulations (vehicles, medical devices, energy), and any national security law are the typical sources. Listing internal compliance posture is a defect.
+- **Sectoral authority expertise is permissive, not mandatory.** Art. 4(2) second sentence allows sectoral authorities to provide technical expertise. The drafter may consult them; doing so strengthens the substantiation. But the absence of sectoral authority consultation is not a defect in itself, where the data holder can document the safety/security analysis on its own.
+- **Art. 4(2) and Art. 4(8) are separate regimes.** Where the data is restricted on a mix of safety/security and trade-secret grounds, the data holder runs both regimes in parallel. Do not collapse a trade-secret refusal into an Art. 4(2) notice merely because the trade-secret regime is more demanding to substantiate. The McIntyre OSS enforcement signals (in `references/gates/trade-secrets-directive.md`) include cases where competent authorities have unwound Art. 4(2) restrictions that were dressed-up trade-secret refusals.
+- **Scope discipline in section 5.** The restriction must be no broader than necessary to address the identified serious adverse effect. Restricting "all telematics data" because real-time access to one data field could be misused is over-broad and will be unwound. The drafter should ensure the restriction matches the safety/security analysis field-by-field or category-by-category.
+- **Competent authority notification is constitutive.** Art. 4(2) third sentence: "Where the data holder refuses to share data pursuant to this Article, it shall notify the competent authority designated pursuant to Article 37." The notification is part of the refusal, not a downstream administrative step. Part 2 of the template runs in parallel with Part 1. A refusal without notification is procedurally defective.
+
+## Pointers to gates and scenarios
+
+- Scenario card: `references/scenarios/ch2-safety-security-handbrake.md` (bilateral structure; Art. 37 notification; sectoral overlay).
+- Sectoral gate: `references/gates/sectoral-lex-specialis.md` (always relevant; the security requirement is sectoral law).
+- Trade-secret gate: `references/gates/trade-secrets-directive.md` (relevant if any part of the underlying motivation for the restriction is trade-secret-protective; if so, the trade-secret regime should be run separately rather than folded into the Art. 4(2) notice).
+- Member State gate: `references/gates/member-state.md` (the competent authority designation varies; the notification path depends on the Member State).
+
+## Common drafting mistakes the drafter should check for
+
+- Quoting Art. 4(2) only down to "security requirements of the connected product" and leaving out the "resulting in a serious adverse effect on the health, safety or security of natural persons" tail. The conjunction is the test; eliding it weakens the substantiation and risks competent-authority unwinding.
+- Naming "security" generically. The Art. 4(2) regime is about safety/security of natural persons. The drafter must trace the data field to a safety/security mechanism that, if compromised, causes harm to natural persons.
+- Naming the wrong instrument. Art. 4(2) requires Union or national law. Industry standards (ISO, IEC, NIST) are not Union or national law unless they have been adopted into law (e.g. through CRA harmonised standards). Citing standards as if they were law is a defect.
+- Using Art. 4(2) for "cybersecurity in general." Cybersecurity exposure to the data holder's own systems is not an Art. 4(2) ground unless the exposure leads to harm to natural persons. The chain must be drawn: data field exposure → compromise of security mechanism → adverse effect on natural persons.
+- Treating Art. 4(2) as unilateral. The data holder cannot impose Art. 4(2); it agrees with the user. The template is structured as a bilateral notice for that reason. Where the user refuses to agree, the matter is a dispute, not a unilaterally effective restriction.
+- Forgetting to cross-reference the bilateral notice in the competent authority notification. The competent authority is being told that the data holder has agreed (or sought to agree) a restriction with the user; the authority will want to see the bilateral document.
+- Treating Art. 4(2) as time-unlimited. Section 6 of the template requires a duration or a defined end-condition. Permanent restrictions on Art. 4(1) rights are not within Art. 4(2); the restriction operates only as long as the safety/security justification is current.
+
+## Length and tone
+
+Formal, factual, restrained. The user is being told that a specific safety/security analysis justifies a specific restriction. The tone is not adversarial; the data holder is invoking a regulatory mechanism, not winning a dispute. The competent authority notification (Part 2) is even more restrained: it documents the data holder's compliance with Art. 4(2) and provides the authority with the materials to assess the restriction if it chooses to.

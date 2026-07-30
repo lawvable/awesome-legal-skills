@@ -1,0 +1,1 @@
+Verification-first methodology for the ECCC (Khmer Rouge Tribunal). Every citation is verified against eccc.gov.kh, the ECCC archive or legal-tools.org. Covers Case File numbering, the 001/002/002-01/002-02 structure, the genocide findings against the Cham and the Vietnamese, and the Internal Rules revision discipline. Research aid, not legal advice.
