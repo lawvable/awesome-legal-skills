@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "requirementDiagram",
+    "rationale": "requirementDiagram selected based on: obligations, controls.",
+    "alternatives": [
+      "flowchart",
+      "sequenceDiagram"
+    ],
+    "confidence": 0.58,
+    "grouping_suggested": false,
+    "grouping_axis": null
+  },
+  "with_intent": {
+    "intent": "data privacy flows and obligations",
+    "result": {
+      "recommended_type": "flowchart",
+      "rationale": "flowchart selected based on: obligations, legal authorities, parties.",
+      "alternatives": [
+        "requirementDiagram",
+        "sequenceDiagram"
+      ],
+      "confidence": 0.6,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

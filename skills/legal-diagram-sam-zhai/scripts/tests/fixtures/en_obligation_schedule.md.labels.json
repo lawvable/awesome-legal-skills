@@ -1,0 +1,83 @@
+{
+  "expected_type": "requirementDiagram",
+  "expected_type_with_intent": {
+    "intent": "compliance obligation checklist",
+    "type": "requirementDiagram"
+  },
+  "fields": {
+    "parties": [
+      "Foxwood Technologies Ltd.",
+      "Vendor",
+      "Bluechip Solutions Inc."
+    ],
+    "obligations": [
+      "Company shall file annual privacy impact assessment with Office of the Privacy Commissioner by December 31, 2026",
+      "Company shall renew operating licence with FINTRAC by March 31, 2026",
+      "Company shall submit quarterly compliance certificate to board by June 30, 2026",
+      "Company shall submit quarterly compliance certificate to board by September 30, 2026",
+      "Company shall conduct annual third-party security audit by November 30, 2026",
+      "Vendor shall deliver updated data processing agreement to Company by May 15, 2026",
+      "Vendor shall provide SOC 2 Type II certification evidence by June 30, 2026",
+      "Vendor shall renew subprocessor registration with Company by December 1, 2026",
+      "Company shall pay annual platform licence fee of $240,000 to Bluechip Solutions Inc. by May 1, 2026",
+      "Company shall deliver audit access certificate to Bluechip Solutions Inc. by May 1, 2026",
+      "Company shall notify Bluechip Solutions Inc. of material changes to data architecture within 30 days",
+      "Company shall complete annual workplace safety training for all employees by June 30, 2026",
+      "Company shall complete annual performance reviews for all employees by December 31, 2026",
+      "Company shall provide written notice of layoffs no later than 8 weeks prior to effective date",
+      "Company shall notify insurer of material change in business operations within 30 days",
+      "Bluechip Solutions Inc. shall deliver updated API documentation to Company by April 30, 2026",
+      "Bluechip Solutions Inc. shall provide 99.9% uptime guarantee and submit monthly SLA reports to Company",
+      "Company shall file T4 slips and T4 summary with the Canada Revenue Agency by February 28, 2026",
+      "Company shall pay annual RRSP matching contributions for eligible employees by March 31, 2026",
+      "Company shall renew commercial general liability insurance policy by July 31, 2026",
+      "Company shall renew cyber liability insurance policy with minimum coverage of $10,000,000 by July 31, 2026",
+      "Company shall provide certificate of insurance to Bluechip Solutions Inc. by August 15, 2026",
+      "Responsible parties must report completion to the compliance officer within 5 business days of satisfying each obligation",
+      "If the Company fails to satisfy any obligation in Schedule A by the stated due date, the compliance officer shall notify the board of directors within 2 business days and prepare a remediation plan within 10 business days",
+      "The Company shall maintain a compliance register recording the date of completion and evidence document for each satisfied obligation"
+    ],
+    "deadlines": [
+      "December 31, 2026",
+      "March 31, 2026",
+      "June 30, 2026",
+      "September 30, 2026",
+      "November 30, 2026",
+      "May 15, 2026",
+      "April 30, 2026",
+      "May 1, 2026",
+      "December 1, 2026",
+      "August 15, 2026",
+      "July 31, 2026",
+      "February 28, 2026",
+      "Within 30 days of change",
+      "no later than 8 weeks prior to effective date",
+      "submit monthly SLA reports to Company",
+      "File annual privacy impact assessment with the Office of the Privacy Commissioner by December 31, 2026",
+      "Provide evidence of SOC 2 Type II certification by June 30, 2026",
+      "Submit quarterly compliance certificate to the board of directors by June 30, 2026",
+      "Renew operating licence with the Financial Transactions and Reports Analysis Centre of Canada by March 31, 2026",
+      "Pay annual platform licence fee of $240,000 to Bluechip Solutions Inc. by May 1, 2026",
+      "Renew cyber liability insurance policy with minimum coverage of $10,000,000 by July 31, 2026",
+      "Notify Bluechip Solutions Inc. of material changes to data architecture within 30 days"
+    ],
+    "controls": [
+      "Privacy Officer review",
+      "Legal review",
+      "Board sign-off",
+      "Audit committee approval",
+      "Compliance Officer review"
+    ],
+    "documents": [
+      "Annual PIA Report",
+      "Licence Renewal Certificate",
+      "Compliance Certificate",
+      "Security Audit Report",
+      "Data Processing Agreement",
+      "SOC 2 Report",
+      "Subprocessor Registration",
+      "Platform Licence Agreement",
+      "Service Level Agreement"
+    ]
+  }
+}

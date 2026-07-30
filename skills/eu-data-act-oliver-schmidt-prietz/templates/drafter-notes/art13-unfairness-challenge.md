@@ -1,0 +1,38 @@
+# Drafter notes: art13-unfairness-challenge
+
+The Art. 13 unfairness challenge is procedurally straightforward but substantively demanding: each contested term must be run through the three-test structure, and each test result must be reasoned. Drafters who pattern-match terms to the Art. 13(4) and 13(5) lists without analysis of the actual term's effect produce challenges that the Imposing Party can rebut on facts.
+
+## Substantive risks of using the template
+
+- **The three-test structure must be applied to each term separately.** Art. 13 has three substantive tests: the Art. 13(4) "always unfair" list (conclusive characterisation, no rebuttal), the Art. 13(5) "presumed unfair" list (rebuttable presumption), and the Art. 13(3) general standard (gross deviation from good commercial practice contrary to good faith and fair dealing). The general standard is the framework; the lists are accelerators. A term not on either list can still be unfair under Art. 13(3). A term on the Art. 13(5) list can be defended against unfairness only by rebutting the presumption against the Art. 13(3) standard. The template's section 4 forces the sequence.
+- **Unilateral imposition is the gating fact.** Art. 13(1) applies only to terms unilaterally imposed. Art. 13(6) sets the test: the recipient was not able to influence the content despite an attempt to negotiate. The burden of proof rests on the party that supplied the term. The drafter should ensure the factual record (correspondence, term sheets, amendment proposals refused) supports the unilateral-imposition finding. A challenge against a genuinely negotiated term is procedurally defective.
+- **Art. 13(2) and Art. 13(8) carve-outs.** Art. 13(2) excludes terms reflecting mandatory Union law or default Union law that would apply absent contractual regulation. Art. 13(8) excludes terms defining the main subject matter or the adequacy of price against data supplied. The template surfaces both in section 3. Drafters who skip the carve-out analysis invite the Imposing Party to defeat the challenge on that ground.
+- **Art. 13(3) "gross deviation" is the dispositive standard for Art. 13(5) rebuttal.** The Imposing Party can rebut the Art. 13(5) presumption by showing the term does not grossly deviate from good commercial practice. Drafters should pre-empt the likely rebuttal arguments and have facts ready: sector comparables, prior practice between the parties, the specific commercial context. A bare assertion that the term is unfair under Art. 13(5) without engagement with the gross-deviation standard is weak.
+- **Art. 13(4) is conclusive characterisation, not rebuttable.** Where a term falls within Art. 13(4)(a), (b), or (c), the unfairness is settled. The Imposing Party cannot defend the term by reference to fair-dealing considerations. The drafter should be precise about whether the term genuinely falls within Art. 13(4); overstating reach weakens credibility for other terms.
+- **Severability under Art. 13(7).** The default is that unfair terms are severed and the rest of the contract continues. Where the unfair term is so central that severance dismantles the deal, the consequence is different and may need to be litigated. Section 5 of the template requires the drafter to state a position. Drafters sometimes leave severability vague; do not. The Imposing Party will exploit ambiguity.
+- **Anti-derogation under Art. 13(9).** A contract cannot exclude or vary Art. 13. Drafters often encounter "no-challenge" clauses or "Art. 13 does not apply to this contract" clauses inserted by the supplier; these are themselves unenforceable. Section 6 surfaces this.
+- **Art. 13(6) third sentence: estoppel against the supplier.** The party that supplied the term cannot argue the term is unfair. This is relevant where the Imposing Party tries to argue its own term is unfair against the recipient. The Challenging Party here is the recipient, so the estoppel runs in the Challenging Party's favour. Section 7 is informational.
+- **The relationship to Art. 8(2).** Art. 8(2) provides that contract terms concerning data access, use, liability or remedies in Ch III B2B relations are not binding if unfair within the meaning of Art. 13, or if they exclude/derogate from/vary user rights under Ch II to the user's detriment. Where the Art. 13 challenge involves a Ch III contract, the Art. 8(2) anchor strengthens the challenge.
+
+## Pointers to gates and scenarios
+
+- Scenario cards: `references/scenarios/ch4-unfairness-challenge.md` (Art. 13 three-test structure; severability); `references/scenarios/ch4-contract-drafting.md` (the same analysis from the drafter's side, pre-imposition).
+- Trade-secret gate: `references/gates/trade-secrets-directive.md` (relevant where Art. 13(5)(b) is invoked because the term concerns trade-secret-protected data).
+- Sectoral gate: `references/gates/sectoral-lex-specialis.md` (relevant where the sector has its own unfairness or fairness regime; e.g. consumer law analogues; sectoral B2B fairness regimes; in some sectors, the sectoral regime carves out or supplements Art. 13).
+- Member State gate: `references/gates/member-state.md` (Member State implementation may carry national contract law overlay; the Art. 13 standard is direct-effect but Member State remedies vary).
+
+## Common drafting mistakes the drafter should check for
+
+- Pattern-matching without analysis. A term that resembles an Art. 13(5) item but does not actually fall within it (because the effect or object is different) cannot be challenged on Art. 13(5); the drafter must analyse the term as drafted.
+- Failing to address the carve-outs. Section 3 of the template should not be skipped.
+- Stating multiple Art. 13(4)/(5) limbs without picking the strongest. A challenge that invokes seven Art. 13(5) limbs against one term looks like fishing. Pick the limbs that genuinely apply and develop each.
+- Mixing the Art. 13(3) general standard with Art. 13(4)/(5) without sequence. The template forces the sequence: Art. 13(4) first (conclusive), then Art. 13(5) (presumed, with rebuttal preemption), then Art. 13(3) (general). A drafter who collapses the tests loses analytical force.
+- Treating severability as automatic. Section 5 requires reasoning; "the rest of the contract should continue" is a position, not a conclusion.
+- Failing to identify the consequence of severance. Where the unfair term is removed, what is the new operative reality? Section 8 forces this.
+- Forgetting that Art. 13 applies only between enterprises (B2B). Where one party is a consumer, the analysis runs under the Consumer Rights Directive, the Unfair Contract Terms Directive, or other consumer protection law instead. Art. 13 is the wrong instrument.
+- Missing the Digital Omnibus check. The Digital Omnibus does not currently propose changes to Art. 13 in the source skill's freshness window, but the drafter should verify against `sources/digital-omnibus-amendments-tracker.md`.
+- Overlooking ancillary terms in long contracts. Art. 13 challenges sometimes focus on a single headline clause and miss subsidiary terms (liability caps in side schedules, indemnity provisions, audit-rights overreach) that are equally challengeable.
+
+## Length and tone
+
+Substantive and surgical. Each contested term gets the three-test treatment; the structure is repeated for clarity, not collapsed for brevity. The tone is firm but not aggressive: the Challenging Party is invoking a statutory framework, not asserting a contract-renegotiation lever. Where the Imposing Party is a long-term commercial counterparty, the drafter should consider whether the challenge can be framed as a request for compliance rather than a confrontation, while preserving the legal posture.

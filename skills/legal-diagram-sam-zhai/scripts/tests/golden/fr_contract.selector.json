@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "flowchart",
+    "rationale": "flowchart selected based on: relationships, entities, obligations, conditions, decision points, transfers, parties.",
+    "alternatives": [
+      "gantt",
+      "requirementDiagram"
+    ],
+    "confidence": 0.5,
+    "grouping_suggested": false,
+    "grouping_axis": null
+  },
+  "with_intent": {
+    "intent": "échéancier des phases et délais de clôture",
+    "result": {
+      "recommended_type": "gantt",
+      "rationale": "gantt selected based on: events, deadlines.",
+      "alternatives": [
+        "timeline",
+        "flowchart"
+      ],
+      "confidence": 0.56,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

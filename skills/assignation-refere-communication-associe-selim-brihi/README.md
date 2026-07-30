@@ -1,0 +1,1 @@
+Guide for drafting emergency court filings (assignation en référé) to force disclosure of corporate documents to a shareholder under Article L. 238-1 of the French Commercial Code. Use when a shareholder is denied access to annual accounts, management reports, or meeting minutes.

@@ -1,0 +1,147 @@
+{
+  "skill_name": "ai-act-knowledge",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're a German manufacturer that integrates a third-party LLM into our customer-support chatbot, then materially fine-tunes it on our domain data and brands it as our own product. The original LLM was placed on the EU market by a US provider. Are we now considered a 'provider' under the AI Act, or still a deployer? Cite the relevant articles.",
+      "expected_output": "Art. 25 quasi-provider rules apply. A deployer that puts its name on a high-risk system OR makes a substantial modification to it OR modifies the intended purpose of an AI system, is considered a provider under Art. 25(1)(a)-(c). Material fine-tuning that changes the intended purpose or constitutes substantial modification triggers Art. 25 — the German company is now a provider of the rebranded system and inherits Art. 16 provider obligations. The substantial-modification threshold (Art. 3(23)) is doing the work — superficial branding alone may not trigger if intended purpose is unchanged, but combining rebrand + fine-tuning typically does. CRITICAL: this analysis only applies if the system is HIGH-RISK under the AI Act; Art. 25(1)(a) triggers are scoped to high-risk systems. A customer-support chatbot is not, by default, high-risk under Annex III, so Art. 25 may not apply at all unless the system falls under high-risk classification.",
+      "files": [],
+      "expectations": [
+        "Cites Art. 25 AI Act by article number as the controlling provision (quasi-provider rules)",
+        "Identifies the three triggers in Art. 25(1)(a)-(c): putting one's name on a high-risk system, making a substantial modification, or modifying the intended purpose",
+        "Cites Art. 3(23) — substantial modification definition — and explains what 'substantial' means in this context",
+        "Distinguishes superficial branding (may not trigger) from rebrand + substantial modification (does trigger)",
+        "States the consequence: provider obligations under Art. 16 apply (if Art. 25 triggers)",
+        "Mentions the upstream provider's obligations under Art. 25(2) re: cooperation with the downstream quasi-provider",
+        "Avoids hallucinating article numbers — only Art. 25, Art. 3(23), Art. 16, and possibly Art. 26 are correctly cited",
+        "Notes Commission Guidelines on substantial modification are in preparation (Watch List item)",
+        "WRONG-ANSWER REJECTION: explicitly notes that Art. 25(1)(a) is scoped to HIGH-RISK systems — does not assert quasi-provider status applies to a customer-support chatbot without first analysing whether it is high-risk under Annex III",
+        "WRONG-ANSWER REJECTION: does not claim that branding alone triggers Art. 25 — the branding trigger requires the system to already be high-risk AND to be placed on the market under the deployer's name"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're building a high-risk AI system for HR (CV ranking, Annex III Nr. 4). Some of the decisions will be solely automated for shortlisting. Do we trigger Art. 27 FRIA, or Art. 22 GDPR, or both? Walk me through the interplay.",
+      "expected_output": "BOTH are triggered, as distinct legal mechanisms. Art. 27 AI Act FRIA: applies to deployers of high-risk systems that are bodies governed by public law, private entities providing public services, or specific Annex III deployers (5(b)/(c) banking/insurance) — scope is narrower than 'all high-risk deployers'. For a private HR system the FRIA obligation depends on whether the deployer qualifies under Art. 27(1)(a)-(c). Art. 22 GDPR: applies to solely automated decisions producing legal/similarly significant effects (CV shortlisting likely qualifies). FRIA covers fundamental-rights risks beyond data protection; Art. 22 governs automated-decision rights specifically. Per EDPB Opinion 28/2024, training and deployment are distinct processing activities. The DPIA (Art. 35 GDPR) is also triggered. Joint EC/EDPB guidelines on AI Act + GDPR interplay are in preparation.",
+      "files": [],
+      "expectations": [
+        "States Art. 22 GDPR is triggered for the solely automated CV shortlisting decisions",
+        "Correctly scopes Art. 27 FRIA: applies to public bodies, private entities providing public services, AND specific Annex III 5(b)/(c) sectors — NOT all deployers of all Annex III high-risk systems",
+        "Identifies Art. 22 GDPR basis: solely automated decision with legal/similarly significant effect on the data subject",
+        "Explains FRIA covers broader fundamental-rights risks vs. Art. 22 covering automated-decision rights specifically",
+        "Triggers Art. 35 GDPR DPIA also (related but distinct from FRIA)",
+        "References EDPB Opinion 28/2024 by name on AI Act + GDPR interplay",
+        "Notes the Joint EC/EDPB Guidelines on AI Act + GDPR are in preparation (Watch List)",
+        "Recommends running DPIA and (if applicable) FRIA in parallel given the overlap in underlying assessment",
+        "WRONG-ANSWER REJECTION: does NOT claim FRIA replaces or substitutes for the DPIA — they are complementary, even if their assessments overlap",
+        "WRONG-ANSWER REJECTION: does NOT assert that Art. 27 FRIA applies to all deployers of all Annex III systems indiscriminately — Art. 27(1) scope is the qualifying word"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The Digital Omnibus has been discussed for over a year. What's its current state and which AI Act provisions would it most affect? Be specific about what's proposed vs. enacted.",
+      "expected_output": "Digital Omnibus is a proposed legislative package, NOT in force. Status as of last reference-file update (March 2026): in trilogue/Council consideration. Most-affected AI Act provisions: Art. 53 GPAI obligations (proposed adjustments to scope and timing), Art. 51 systemic-risk threshold (potential recalibration), penalty regime under Art. 99 (some streamlining proposals). Current AI Act text continues to apply. Should recommend web search for most-current status because the file knowledge is bounded.",
+      "files": [],
+      "expectations": [
+        "States Digital Omnibus is proposed legislation, NOT in force",
+        "Distinguishes proposed changes from current law explicitly",
+        "Identifies Art. 53 GPAI obligations as a primary target of proposed amendments",
+        "Identifies Art. 51 (systemic risk) as a target of potential recalibration",
+        "Does not assert specific trilogue outcomes or final text — flags uncertainty",
+        "References the EDPB-EDPS joint opinion 2026 where it bears on Digital Omnibus interactions",
+        "POST-CUTOFF STRESS: explicitly recommends web search for current status because the skill's reference files have a knowledge cutoff (~March 2026) and Omnibus state changes by week",
+        "WRONG-ANSWER REJECTION: does NOT frame the Digital Omnibus as enacted law or assert that any of its proposed changes have taken effect",
+        "POST-CUTOFF CONTENT: identifies the Digital Omnibus by its formal Commission document reference COM(2025) 836 final or its publication date 19 November 2025 — this specific identifier is in the reference files but not in baseline training"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We release an open-source foundation model with weights, code, training data references, but with a non-commercial-only licence. Are we exempt from any AI Act obligations under the open-source carve-outs, or not? Cite the specific provisions and explain the distinction between Art. 2(12) and Art. 53(2).",
+      "expected_output": "Art. 2(12) AI Act exempts free and open-source AI systems from most obligations EXCEPT prohibited practices (Art. 5) and high-risk systems (Art. 6), and EXCEPT for systems made available as part of a product placed on the market. Art. 53(2) is a separate, narrower carve-out for GPAI models released under a free and open-source licence — it disapplies parts of Art. 53(1)(a) and (b) obligations BUT NOT the systemic-risk obligations of Art. 55 if the model meets the threshold. CRITICAL: a non-commercial-only licence is NOT 'free and open-source' under the AI Act definition (which generally tracks OSI principles — usage cannot be field-restricted). Therefore the carve-out does NOT apply.",
+      "files": [],
+      "expectations": [
+        "Distinguishes Art. 2(12) (AI system carve-out) from Art. 53(2) (GPAI model carve-out) — these are different provisions",
+        "Cites Art. 2(12) accurately: exempts free open-source AI systems from most obligations BUT NOT from prohibited practices, high-risk requirements, or product-integrated systems",
+        "Cites Art. 53(2) accurately: GPAI-specific carve-out that disapplies parts of Art. 53(1) but NOT Art. 55 systemic-risk obligations",
+        "Identifies that a non-commercial-only licence is NOT 'free and open-source' under the AI Act — the carve-outs do NOT apply",
+        "References the OSI principles or the AI Act's open-source criteria to ground the licence-eligibility analysis",
+        "Notes that even if the carve-out applied, Art. 5 (prohibited practices) still applies to all systems",
+        "Recommends checking specific licence terms against the AI Act criteria, not assuming",
+        "Avoids the common error of conflating Art. 2(12) and Art. 53(2)",
+        "WRONG-ANSWER REJECTION: does NOT claim that releasing weights or code under a 'source-available' or 'non-commercial' licence qualifies for the open-source carve-out — explicitly excludes field-of-use restrictions",
+        "WRONG-ANSWER REJECTION: does NOT claim that the carve-out exempts the system from Art. 5 prohibited-practices obligations"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "We're adhering to the GPAI Code of Practice. Is that sufficient evidence of compliance with Art. 53 obligations, or do we need more? When is adherence to the Code enough vs. when do we need to layer additional measures?",
+      "expected_output": "Adherence to the GPAI Code of Practice creates a PRESUMPTION of compliance with Art. 53 obligations covered by the Code (Art. 56 mechanism), but only for the obligations the Code addresses and only to the extent it does so. Code-based compliance is a strong evidentiary anchor but: (1) systemic-risk GPAI models under Art. 55 must do MORE than the Code — the Code is a baseline; (2) where the Code is silent or only partially addresses an obligation, additional measures are needed; (3) the Code is non-binding soft law that the AI Office may treat as a benchmark. Recommend documenting the gap between Code adherence and any additional measures.",
+      "files": [],
+      "expectations": [
+        "States adherence to the GPAI Code creates a PRESUMPTION of compliance via Art. 56, not absolute compliance",
+        "Identifies Art. 56 as the legal mechanism for Code-based presumption of compliance",
+        "Explicitly states that systemic-risk GPAI models (Art. 55) need MORE than the Code — Code is baseline only",
+        "Notes the Code is non-binding soft law — the EC's interpretive guidance, not regulation",
+        "Notes that where the Code is silent, additional measures are required to demonstrate Art. 53 compliance",
+        "Distinguishes Code obligations from regulation obligations — Code interprets, Regulation binds",
+        "Recommends documenting the analysis (gap between Code adherence and full Art. 53/55 compliance)",
+        "WRONG-ANSWER REJECTION: does NOT claim that GPAI Code adherence is sufficient compliance for systemic-risk models — Art. 55 obligations require more even if the Code is followed",
+        "WRONG-ANSWER REJECTION: does NOT treat the Code as binding regulation — flags its non-binding soft-law status explicitly"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "We're deploying an AI system that generates synthetic news anchor videos for our marketing campaigns. Art. 50(4) deepfake labelling — what specifically do we need to do, and how does the GPAI Code of Practice's metadata/watermarking framework layer on top?",
+      "expected_output": "Art. 50(4) requires deployers of AI systems that generate or manipulate image/audio/video content constituting a deepfake to disclose this. This is a multi-layer framework: (1) Art. 50(4) regulation-level label disclosure; (2) GPAI Code of Practice (Transparency Code) adds metadata embedding (C2PA-style provenance), watermarking, and content credentials guidance for upstream model providers; (3) Art. 50(2) requires the model provider to mark outputs as AI-generated in machine-readable format. Marketing campaigns get an exception under Art. 50(4) ONLY where artistic, creative, satirical, fictional or analogous work — but marketing is NOT generally one of these exceptions, so labelling is required.",
+      "files": [],
+      "expectations": [
+        "Cites Art. 50(4) AI Act as the controlling provision for deployer disclosure of deepfake content",
+        "Identifies the multi-layer framework: Art. 50(4) deployer label + Art. 50(2) provider machine-readable marking + Code of Practice metadata/watermarking guidance",
+        "States that the artistic/creative/satirical/fictional exception in Art. 50(4) does NOT typically cover marketing campaigns",
+        "Cites Art. 50(2) for the upstream model-provider obligation to mark outputs machine-readable",
+        "Distinguishes user-facing disclosure (Art. 50(4) deployer) from machine-readable marking (Art. 50(2) provider)",
+        "Notes Commission Guidelines on transparency requirements are in preparation (Watch List)",
+        "Recommends C2PA-style provenance / content credentials as concrete implementation",
+        "WRONG-ANSWER REJECTION: does NOT classify marketing deepfakes as falling within the Art. 50(4) artistic/creative/satirical/fictional exception",
+        "WRONG-ANSWER REJECTION: does NOT conflate Art. 50(2) (provider machine-readable marking) with Art. 50(4) (deployer user-facing disclosure) — these are distinct obligations on distinct parties"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "We're a medical device manufacturer placing an AI-enabled diagnostic tool on the EU market. We've got CE marking under the MDR. Does the AI Act add anything, or does MDR cover everything?",
+      "expected_output": "Dual conformity assessment regime. AI Act Art. 6(1) covers safety-component AI in Annex I products including medical devices (MDR/IVDR). The system is HIGH-RISK under the AI Act. Both regimes apply: MDR for the medical-device aspects, AI Act for the AI-specific obligations (Art. 8-15 — risk management, data governance, transparency, human oversight, accuracy/robustness, post-market monitoring). Art. 8(2) allows integration into a single conformity assessment to avoid duplication. MDCG 2025-6 provides specific guidance on the AI Act + MDR interplay. Note: the AI Act adds requirements MDR does not have (e.g., bias mitigation in training data per Art. 10), so MDR alone is insufficient. AI Act high-risk in Annex I products applies from 2 August 2028 (Art. 113(d) as postponed by the AI Omnibus 2026 from the original 2 August 2027).",
+      "files": [],
+      "expectations": [
+        "Identifies the dual-conformity regime — AI Act AND MDR both apply, not one or the other",
+        "Cites Art. 6(1) AI Act as the basis for medical-device AI being high-risk",
+        "Cites Art. 8-15 AI Act as the high-risk requirements that layer on top of MDR",
+        "References MDCG 2025-6 by exact identifier as the Medical Device Coordination Group guidance on this interplay",
+        "Cites Art. 8(2) AI Act allowing integration into a single conformity assessment to avoid duplication",
+        "Identifies AI Act-specific requirements MDR does not address (e.g., training data bias mitigation per Art. 10)",
+        "Notes IVDR may apply alongside MDR depending on the diagnostic context",
+        "Concludes MDR alone is insufficient — AI Act adds substantive obligations",
+        "POST-CUTOFF STRESS: identifies Art. 113(d) timing under the AI Omnibus 2026 postponement — Annex I high-risk AI applies from 2 August 2028 (not the pre-Omnibus 2 August 2027), and Annex III high-risk AI applies from 2 December 2027 (not the pre-Omnibus 2 August 2026)",
+        "WRONG-ANSWER REJECTION: does NOT claim MDR conformity assessment alone is sufficient — explicitly identifies the additional AI Act layer",
+        "POST-CUTOFF CONTENT: identifies MDCG 2025-6 by its document title or publication date (e.g., '2025-6' refers to a 2025 Medical Device Coordination Group guidance specifically on AI Act / MDR interplay) — the precise identifier is in the reference files; baseline may guess or omit"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "How does the German KI-Verordnungs-Durchführungsgesetz (AI Act implementation law) layer on top of the EU AI Act? What does it add or change, and where do German entities need to look beyond the Regulation?",
+      "expected_output": "Germany's KI-Verordnungs-Durchführungsgesetz (KI-VO-DG; earlier draft sometimes called KI-MIG) implements the procedural/institutional layer the Regulation leaves to Member States. Adds: designation of national competent authorities (likely BNetzA + BfDI + sectoral regulators with BSI for cybersecurity), national rules on sandboxes per Art. 57, national administrative-procedure rules for enforcement, fine collection mechanisms, language requirements (German required for certain documentation). Does NOT add substantive obligations beyond the Regulation — Regulation 2024/1689 is directly applicable. Recommend web search for current status of the law and ordinances.",
+      "files": [],
+      "expectations": [
+        "States the German law implements procedural/institutional aspects the Regulation delegates to Member States, not substantive obligations beyond the Regulation",
+        "Identifies likely competent authorities: BNetzA, BfDI, sectoral regulators, BSI for cybersecurity",
+        "References Art. 57 (regulatory sandboxes) as a provision needing national implementation",
+        "Notes the AI Act Regulation 2024/1689 is directly applicable — German law adds the procedural skin, not the substance",
+        "Mentions German-language documentation requirements where applicable",
+        "Notes the law has been called KI-MIG or KI-VO-DG in different drafts; flags this naming variability",
+        "POST-CUTOFF STRESS: recommends web search for current status — the law was still in legislative process at the skill's reference cutoff, status changes by month",
+        "WRONG-ANSWER REJECTION: does NOT claim the German national law adds substantive AI-Act obligations beyond the directly-applicable Regulation — German law is procedural/institutional only",
+        "WRONG-ANSWER REJECTION: does NOT assert the law is in force without flagging the verify-current-status caveat",
+        "POST-CUTOFF CONTENT: names the specific Bundes-level competent authorities the German implementation law designates — e.g., BNetzA as the central Marktüberwachungsbehörde / coordinating authority; BfDI for fundamental-rights-relevant AI; BSI for cybersecurity-aligned AI; BaFin for financial-services AI — the exact attribution is in the reference files but baseline may give a vaguer 'various sectoral regulators' answer"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="{{ ui_lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>{{ matter_title }}</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #555;
+      --rule: #c8c8c8;
+      --bg: #ffffff;
+      --accent: #2a4d69;
+      color-scheme: light;
+    }
+    html { background: #f4f4f2; }
+    pre.mermaid, .diagram-inner svg { background: #ffffff; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f4f4f2;
+      color: var(--ink);
+      font-family: "Georgia", "Times New Roman", serif;
+      line-height: 1.5;
+    }
+    .paper {
+      max-width: 900px;
+      margin: 32px auto;
+      background: var(--bg);
+      padding: 48px 56px 64px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+    h1.matter-title {
+      font-size: 1.55rem;
+      margin: 0 0 4px;
+      letter-spacing: 0.2px;
+    }
+    .matter-context {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .diagram-frame {
+      border: 1px solid var(--rule);
+      background: #fbfbfa;
+      overflow: hidden;
+      position: relative;
+      min-height: 300px;
+      cursor: grab;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      touch-action: none;
+    }
+    .diagram-frame:active { cursor: grabbing; }
+    .diagram-frame:fullscreen,
+    .diagram-frame:-webkit-full-screen {
+      background: #fbfbfa;
+      cursor: grab;
+    }
+    .diagram-frame:fullscreen:active,
+    .diagram-frame:-webkit-full-screen:active { cursor: grabbing; }
+    .diagram-inner {
+      transform-origin: 0 0;
+      transition: transform 0.04s linear;
+      padding: 18px;
+    }
+    pre.mermaid {
+      margin: 0;
+      text-align: center;
+      font-family: "Courier New", monospace;
+    }
+
+    /* --- Diagram viewport controls (bottom-right overlay) --- */
+    .diagram-controls {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 200;
+      pointer-events: all;
+    }
+    .diagram-controls button {
+      height: 32px;
+      padding: 0 10px;
+      border: 1px solid rgba(42,77,105,0.45);
+      background: rgba(255,255,255,0.93);
+      color: var(--accent);
+      cursor: pointer;
+      border-radius: 16px;
+      font-size: 0.78rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .diagram-controls button:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .diagram-controls .ctrl-glyph { font-size: 1rem; font-weight: 600; line-height: 1; }
+    .diagram-controls .ctrl-label { font-size: 0.72rem; }
+    .diagram-controls button[data-action="exit-fs"] {
+      padding: 0 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: rgba(180,40,40,0.93);
+      color: #fff;
+      border-color: #a02020;
+      display: none;
+    }
+    .diagram-controls button[data-action="exit-fs"]:hover {
+      background: #8a1515;
+      border-color: #8a1515;
+    }
+
+    .figure-caption {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 12px 2px 28px;
+      text-align: left;
+    }
+    .figure-caption strong { color: var(--ink); }
+    /* --- Section tabs --- */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      align-items: flex-end;
+      margin: 28px 0 0;
+    }
+    .tab-btn {
+      font-family: inherit;
+      font-size: 0.73rem;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #eef1f4;
+      border: 1px solid var(--rule);
+      border-radius: 4px 4px 0 0;
+      padding: 8px 18px 9px;
+      cursor: pointer;
+      transition: background 0.13s, color 0.13s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover:not(.active) { background: #dde4ec; color: var(--accent); }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      font-weight: 700;
+      padding-bottom: 11px;
+    }
+    .tab-content {
+      position: relative;
+      border: 1px solid var(--rule);
+      border-top: 2px solid var(--accent);
+      padding: 18px 20px;
+      min-height: 72px;
+      margin-bottom: 28px;
+    }
+    .tab-panel { display: none; font-size: 0.95rem; }
+    .tab-panel.active { display: block; }
+    .tab-panel p { margin: 0; }
+    .tab-panel ul { margin: 0; padding-left: 22px; }
+    .tab-panel li { margin: 0 0 5px; }
+    @media (max-width: 540px) {
+      .tabs { display: grid; grid-template-columns: 1fr 1fr; }
+      .tab-btn { border-radius: 4px; text-align: center; padding: 10px 6px; }
+      .tab-btn.active { padding-bottom: 10px; }
+    }
+    /* --- Credit footer --- */
+    .credit-footer {
+      position: sticky;
+      bottom: 0;
+      z-index: 1000;
+      background: var(--accent);
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 0.85rem;
+      padding: 9px 20px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 -1px 4px rgba(0,0,0,0.22);
+    }
+    .credit-footer a {
+      color: #a8c8e8;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(168,200,232,0.35);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .credit-footer a:hover { color: #fff; border-bottom-color: rgba(255,255,255,0.7); }
+    .disclaimer-banner {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #7a2d1e;
+      color: #f5ede9;
+      text-align: center;
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 0.85rem;
+      font-style: italic;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      padding: 9px 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.22);
+    }
+    .disclaimer-banner .not-advice {
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #ffd9ce;
+    }
+    /* --- Floating action buttons --- */
+    .fab-group {
+      position: fixed;
+      right: 16px;
+      bottom: 56px;
+      top: auto;
+      transform: none;
+      z-index: 500;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+    .fab-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .fab-btn {
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-size: 1.05rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+      transition: background 0.15s, transform 0.12s;
+      flex-shrink: 0;
+      line-height: 1;
+      position: relative;
+    }
+    .fab-btn:hover, .fab-btn.active {
+      background: #1e3a52;
+      transform: scale(1.05);
+    }
+    .fab-btn-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .fab-popup {
+      position: absolute;
+      bottom: 48px;
+      right: 0;
+      top: auto;
+      transform: none;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent);
+      border-radius: 5px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+      display: none;
+      flex-direction: column;
+      min-width: 150px;
+      overflow: hidden;
+    }
+    .fab-popup.open { display: flex; }
+    .fab-popup button {
+      font-family: inherit;
+      font-size: 0.82rem;
+      padding: 9px 14px;
+      border: none;
+      border-bottom: 1px solid var(--rule);
+      background: none;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+      white-space: nowrap;
+      transition: background 0.1s, color 0.1s;
+    }
+    .fab-popup button:last-child { border-bottom: none; }
+    .fab-popup button:hover { background: #f0f4f8; color: var(--accent); }
+    .editor-disclosure { margin-top: 14px; }
+    .editor-disclosure summary {
+      cursor: pointer;
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding: 6px 0;
+      user-select: none;
+    }
+    .editor-disclosure summary:hover { color: var(--accent); }
+    .editor-warning {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 6px 0 8px;
+    }
+    .editor-wrap { margin-top: 14px; }
+    textarea.editor {
+      width: 100%;
+      min-height: 130px;
+      font-family: "Courier New", monospace;
+      font-size: 0.8rem;
+      padding: 10px;
+      border: 1px solid var(--rule);
+      resize: vertical;
+    }
+    .editor-action-btn {
+      font-family: inherit;
+      font-size: 0.82rem;
+      padding: 6px 13px;
+      border: 1px solid var(--accent);
+      background: #fff;
+      color: var(--accent);
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .editor-action-btn:hover { background: var(--accent); color: #fff; }
+    /* --- Semantic node colours (applied via JS post-render) --- */
+    /* Base fills applied directly via setAttribute in JS; CSS handles high-contrast override */
+    .sem-risk-high rect, .sem-risk-high polygon { stroke: #8B4444 !important; stroke-width: 2.5 !important; }
+    /* High-contrast mode — overrides direct SVG attributes */
+    #diagramFrame.high-contrast [class*="sem-"] rect:not(.sem-pattern-overlay),
+    #diagramFrame.high-contrast [class*="sem-"] polygon { fill: #ffffff !important; stroke: #000000 !important; stroke-width: 2 !important; }
+    #diagramFrame.high-contrast .sem-risk-high rect:not(.sem-pattern-overlay),
+    #diagramFrame.high-contrast .sem-risk-high polygon { stroke-width: 3 !important; }
+    #diagramFrame.high-contrast .sem-pattern-overlay { display: none !important; }
+    /* Generic high-contrast effect for non-flowchart diagrams (timeline, gantt, sequence, ER, etc.)
+       Scoped to .diagram-inner so the filter does not tint the control buttons or hint chip. */
+    #diagramFrame.high-contrast .diagram-inner { filter: contrast(1.4) saturate(1.1); }
+    #diagramFrame.high-contrast .diagram-inner svg text { fill: #000 !important; }
+    @media (prefers-contrast: more) { #diagramFrame { filter: contrast(1.35); } }
+    /* Edge-label font size fix */
+    #diagramInner .edgeLabel, #diagramInner .edgeLabel span, #diagramInner .edgeLabel p, #diagramInner .edgeLabels foreignObject div { font-size: 0.95rem; }
+    /* Semantic legend */
+    .semantic-legend {
+      margin: 8px 2px 20px;
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+    .legend-inner { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    .legend-item { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+    .legend-swatch {
+      display: inline-block; width: 14px; height: 14px;
+      border-radius: 2px; border: 1px solid rgba(0,0,0,0.18); flex-shrink: 0;
+    }
+    /* Swatch fill colours — match SEM_COLORS in JS */
+    .legend-swatch.sem-party     { background: #C9D6E3; border-color: #8FA8BE; }
+    .legend-swatch.sem-authority { background: #CAD2C5; border-color: #8A9E84; }
+    .legend-swatch.sem-risk      { background: #D6B8B8; border-color: #A87878; }
+    .legend-swatch.sem-outcome   { background: #CFCFCF; border-color: #909090; }
+    .legend-swatch.sem-process   { background: #F5F3EE; border-color: #B0A898; }
+    .legend-swatch.sem-evidence  { background: #D8D3E8; border-color: #9888B8; }
+    .legend-swatch.sem-claim     { background: #DDD2C2; border-color: #A89878; }
+    .legend-swatch.sem-ownership { background: #D3DDE8; border-color: #7898B8; }
+    .legend-swatch.sem-financial { background: #E6D3A3; border-color: #B89840; }
+    .legend-swatch.sem-control   { background: #D4E8D3; border-color: #78A878; }
+    .legend-swatch.sem-gap       { background: #E8D6B8; border-color: #B89860; }
+    .legend-swatch.sem-dataflow  { background: #D8E8E3; border-color: #78A898; }
+    .legend-swatch.sem-finding   { background: #E3D8E8; border-color: #9878A8; }
+    .legend-swatch.sem-ip-asset  { background: #D8E3D8; border-color: #789878; }
+    /* --- Coach hints (W5.2.4) --- */
+    .hint-chip {
+      position: absolute;
+      bottom: 52px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(42,77,105,0.90);
+      color: #fff;
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 0.78rem;
+      padding: 8px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 300;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+      white-space: nowrap;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .hint-chip-text { flex: 1; }
+    .hint-got-it {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.45);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.12s;
+    }
+    .hint-got-it:hover { background: rgba(255,255,255,0.30); }
+    /* --- Visible focus outline for keyboard navigation --- */
+    .tab-btn:focus-visible,
+    .diagram-controls button:focus-visible,
+    .fab-btn:focus-visible,
+    .fab-popup button:focus-visible,
+    .hint-got-it:focus-visible,
+    .editor-disclosure summary:focus-visible,
+    .editor-action-btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .hint-pulse {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 300px;
+      background: rgba(42,77,105,0.95);
+      color: #fff;
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 0.76rem;
+      padding: 7px 10px 7px 13px;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.22);
+    }
+    .hint-pulse-text { flex: 1; }
+    @media (prefers-reduced-motion: reduce) { .hint-pulse { animation: none; } }
+    @media print {
+      body { background: #fff; }
+      .paper { box-shadow: none; margin: 0; max-width: none; }
+      .fab-group, .editor-wrap, .editor-disclosure, .diagram-controls, .credit-footer { display: none !important; }
+      .hint-chip, .hint-pulse { display: none !important; }
+      .disclaimer-banner { position: static; box-shadow: none; }
+      .tabs { display: none; }
+      .tab-content { border: none; padding: 0; }
+      .tab-panel { display: block !important; margin-bottom: 18px; }
+      .tab-panel::before { content: attr(data-label); display: block; font-size: 0.73rem; letter-spacing: 1.3px; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--rule); padding-bottom: 4px; margin-bottom: 8px; font-weight: 700; }
+      .semantic-legend { font-size: 0.72rem; margin-bottom: 12px; }
+      .diagram-frame, .diagram-inner svg, .semantic-legend .legend-swatch, [class*="sem-"] rect, [class*="sem-"] polygon { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .diagram-frame { background: #ffffff; }
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #f4f4f2; color: var(--ink); }
+      .paper { background: #ffffff; }
+      .diagram-frame, .diagram-frame:fullscreen, .diagram-frame:-webkit-full-screen { background: #fbfbfa; }
+      .diagram-inner svg, pre.mermaid { background: #ffffff; }
+      textarea.editor { background: #fff; color: var(--ink); }
+    }
+    @media (forced-colors: active) {
+      .diagram-inner svg text { fill: CanvasText !important; }
+      .diagram-inner svg rect, .diagram-inner svg polygon, .diagram-inner svg ellipse { fill: Canvas; stroke: CanvasText; }
+    }
+  </style>
+  {% if digest_rows %}<style>
+    /* --- Digest verification table (Source Docs tab) --- */
+    .verification-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 10px; }
+    .verification-table th { background: var(--accent); color: #fff; text-align: left; padding: 8px 10px; font-weight: 600; letter-spacing: 0.3px; }
+    .verification-table td { border: 1px solid var(--rule); padding: 7px 10px; vertical-align: top; }
+    .verification-table tr:nth-child(even) td { background: #f9f9f7; }
+    .verification-table tr.unverified-row td { background: #fff8f0; }
+    .verbatim-cell { font-style: italic; color: var(--muted); }
+    .source-link { color: var(--accent); text-decoration: underline; white-space: nowrap; }
+    .anchor-text { color: var(--muted); font-size: 0.78rem; }
+    .source-filename { font-weight: 600; margin-right: 2px; }
+    @media print {
+      .verification-table { font-size: 0.78rem; }
+      .verification-table th { background: #2a4d69; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>{% endif %}
+</head>
+<body>
+  <div class="disclaimer-banner">{{ ui.disclaimer_html | safe }}</div>
+  <article class="paper">
+    <h1 class="matter-title">{{ matter_title }}</h1>
+    <p class="matter-context">{{ matter_context }}</p>
+
+    <div class="diagram-frame" id="diagramFrame">
+      <div class="diagram-inner" id="diagramInner">
+        {% if mermaid_loader.mode == "source-only" %}
+        <div class="source-only-panel" id="sourceOnlyPanel">
+          <p class="source-only-message">{{ ui.source_only_message }}</p>
+          <details>
+            <summary>{{ ui.source_only_disclosure_label }}</summary>
+            <pre class="source-only-source">{{ mermaid_block }}</pre>
+          </details>
+          <p class="source-only-action">{{ ui.source_only_action }}</p>
+        </div>
+        {% else %}
+        <pre class="mermaid">{{ mermaid_block }}</pre>
+        {% endif %}
+      </div>
+      <script id="semantic-map" type="application/json">{{ semantic_map | tojson }}</script>
+      <script id="mermaid-source" type="application/json">{{ mermaid_block | tojson }}</script>
+
+      <!-- Viewport controls — persists in fullscreen -->
+      <div class="diagram-controls" id="diagramControls">
+        <button type="button" data-action="zoom-in"   title="{{ ui.ctrl_zoom_in }}"><span class="ctrl-glyph">+</span><span class="ctrl-label">{{ ui.ctrl_zoom_in }}</span></button>
+        <button type="button" data-action="zoom-out"  title="{{ ui.ctrl_zoom_out }}"><span class="ctrl-glyph">−</span><span class="ctrl-label">{{ ui.ctrl_zoom_out }}</span></button>
+        <button type="button" data-action="reset"     title="{{ ui.ctrl_reset }}"><span class="ctrl-glyph">⟲</span><span class="ctrl-label">{{ ui.ctrl_reset }}</span></button>
+        <button type="button" data-action="contrast"  title="{{ ui.ctrl_contrast }}" id="contrastBtn"><span class="ctrl-glyph">◐</span><span class="ctrl-label">{{ ui.ctrl_contrast }}</span></button>
+        <button type="button" data-action="flip"      title="{{ ui.ctrl_flip }}" id="flipBtn" style="display:none;"><span class="ctrl-glyph">↔</span><span class="ctrl-label">{{ ui.ctrl_flip }}</span></button>
+        <button type="button" data-action="fullscreen" title="{{ ui.ctrl_fullscreen }}"><span class="ctrl-glyph">⛶</span><span class="ctrl-label">{{ ui.ctrl_fullscreen }}</span></button>
+        <button type="button" data-action="exit-fs"   title="{{ ui.ctrl_exit_fullscreen }}">{{ ui.ctrl_exit_fullscreen_label }}</button>
+      </div>
+      <!-- Coach hint chip (W5.2.4): shown on first visit only; hidden by JS if hints dismissed -->
+      <div class="hint-chip" id="hintChip">
+        <span class="hint-chip-text">{{ ui.hint_chip }}</span>
+        <button type="button" class="hint-got-it" id="hintGotIt">{{ ui.hint_got_it }}</button>
+      </div>
+    </div>
+
+    <div id="semanticLegend" class="semantic-legend" style="display:none;" aria-label="Diagram colour legend"></div>
+
+    <p class="figure-caption"><strong>Figure.</strong> {{ figure_caption }}</p>
+
+    <details class="editor-disclosure" id="editorWrap">
+      <summary>{{ ui.editor_summary }}</summary>
+      <p class="editor-warning">{{ ui.editor_warning }}</p>
+      <div class="editor-wrap">
+        <textarea class="editor" id="editor" spellcheck="false"></textarea>
+        <div style="margin-top:8px;">
+          <button type="button" class="editor-action-btn" onclick="rerender()">{{ ui.rerender }}</button>
+          <button type="button" class="editor-action-btn" onclick="cancelEdit()" style="margin-left:6px;">{{ ui.cancel }}</button>
+        </div>
+      </div>
+    </details>
+
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="overview" role="tab" id="tab-btn-overview" aria-selected="true" aria-controls="tab-overview" tabindex="0">{{ ui.tab_overview }}</button>
+      <button class="tab-btn" data-tab="how-to-read" role="tab" id="tab-btn-how-to-read" aria-selected="false" aria-controls="tab-how-to-read" tabindex="-1">{{ ui.tab_how_to_read }}</button>
+      <button class="tab-btn" data-tab="observations" role="tab" id="tab-btn-observations" aria-selected="false" aria-controls="tab-observations" tabindex="-1">{{ ui.tab_observations }}</button>
+      <button class="tab-btn" data-tab="limitations" role="tab" id="tab-btn-limitations" aria-selected="false" aria-controls="tab-limitations" tabindex="-1">{{ ui.tab_limitations }}</button>
+      {% if digest_rows %}<button class="tab-btn" data-tab="source-docs" role="tab" id="tab-btn-source-docs" aria-selected="false" aria-controls="tab-source-docs" tabindex="-1">{{ ui.tab_source_docs }}</button>{% endif %}
+    </div>
+    <div class="tab-content">
+      <!-- Tab-content floating hint popup (C-hints-overhaul #3/#7): moved out of tablist to fix ARIA violation -->
+      <div class="hint-pulse" id="hintPulse" role="status"><span class="hint-pulse-text">{{ ui.hint_pulse }}</span><button type="button" class="hint-got-it" id="hintPulseGotIt">{{ ui.hint_got_it }}</button></div>
+      <div class="tab-panel active" id="tab-overview" role="tabpanel" aria-labelledby="tab-btn-overview" data-label="{{ ui.panel_overview }}">
+        <p>{{ overview }}</p>
+      </div>
+      <div class="tab-panel" id="tab-how-to-read" role="tabpanel" aria-labelledby="tab-btn-how-to-read" data-label="{{ ui.panel_how_to_read }}">
+        <p>{{ how_to_read }}</p>
+      </div>
+      <div class="tab-panel" id="tab-observations" role="tabpanel" aria-labelledby="tab-btn-observations" data-label="{{ ui.panel_observations }}">
+        <ul>{% for observation in observations %}<li>{{ observation }}</li>{% endfor %}</ul>
+      </div>
+      <div class="tab-panel" id="tab-limitations" role="tabpanel" aria-labelledby="tab-btn-limitations" data-label="{{ ui.panel_limitations }}">
+        <ul>{% for caveat in caveats %}<li>{{ caveat }}</li>{% endfor %}</ul>
+      </div>
+      {% if digest_rows %}
+      <div class="tab-panel" id="tab-source-docs" role="tabpanel" aria-labelledby="tab-btn-source-docs" data-label="{{ ui.panel_source_docs }}">
+        <p class="section-intro">Each row shows exact wording from your {% if digest_rows[0].source_doc %}documents{% else %}document{% endif %}. Items marked ⚠ could not be fully confirmed — review carefully.</p>
+        <table class="verification-table">
+          <thead>
+            <tr>
+              <th>#</th><th>Category</th><th>Finding</th><th>Party</th><th>Exact wording from document</th><th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in digest_rows %}
+            <tr class="{% if row.unverified %}unverified-row{% endif %}">
+              <td>{{ row.row_num }}{% if row.unverified %} ⚠{% endif %}</td>
+              <td>{{ row.category }}</td>
+              <td>{{ row.finding }}</td>
+              <td>{{ row.party or '—' }}</td>
+              <td class="verbatim-cell">"{{ row.verbatim }}"</td>
+              <td>{% if row.source_link %}<a href="{{ row.source_link }}" class="source-link" target="_blank">{% if row.source_doc %}<span class="source-filename">{{ row.source_doc }}</span> {% endif %}{{ row.anchor }} ↗</a>{% else %}<span class="anchor-text">{% if row.source_doc %}<span class="source-filename">{{ row.source_doc }}</span> {% endif %}{{ row.anchor }}</span>{% endif %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+    </div>
+
+  </article>
+
+  <footer class="credit-footer">
+    /legal-diagram &nbsp;&middot;&nbsp; Created by Sam Zhai &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/samyusenzhai/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&middot;&nbsp; <a href="https://github.com/nanparth" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+
+  <!-- Floating action buttons -->
+  <div class="fab-group" id="fabGroup">
+    <div class="fab-item">
+      <div class="fab-popup" id="popupSave">
+        <button type="button" onclick="downloadSVG()">{{ ui.export_svg }}</button>
+        <button type="button" onclick="downloadPNG()">{{ ui.export_png }}</button>
+        <button type="button" onclick="saveHTML()">{{ ui.export_html }}</button>
+      </div>
+      <button class="fab-btn" title="{{ ui.export_title }}" onclick="togglePopup('popupSave')">💾<span class="fab-btn-label">{{ ui.fab_save_label }}</span></button>
+    </div>
+    <div class="fab-item">
+      <div class="fab-popup" id="popupEdit">
+        <button type="button" onclick="toggleEditor()">{{ ui.edit_source }}</button>
+      </div>
+      <button class="fab-btn" title="{{ ui.edit_title }}" onclick="togglePopup('popupEdit')">✏<span class="fab-btn-label">{{ ui.fab_edit_label }}</span></button>
+    </div>
+  </div>
+
+  {% if mermaid_loader.script_body %}
+  <script>{{ mermaid_loader.script_body | safe }}</script>
+  {% elif mermaid_loader.script_url %}
+  <script src="{{ mermaid_loader.script_url }}"></script>
+  {% endif %}
+  <!-- Maintainer: to embed the diagram renderer, re-export with --allow-cdn or place the library at assets/vendor/mermaid.min.js -->
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: 'strict',
+        theme: 'base',
+        themeVariables: {
+          primaryColor: '#F5F3EE',
+          primaryTextColor: '#1a1a1a',
+          primaryBorderColor: '#B0A898',
+          lineColor: '#8FA8BE',
+          fontSize: '16px',
+          background: '#ffffff',
+          darkMode: false
+        },
+        flowchart: { useMaxWidth: true, htmlLabels: true, wrappingWidth: 220 }
+      });
+    }
+
+    // --- Coach hints (C-hints-overhaul #5): independent dismissal per hint ---
+    var HINT_CHIP_KEY = 'legal-diagram-hint-chip-v1';
+    var HINT_TABS_KEY = 'legal-diagram-hint-tabs-v1';
+
+    function _hintDismissed(k) {
+      try { return localStorage.getItem(k) === 'dismissed'; } catch (e) { return true; }
+    }
+
+    function _persistDismiss(k) {
+      try { localStorage.setItem(k, 'dismissed'); } catch (e) { /* unavailable */ }
+    }
+
+    function _hideEl(el) {
+      if (el) { el.style.display = 'none'; el.setAttribute('aria-hidden', 'true'); }
+    }
+
+    function _initHints() {
+      var chip = document.getElementById('hintChip');
+      var chipBtn = document.getElementById('hintGotIt');
+      if (_hintDismissed(HINT_CHIP_KEY)) {
+        _hideEl(chip);
+      } else if (chipBtn) {
+        chipBtn.addEventListener('click', function () { _hideEl(chip); _persistDismiss(HINT_CHIP_KEY); });
+      }
+      var pulse = document.getElementById('hintPulse');
+      var pulseBtn = document.getElementById('hintPulseGotIt');
+      if (_hintDismissed(HINT_TABS_KEY)) {
+        _hideEl(pulse);
+      } else if (pulseBtn) {
+        pulseBtn.addEventListener('click', function () { _hideEl(pulse); _persistDismiss(HINT_TABS_KEY); });
+      }
+    }
+
+    var mermaidSource = '';
+
+    // --- Initial render (P1 render hardening: size-gated to avoid zero-width race) ---
+    // startOnLoad is false, so we drive the first paint ourselves.  Before calling
+    // mermaid.render() we confirm the container has a nonzero width; if not, we defer
+    // via requestAnimationFrame until the layout engine reports a real size (handles the
+    // webapp-iframe case where the frame mounts hidden or mid-animation).
+    // On a transient render error we allow exactly ONE deferred retry before showing
+    // the source-only fallback.  The flip / cancelEdit / rerender paths are unchanged.
+    function _initialRender(container, src, isRetry) {
+      if (!window.mermaid || !src) return;
+      // Size gate: defer if the container has no layout width yet.
+      var w = container.getBoundingClientRect().width || container.offsetWidth || container.clientWidth;
+      if (w === 0) {
+        requestAnimationFrame(function () { _initialRender(container, src, isRetry); });
+        return;
+      }
+      var id = 'mmd-' + Date.now();
+      try {
+        mermaid.render(id, src).then(function (res) {
+          container.innerHTML = res.svg;
+          resetView();
+          applySemanticColoring();
+          waitForSVGAndColor();
+        }).catch(function () {
+          if (!isRetry) {
+            // Single deferred retry before fallback.
+            requestAnimationFrame(function () { _initialRender(container, src, true); });
+          } else {
+            setMermaidSourceFallback(container, src);
+          }
+        });
+      } catch (err) {
+        if (!isRetry) {
+          requestAnimationFrame(function () { _initialRender(container, src, true); });
+        } else {
+          setMermaidSourceFallback(container, src);
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+      var stash = document.getElementById('mermaid-source');
+      if (stash) { try { mermaidSource = JSON.parse(stash.textContent) || ''; } catch (e) { mermaidSource = ''; } }
+      var pre = document.querySelector('pre.mermaid');
+      if (!mermaidSource && pre) { mermaidSource = pre.getAttribute('data-source') || pre.textContent; }
+      var ed = document.getElementById('editor');
+      if (ed) ed.value = mermaidSource.trim();
+      syncFlipButton(mermaidSource);
+      if (window.mermaid) {
+        var container = document.getElementById('diagramInner');
+        if (container) { _initialRender(container, mermaidSource, false); }
+        waitForSVGAndColor();
+      }
+      _initHints();
+    });
+
+    // Returns 'TD', 'LR', or null if diagram type doesn't support orientation.
+    function detectOrientation(src) {
+      var m = src.match(/^(?:flowchart|graph)\s+(TD|LR|TB|BT|RL)/im);
+      if (!m) return null;
+      var dir = m[1].toUpperCase();
+      return (dir === 'TB') ? 'TD' : dir; // TB is alias for TD
+    }
+
+    function syncFlipButton(src) {
+      var btn = document.getElementById('flipBtn');
+      if (!btn) return;
+      var dir = detectOrientation(src);
+      if (!dir) { btn.style.display = 'none'; return; }
+      btn.style.display = '';
+      var isVertical = (dir === 'TD' || dir === 'TB');
+      var glyph = btn.querySelector('.ctrl-glyph');
+      if (glyph) glyph.textContent = isVertical ? '↔' : '↕';
+      btn.title = isVertical ? 'Flip to horizontal' : 'Flip to vertical';
+    }
+
+    // --- Semantic node colouring ---
+    var SEM_COLORS = {
+      'sem-party':     { fill: '#C9D6E3', stroke: '#8FA8BE', pattern: null },
+      'sem-authority': { fill: '#CAD2C5', stroke: '#8A9E84', pattern: 'sem-hatch' },
+      'sem-risk':      { fill: '#D6B8B8', stroke: '#A87878', pattern: 'sem-xhatch' },
+      'sem-outcome':   { fill: '#CFCFCF', stroke: '#909090', pattern: 'sem-dots' },
+      'sem-process':   { fill: '#F5F3EE', stroke: '#B0A898', pattern: null },
+      'sem-evidence':  { fill: '#D8D3E8', stroke: '#9888B8', pattern: 'sem-dots' },
+      'sem-claim':     { fill: '#DDD2C2', stroke: '#A89878', pattern: 'sem-hatch' },
+      'sem-ownership': { fill: '#D3DDE8', stroke: '#7898B8', pattern: 'sem-hatch' },
+      'sem-financial': { fill: '#E6D3A3', stroke: '#B89840', pattern: 'sem-dots' },
+      'sem-control':   { fill: '#D4E8D3', stroke: '#78A878', pattern: 'sem-hatch' },
+      'sem-gap':       { fill: '#E8D6B8', stroke: '#B89860', pattern: 'sem-xhatch' },
+      'sem-dataflow':  { fill: '#D8E8E3', stroke: '#78A898', pattern: 'sem-dots' },
+      'sem-finding':   { fill: '#E3D8E8', stroke: '#9878A8', pattern: 'sem-dots' },
+      'sem-ip-asset':  { fill: '#D8E3D8', stroke: '#789878', pattern: 'sem-hatch' }
+    };
+    var SEM_LABELS = {
+      'sem-party': 'Party / Stakeholder', 'sem-authority': 'Authority / Rule',
+      'sem-risk': 'Risk / Concern', 'sem-outcome': 'Outcome / Position',
+      'sem-process': 'Process Step', 'sem-evidence': 'Evidence / Record',
+      'sem-claim': 'Claim Element', 'sem-ownership': 'Ownership Link',
+      'sem-financial': 'Financial Node', 'sem-control': 'Control',
+      'sem-gap': 'Gap', 'sem-dataflow': 'Data Flow',
+      'sem-finding': 'Finding', 'sem-ip-asset': 'IP Asset'
+    };
+
+    function getSemanticMap() {
+      var el = document.getElementById('semantic-map');
+      if (!el) return {};
+      try { return JSON.parse(el.textContent) || {}; } catch(e) { return {}; }
+    }
+
+    function injectSVGPatterns(svg) {
+      if (svg.querySelector('#sem-hatch')) return;
+      var defs = svg.querySelector('defs');
+      if (!defs) {
+        defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        svg.insertBefore(defs, svg.firstChild);
+      }
+      defs.insertAdjacentHTML('beforeend',
+        '<pattern id="sem-hatch" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">' +
+        '<line x1="0" y1="0" x2="0" y2="6" stroke="#555" stroke-width="1.5" stroke-opacity="0.35"/></pattern>' +
+        '<pattern id="sem-xhatch" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">' +
+        '<line x1="0" y1="0" x2="6" y2="6" stroke="#555" stroke-width="1" stroke-opacity="0.3"/>' +
+        '<line x1="6" y1="0" x2="0" y2="6" stroke="#555" stroke-width="1" stroke-opacity="0.3"/></pattern>' +
+        '<pattern id="sem-dots" x="0" y="0" width="7" height="7" patternUnits="userSpaceOnUse">' +
+        '<circle cx="3.5" cy="3.5" r="1.4" fill="#555" fill-opacity="0.3"/></pattern>'
+      );
+    }
+
+    function getNodeLabel(g) {
+      var fo = g.querySelector('foreignObject');
+      if (fo) return fo.textContent.trim().substring(0, 40);
+      var t = g.querySelector('text');
+      if (t) return t.textContent.trim().substring(0, 40);
+      return g.id || '';
+    }
+
+    function applySemanticColoring() {
+      var map = getSemanticMap();
+      if (!map.nodes || !Object.keys(map.nodes).length) { hideLegend(); return; }
+      var svg = getSVG();
+      if (!svg) return;
+      injectSVGPatterns(svg);
+      // Strip semantic classes/labels that older matcher versions applied to
+      // edge paths (edge ids like L-A-B-0 used to shadow node lookups).
+      svg.querySelectorAll('path.flowchart-link[class*="sem-"]').forEach(function(p) {
+        Array.prototype.slice.call(p.classList).forEach(function(c) {
+          if (c.indexOf('sem-') === 0) p.classList.remove(c);
+        });
+        p.removeAttribute('aria-label');
+      });
+      Object.keys(map.nodes).forEach(function(nodeId) {
+        var semClasses = map.nodes[nodeId] || '';
+        var escaped = nodeId.replace(/[^a-zA-Z0-9_-]/g, '\\$&');
+        // Prefer data-id (exact node match). The id-substring fallbacks can also
+        // hit edge paths (ids like L-A-B-0), so restrict them to <g> elements.
+        var g = svg.querySelector('g[data-id="' + escaped + '"]');
+        if (!g) {
+          var candidates = svg.querySelectorAll(
+            '[id="' + escaped + '"], [id$="-' + escaped + '"], ' +
+            '[id*="-' + escaped + '-"], [id^="' + escaped + '-"]');
+          for (var ci = 0; ci < candidates.length; ci++) {
+            if (candidates[ci].tagName.toLowerCase() === 'g') { g = candidates[ci]; break; }
+          }
+        }
+        if (!g) return;
+        var classes = semClasses.split(' ').filter(Boolean);
+        classes.forEach(function(cls) { g.classList.add(cls); });
+        // Apply fill/stroke directly (overrides Mermaid presentation attributes).
+        // Real shape = direct child of the node group; the descendant fallback
+        // can hit the bare <rect> inside the label group, so it comes last.
+        var shape = g.querySelector(':scope > rect:not(.sem-pattern-overlay), :scope > polygon:not(.sem-pattern-overlay), :scope > circle, :scope > ellipse, :scope > path:not(.sem-pattern-overlay)') ||
+                    g.querySelector('rect:not(.sem-pattern-overlay)') ||
+                    g.querySelector('polygon:not(.sem-pattern-overlay)');
+        var primaryClass = classes[0];
+        var color = SEM_COLORS[primaryClass];
+        if (color && shape) {
+          shape.style.fill = color.fill;
+          shape.style.stroke = color.stroke;
+          shape.style.strokeWidth = '1.5px';
+          if (color.pattern) {
+            var overlay = g.querySelector('.sem-pattern-overlay');
+            if (!overlay) {
+              overlay = shape.cloneNode(false);
+              overlay.classList.add('sem-pattern-overlay');
+            }
+            // Inline !important: injected classDef CSS carries fill !important,
+            // which would otherwise solidify the texture into an opaque cover.
+            overlay.style.setProperty('fill', 'url(#' + color.pattern + ')', 'important');
+            overlay.style.stroke = 'none';
+            overlay.style.pointerEvents = 'none';
+            // Texture sits directly above the base shape, below the label.
+            shape.parentNode.insertBefore(overlay, shape.nextSibling);
+          }
+        }
+        // sem-risk-high modifier: darken stroke
+        if (classes.indexOf('sem-risk-high') !== -1 && shape) {
+          shape.style.stroke = '#8B4444'; shape.style.strokeWidth = '2.5px';
+        }
+        g.setAttribute('aria-label', (SEM_LABELS[primaryClass] || primaryClass) + ': ' + getNodeLabel(g));
+      });
+      enforceLabelsOnTop(svg);
+      renderLegend(map);
+      // Show contrast button when semantic map is active
+      var cb = document.getElementById('contrastBtn');
+      if (cb) cb.style.display = '';
+    }
+
+    // SVG has no z-index: paint order is DOM order. After any decoration pass,
+    // re-append each node's label so text always renders above fills/overlays.
+    function enforceLabelsOnTop(svg) {
+      svg.querySelectorAll('g.node, g[class*="sem-"]').forEach(function(node) {
+        var lbl = node.querySelector(':scope > g.label, :scope > .label, :scope > text');
+        if (lbl && lbl !== node.lastElementChild) node.appendChild(lbl);
+      });
+    }
+
+    function hideLegend() {
+      var el = document.getElementById('semanticLegend');
+      if (el) el.style.display = 'none';
+    }
+
+    function renderLegend(map) {
+      var el = document.getElementById('semanticLegend');
+      if (!el) return;
+      var palette = (map.meta && map.meta.active_palette) || [];
+      if (!palette.length) {
+        // Derive from nodes if meta absent
+        var seen = {};
+        Object.values(map.nodes || {}).forEach(function(v) {
+          v.split(' ').forEach(function(c) { if (c && c.indexOf('sem-') === 0 && c !== 'sem-risk-high') seen[c] = true; });
+        });
+        palette = Object.keys(seen);
+      }
+      if (!palette.length) { el.style.display = 'none'; return; }
+      var html = '<div class="legend-inner">';
+      palette.forEach(function(cls) {
+        var label = SEM_LABELS[cls] || cls.replace('sem-', '');
+        html += '<span class="legend-item"><span class="legend-swatch ' + cls + '"></span>' + label + '</span>';
+      });
+      html += '</div>';
+      el.innerHTML = html;
+      el.style.display = '';
+    }
+
+    function setMermaidSourceFallback(container, source) {
+      container.textContent = '';
+      var pre = document.createElement('pre');
+      pre.className = 'mermaid';
+      pre.textContent = source;
+      container.appendChild(pre);
+    }
+
+    function toggleHighContrast() {
+      document.getElementById('diagramFrame').classList.toggle('high-contrast');
+      var btn = document.getElementById('contrastBtn');
+      if (btn) btn.classList.toggle('active');
+    }
+
+    var _colorObserver = null;
+    function waitForSVGAndColor() {
+      var container = document.getElementById('diagramInner');
+      if (!container) return;
+      if (container.querySelector('svg')) { setTimeout(applySemanticColoring, 80); return; }
+      if (_colorObserver) _colorObserver.disconnect();
+      var _debounce = null;
+      _colorObserver = new MutationObserver(function() {
+        if (!container.querySelector('svg')) return;
+        clearTimeout(_debounce);
+        _debounce = setTimeout(function() {
+          if (_colorObserver) { _colorObserver.disconnect(); _colorObserver = null; }
+          applySemanticColoring();
+        }, 80);
+      });
+      _colorObserver.observe(container, { childList: true, subtree: true });
+    }
+
+    function flipOrientation() {
+      if (!window.mermaid) { alert({{ ui.alert_no_renderer | tojson }}); return; }
+      var src = mermaidSource;
+      var dir = detectOrientation(src);
+      if (!dir) return;
+      var newSrc;
+      if (dir === 'TD' || dir === 'TB') {
+        newSrc = src.replace(/^((?:flowchart|graph)\s+)(TD|TB)/im, '$1LR');
+      } else {
+        newSrc = src.replace(/^((?:flowchart|graph)\s+)(LR|RL)/im, '$1TD');
+      }
+      mermaidSource = newSrc;
+      var ed = document.getElementById('editor');
+      if (ed) ed.value = newSrc;
+      var container = document.getElementById('diagramInner');
+      var id = 'mmd-' + Date.now();
+      try {
+        mermaid.render(id, newSrc).then(function (res) {
+          container.innerHTML = res.svg;
+          resetView();
+          syncFlipButton(newSrc);
+          applySemanticColoring();
+        }).catch(function (err) { alert({{ ui.alert_rerender_error | tojson }}); });
+      } catch (err) {
+        setMermaidSourceFallback(container, newSrc);
+        if (typeof mermaid.run === 'function') mermaid.run({ nodes: container.querySelectorAll('.mermaid') });
+        else mermaid.init(undefined, container.querySelectorAll('.mermaid'));
+        resetView();
+        syncFlipButton(newSrc);
+      }
+    }
+
+    // Mermaid 10+ replaces <pre class="mermaid"> with a bare <svg> in the container.
+    // Searching by container ID is the reliable cross-version approach.
+    function getSVG() {
+      return document.querySelector('#diagramInner svg');
+    }
+
+    function downloadFromBlob(blob, filename) {
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1500);
+    }
+
+    // Returns an XML-serialized SVG string with a white background rect prepended.
+    // Both SVG and PNG exporters consume this so the white-background guarantee
+    // lives in one place.
+    function cloneSvgWithWhiteBg(svg) {
+      var clone = svg.cloneNode(true);
+      var bgRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      bgRect.setAttribute('width', '100%');
+      bgRect.setAttribute('height', '100%');
+      bgRect.setAttribute('fill', '#ffffff');
+      clone.insertBefore(bgRect, clone.firstChild);
+      return '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(clone);
+    }
+
+    function downloadSVG() {
+      var svg = getSVG();
+      if (!svg) { alert({{ ui.alert_svg_not_ready | tojson }}); return; }
+      downloadFromBlob(new Blob([cloneSvgWithWhiteBg(svg)], { type: 'image/svg+xml' }), 'figure.svg');
+    }
+
+    function downloadPNG() {
+      var svg = getSVG();
+      if (!svg) { alert({{ ui.alert_svg_not_ready | tojson }}); return; }
+      var source = cloneSvgWithWhiteBg(svg);
+      var vb = svg.viewBox && svg.viewBox.baseVal;
+      var w = Math.max((vb && vb.width) || svg.getBoundingClientRect().width || 800, 800);
+      var h = Math.max((vb && vb.height) || svg.getBoundingClientRect().height || 600, 600);
+
+      function drawToCanvas(imgSrc, onSuccess, onFail) {
+        var canvas = document.createElement('canvas');
+        canvas.width = w * 2; canvas.height = h * 2;
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        var img = new Image();
+        img.onload = function () {
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          try { onSuccess(canvas); } catch (e) { onFail(e); }
+        };
+        img.onerror = onFail;
+        img.src = imgSrc;
+      }
+
+      var blobUrl = URL.createObjectURL(new Blob([source], { type: 'image/svg+xml;charset=utf-8' }));
+      drawToCanvas(blobUrl,
+        function (canvas) {
+          URL.revokeObjectURL(blobUrl);
+          canvas.toBlob(function (blob) { downloadFromBlob(blob, 'figure.png'); }, 'image/png');
+        },
+        function () {
+          URL.revokeObjectURL(blobUrl);
+          // Fallback: data URL (avoids cross-origin blob restriction in some browsers)
+          var dataUrl = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(source)));  // audit-ok: dangerous-shell: client-side SVG export data URL built in browser, no remote code
+          drawToCanvas(dataUrl,
+            function (canvas) {
+              canvas.toBlob(function (blob) { downloadFromBlob(blob, 'figure.png'); }, 'image/png');
+            },
+            function () { alert({{ ui.alert_png_failed | tojson }}); }
+          );
+        }
+      );
+    }
+
+    function saveHTML() {
+      downloadFromBlob(new Blob([document.documentElement.outerHTML], { type: 'text/html' }), 'figure.html');
+    }
+
+    // --- Pan / zoom (wheel + single-pointer drag + two-pointer pinch) ---
+    var scale = 1, tx = 0, ty = 0;
+    var dragging = false, startX = 0, startY = 0;
+    var frame = document.getElementById('diagramFrame');
+    var inner = document.getElementById('diagramInner');
+    var _fabGroup = document.getElementById('fabGroup');
+    var _fabHome  = _fabGroup ? _fabGroup.parentNode : null;
+    function relocateFabsForFullscreen(active) {
+      if (!_fabGroup) return;
+      var pe = document.getElementById('popupEdit');
+      var editItem = pe ? pe.closest('.fab-item') : null;
+      if (active) {
+        frame.appendChild(_fabGroup);
+        if (editItem) editItem.style.display = 'none';
+      } else {
+        if (_fabHome) _fabHome.appendChild(_fabGroup);
+        if (editItem) editItem.style.display = '';
+      }
+    }
+
+    // Pinch tracking: map of pointerId → {x, y}
+    var activePointers = {};
+
+    function _pointerCount() { return Object.keys(activePointers).length; }
+    function _pinchDist() {
+      var pts = Object.values(activePointers);
+      if (pts.length < 2) return 0;
+      var dx = pts[0].x - pts[1].x;
+      var dy = pts[0].y - pts[1].y;
+      return Math.hypot(dx, dy);
+    }
+    function _pinchMidpoint() {
+      var pts = Object.values(activePointers);
+      var rect = frame.getBoundingClientRect();
+      return {
+        x: (pts[0].x + pts[1].x) / 2 - rect.left,
+        y: (pts[0].y + pts[1].y) / 2 - rect.top
+      };
+    }
+    var _lastPinchDist = 0;
+
+    function applyTransform() {
+      inner.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    }
+    function resetView() { scale = 1; tx = 0; ty = 0; applyTransform(); }
+
+    function zoomAt(factor, cx, cy) {
+      var px = (cx - tx) / scale;
+      var py = (cy - ty) / scale;
+      scale = Math.min(Math.max(scale * factor, 0.15), 10);
+      tx = cx - px * scale;
+      ty = cy - py * scale;
+      applyTransform();
+    }
+
+    frame.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      var rect = frame.getBoundingClientRect();
+      zoomAt(e.deltaY < 0 ? 1.1 : 0.9, e.clientX - rect.left, e.clientY - rect.top);
+    }, { passive: false });
+
+    frame.addEventListener('pointerdown', function (e) {
+      if (e.target.closest('.diagram-controls') || e.target.closest('.hint-chip')) return;
+      frame.setPointerCapture(e.pointerId);
+      activePointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+      if (_pointerCount() === 2) {
+        // Start pinch: record initial distance; cancel drag
+        dragging = false;
+        _lastPinchDist = _pinchDist();
+      } else if (_pointerCount() === 1) {
+        dragging = true;
+        startX = e.clientX - tx;
+        startY = e.clientY - ty;
+      }
+    });
+    frame.addEventListener('pointermove', function (e) {
+      if (!(e.pointerId in activePointers)) return;
+      activePointers[e.pointerId] = { x: e.clientX, y: e.clientY };
+      if (_pointerCount() === 2) {
+        // Pinch zoom
+        var dist = _pinchDist();
+        if (_lastPinchDist > 0 && dist > 0) {
+          var factor = dist / _lastPinchDist;
+          var mid = _pinchMidpoint();
+          zoomAt(factor, mid.x, mid.y);
+        }
+        _lastPinchDist = dist;
+      } else if (dragging && _pointerCount() === 1) {
+        // Single-pointer drag
+        tx = e.clientX - startX;
+        ty = e.clientY - startY;
+        applyTransform();
+      }
+    });
+    frame.addEventListener('pointerup', function (e) {
+      delete activePointers[e.pointerId];
+      _lastPinchDist = 0;
+      if (_pointerCount() < 2) { dragging = false; }
+    });
+    frame.addEventListener('pointercancel', function (e) {
+      delete activePointers[e.pointerId];
+      _lastPinchDist = 0;
+      dragging = false;
+    });
+
+    // --- Diagram viewport controls ---
+    document.getElementById('diagramControls').addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+      e.stopPropagation();
+      switch (btn.getAttribute('data-action')) {
+        case 'zoom-in': {
+          var r = frame.getBoundingClientRect();
+          zoomAt(1.3, r.width / 2, r.height / 2); break;
+        }
+        case 'zoom-out': {
+          var r2 = frame.getBoundingClientRect();
+          zoomAt(1 / 1.3, r2.width / 2, r2.height / 2); break;
+        }
+        case 'reset':
+          resetView(); break;
+        case 'flip':
+          flipOrientation(); break;
+        case 'contrast':
+          toggleHighContrast(); break;
+        case 'fullscreen':
+          if (frame.requestFullscreen) frame.requestFullscreen();
+          else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
+          break;
+        case 'exit-fs':
+          if (document.exitFullscreen) document.exitFullscreen();
+          else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+          break;
+      }
+    });
+
+    function syncFullscreenUI(active) {
+      var fsBtn   = document.querySelector('[data-action="fullscreen"]');
+      var exitBtn = document.querySelector('[data-action="exit-fs"]');
+      if (active) {
+        fsBtn.style.display  = 'none';
+        exitBtn.style.display = 'flex';
+      } else {
+        fsBtn.style.display  = 'flex';
+        exitBtn.style.display = 'none';
+      }
+    }
+    document.addEventListener('fullscreenchange',        function () { var a = !!document.fullscreenElement; syncFullscreenUI(a); relocateFabsForFullscreen(a); });
+    document.addEventListener('webkitfullscreenchange',  function () { var a = !!document.webkitFullscreenElement; syncFullscreenUI(a); relocateFabsForFullscreen(a); });
+
+    // F key shortcut for fullscreen
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'f' || e.key === 'F') {
+        if (document.activeElement && ['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+          if (frame.requestFullscreen) frame.requestFullscreen();
+          else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
+        }
+      }
+    });
+
+    // --- Section tabs (with ARIA + keyboard) ---
+    function _getTabBtns() {
+      return Array.prototype.slice.call(document.querySelectorAll('.tab-btn[role="tab"]'));
+    }
+    function switchTab(activeBtn) {
+      _getTabBtns().forEach(function (b) {
+        var isActive = (b === activeBtn);
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        b.tabIndex = isActive ? 0 : -1;
+      });
+      document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+      var tab = activeBtn.getAttribute('data-tab');
+      var panel = document.getElementById('tab-' + tab);
+      if (panel) panel.classList.add('active');
+    }
+    _getTabBtns().forEach(function (btn) {
+      btn.addEventListener('click', function () { switchTab(btn); });
+    });
+    // Arrow-key navigation on tablist
+    var _tabList = document.querySelector('.tabs[role="tablist"]');
+    if (_tabList) {
+      _tabList.addEventListener('keydown', function (e) {
+        var tabs = _getTabBtns();
+        var idx = tabs.indexOf(document.activeElement);
+        if (idx === -1) return;
+        var next = -1;
+        if (e.key === 'ArrowRight') { next = (idx + 1) % tabs.length; }
+        else if (e.key === 'ArrowLeft') { next = (idx - 1 + tabs.length) % tabs.length; }
+        if (next !== -1) {
+          e.preventDefault();
+          switchTab(tabs[next]);
+          tabs[next].focus();
+        }
+      });
+    }
+
+    // --- Popup toggle ---
+    function togglePopup(id) {
+      var target = document.getElementById(id);
+      var isOpen = target.classList.contains('open');
+      document.querySelectorAll('.fab-popup').forEach(function (p) { p.classList.remove('open'); });
+      document.querySelectorAll('.fab-btn').forEach(function (b) { b.classList.remove('active'); });
+      if (!isOpen) {
+        target.classList.add('open');
+        var fabBtn = target.nextElementSibling;
+        if (fabBtn && fabBtn.classList.contains('fab-btn')) fabBtn.classList.add('active');
+      }
+    }
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.fab-item')) {
+        document.querySelectorAll('.fab-popup').forEach(function (p) { p.classList.remove('open'); });
+        document.querySelectorAll('.fab-btn').forEach(function (b) { b.classList.remove('active'); });
+      }
+    });
+
+    // --- Edit source / re-render / cancel ---
+    function toggleEditor() {
+      var details = document.getElementById('editorWrap');
+      details.open = !details.open;
+      if (details.open) {
+        var summary = details.querySelector('summary');
+        if (summary) summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      document.querySelectorAll('.fab-popup').forEach(function (p) { p.classList.remove('open'); });
+      document.querySelectorAll('.fab-btn').forEach(function (b) { b.classList.remove('active'); });
+    }
+    function cancelEdit() {
+      var ed = document.getElementById('editor');
+      if (ed) ed.value = mermaidSource.trim();
+      var details = document.getElementById('editorWrap');
+      if (details) details.open = false;
+      // Re-render original source to restore diagram
+      if (!window.mermaid) return;
+      var container = document.getElementById('diagramInner');
+      var id = 'mmd-' + Date.now();
+      try {
+        mermaid.render(id, mermaidSource).then(function (res) {
+          container.innerHTML = res.svg;
+          resetView();
+          applySemanticColoring();
+        }).catch(function () { /* original was valid; ignore */ });
+      } catch (err) {
+        setMermaidSourceFallback(container, mermaidSource);
+        if (typeof mermaid.run === 'function') mermaid.run({ nodes: container.querySelectorAll('.mermaid') });
+        else mermaid.init(undefined, container.querySelectorAll('.mermaid'));
+        resetView();
+      }
+    }
+    function rerender() {
+      if (!window.mermaid) { alert({{ ui.alert_no_renderer | tojson }}); return; }
+      var src = document.getElementById('editor').value;
+      var container = document.getElementById('diagramInner');
+      var id = 'mmd-' + Date.now();
+      try {
+        mermaid.render(id, src).then(function (res) {
+          container.innerHTML = res.svg;
+          resetView();
+          applySemanticColoring();
+        }).catch(function (err) {
+          alert({{ ui.alert_rerender_error | tojson }});
+        });
+      } catch (err) {
+        setMermaidSourceFallback(container, src);
+        if (typeof mermaid.run === 'function') {
+          mermaid.run({ nodes: container.querySelectorAll('.mermaid') });
+        } else {
+          mermaid.init(undefined, container.querySelectorAll('.mermaid'));
+        }
+        resetView();
+      }
+    }
+  </script>
+</body>
+</html>

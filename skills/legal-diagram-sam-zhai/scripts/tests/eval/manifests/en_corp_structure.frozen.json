@@ -1,0 +1,2542 @@
+{
+  "extraction_result": {
+    "matter_name": "en_corp_structure",
+    "matter_type": "corporate",
+    "input_source": "en_corp_structure.md",
+    "truncated": false,
+    "extraction_warnings": [],
+    "signal_map": {
+      "extractor.events.dated_event": 0.66,
+      "extractor": 0.88,
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor.conditions.trigger_condition": 0.48,
+      "extractor.ownership_links.ownership": 0.83,
+      "extractor.entities.ownership_participant": 0.77,
+      "extractor.entities.entity_list_item": 0.77
+    },
+    "hierarchy": [
+      {
+        "id": "H-corporatestructurememorandum",
+        "label": "Corporate Structure Memorandum",
+        "parent": null,
+        "depth": 0,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-corporatestructurememorandum-overview",
+        "label": "Overview",
+        "parent": "H-corporatestructurememorandum",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-corporatestructurememorandum-ownershipstructure",
+        "label": "Ownership Structure",
+        "parent": "H-corporatestructurememorandum",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-corporatestructurememorandum-entities",
+        "label": "Entities",
+        "parent": "H-corporatestructurememorandum",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-corporatestructurememorandum-keyrelationships",
+        "label": "Key Relationships",
+        "parent": "H-corporatestructurememorandum",
+        "depth": 1,
+        "source": "deterministic"
+      }
+    ],
+    "extraction_hints": [
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "**To:** Board of Directors, Cedarbrook Group Inc. **From:** Corporate Counsel **Date:** February 20, 2026 **Re:** Post-Acquisition Corporate Structure of Cedarbrook Group",
+        "confidence": 0.42,
+        "anchor": "§1#1",
+        "span": [
+          1,
+          1
+        ],
+        "context_heading": "Corporate Structure Memorandum",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+        "confidence": 0.48,
+        "anchor": "§2#1",
+        "span": [
+          3,
+          3
+        ],
+        "context_heading": "Corporate Structure Memorandum > Overview",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+        "confidence": 0.42,
+        "anchor": "§2#1",
+        "span": [
+          3,
+          3
+        ],
+        "context_heading": "Corporate Structure Memorandum > Overview",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "The following entities form part of the Cedarbrook corporate group",
+        "confidence": 0.48,
+        "anchor": "§4#1",
+        "span": [
+          11,
+          11
+        ],
+        "context_heading": "Corporate Structure Memorandum > Entities",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "name": "Cedarbrook Group Inc",
+        "role": "cedarbrook",
+        "type": "party"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Cedarbrook Group Inc",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Lakeview Distribution Corp",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Pinoak Financial Services Inc",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Ridgetop Realty Ltd",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Westcoast Properties Corp",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Bridgewater Asset Management Inc",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Weststone Capital Partners Ltd",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Lakeview Transport No. 1 Inc",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      },
+      {
+        "name": "Lakeview Transport No. 2 Inc",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      }
+    ],
+    "events": [
+      {
+        "date": "January 15, 2024",
+        "description": "Ridgetop Realty Ltd. is a joint venture vehicle between Cedarbrook Group Inc. and Westcoast Properties Corp. pursuant to a shareholders agreement dated January 15, 2024",
+        "actor": null,
+        "anchor": null
+      },
+      {
+        "date": "March 15, 2023",
+        "description": "Weststone Capital Partners Ltd. holds its 40% interest in Bridgewater Asset Management Inc. pursuant to a unanimous shareholders agreement dated March 15, 2023",
+        "actor": null,
+        "anchor": null
+      }
+    ],
+    "deadlines": [],
+    "phases": [],
+    "tasks": [],
+    "obligations": [],
+    "controls": [],
+    "conditions": [],
+    "relationships": [],
+    "ownership_links": [
+      {
+        "parent": "Cedarbrook Group Inc",
+        "child": "Lakeview Distribution Corp",
+        "percentage": 100.0
+      },
+      {
+        "parent": "Cedarbrook Group Inc",
+        "child": "Pinoak Financial Services Inc",
+        "percentage": 100.0
+      },
+      {
+        "parent": "Cedarbrook Group Inc",
+        "child": "Ridgetop Realty Ltd",
+        "percentage": 75.0
+      },
+      {
+        "parent": "Pinoak Financial Services Inc",
+        "child": "Bridgewater Asset Management Inc",
+        "percentage": 60.0
+      },
+      {
+        "parent": "Lakeview Distribution Corp",
+        "child": "Lakeview Transport No",
+        "percentage": 100.0
+      }
+    ],
+    "states": [],
+    "transitions": [],
+    "decision_points": [],
+    "process_steps": [],
+    "investigation_steps": [],
+    "communications": [],
+    "concepts": [],
+    "risk_items": [],
+    "negotiation_issues": [],
+    "transfers": [],
+    "claim_classes": [],
+    "data_flows": [],
+    "witnesses": [],
+    "legal_authorities": [],
+    "ip_assets": [],
+    "documents": []
+  },
+  "extraction_hints": [
+    {
+      "id": "H0",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "**To:** Board of Directors, Cedarbrook Group Inc. **From:** Corporate Counsel **Date:** February 20, 2026 **Re:** Post-Acquisition Corporate Structure of Cedarbrook Group",
+      "confidence": 0.42,
+      "anchor": "§1#1",
+      "context_heading": "Corporate Structure Memorandum"
+    },
+    {
+      "id": "H1",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+      "confidence": 0.48,
+      "anchor": "§2#1",
+      "context_heading": "Corporate Structure Memorandum > Overview"
+    },
+    {
+      "id": "H2",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+      "confidence": 0.42,
+      "anchor": "§2#1",
+      "context_heading": "Corporate Structure Memorandum > Overview"
+    },
+    {
+      "id": "H3",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "The following entities form part of the Cedarbrook corporate group",
+      "confidence": 0.48,
+      "anchor": "§4#1",
+      "context_heading": "Corporate Structure Memorandum > Entities"
+    }
+  ],
+  "coverage": {
+    "populated_fields": [
+      "parties",
+      "entities",
+      "events",
+      "ownership_links"
+    ],
+    "hint_only_fields": [
+      "conditions"
+    ],
+    "absent_fields": [
+      "deadlines",
+      "phases",
+      "tasks",
+      "obligations",
+      "controls",
+      "relationships",
+      "states",
+      "transitions",
+      "decision_points",
+      "process_steps",
+      "investigation_steps",
+      "communications",
+      "concepts",
+      "risk_items",
+      "negotiation_issues",
+      "transfers",
+      "claim_classes",
+      "data_flows",
+      "witnesses",
+      "legal_authorities",
+      "ip_assets",
+      "documents"
+    ],
+    "signal_map": {
+      "extractor.events.dated_event": 0.66,
+      "extractor": 0.88,
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor.conditions.trigger_condition": 0.48,
+      "extractor.ownership_links.ownership": 0.83,
+      "extractor.entities.ownership_participant": 0.77,
+      "extractor.entities.entity_list_item": 0.77
+    }
+  },
+  "matter_type_evidence": {
+    "candidates": {
+      "corporate": 0.3
+    },
+    "signals": []
+  },
+  "candidate_manifest": {
+    "schema_version": "legal-diagram-candidates",
+    "structure_metrics": {
+      "headings": 6,
+      "lists": 7,
+      "tables": 0,
+      "paragraphs": 15,
+      "blocks": 28,
+      "table_rows": 0
+    },
+    "warning_codes": [],
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "**To:** Board of Directors, Cedarbrook Group Inc. **From:** Corporate Counsel **Date:** February 20, 2026 **Re:** Post-Acquisition Corporate Structure of Cedarbrook Group",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0001",
+        "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Overview"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Overview"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Overview"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0004",
+        "snippet": "Cedarbrook Group Inc. owns 100% of Lakeview Distribution Corp., a corporation incorporated under the laws of Manitoba",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "ownership_links"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "Cedarbrook Group Inc. owns 100% of Lakeview Distribution Corp., a corporation incorporated under the laws of Manitoba",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0006",
+        "snippet": "Cedarbrook Group Inc. owns 100% of Lakeview Distribution Corp., a corporation incorporated under the laws of Manitoba",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "Cedarbrook Group Inc. owns 100% of Pinoak Financial Services Inc., a corporation incorporated under the laws of Ontario",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "6",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            120
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "ownership_links"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0008",
+        "snippet": "Cedarbrook Group Inc. owns 100% of Pinoak Financial Services Inc., a corporation incorporated under the laws of Ontario",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "6",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            120
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0009",
+        "snippet": "Cedarbrook Group Inc. owns 100% of Pinoak Financial Services Inc., a corporation incorporated under the laws of Ontario",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "6",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            120
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "Cedarbrook Group Inc. owns 75% of Ridgetop Realty Ltd., a corporation incorporated under the laws of British Columbia",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "7",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "ownership_links"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0011",
+        "snippet": "Cedarbrook Group Inc. owns 75% of Ridgetop Realty Ltd., a corporation incorporated under the laws of British Columbia",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "7",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "Cedarbrook Group Inc. owns 75% of Ridgetop Realty Ltd., a corporation incorporated under the laws of British Columbia",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "7",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "The remaining 25% is held by Westcoast Properties Corp., an arm's length third party",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "7",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            119,
+            204
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.75,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "Pinoak Financial Services Inc. owns 60% of Bridgewater Asset Management Inc., a corporation incorporated under the laws of Ontario",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "8",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            131
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "ownership_links"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "Pinoak Financial Services Inc. owns 60% of Bridgewater Asset Management Inc., a corporation incorporated under the laws of Ontario",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "8",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            131
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0016",
+        "snippet": "Pinoak Financial Services Inc. owns 60% of Bridgewater Asset Management Inc., a corporation incorporated under the laws of Ontario",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "8",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            131
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "The remaining 40% is held by Weststone Capital Partners Ltd., a limited partnership",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "8",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            132,
+            216
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.75,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "Lakeview Distribution Corp. owns 100% of Lakeview Transport No. 1 Inc. and 100% of Lakeview Transport No. 2 Inc., both corporations incorporated under the laws of Manitoba",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "9",
+          "anchor": "§3#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            172
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "ownership_links"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0019",
+        "snippet": "Lakeview Distribution Corp. owns 100% of Lakeview Transport No. 1 Inc. and 100% of Lakeview Transport No. 2 Inc., both corporations incorporated under the laws of Manitoba",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "9",
+          "anchor": "§3#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            172
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Ownership Structure"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "The following entities form part of the Cedarbrook corporate group",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "11",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            67
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "**Cedarbrook Group Inc.**: Ultimate parent",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "12",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            43
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "**Lakeview Distribution Corp.**: Wholly owned subsidiary",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "13",
+          "anchor": "§4#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            57
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "12",
+          "14"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "**Pinoak Financial Services Inc.**: Wholly owned subsidiary",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "14",
+          "anchor": "§4#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            60
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "13",
+          "15"
+        ]
+      },
+      {
+        "id": "E0024",
+        "snippet": "**Ridgetop Realty Ltd.**: Majority-owned subsidiary (75%)",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "15",
+          "anchor": "§4#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            58
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "**Bridgewater Asset Management Inc.**: Subsidiary of Pinoak Financial Services Inc. (60%)",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "16",
+          "anchor": "§4#6",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            90
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "**Lakeview Transport No. 1 Inc.**: Wholly owned subsidiary of Lakeview Distribution Corp",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "17",
+          "anchor": "§4#7",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            90
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "**Lakeview Transport No. 2 Inc.**: Wholly owned subsidiary of Lakeview Distribution Corp",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "18",
+          "anchor": "§4#8",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            90
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "Ridgetop Realty Ltd. is a joint venture vehicle between Cedarbrook Group Inc. and Westcoast Properties Corp. pursuant to a shareholders agreement dated January 15, 2024",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "23",
+          "anchor": "§5#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Key Relationships"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            169
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Key Relationships"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "Weststone Capital Partners Ltd. holds its 40% interest in Bridgewater Asset Management Inc. pursuant to a unanimous shareholders agreement dated March 15, 2023",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "24",
+          "anchor": "§5#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Key Relationships"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Key Relationships"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "id": "C0000",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "February 20, 2026",
+          "description": "**To:** Board of Directors, Cedarbrook Group Inc. **From:** Corporate Counsel **Date:** February 20, 2026 **Re:** Post-Acquisition Corporate Structure of Cedarbrook Group"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0000"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        }
+      },
+      {
+        "id": "C0001",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Cedarbrook Group Inc",
+          "role": "cedarbrook",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0001"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      },
+      {
+        "id": "C0002",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0002"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      },
+      {
+        "id": "C0003",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "January 31, 2026",
+          "description": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0003"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      },
+      {
+        "id": "C0004",
+        "target_field": "ownership_links",
+        "frame_type": "ownership",
+        "normalized_value": {
+          "parent": "Cedarbrook Group Inc",
+          "child": "Lakeview Distribution Corp",
+          "percentage": 100.0
+        },
+        "signals": [
+          "ownership_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0004"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        }
+      },
+      {
+        "id": "C0005",
+        "target_field": "entities",
+        "frame_type": "ownership_participant",
+        "normalized_value": {
+          "name": "Cedarbrook Group Inc",
+          "type": "entity"
+        },
+        "signals": [
+          "ownership_participant",
+          "heading_prior",
+          "entity_list_item"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0005",
+          "E0008",
+          "E0011",
+          "E0021"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        }
+      },
+      {
+        "id": "C0006",
+        "target_field": "entities",
+        "frame_type": "ownership_participant",
+        "normalized_value": {
+          "name": "Lakeview Distribution Corp",
+          "type": "entity"
+        },
+        "signals": [
+          "ownership_participant",
+          "heading_prior",
+          "entity_list_item"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0006",
+          "E0019",
+          "E0022"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "5",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        }
+      },
+      {
+        "id": "C0007",
+        "target_field": "ownership_links",
+        "frame_type": "ownership",
+        "normalized_value": {
+          "parent": "Cedarbrook Group Inc",
+          "child": "Pinoak Financial Services Inc",
+          "percentage": 100.0
+        },
+        "signals": [
+          "ownership_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0007"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "6",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            120
+          ]
+        }
+      },
+      {
+        "id": "C0009",
+        "target_field": "entities",
+        "frame_type": "ownership_participant",
+        "normalized_value": {
+          "name": "Pinoak Financial Services Inc",
+          "type": "entity"
+        },
+        "signals": [
+          "ownership_participant",
+          "heading_prior",
+          "entity_list_item"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0009",
+          "E0015",
+          "E0023"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "6",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            120
+          ]
+        }
+      },
+      {
+        "id": "C0010",
+        "target_field": "ownership_links",
+        "frame_type": "ownership",
+        "normalized_value": {
+          "parent": "Cedarbrook Group Inc",
+          "child": "Ridgetop Realty Ltd",
+          "percentage": 75.0
+        },
+        "signals": [
+          "ownership_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0010"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "7",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        }
+      },
+      {
+        "id": "C0012",
+        "target_field": "entities",
+        "frame_type": "ownership_participant",
+        "normalized_value": {
+          "name": "Ridgetop Realty Ltd",
+          "type": "entity"
+        },
+        "signals": [
+          "ownership_participant",
+          "heading_prior",
+          "entity_list_item"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0012",
+          "E0024"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "7",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            118
+          ]
+        }
+      },
+      {
+        "id": "C0013",
+        "target_field": "entities",
+        "frame_type": "ownership_participant",
+        "normalized_value": {
+          "name": "Westcoast Properties Corp",
+          "type": "entity"
+        },
+        "signals": [
+          "ownership_participant",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.75,
+        "evidence_ids": [
+          "E0013"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "7",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            119,
+            204
+          ]
+        }
+      },
+      {
+        "id": "C0014",
+        "target_field": "ownership_links",
+        "frame_type": "ownership",
+        "normalized_value": {
+          "parent": "Pinoak Financial Services Inc",
+          "child": "Bridgewater Asset Management Inc",
+          "percentage": 60.0
+        },
+        "signals": [
+          "ownership_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0014"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "8",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            131
+          ]
+        }
+      },
+      {
+        "id": "C0016",
+        "target_field": "entities",
+        "frame_type": "ownership_participant",
+        "normalized_value": {
+          "name": "Bridgewater Asset Management Inc",
+          "type": "entity"
+        },
+        "signals": [
+          "ownership_participant",
+          "heading_prior",
+          "entity_list_item"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0016",
+          "E0025"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "8",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            131
+          ]
+        }
+      },
+      {
+        "id": "C0017",
+        "target_field": "entities",
+        "frame_type": "ownership_participant",
+        "normalized_value": {
+          "name": "Weststone Capital Partners Ltd",
+          "type": "entity"
+        },
+        "signals": [
+          "ownership_participant",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.75,
+        "evidence_ids": [
+          "E0017"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "8",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            132,
+            216
+          ]
+        }
+      },
+      {
+        "id": "C0018",
+        "target_field": "ownership_links",
+        "frame_type": "ownership",
+        "normalized_value": {
+          "parent": "Lakeview Distribution Corp",
+          "child": "Lakeview Transport No",
+          "percentage": 100.0
+        },
+        "signals": [
+          "ownership_signal",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0018"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "9",
+          "anchor": "§3#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Ownership Structure"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            172
+          ]
+        }
+      },
+      {
+        "id": "C0020",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "The following entities form part of the Cedarbrook corporate group",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0020"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "11",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            67
+          ]
+        }
+      },
+      {
+        "id": "C0026",
+        "target_field": "entities",
+        "frame_type": "entity_list_item",
+        "normalized_value": {
+          "name": "Lakeview Transport No. 1 Inc",
+          "type": "entity"
+        },
+        "signals": [
+          "entity_list_item",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0026"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "17",
+          "anchor": "§4#7",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            90
+          ]
+        }
+      },
+      {
+        "id": "C0027",
+        "target_field": "entities",
+        "frame_type": "entity_list_item",
+        "normalized_value": {
+          "name": "Lakeview Transport No. 2 Inc",
+          "type": "entity"
+        },
+        "signals": [
+          "entity_list_item",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0027"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "18",
+          "anchor": "§4#8",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            90
+          ]
+        }
+      },
+      {
+        "id": "C0028",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "January 15, 2024",
+          "description": "Ridgetop Realty Ltd. is a joint venture vehicle between Cedarbrook Group Inc. and Westcoast Properties Corp. pursuant to a shareholders agreement dated January 15, 2024",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0028"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "23",
+          "anchor": "§5#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Key Relationships"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            169
+          ]
+        }
+      },
+      {
+        "id": "C0029",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "March 15, 2023",
+          "description": "Weststone Capital Partners Ltd. holds its 40% interest in Bridgewater Asset Management Inc. pursuant to a unanimous shareholders agreement dated March 15, 2023",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0029"
+        ],
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "24",
+          "anchor": "§5#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Key Relationships"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        }
+      }
+    ],
+    "promotion_decisions": [
+      {
+        "candidate_id": "C0000",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0001",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0001"
+      },
+      {
+        "candidate_id": "C0002",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0003",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0004",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0004"
+      },
+      {
+        "candidate_id": "C0005",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0005"
+      },
+      {
+        "candidate_id": "C0006",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0006"
+      },
+      {
+        "candidate_id": "C0007",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0007"
+      },
+      {
+        "candidate_id": "C0009",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0009"
+      },
+      {
+        "candidate_id": "C0010",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0010"
+      },
+      {
+        "candidate_id": "C0012",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0012"
+      },
+      {
+        "candidate_id": "C0013",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0013"
+      },
+      {
+        "candidate_id": "C0014",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0014"
+      },
+      {
+        "candidate_id": "C0016",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0016"
+      },
+      {
+        "candidate_id": "C0017",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0017"
+      },
+      {
+        "candidate_id": "C0018",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0018"
+      },
+      {
+        "candidate_id": "C0020",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0026",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0026"
+      },
+      {
+        "candidate_id": "C0027",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0027"
+      },
+      {
+        "candidate_id": "C0028",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0028"
+      },
+      {
+        "candidate_id": "C0029",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0029"
+      }
+    ]
+  },
+  "llm_enrichment": {
+    "mode": "json_patch_only",
+    "read_policy": {
+      "high_confidence": "no_reread",
+      "medium_confidence": "snippet_only",
+      "low_confidence": "snippet_plus_neighboring_block",
+      "contradiction_or_missing_role_date": "heading_section_window"
+    },
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "**To:** Board of Directors, Cedarbrook Group Inc. **From:** Corporate Counsel **Date:** February 20, 2026 **Re:** Post-Acquisition Corporate Structure of Cedarbrook Group",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Overview"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "This memorandum describes the corporate structure of Cedarbrook Group Inc. (\"Cedarbrook\") and its subsidiaries following the completion of the acquisition of Lakeview Distribution Corp. on January 31, 2026",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "3",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Overview"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Overview"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "The following entities form part of the Cedarbrook corporate group",
+        "source_ref": {
+          "source": "en_corp_structure.md",
+          "block_id": "11",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Corporate Structure Memorandum",
+            "Entities"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            67
+          ]
+        },
+        "heading_path": [
+          "Corporate Structure Memorandum",
+          "Entities"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0000",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0000"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0002",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0002"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0003",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0003"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0020",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0020"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H0"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §1#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H1"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §2#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H2"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §2#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H3"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §4#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "implicit_inference",
+        "field": "decision_points",
+        "instruction": "Scan obligations, conditions, and process_steps for if/then logic."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "directed_inference",
+        "field": "decision_points",
+        "instruction": "Profile 'governance' active (score 1.0); 'decision_points' is absent. Populate decision_points from a bounded read of the source around supporting spans only; every added entity carries evidence_id and source_ref. No textual support: leave empty and add an extraction_warning."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "directed_inference",
+        "field": "process_steps",
+        "instruction": "Profile 'governance' active (score 1.0); 'process_steps' is absent. Populate process_steps from a bounded read of the source around supporting spans only; every added entity carries evidence_id and source_ref. No textual support: leave empty and add an extraction_warning."
+      }
+    ]
+  },
+  "profile_signals": {
+    "privacy": 0.33,
+    "litigation": 0.0,
+    "governance": 1.0,
+    "risk_assessment": 0.0
+  },
+  "language_profile": {
+    "dominant": "en",
+    "override": null,
+    "blocks": {
+      "en": 14,
+      "fr": 0,
+      "und": 14
+    },
+    "char_share": {
+      "en": 1.0,
+      "fr": 0.0
+    }
+  }
+}

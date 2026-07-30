@@ -1,0 +1,1 @@
+Verification-first methodology for the UNMIK Regulation 64 Panels of the Kosovo district courts (2000–2008). Citations are verified against UNMIK/EULEX archives and legal-tools.org. Keeps the Reg. 64 Panels distinct from the Kosovo Specialist Chambers, and clarifies that Reg. 2000/64 permitted (did not impose) internationally-majority panels. Research aid, not legal advice.

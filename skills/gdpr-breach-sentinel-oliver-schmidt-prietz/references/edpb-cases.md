@@ -252,6 +252,14 @@ Based on EDPB Guidelines 01/2021 - Examples regarding data breach notification.
 
 ## Using This Reference
 
+### Analogy Warning (read before matching)
+
+- The Guidelines 01/2021 cases are **illustrative analogies, not binding decisions**. They show how the EDPB reasoned on stylised facts — they do not decide your case.
+- **Factual differences matter.** An analogy never substitutes for the Art. 33/34 legal test applied to the actual facts (see the Legal Bridge in SKILL.md).
+- **ENISA and EDPB examples can diverge.** Where they conflict, document both and lean conservative (see "When Cases Conflict with ENISA" below).
+- **Channel matters:** a misdirected *email* is only *analogised* to the postal cases (13–16) and Case 09 — it is not directly covered by them. State the differences expressly: emails may be recallable, read receipts and server logs can evidence (non-)access, and digital copies persist and forward in ways paper does not.
+- Where an example suggests no notification but your facts are uncertain, preserve the conservative reasoning in writing rather than adopting the example's outcome.
+
 ### Matching Process
 
 1. Identify the **category** (Ransomware, Exfiltration, Human Risk, Lost Device, Mispostal, Social Engineering)
@@ -263,13 +271,15 @@ Based on EDPB Guidelines 01/2021 - Examples regarding data breach notification.
 
 ### Output Format
 
-> "This scenario most closely resembles **EDPB Case [XX]: [Brief Description]**.
+> "This scenario most closely resembles **EDPB Case [XX]: [Brief Description]** — as an analogy, not a binding precedent.
 >
-> EDPB recommendation: SA notification [YES/NO], Subject notification [YES/NO]
+> EDPB recommendation in that case: SA notification [YES/NO], Subject notification [YES/NO]
 >
 > Your situation differs in: [Key differences]
 >
-> This comparison [SUPPORTS / SUGGESTS RECONSIDERING] your calculated severity verdict of [LEVEL]."
+> Limits of the analogy: [e.g., different channel/medium, scale, data category, evidence of access]
+>
+> This comparison [SUPPORTS / SUGGESTS RECONSIDERING] your calculated severity verdict of [LEVEL]. The Art. 33/34 Legal Bridge on your facts remains decisive."
 
 ### When Cases Conflict with ENISA
 

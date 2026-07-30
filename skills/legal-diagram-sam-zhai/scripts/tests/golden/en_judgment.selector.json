@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "flowchart",
+    "rationale": "Timeline overridden to a grouped flowchart: 12 events exceed the density threshold. Rendering as a vertical flowchart with era subgraphs.",
+    "alternatives": [
+      "flowchart",
+      "gantt"
+    ],
+    "confidence": 0.5,
+    "grouping_suggested": true,
+    "grouping_axis": "era"
+  },
+  "with_intent": {
+    "intent": "litigation chronology of events",
+    "result": {
+      "recommended_type": "timeline",
+      "rationale": "timeline selected based on: events, deadlines.",
+      "alternatives": [
+        "gantt",
+        "flowchart"
+      ],
+      "confidence": 0.52,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

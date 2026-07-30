@@ -37,7 +37,7 @@ Suivre la séquence du §3 du SKILL.md dans cet ordre strict :
 - Sélectionner les décisions illustrant concrètement l'application de la règle
 
 **2d. Doctrine** (priorité renforcée — contexte académique) :
-- `scripts/hal_search.py` → recherche thématique multi-champs
+- `scripts/doctrine_search.py` → recherche doctrinale multi-sources (HAL + OpenAlex + Isidore), identifiant vérifiable par référence ; `scripts/hal_search.py` pour les notes d'arrêt par pourvoi
 - web_search → Cairn, Dalloz Actualité, Persée, OpenEdition
 - Rechercher les notes d'arrêt par numéro de pourvoi (HAL : `--pourvoi "NUMÉRO"`)
 - Dédoublonner HAL / web_search

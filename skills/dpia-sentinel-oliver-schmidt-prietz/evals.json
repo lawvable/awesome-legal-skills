@@ -1,0 +1,141 @@
+{
+  "skill_name": "dpia-sentinel",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Mall operator headquartered in Munich. We want to deploy facial-recognition CCTV across 12 shopping centres in Bavaria for security purposes — 24/7 operation, estimated 2.5 million unique visitors per month. We are the controller. I'm the DPO. Do we need a DPIA, and how should we frame it?",
+      "expected_output": "DPIA is MANDATORY under Art. 35(3)(c) (systematic monitoring of publicly accessible area on a large scale) AND Art. 35(3)(b) (special-category biometric data). Art. 35(3) triggers are absolute — no balancing or nine-criteria analysis required. Likely on the DSK (German) blacklist. Art. 6 + Art. 9 cumulative legal basis must both be satisfied. Art. 36 prior consultation likely if residual risk remains high after mitigations.",
+      "files": [],
+      "expectations": [
+        "Identifies Art. 35(3)(c) systematic monitoring of publicly accessible area as an applicable trigger",
+        "Identifies Art. 35(3)(b) special-category data trigger (biometric data under Art. 9)",
+        "States DPIA is MANDATORY — uses 'required' or 'mandatory', not 'recommended' or 'likely needed'",
+        "Explicitly states that Art. 35(3) triggers are absolute and do NOT require nine-criteria analysis or balancing",
+        "References EDPB Guidelines WP 248 rev.01 by name",
+        "Notes this processing likely appears on the DSK (German) blacklist for Art. 35(4)",
+        "States cumulative Art. 6 + Art. 9 legal basis must BOTH be satisfied (identifies these as separate hurdles)",
+        "Flags Art. 36 prior consultation as likely required if residual risk remains high after mitigations",
+        "Recommends DPO involvement under Art. 35(2) and qualified counsel for final decisions",
+        "Identifies BayLDA (Bavarian DPA) as the relevant SA for a Munich-based private company"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're a German company with 1,200 employees. We're planning an annual employee-engagement survey with demographic questions (age range, department, gender) and 30 Likert-scale items on workplace climate. Responses are pseudonymised at intake — a separate key system run by a third-party vendor in Ireland holds the linkage, and we as the controller never see the raw responses linked to individual identifiers. Results are aggregated weekly into department-level cohort metrics (minimum cohort size = 30 employees). I see 'evaluation/scoring' and 'systematic monitoring' on the EDPB nine — but is a full DPIA really needed here?",
+      "expected_output": "The two-criteria rule is a strong PRESUMPTION per WP 248 rev.01, not a mandate. With genuine pseudonymisation (per EDPB Guidelines 01/2025) and cohort-only aggregation, a documented threshold memo arguing DPIA-not-required is defensible. Art. 35(2) DPO involvement still required. Should also surface the vendor-in-Ireland processor angle (Art. 28).",
+      "files": [],
+      "expectations": [
+        "Explicitly recognises and engages with the user's two-of-nine framing",
+        "Explains the two-criteria rule is a strong PRESUMPTION per WP 248 rev.01, NOT a mandate",
+        "States that a DPIA may be justified as unnecessary with 2 criteria IF thoroughly documented",
+        "Applies EDPB Guidelines 01/2025 on pseudonymisation as a risk reducer (lowers likelihood scoring)",
+        "Confirms pseudonymisation must be GENUINE — technically separated additional information, non-trivial re-identification",
+        "Recommends a documented threshold memo (not a full DPIA) given the risk profile",
+        "States Art. 35(2) DPO involvement is required regardless of the threshold outcome",
+        "Surfaces the Ireland-based vendor as an Art. 28 processor angle requiring DPA",
+        "Assesses risk from the data subject's perspective, not the company's reputational/business perspective"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're a German fintech, controller, main establishment in Frankfurt. We're launching credit-scoring for customers in France using a third-party AI model that takes 30+ behavioural data points (browsing, social media, transaction patterns) — 50,000 French customers to start. The vendor (model provider) is in Estonia. Do we need a DPIA, and whose blacklist applies?",
+      "expected_output": "DPIA mandatory under Art. 35(3)(a) systematic extensive automated evaluation with legal/significant effects. BOTH DSK (Germany) and CNIL (France) blacklists must be checked — one-stop-shop governs ENFORCEMENT, not which Art. 35(4) lists apply to the DPIA OBLIGATION. HBDI (Hessen) as Lead SA under Art. 56(1) because the controller's main establishment is in Frankfurt; CNIL is the concerned SA for the French data subjects. Also triggers Art. 22 automated decision-making analysis and EDPB Opinion 28/2024 dual-phase AI assessment (training by vendor + deployment by fintech). Deployer cannot inherit vendor's DPIA.",
+      "files": [],
+      "expectations": [
+        "States DPIA is mandatory under Art. 35(3)(a) — systematic extensive automated evaluation with legal/significant effect",
+        "Identifies that BOTH the DSK (Germany) blacklist AND the CNIL (France) blacklist must be checked",
+        "Explicitly states the one-stop-shop mechanism (Art. 56) does NOT limit which Art. 35(4) blacklists apply to the DPIA obligation",
+        "Identifies HBDI (Hessen) as Lead SA under Art. 56(1) because the controller's main establishment is in Frankfurt — NOT CNIL on data-subject majority. CNIL is the concerned SA for French data subjects.",
+        "Triggers Art. 22 automated decision-making analysis (credit scoring has legal/significant effect)",
+        "Applies EDPB Opinion 28/2024 dual-phase analysis — training (vendor) and deployment (fintech) as distinct processing activities",
+        "States the fintech cannot rely solely on the vendor's training DPIA — a separate deployment DPIA is required",
+        "Recommends a single DPIA document covering both jurisdictions with jurisdiction-specific sections",
+        "Notes Estonian vendor as a processor under Art. 28 requiring a DPA"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're a Berlin hospital, controller. We're deploying a third-party LLM-based clinical triage assistant — the vendor is US-based, the model was trained on US medical data. The vendor provided their DPIA covering training and is telling us 'the training DPIA is done, you don't need a separate one'. Is that right?",
+      "expected_output": "NO. The vendor's training DPIA is insufficient. Per EDPB Opinion 28/2024, training and deployment are distinct processing activities with distinct risk profiles — the deployer needs its own DPIA. Also triggers: cross-border transfer to US (Chapter V — SCCs / TIA / adequacy analysis), Art. 9 health data with cumulative Art. 6 + Art. 9 basis, likely AI Act high-risk (Annex III, health), and Art. 27 AI Act FRIA distinct from DPIA. Art. 36 prior consultation possible.",
+      "files": [],
+      "expectations": [
+        "States clearly that the vendor's training DPIA is INSUFFICIENT for the hospital's deployment",
+        "References EDPB Opinion 28/2024 on dual-phase AI DPIA by name",
+        "Explains training and deployment are distinct processing activities with distinct risk profiles",
+        "Identifies cross-border transfer to the US as triggering Chapter V analysis (SCCs / TIA / adequacy)",
+        "Identifies the data as Art. 9 health data and requires cumulative Art. 6 + Art. 9 basis analysis",
+        "Notes the AI Act FRIA under Art. 27 may also be required — distinct from the DPIA, complementary",
+        "Identifies the system as likely high-risk under Annex III (medical devices or health) of the AI Act",
+        "Recommends Art. 36 prior consultation may be required if residual risk remains high",
+        "Identifies BlnBDI (Berliner Beauftragte für Datenschutz) as the relevant SA for the Berlin controller"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "We're a French SME (controller, Lyon) doing standard HR processing for 80 employees — payroll, leave management, annual performance reviews. No AI, no biometrics, no profiling. I saw the CNIL whitelist exempts standard employer-employee processing. But we also have a German subsidiary in Berlin (20 employees, same HR processing). Are we exempt from DPIA, or not?",
+      "expected_output": "Whitelist exemption applies only to the French-located portion. German portion must be assessed against the DSK blacklist separately — whitelist exemptions from one jurisdiction do NOT override blacklist obligations in another. Standard HR is generally NOT on the DSK blacklist either, so DPIA likely not required for the German portion either. Single threshold memo covering both jurisdictions with separate analysis sections.",
+      "files": [],
+      "expectations": [
+        "Recognises the cross-border element — French establishment + German subsidiary",
+        "States the CNIL whitelist exemption applies only to French processing",
+        "States the German processing must be checked against the DSK blacklist separately",
+        "Explicitly states whitelist exemptions from one jurisdiction do NOT override blacklist obligations in another",
+        "Recommends a single threshold memo covering both jurisdictions with separate analysis sections",
+        "Concludes standard HR is generally not on the DSK blacklist — DPIA likely not required for the German portion",
+        "Identifies CNIL as Lead SA based on French main establishment (one-stop-shop)",
+        "Notes Art. 35(2) DPO involvement is still required even if no DPIA is needed"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Academic research project at a German university. We want to process patient health data — consent-based, 2,000 participants — to study a rare genetic condition. 10% of participants are minors under 16 (parental consent obtained). We have Art. 6(1)(a) consent. What else do we need to demonstrate for the DPIA?",
+      "expected_output": "DPIA mandatory under Art. 35(3)(b) special-category data large scale. Art. 6 and Art. 9 are cumulative separate hurdles — must demonstrate Art. 9(2) basis on top of Art. 6. Art. 9(2)(a) explicit consent OR Art. 9(2)(j) scientific research with safeguards. Genetic data sub-category warrants extra scrutiny. For minors under 16, Art. 8 GDPR applies for information-society services (Germany retains the 16-year threshold). EDPB pseudonymisation guidance applies if pseudonymised research datasets are used.",
+      "files": [],
+      "expectations": [
+        "States DPIA is mandatory under Art. 35(3)(b) — special-category data on a large scale",
+        "Explicitly states Art. 6 and Art. 9 are cumulative separate legal hurdles",
+        "Identifies Art. 9(2)(a) explicit consent OR Art. 9(2)(j) scientific research as candidate Art. 9 bases",
+        "Notes Art. 9(2)(a) requires EXPLICIT consent — a higher bar than Art. 6(1)(a) ordinary consent",
+        "Identifies genetic data as a sub-category warranting extra scrutiny under Art. 9(1)",
+        "Identifies Art. 8 GDPR as relevant for the under-16 participants (information-society services context)",
+        "Notes Germany retains the 16-year threshold for Art. 8 (some Member States set it lower)",
+        "Recommends documenting BOTH Art. 6 and Art. 9 bases explicitly in the DPIA",
+        "Notes EDPB Guidelines 01/2025 on pseudonymisation can reduce likelihood scoring if applied"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "We're a German staffing agency (controller). We want to use an AI tool that scores CVs and ranks job candidates. We've already classified the AI system as high-risk under Annex III Nr. 4 of the AI Act. Do we need a DPIA, a FRIA, or both?",
+      "expected_output": "BOTH are required. DPIA under Art. 35(3)(a) GDPR — systematic extensive automated evaluation with legal/significant effect. FRIA under Art. 27 AI Act because the deployer is using a high-risk system in employment/HR (Annex III Nr. 4). They are complementary, not substitutes — DPIA covers data-protection risks, FRIA covers broader fundamental-rights risks. Should also surface Art. 22 automated decision-making and labour-law overlays.",
+      "files": [],
+      "expectations": [
+        "States clearly that BOTH a DPIA and a FRIA are required — not one or the other",
+        "Identifies DPIA basis: Art. 35(3)(a) systematic extensive automated evaluation with legal/significant effect",
+        "Identifies FRIA basis: Art. 27 AI Act for deployers of high-risk systems",
+        "Confirms Annex III Nr. 4 (employment / worker management) places the system in scope of the FRIA obligation",
+        "Explicitly states DPIA covers data-protection risks; FRIA covers broader fundamental-rights risks",
+        "Explicitly states one does NOT replace the other — they are complementary",
+        "Triggers Art. 22 automated decision-making analysis (CV ranking has legal/significant effects)",
+        "Recommends running DPIA and FRIA in parallel with shared underlying assessment where feasible",
+        "References EDPB Opinion 28/2024 on AI–DPIA interplay",
+        "Notes the staffing-agency context likely triggers German labour-law overlays beyond GDPR/AI Act"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Marketing analytics: we collect website behavioural data (no logins, no fingerprinting, no cross-device tracking). We aggregate it weekly into anonymised cohort metrics (minimum cohort size 1,000 visitors) and use it for A/B testing. Source data is deleted after 7 days. No special category data, no profiling of individuals, no decisions affecting individuals. Strong pseudonymisation at intake (separate key system, technical separation, salt rotation weekly). Do we need a DPIA?",
+      "expected_output": "DPIA likely NOT required. Art. 35(3) triggers absent. EDPB nine-criteria analysis: at most 1 weakly applicable (some scoring/evaluation but at cohort level, not individuals). EDPB Guidelines 01/2025 on pseudonymisation supports reduced likelihood scoring given the strong technical separation. Recommend a documented threshold memo, not a full DPIA. Art. 35(2) DPO involvement still required. Validate that 'anonymised cohort metrics' truly meets the anonymisation bar (re-identification genuinely impossible).",
+      "files": [],
+      "expectations": [
+        "Walks through Art. 35(3) triggers and confirms none apply",
+        "Walks through the EDPB nine criteria and identifies at most 1–2 weakly applicable criteria",
+        "Applies EDPB Guidelines 01/2025 on pseudonymisation as a risk reducer (lowers likelihood scoring)",
+        "Confirms the described pseudonymisation appears effective — separate key system, technical separation, salt rotation",
+        "Concludes DPIA is NOT required — recommends a documented threshold memo instead",
+        "Notes Art. 35(2) DPO involvement is still required regardless of the threshold outcome",
+        "Assesses risk from the data subject's perspective, not the company's perspective",
+        "Flags that 'anonymised cohort metrics' counts as anonymisation only if re-identification is genuinely impossible (otherwise it remains pseudonymisation)"
+      ]
+    }
+  ]
+}

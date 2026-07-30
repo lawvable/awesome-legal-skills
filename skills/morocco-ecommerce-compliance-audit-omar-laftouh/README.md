@@ -1,0 +1,3 @@
+# Overview
+
+Performs a legal compliance audit for a Moroccan e-commerce website, focused on personal data protection (Law 09-08) and consumer contract disclosures/obligations (Law 31-08). Use this skill when a user asks to audit, check, or assess the legal compliance of an e-commerce website operating in Morocco — presence and validity of Terms & Conditions, privacy policy, CNDP declaration, mandatory disclosures, right of withdrawal, consent banner. Out of scope: compliance for other countries, Meta/Google advertising compliance (covered by another skill), definitive legal advice (results are a starting point for professional review, not legal advice).

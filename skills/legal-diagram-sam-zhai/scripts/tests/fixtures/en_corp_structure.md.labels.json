@@ -1,0 +1,36 @@
+{
+  "expected_type": "erDiagram",
+  "expected_type_with_intent": {
+    "intent": "ownership structure and entity relationships",
+    "type": "erDiagram"
+  },
+  "fields": {
+    "parties": [],
+    "entities": [
+      "Cedarbrook Group Inc.",
+      "Lakeview Distribution Corp.",
+      "Pinoak Financial Services Inc.",
+      "Ridgetop Realty Ltd.",
+      "Bridgewater Asset Management Inc.",
+      "Lakeview Transport No. 1 Inc.",
+      "Lakeview Transport No. 2 Inc.",
+      "Westcoast Properties Corp.",
+      "Weststone Capital Partners Ltd."
+    ],
+    "ownership_links": [
+      "Cedarbrook Group Inc. owns 100% of Lakeview Distribution Corp.",
+      "Cedarbrook Group Inc. owns 100% of Pinoak Financial Services Inc.",
+      "Cedarbrook Group Inc. owns 75% of Ridgetop Realty Ltd.",
+      "Pinoak Financial Services Inc. owns 60% of Bridgewater Asset Management Inc.",
+      "Lakeview Distribution Corp. owns 100% of Lakeview Transport No. 1 Inc.",
+      "Lakeview Distribution Corp. owns 100% of Lakeview Transport No. 2 Inc."
+    ],
+    "relationships": [
+      "Cedarbrook Group Inc. controls all subsidiaries through board appointment authority",
+      "Pinoak Financial Services Inc. holds regulated licences for Bridgewater Asset Management Inc.",
+      "Lakeview Distribution Corp. coordinates operations of transport subsidiaries via intercompany services agreements",
+      "Ridgetop Realty Ltd. is a joint venture between Cedarbrook Group Inc. and Westcoast Properties Corp.",
+      "Weststone Capital Partners Ltd. holds 40% of Bridgewater Asset Management Inc."
+    ]
+  }
+}

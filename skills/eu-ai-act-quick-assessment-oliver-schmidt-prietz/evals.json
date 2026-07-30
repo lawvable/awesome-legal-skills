@@ -1,0 +1,26 @@
+{
+  "skill_name": "ai-act-quick",
+  "evals": [
+    {
+      "id": 0,
+      "name": "clear-high-risk-triage",
+      "prompt": "Quick AI Act check, please — we're considering deploying an off-the-shelf AI tool from a US vendor that does credit-scoring for our consumer-loan applications. We're a German bank. The vendor's system uses applicant data (income, employment, debt history) to produce a credit score we'd use in the loan-approval decision. We acknowledge legal disclaimer. We need a 15-min preliminary assessment: does AI Act apply? Are we obviously high-risk? What's the rough effort to be compliant? Where should we drill down next?",
+      "expected_output": "Quick triage output: clearly identifies high-risk under Annex III Nr. 5(b) (creditworthiness/credit-score evaluation of natural persons). Role identified as deployer (importing from US vendor — possible importer role too). Recommends running full /ai-act-classifier + /ai-act-roles + /ai-act-obligations for definitive matrix. Flags: 2 Dec 2027 deadline (Annex III high-risk applicability per Art. 6(2), as postponed by AI Omnibus 2026). FRIA IS triggered: Art. 27 requires a fundamental-rights impact assessment for deployers of Annex III Nr. 5(b) creditworthiness systems. Flags US vendor → possible importer status, possible need for EU authorised representative. Recommends prioritising vendor due-diligence on their AI Act provider obligations.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "clear-minimal-risk-no-action",
+      "prompt": "Quick AI Act triage please. We have a small AI feature in our internal HR portal that suggests room booking optimization (when employees want to book a meeting room, the AI suggests an alternative if their first choice is fully booked, based on capacity, location, equipment available). Built in-house, simple recommendation engine, no decision-making about people. German GmbH, 350 employees, professional services. We acknowledge legal disclaimer. Quick check: does AI Act apply at all? Any concerns? Any obligations? Or is this 'minimal risk, no action needed'?",
+      "expected_output": "Quick triage: minimal risk. Art. 4 AI literacy applies (since 2 Feb 2025) for any AI use. Art. 50 transparency NOT triggered (no deepfakes, no synthetic content, no chatbots interacting with end users about identifying decisions, no emotion recognition). Annex III high-risk categories NOT triggered (no employment evaluation, no biometric, no public-services decision-making — meeting-room booking is operational logistics). No Art. 5 prohibited. Confirmation: minimal-risk free use, no further classification needed. AI literacy programme should still be in place per Art. 4. Recommendation: document the system in an internal AI register but no AI Act compliance action required beyond literacy training.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "ambiguous-customer-service-chatbot",
+      "prompt": "Quick AI Act check — we're rolling out a customer-service chatbot on our B2C e-commerce site (clothing retailer, EU + UK + US customers). The chatbot answers product questions, helps with returns/exchanges, escalates complex cases to a human agent. It uses an LLM (we license from Anthropic via API). The chatbot identifies itself as AI in its first message. We don't process any decisions about people — it's purely informational + escalation routing. Acknowledge disclaimer. Quick triage: AI Act exposure? High-risk? Art. 50? Anything to worry about?",
+      "expected_output": "Quick triage: limited risk under Art. 50 (chatbot interacting with natural persons → Art. 50(1) transparency obligation: must inform users they're interacting with AI; user notes this is already done). NOT high-risk Annex III. NOT prohibited Art. 5. Role analysis: deployer of an AI system that wraps Anthropic's GPAI (similar to HR-tech vendor case). Anthropic = GPAI provider (Art. 53). Annotation: user did not mention if the chatbot influences purchase decisions in a manipulative way (Art. 5(1)(a)) — quick triage should flag this question for follow-up but NOT classify as prohibited based on info provided. Recommendation: confirm Art. 50(1) language is compliant; possibly proceed to /ai-act-classifier for fuller analysis if any uncertainty; verify Anthropic's downstream-provider info pack (Annex XII) covers your integrator role.",
+      "files": []
+    }
+  ]
+}

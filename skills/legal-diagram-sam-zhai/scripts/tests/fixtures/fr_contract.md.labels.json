@@ -1,0 +1,50 @@
+{
+  "expected_type": "gantt",
+  "expected_type_with_intent": {
+    "intent": "échéancier des phases et délais de clôture",
+    "type": "gantt"
+  },
+  "fields": {
+    "parties": [
+      "Placements Beauchemin Ltée",
+      "Groupe Faucher",
+      "Financière Dorval Ltée"
+    ],
+    "entities": [
+      "Technologies Malouin Ltée"
+    ],
+    "deadlines": [
+      "au plus tard le 1er juin 2026",
+      "au plus tard à la Clôture",
+      "au plus tard le 20 juin 2026",
+      "dans les 18 mois suivant la date de Clôture",
+      "moyennant un préavis écrit de 60 jours",
+      "dans les 10 jours suivant la réception de toute réclamation d'un tiers"
+    ],
+    "obligations": [
+      "La Venderesse doit céder et transférer à l'Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée, libres de toute charge, pour un prix d'achat global de 12 345 678,90 $",
+      "L'Acheteur doit payer un acompte de 1 234 567,89 $ au plus tard le 1er juin 2026",
+      "L'Acheteur doit payer le solde de 11 111 111,01 $ à la clôture par virement de fonds immédiatement disponibles",
+      "La Venderesse doit remettre à l'Acheteur, au plus tard à la Clôture, les certificats d'actions, les registres des procès-verbaux et un certificat de conformité",
+      "La Venderesse doit faire en sorte que Technologies Malouin Ltée exploite son entreprise dans le cours normal des affaires jusqu'à la Clôture",
+      "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l'Acheteur",
+      "L'Acheteur s'engage à payer les droits de mutation applicables",
+      "La Venderesse s'engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+      "L'Acheteur s'engage à maintenir en vigueur les polices d'assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+      "La Garante devra exécuter les obligations de paiement de l'Acheteur advenant que celui-ci omette d'y donner suite",
+      "La Venderesse doit indemniser l'Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes",
+      "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l'attention des représentants désignés des parties",
+      "La Venderesse doit aviser l'Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d'un tiers visant les Actions visées"
+    ],
+    "conditions": [
+      "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+      "la Venderesse ait remis tous les documents de clôture requis",
+      "aucun changement défavorable important ne doit survenir relativement aux activités de Technologies Malouin Ltée avant la Clôture"
+    ],
+    "transfers": [
+      "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+      "le solde de 11 111 111,01 $ payable à la clôture par virement de fonds immédiatement disponibles",
+      "La Venderesse doit céder et transférer à l'Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée, libres de toute charge, pour un prix d'achat global de 12 345 678,90 $"
+    ]
+  }
+}

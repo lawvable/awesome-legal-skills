@@ -1,0 +1,1 @@
+Use for due diligence, legal-financial risk review, investment or business transaction checklists, and preliminary screening where facts, documents, assumptions, legal uncertainty, debt/equity, assets/liabilities, contracts, tax, regulatory, compliance, technology/product, and financial-model issues must be separated clearly.

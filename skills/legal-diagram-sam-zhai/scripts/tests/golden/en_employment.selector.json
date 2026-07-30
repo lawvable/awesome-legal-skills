@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "flowchart",
+    "rationale": "flowchart selected based on: obligations, conditions, transfers, parties.",
+    "alternatives": [
+      "requirementDiagram",
+      "gantt"
+    ],
+    "confidence": 0.49,
+    "grouping_suggested": false,
+    "grouping_axis": null
+  },
+  "with_intent": {
+    "intent": "compliance obligations and notice periods",
+    "result": {
+      "recommended_type": "requirementDiagram",
+      "rationale": "requirementDiagram selected based on: obligations, conditions.",
+      "alternatives": [
+        "flowchart",
+        "gantt"
+      ],
+      "confidence": 0.6,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

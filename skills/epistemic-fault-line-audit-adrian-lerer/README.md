@@ -1,0 +1,1 @@
+Audits legal AI outputs, prompts, skills, workflows and MCP/tool instructions for fluent but unsupported reasoning, missing evidence, overconfidence, hidden assumptions, weak causal links and absent human-review gates.

@@ -1,0 +1,1 @@
+Pre-flight privilege and work-product check for legal AI prompts. Use when the user is about to send legal content to a third-party AI surface and wants to know whether the prompt risks blowing attorney-client privilege or work-product protection. Returns a SAFE/CAUTION/STOP band with cited factors, a discovery-impact line, and a redacted-safe rewrite.

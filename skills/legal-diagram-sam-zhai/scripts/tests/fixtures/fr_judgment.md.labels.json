@@ -1,0 +1,34 @@
+{
+  "expected_type": "timeline",
+  "expected_type_with_intent": {
+    "intent": "chronologie des événements du litige",
+    "type": "timeline"
+  },
+  "fields": {
+    "parties": [
+      "Marc Tremblay",
+      "Gagnon Transport Ltée"
+    ],
+    "events": [
+      "1er février 2023",
+      "5 mars 2024",
+      "12 juin 2024",
+      "8 août 2024",
+      "15 septembre 2024",
+      "du 2 au 4 décembre 2025",
+      "10 janvier 2026"
+    ],
+    "legal_authorities": [
+      "art. 1458 C.c.Q.",
+      "art. 1457 C.c.Q.",
+      "Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415",
+      "Morin c. Entreprises Casgrain, 2026 QCCA 217"
+    ],
+    "obligations": [
+      "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées",
+      "La défenderesse doit verser des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+      "La défenderesse doit payer l'intérêt au taux légal majoré de l'indemnité additionnelle depuis le 5 mars 2024",
+      "La défenderesse doit payer les frais de justice"
+    ]
+  }
+}

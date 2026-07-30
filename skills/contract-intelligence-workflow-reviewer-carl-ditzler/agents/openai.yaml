@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contract Ops Playbook"
+  short_description: "Run contract review, drafting, research, routing, and saved workflow actions with QA controls"
+  default_prompt: "If workspace setup is missing, collect and save contract-workflow configuration first. Then perform the task using the mandatory intake form, playbook schema, priority matrix, execution workflow, workflow-state rules, action schema, approved MCP sources, contract artifact workflow, human approval gates, failure-mode checks, QA plan, and benchmark rubric. Do not skip steps or finalize until all workflow gates pass."

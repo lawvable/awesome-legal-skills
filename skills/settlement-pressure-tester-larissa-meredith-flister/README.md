@@ -1,0 +1,1 @@
+This skill stress-tests a proposed settlement position before an offer goes out or comes back: the assumptions it depends on, your leverage and the opponent’s, the evidential weaknesses, the likely opponent response, and the timing and costs pressures around it. It structures settlement judgment for a better-informed decision; it does not advise whether to settle.

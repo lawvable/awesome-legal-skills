@@ -1,0 +1,1 @@
+Use this skill when asked about Icelandic employment law, labour relations, workplace rights, or collective agreements. Triggers on questions about hiring, termination, working conditions, parental leave, trade unions, collective bargaining, workplace safety, or the Félagsdómur labour court in Iceland.

@@ -1,0 +1,43 @@
+{
+  "expected_type": "timeline",
+  "expected_type_with_intent": {
+    "intent": "litigation chronology of events",
+    "type": "timeline"
+  },
+  "fields": {
+    "parties": [
+      "Hargrove Consulting Inc.",
+      "Thornfield Logistics Ltd."
+    ],
+    "events": [
+      "March 1, 2024",
+      "June 12, 2024",
+      "August 5, 2024",
+      "January 20, 2025",
+      "March 3, 2025",
+      "May 8, 2025",
+      "October 6, 2025",
+      "October 9, 2025",
+      "October 24, 2025",
+      "November 14, 2025",
+      "September 15, 2024",
+      "September 18, 2024",
+      "October 1, 2024",
+      "December 1, 2024"
+    ],
+    "legal_authorities": [
+      "Renwick Building Products Ltd. v. Carleton Designs Corp., 2018 ONCA 227",
+      "Fidler v. Sun Life Assurance Co. of Canada, 2006 SCC 30",
+      "Transamerica Life Insurance Co. of Canada v. Canada Life Assurance Co., 1996 CanLII 7979 (ON SC)",
+      "Hadley v. Baxendale",
+      "Victoria Laundry (Windsor) Ltd. v. Newman Industries Ltd.",
+      "Courts of Justice Act, R.S.O. 1990, c. C.43"
+    ],
+    "obligations": [
+      "Defendant shall pay $485,000 in general damages for unpaid fees",
+      "Defendant shall pay $190,000 in damages for wrongful termination",
+      "Defendant shall pay pre-judgment interest from September 15, 2024",
+      "Defendant shall pay costs on partial indemnity basis"
+    ]
+  }
+}

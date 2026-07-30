@@ -1,13 +1,11 @@
 ---
-name: legal-risk-analysis-goodlegal
-description: Use for Legal Risk Analysis with Goodlegal MCP
+name: legal-risk-analysis
+description: Assess and classify legal risks using a severity-by-likelihood framework with escalation criteria. Use when evaluating contract risk, assessing deal exposure, classifying issues by severity, or determining whether a matter needs senior counsel or outside legal review.
 metadata:
   author: Zacharie Laïk
   license: AGPL-3.0
   version: 2026.02.25
 ---
-
-Assess and classify legal risks using a severity-by-likelihood framework with escalation criteria. Use when evaluating contract risk, assessing deal exposure, classifying issues by severity, or determining whether a matter needs senior counsel or outside legal review.
 
 # Legal Risk Assessment Skill
 

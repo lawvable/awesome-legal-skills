@@ -1,0 +1,39 @@
+{
+  "expected_type": "requirementDiagram",
+  "expected_type_with_intent": {
+    "intent": "liste d'obligations et délais de livraison",
+    "type": "requirementDiagram"
+  },
+  "fields": {
+    "parties": [
+      "Aurora Software Inc.",
+      "Boreal Distribution Ltd."
+    ],
+    "deadlines": [
+      "no later than June 30, 2026",
+      "within 10 business days after the date on which this Agreement takes effect",
+      "60 days prior written notice",
+      "dans les 10 jours ouvrables suivant la date de prise d'effet de la présente convention",
+      "moyennant un préavis écrit de 60 jours",
+      "au plus tard le 30 juin 2026"
+    ],
+    "obligations": [
+      "Distributor shall maintain the confidentiality of all technical documentation that the Licensor delivers under this Agreement",
+      "Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026",
+      "Distributor shall remit quarterly sales reports to the Licensor",
+      "Licensor shall deliver the master software package to the Distributor within 10 business days after the date on which this Agreement takes effect",
+      "Distributor shall not assign this Agreement without the prior written consent of the Licensor",
+      "the parties shall settle all outstanding royalties before the effective date of termination",
+      "La Concédante doit livrer le progiciel maître à la Distributrice dans les 10 jours ouvrables suivant la date de prise d'effet de la présente convention",
+      "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026",
+      "La Distributrice doit transmettre à la Concédante des rapports de ventes trimestriels",
+      "La Distributrice ne doit pas céder ni transférer la présente convention sans le consentement préalable écrit de la Concédante",
+      "la Distributrice doit maintenir la confidentialité de toute la documentation technique que la Concédante remet",
+      "les parties doivent payer toutes les redevances impayées avant la date de prise d'effet de la résiliation"
+    ],
+    "transfers": [
+      "The Distributor shall pay to the Licensor a royalty of $250,000.00 no later than June 30, 2026",
+      "La Distributrice doit verser à la Concédante une redevance de 250 000,00 $ au plus tard le 30 juin 2026"
+    ]
+  }
+}

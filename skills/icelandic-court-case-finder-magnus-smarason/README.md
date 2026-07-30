@@ -1,0 +1,1 @@
+Use this skill when asked to find, cite, analyze, or summarize Icelandic court decisions. Triggers on requests involving Hæstiréttur (Supreme Court), Landsréttur (Court of Appeal), Félagsdómur (Labour Court), héraðsdómur (District Court) case law, or Icelandic legal precedent research.

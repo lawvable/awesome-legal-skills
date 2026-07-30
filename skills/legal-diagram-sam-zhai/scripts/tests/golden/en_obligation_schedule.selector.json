@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "requirementDiagram",
+    "rationale": "requirementDiagram selected based on: documents, obligations, controls.",
+    "alternatives": [
+      "quadrantChart",
+      "flowchart"
+    ],
+    "confidence": 0.6,
+    "grouping_suggested": false,
+    "grouping_axis": null
+  },
+  "with_intent": {
+    "intent": "compliance obligation checklist",
+    "result": {
+      "recommended_type": "requirementDiagram",
+      "rationale": "requirementDiagram selected based on: documents, obligations, controls.",
+      "alternatives": [
+        "flowchart",
+        "quadrantChart"
+      ],
+      "confidence": 0.68,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

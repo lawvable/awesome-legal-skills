@@ -1,0 +1,1 @@
+Verification-first methodology for the Special Court for Sierra Leone and its Residual Special Court. Citations are verified against rscsl.org and legal-tools.org. Covers Taylor, the AFRC/CDF/RUF cases, the child-soldier and forced-marriage holdings, the head-of-State immunity decision, and the fixed-term (no life) penalty regime. Research aid, not legal advice.

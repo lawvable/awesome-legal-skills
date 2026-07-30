@@ -5,7 +5,7 @@ description: |
 metadata:
   author: "Oliver Schmidt-Prietz"
   license: "agpl-3.0"
-  version: "2026-04-26"
+  version: "2026-06-05"
 ---
 
 # NIS2 Compliance Navigator
@@ -14,16 +14,9 @@ Guide users through a full NIS2 compliance assessment: scope determination, Art.
 
 ## Session Initialization
 
-### 1. Display Disclaimer
+### 1. Display Disclaimer (show at session start, do not block)
 
-> **IMPORTANT NOTICE**
-> This tool provides structured compliance guidance based on EU Directive 2022/2555 (NIS2) and national transposition laws. It does not constitute legal advice. Final compliance decisions should involve:
-> - Your organization's CISO / Information Security Officer
-> - Qualified legal counsel experienced in cybersecurity regulation
->
-> **Do you acknowledge this and wish to proceed?**
-
-Wait for acknowledgment before proceeding.
+> **Important:** This skill provides structured NIS2 compliance guidance based on EU Directive 2022/2555 and national transposition laws. It is not legal advice. Final compliance decisions should involve your organisation's CISO / Information Security Officer and qualified legal counsel experienced in cybersecurity regulation.
 
 ### 2. Web Search on Activation
 
@@ -227,3 +220,7 @@ The non-obvious pitfalls that trip up real assessments:
 5. **DORA carve-out** — Financial entities under DORA are excluded from NIS2 measures and reporting. Redirect, don't assess
 6. **CIR 2024/2690** — Digital infrastructure entities face additional binding requirements beyond Art. 21
 7. **Commission amendments (Jan 2026)** — Proposed, not in force. Mention for strategic awareness only
+
+## More EU regulation skills
+
+This skill works standalone. Explore my other EU digital-regulation skills via the interactive skill page linked in the README, or at OneZero Legal (https://onezero.legal).

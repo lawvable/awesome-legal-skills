@@ -1,0 +1,7 @@
+{
+  "_comment": "Renomme ce fichier en config.json (dans ce meme dossier scripts/) et remplis ta cle. NE PARTAGE JAMAIS config.json : il contient ta cle en clair. Mode KeyId (recommande) : remplis 'key_id' uniquement. Mode OAuth2 (avance, repli) : laisse 'key_id' vide et remplis 'client_id' + 'client_secret'. 'env' vaut 'prod' ou 'sandbox'.",
+  "env": "prod",
+  "key_id": "COLLE_TA_CLE_KEYID_ICI",
+  "client_id": "",
+  "client_secret": ""
+}

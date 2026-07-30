@@ -1,0 +1,1 @@
+Use this skill when asked to review, analyze, or draft a contract governed by Icelandic law. Triggers on requests involving Icelandic commercial agreements, consumer contracts, sales agreements, service contracts, or any contract where Icelandic mandatory rules may apply.

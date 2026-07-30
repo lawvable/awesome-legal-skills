@@ -1,12 +1,16 @@
 # DPIA Document Templates
 
-For .docx generation. Always load the docx generation skill first (`/mnt/skills/public/docx/SKILL.md` in Claude.ai Projects, or the `docx-processing-anthropic` skill in Claude Code). If no docx skill is available, generate well-formatted Markdown as fallback.
+For .docx generation. Always load the docx skill first (`/mnt/skills/public/docx/SKILL.md` in Claude.ai Projects, or the `docx-processing-anthropic` skill in Claude Code). If no docx skill is available, generate well-formatted Markdown as fallback.
 
-Use `docx-js` (npm). Page size: A4 (11906 × 16838 DXA). Font: Arial. All table widths in DXA. Risk tables use color-coded cell shading (ShadingType.CLEAR): Low=#E8F5E9, Medium=#FFF8E1, High=#FFF3E0, Very High=#FFEBEE.
+**Generation approach:** Templates 1 (Full DPIA Report) and 5 (EDPB 2026) use template population — unpack a base `.docx`, fill tables/placeholders via OOXML editing, repack. This ensures consistent styling across runs. Templates 2–4 (shorter documents) are generated from scratch using `docx-js`.
+
+**Styling:** A4 (11906 × 16838 DXA). Font: Arial. Risk tables use color-coded cell shading (ShadingType.CLEAR): Low=#E8F5E9, Medium=#FFF8E1, High=#FFF3E0, Very High=#FFEBEE.
 
 ---
 
 ## 1. Full DPIA Report
+
+**Uses template population.** Base file: `dpia-custom-template-v1.docx`. Population guide: `dpia-custom-population.md`. The template contains all 12 sections with pre-built tables, color-coded risk heat maps, and consistent professional styling. See the population guide for table-by-table fill instructions.
 
 ### Structure
 
@@ -23,7 +27,7 @@ Use `docx-js` (npm). Page size: A4 (11906 × 16838 DXA). Font: Arial. All table 
 **Section 1: Executive Summary**
 - 1.1 Processing overview (2-3 paragraphs, plain language)
 - 1.2 Key findings (top risks, overall position)
-- 1.3 Recommendation: PROCEED / PROCEED WITH CONDITIONS / DO NOT PROCEED / ART. 36 CONSULTATION
+- 1.3 Recommendation: APPROVED / CONDITIONALLY APPROVED / CONSULT SA / REJECTED
 - 1.4 DPO opinion summary
 
 **Section 2: Threshold Assessment**
@@ -58,12 +62,12 @@ Use `docx-js` (npm). Page size: A4 (11906 × 16838 DXA). Font: Arial. All table 
 - 4.5 Conclusion
 
 **Section 5: Risk Assessment (Art. 35(7)(c))**
-- 5.1 Methodology statement (5×5 matrix, data subject perspective, EDPB-aligned)
-- 5.2 Risk register — table: ID | Description | Rights Category | Likelihood | Severity | Score | Level
+- 5.1 Methodology statement (5×5 matrix, data subject perspective, EDPB-aligned, two risk tracks)
+- 5.2 Inherent risk register — table: Risk ID | Track (A/B) | Description | Rights Category | L | S | Score | Modulating Factors | Adjusted Level
 - 5.3 Risk heat map (5×5 table with risk IDs in cells, color-coded)
 
 **Section 6: Mitigation Measures (Art. 35(7)(d))**
-- 6.1 Measures by risk — table: Risk ID | Risk | Pre-Score | Measures | Type (Tech/Org/Legal) | Post-L | Post-S | Residual Score | Residual Level
+- 6.1 Measures by risk — table: Risk ID | Risk | Inherent Score | Measures | Type (Tech/Org/Legal) | Implementation Status (Planned/Partial/Implemented) | Residual L | Residual S | Residual Score | Residual Level
 - 6.2 Technical measures (detailed descriptions)
 - 6.3 Organizational measures
 - 6.4 Legal/contractual measures
@@ -71,7 +75,7 @@ Use `docx-js` (npm). Page size: A4 (11906 × 16838 DXA). Font: Arial. All table 
 **Section 7: Residual Risk**
 - 7.1 Summary table: Level | Count | Risk IDs
 - 7.2 Residual heat map (color-coded)
-- 7.3 Overall position: ACCEPTABLE / ACCEPTABLE WITH CONDITIONS / ART. 36 CONSULTATION
+- 7.3 Overall position: APPROVED / CONDITIONALLY APPROVED / CONSULT SA / REJECTED
 - 7.4 Justification
 
 **Section 8: Art. 36 Prior Consultation** (if applicable)
@@ -150,3 +154,39 @@ Required when residual risk remains high after all feasible mitigations. Must co
 10. Attachments list — full DPIA report, data flow diagram, ROPA extract, contracts
 
 **Note:** SA has 8 weeks to respond (extendable by 6 weeks for complex cases). Processing must not begin until SA response is received or the response period has elapsed.
+
+---
+
+## 5. EDPB 2026 DPIA Report
+
+DPIA report in the official EDPB harmonised template format (Sections 0–6). Unlike templates 1–4 which are generated from scratch, this format **populates the official EDPB template .docx file** to produce output in the exact format recognized by all EU supervisory authorities.
+
+### Generation Workflow
+
+1. Read `references/edpb-2026-population.md` for the complete table-by-table population guide
+2. Read the docx skill's OOXML editing reference (`ooxml.md`)
+3. Unpack `references/edpb-2026-template-v1.docx` using the OOXML unpack script
+4. Create Python scripts using the Document library to populate tables and placeholders with assessment data
+5. Repack using the OOXML pack script
+
+The population guide maps all 35 tables and 13 placeholder patterns to assessment phases and provides OOXML code patterns for each operation type (Fill Cells, Add Rows, Fill Narrative, Mark Decision).
+
+### Structure
+
+See `references/edpb-2026-template.md` for the complete field-by-field specification:
+
+- **Section 0** — Overview: controllers, processors, processing name, planning, DPIA technical sheet
+- **Section 1** — Systematic Description: personal data, purposes, lifecycle, assets, codes of conduct
+- **Section 2** — Analysis: legal basis, minimisation, five compliance measure buckets with implementation status
+- **Section 3** — Necessity and Proportionality: inherent-by-design impacts, necessity test, proportionality balancing
+- **Section 4** — Risk Assessment and Management: operational threats, method declaration, inherent risk table, additional measures, residual risk, implementation plan
+- **Section 5** — Interested Parties: DPO advice, data subjects' views
+- **Section 6** — Conclusion: four-outcome decision (REJECTED / CONSULT SA / APPROVED / CONDITIONALLY APPROVED)
+
+### Formatting
+
+The official template's formatting (headers, footers, EDPB branding, table styles) is preserved by the population approach. Risk-level cell shading follows the same color scheme: Low=#E8F5E9, Medium=#FFF8E1, High=#FFF3E0, Very High=#FFEBEE. Implementation status badges: Planned=grey, Partially=yellow, Implemented=green.
+
+### Relationship to Full DPIA Report (Template 1)
+
+The EDPB 2026 format and the custom 12-section format contain the same assessment data, structured differently. The EDPB format follows the official harmonised structure recognizable by all EU SAs. The custom format includes additional features (threshold assessment section, jurisdictional blacklist analysis, risk heat maps) not part of the EDPB template but useful for comprehensive documentation. Users choose the format at document generation time.

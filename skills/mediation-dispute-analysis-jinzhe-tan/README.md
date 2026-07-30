@@ -1,0 +1,3 @@
+Analyzes legal disputes for mediation purposes — reviewing case materials (pleadings, contracts, correspondence, evidence), identifying contested issues, summarizing each party's position and interests, performing legal analysis of key issues, proposing mediation strategies or settlement directions, and preparing for mediation sessions.
+
+Use this skill whenever the user mentions mediation, dispute analysis, settlement, ADR, dispute resolution, party positions, caucus strategy, or asks to analyze a conflict between two or more parties with a resolution-oriented (rather than litigation-oriented) goal — including when they upload case files and ask for a structured breakdown of who wants what or how the case might settle, even when they don't explicitly say "mediation".

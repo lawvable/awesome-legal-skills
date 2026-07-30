@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "erDiagram",
+    "rationale": "erDiagram selected based on: ownership links, entities.",
+    "alternatives": [
+      "flowchart",
+      "timeline"
+    ],
+    "confidence": 0.64,
+    "grouping_suggested": false,
+    "grouping_axis": null
+  },
+  "with_intent": {
+    "intent": "ownership structure and entity relationships",
+    "result": {
+      "recommended_type": "erDiagram",
+      "rationale": "erDiagram selected based on: ownership links, entities.",
+      "alternatives": [
+        "flowchart",
+        "stateDiagram-v2"
+      ],
+      "confidence": 0.7,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

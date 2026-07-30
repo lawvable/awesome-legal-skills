@@ -1,0 +1,36 @@
+Ambiguity Stress-Test
+Copyright 2026 Seth J. Chandler (https://legaled.ai)
+
+Licensed under the Apache License, Version 2.0. A copy of the License is included
+in the file LICENSE and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+ORIGIN
+
+This skill is original work. It was first distributed under the name
+"interpretive-ambiguity-stress-test", as one half of the "ambiguity-audit" plugin, alongside
+a companion skill (ambiguity-report) that renders a completed audit as a website, Word
+document, slide deck, or LaTeX/PDF. This standalone release performs the analysis only; it
+does not produce formatted deliverables.
+
+Instructions that previously lived at the plugin level — the rule for choosing between the
+judicial-opinion profile's two output modes, and the citation-checking stage — have been
+folded into this skill so that it runs correctly on its own.
+
+The plugin bundled two legal-research connectors. A skill cannot carry connectors, so this
+release instead adapts to whatever research tools the user has: an explicitly named source,
+any connected legal-research tool, ordinary web search, or the text alone, with the choice
+disclosed in the output.
+
+---
+
+DISCLAIMER
+
+Audits produced by this skill are interpretive analyses of a legal text. They are not legal
+advice, they do not determine anyone's rights or obligations, and predicted outcomes are
+predictions rather than answers. Users remain responsible for reading the instrument, for
+verifying any authority named, and for confirming that a cited case or audited opinion
+remains good law.

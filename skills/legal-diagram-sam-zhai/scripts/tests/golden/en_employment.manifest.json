@@ -1,0 +1,5750 @@
+{
+  "extraction_result": {
+    "matter_name": "en_employment",
+    "matter_type": "employment",
+    "input_source": "en_employment.md",
+    "truncated": false,
+    "extraction_warnings": [],
+    "signal_map": {
+      "extractor.parties.defined_party_alias": 0.98,
+      "extractor": 0.98,
+      "extractor.events.transaction_event": 0.66,
+      "extractor.obligations.positive_obligation": 0.91,
+      "extractor.obligations.negative_obligation": 0.85,
+      "extractor.transfers.payment_flow": 0.8,
+      "extractor.conditions.trigger_condition": 0.55,
+      "extractor.conditions.dependency": 0.57,
+      "extractor.deadlines.hard_deadline": 0.77,
+      "extractor.events.dated_event": 0.42,
+      "extractor.conditions.default_remedy": 0.73,
+      "extractor.communications.notice_communication": 0.44,
+      "extractor.deadlines.notice_period": 0.79,
+      "extractor.obligations.continuing_duty": 0.81,
+      "extractor.deadlines.relative_deadline": 0.71,
+      "extractor.deadlines.cure_period": 0.79,
+      "extractor.parties.freeform_mention": 0.5
+    },
+    "hierarchy": [
+      {
+        "id": "H-employmentagreement",
+        "label": "Employment Agreement",
+        "parent": null,
+        "depth": 0,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-positionandduties",
+        "label": "Position and Duties",
+        "parent": "H-employmentagreement",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-compensationandbenefits",
+        "label": "Compensation and Benefits",
+        "parent": "H-employmentagreement",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-termandtermination",
+        "label": "Term and Termination",
+        "parent": "H-employmentagreement",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-termandtermination-terminationwithoutcause",
+        "label": "Termination Without Cause",
+        "parent": "H-employmentagreement-termandtermination",
+        "depth": 2,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-termandtermination-resignationbyemployee",
+        "label": "Resignation by Employee",
+        "parent": "H-employmentagreement-termandtermination",
+        "depth": 2,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-termandtermination-terminationforcause",
+        "label": "Termination for Cause",
+        "parent": "H-employmentagreement-termandtermination",
+        "depth": 2,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-nonsolicitation",
+        "label": "Non-Solicitation",
+        "parent": "H-employmentagreement",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-confidentiality",
+        "label": "Confidentiality",
+        "parent": "H-employmentagreement",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-employmentagreement-deductionsandsourcedeductions",
+        "label": "Deductions and Source Deductions",
+        "parent": "H-employmentagreement",
+        "depth": 1,
+        "source": "deterministic"
+      }
+    ],
+    "extraction_hints": [
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "confidence": 0.55,
+        "anchor": "§3#2",
+        "span": [
+          8,
+          8
+        ],
+        "context_heading": "Employment Agreement > Compensation and Benefits",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "dependency",
+        "suggested_field": "conditions",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "confidence": 0.57,
+        "anchor": "§3#2",
+        "span": [
+          8,
+          8
+        ],
+        "context_heading": "Employment Agreement > Compensation and Benefits",
+        "docx_style": null,
+        "matched_signals": [
+          "dependency",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "This Agreement shall commence on April 1, 2026, and shall continue until terminated in accordance with this Article",
+        "confidence": 0.42,
+        "anchor": "§4#1",
+        "span": [
+          11,
+          11
+        ],
+        "context_heading": "Employment Agreement > Term and Termination",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+        "confidence": 0.44,
+        "anchor": "§5#3",
+        "span": [
+          15,
+          15
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Termination Without Cause",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+        "confidence": 0.44,
+        "anchor": "§6#1",
+        "span": [
+          17,
+          17
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Resignation by Employee",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+        "confidence": 0.55,
+        "anchor": "§7#1",
+        "span": [
+          19,
+          19
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Termination for Cause",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "confidence": 0.55,
+        "anchor": "§7#2",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Termination for Cause",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "confidence": 0.44,
+        "anchor": "§7#2",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Termination for Cause",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "confidence": 0.55,
+        "anchor": "§7#2",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Termination for Cause",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "confidence": 0.44,
+        "anchor": "§7#2",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Termination for Cause",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+        "confidence": 0.55,
+        "anchor": "§7#2",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Employment Agreement > Term and Termination > Termination for Cause",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+        "confidence": 0.55,
+        "anchor": "§8#1",
+        "span": [
+          22,
+          22
+        ],
+        "context_heading": "Employment Agreement > Non-Solicitation",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+        "confidence": 0.55,
+        "anchor": "§8#2",
+        "span": [
+          23,
+          23
+        ],
+        "context_heading": "Employment Agreement > Non-Solicitation",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "confidence": 0.49,
+        "anchor": "§9#2",
+        "span": [
+          26,
+          26
+        ],
+        "context_heading": "Employment Agreement > Confidentiality",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition",
+          "legal_action_object"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "confidence": 0.44,
+        "anchor": "§9#2",
+        "span": [
+          26,
+          26
+        ],
+        "context_heading": "Employment Agreement > Confidentiality",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "dependency",
+        "suggested_field": "conditions",
+        "snippet": "Any disputes arising from this Agreement shall be subject to the exclusive jurisdiction of the courts of the Province of Alberta",
+        "confidence": 0.51,
+        "anchor": "§11#2",
+        "span": [
+          32,
+          32
+        ],
+        "context_heading": "Employment Agreement > Governing Law",
+        "docx_style": null,
+        "matched_signals": [
+          "dependency",
+          "legal_action_object"
+        ]
+      },
+      {
+        "hint_type": "freeform_mention",
+        "suggested_field": "parties",
+        "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+        "confidence": 0.5,
+        "anchor": "§1#1",
+        "span": [
+          1,
+          1
+        ],
+        "context_heading": "Employment Agreement",
+        "docx_style": null,
+        "matched_signals": [
+          "ner_mention",
+          "ner_role_word",
+          "ner_doc_frequency"
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "name": "Sandbourne Industries Inc",
+        "role": "employer",
+        "type": "party"
+      }
+    ],
+    "entities": [],
+    "events": [
+      {
+        "date": "April 1, 2026",
+        "description": "This Employment Agreement is entered into between Sandbourne Industries Inc., a corporation incorporated under the laws of Alberta (\"Employer\"), and Jordan Fairweather, an individual residing in Calgary, Alberta (\"Employee\"), effective as of April 1, 2026",
+        "actor": null,
+        "anchor": null
+      }
+    ],
+    "deadlines": [
+      {
+        "date": "no later than March 31 of each calendar year following the performance year",
+        "description": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "party": "Employee",
+        "consequence": null
+      },
+      {
+        "date": "no later than the effective date of termination",
+        "description": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+        "party": "Employer",
+        "consequence": null
+      },
+      {
+        "date": "30 days prior written notice",
+        "description": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+        "party": "Employee",
+        "consequence": null
+      },
+      {
+        "date": "15 business days after receipt of such written notice to cure the deficiency to th",
+        "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "party": "Employee",
+        "consequence": null
+      },
+      {
+        "date": "15 business days cure period",
+        "description": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+        "party": "unspecified",
+        "consequence": null
+      }
+    ],
+    "phases": [],
+    "tasks": [],
+    "obligations": [
+      {
+        "id": "OBL-0001",
+        "description": "The Employer shall employ the Employee as Director of Operations",
+        "party": "Employer",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0002",
+        "description": "The Employee shall report directly to the Chief Executive Officer of Sandbourne Industries Inc. and shall perform such duties",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0003",
+        "description": "The Employee shall devote substantially all of the Employee's working time and attention to the performance of duties under this Agreement and shall not, without the prior written consent of the Employer, engage in any outside employment or business activities that conflict with the Employee's obligations hereunder",
+        "party": "unspecified",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0004",
+        "description": "The Employer shall pay the Employee a base salary of $185,000 per annum, payable in equal semi-monthly instalments",
+        "party": "Employer",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0005",
+        "description": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0006",
+        "description": "The Employer shall provide the Employee with group benefits coverage, including extended health, dental, and life insurance",
+        "party": "Employer",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0007",
+        "description": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+        "party": "Employer",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0008",
+        "description": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": "30 days prior written notice"
+      },
+      {
+        "id": "OBL-0009",
+        "description": "During the notice period, the Employee shall continue to perform the Employee's duties and shall cooperate with the transition of the Employee's responsibilities",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0010",
+        "description": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "party": "Employer",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0011",
+        "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0012",
+        "description": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0013",
+        "description": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0014",
+        "description": "The Employee agrees to keep confidential all Confidential Information of Sandbourne Industries Inc. both during and after the term of employment",
+        "party": "Employee agrees to",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0015",
+        "description": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "party": "Employee",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0016",
+        "description": "The Employer shall make all deductions required by law, including income tax, Canada Pension Plan contributions, and Employment Insurance premiums, from amounts payable to the Employee under this Agreement",
+        "party": "Employer",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      }
+    ],
+    "controls": [],
+    "conditions": [
+      {
+        "id": "COND-0001",
+        "description": "The Employer may terminate the Employee's employment without cause by providing the Employee with working notice or pay in lieu of notice equal to",
+        "responsible_party": "Employer",
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      },
+      {
+        "id": "COND-0002",
+        "description": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+        "responsible_party": "Employer",
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      },
+      {
+        "id": "COND-0003",
+        "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "responsible_party": "Employee",
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      },
+      {
+        "id": "COND-0004",
+        "description": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+        "responsible_party": null,
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      },
+      {
+        "id": "COND-0005",
+        "description": "The obligation of confidentiality shall survive termination of this Agreement indefinitely with respect to trade secrets and for 5 years with respect to other Confidential Information",
+        "responsible_party": "obligation of confidentiality",
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      }
+    ],
+    "relationships": [],
+    "ownership_links": [],
+    "states": [],
+    "transitions": [],
+    "decision_points": [],
+    "process_steps": [],
+    "investigation_steps": [],
+    "communications": [],
+    "concepts": [],
+    "risk_items": [],
+    "negotiation_issues": [],
+    "transfers": [
+      {
+        "from_party": "Employer",
+        "to_party": "unspecified",
+        "description": "The Employer shall pay the Employee a base salary of $185,000 per annum, payable in equal semi-monthly instalments in accordance with the Employer's payroll practices",
+        "amount": 185000.0,
+        "sequence_order": null,
+        "mechanism": null,
+        "triggered_by": null
+      }
+    ],
+    "claim_classes": [],
+    "data_flows": [],
+    "witnesses": [],
+    "legal_authorities": [],
+    "ip_assets": [],
+    "documents": []
+  },
+  "extraction_hints": [
+    {
+      "id": "H0",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+      "confidence": 0.55,
+      "anchor": "§3#2",
+      "context_heading": "Employment Agreement > Compensation and Benefits"
+    },
+    {
+      "id": "H1",
+      "hint_type": "dependency",
+      "suggested_field": "conditions",
+      "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+      "confidence": 0.57,
+      "anchor": "§3#2",
+      "context_heading": "Employment Agreement > Compensation and Benefits"
+    },
+    {
+      "id": "H2",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "This Agreement shall commence on April 1, 2026, and shall continue until terminated in accordance with this Article",
+      "confidence": 0.42,
+      "anchor": "§4#1",
+      "context_heading": "Employment Agreement > Term and Termination"
+    },
+    {
+      "id": "H3",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+      "confidence": 0.44,
+      "anchor": "§5#3",
+      "context_heading": "Employment Agreement > Term and Termination > Termination Without Cause"
+    },
+    {
+      "id": "H4",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+      "confidence": 0.44,
+      "anchor": "§6#1",
+      "context_heading": "Employment Agreement > Term and Termination > Resignation by Employee"
+    },
+    {
+      "id": "H5",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+      "confidence": 0.55,
+      "anchor": "§7#1",
+      "context_heading": "Employment Agreement > Term and Termination > Termination for Cause"
+    },
+    {
+      "id": "H6",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+      "confidence": 0.55,
+      "anchor": "§7#2",
+      "context_heading": "Employment Agreement > Term and Termination > Termination for Cause"
+    },
+    {
+      "id": "H7",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+      "confidence": 0.44,
+      "anchor": "§7#2",
+      "context_heading": "Employment Agreement > Term and Termination > Termination for Cause"
+    },
+    {
+      "id": "H8",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+      "confidence": 0.55,
+      "anchor": "§7#2",
+      "context_heading": "Employment Agreement > Term and Termination > Termination for Cause"
+    },
+    {
+      "id": "H9",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+      "confidence": 0.44,
+      "anchor": "§7#2",
+      "context_heading": "Employment Agreement > Term and Termination > Termination for Cause"
+    },
+    {
+      "id": "H10",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+      "confidence": 0.55,
+      "anchor": "§7#2",
+      "context_heading": "Employment Agreement > Term and Termination > Termination for Cause"
+    },
+    {
+      "id": "H11",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+      "confidence": 0.55,
+      "anchor": "§8#1",
+      "context_heading": "Employment Agreement > Non-Solicitation"
+    },
+    {
+      "id": "H12",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+      "confidence": 0.55,
+      "anchor": "§8#2",
+      "context_heading": "Employment Agreement > Non-Solicitation"
+    },
+    {
+      "id": "H13",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+      "confidence": 0.49,
+      "anchor": "§9#2",
+      "context_heading": "Employment Agreement > Confidentiality"
+    },
+    {
+      "id": "H14",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+      "confidence": 0.44,
+      "anchor": "§9#2",
+      "context_heading": "Employment Agreement > Confidentiality"
+    },
+    {
+      "id": "H15",
+      "hint_type": "dependency",
+      "suggested_field": "conditions",
+      "snippet": "Any disputes arising from this Agreement shall be subject to the exclusive jurisdiction of the courts of the Province of Alberta",
+      "confidence": 0.51,
+      "anchor": "§11#2",
+      "context_heading": "Employment Agreement > Governing Law"
+    },
+    {
+      "id": "H16",
+      "hint_type": "freeform_mention",
+      "suggested_field": "parties",
+      "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+      "confidence": 0.5,
+      "anchor": "§1#1",
+      "context_heading": "Employment Agreement"
+    }
+  ],
+  "coverage": {
+    "populated_fields": [
+      "parties",
+      "events",
+      "deadlines",
+      "obligations",
+      "conditions",
+      "transfers"
+    ],
+    "hint_only_fields": [
+      "communications"
+    ],
+    "absent_fields": [
+      "entities",
+      "phases",
+      "tasks",
+      "controls",
+      "relationships",
+      "ownership_links",
+      "states",
+      "transitions",
+      "decision_points",
+      "process_steps",
+      "investigation_steps",
+      "concepts",
+      "risk_items",
+      "negotiation_issues",
+      "claim_classes",
+      "data_flows",
+      "witnesses",
+      "legal_authorities",
+      "ip_assets",
+      "documents"
+    ],
+    "signal_map": {
+      "extractor.parties.defined_party_alias": 0.98,
+      "extractor": 0.98,
+      "extractor.events.transaction_event": 0.66,
+      "extractor.obligations.positive_obligation": 0.91,
+      "extractor.obligations.negative_obligation": 0.85,
+      "extractor.transfers.payment_flow": 0.8,
+      "extractor.conditions.trigger_condition": 0.55,
+      "extractor.conditions.dependency": 0.57,
+      "extractor.deadlines.hard_deadline": 0.77,
+      "extractor.events.dated_event": 0.42,
+      "extractor.conditions.default_remedy": 0.73,
+      "extractor.communications.notice_communication": 0.44,
+      "extractor.deadlines.notice_period": 0.79,
+      "extractor.obligations.continuing_duty": 0.81,
+      "extractor.deadlines.relative_deadline": 0.71,
+      "extractor.deadlines.cure_period": 0.79,
+      "extractor.parties.freeform_mention": 0.5
+    }
+  },
+  "matter_type_evidence": {
+    "candidates": {},
+    "signals": []
+  },
+  "candidate_manifest": {
+    "schema_version": "legal-diagram-candidates",
+    "structure_metrics": {
+      "headings": 11,
+      "lists": 1,
+      "tables": 0,
+      "paragraphs": 21,
+      "blocks": 33,
+      "table_rows": 0
+    },
+    "warning_codes": [],
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            88
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0001",
+        "snippet": "This Employment Agreement is entered into between Sandbourne Industries Inc., a corporation incorporated under the laws of Alberta (\"Employer\"), and Jordan Fairweather, an individual residing in Calgary, Alberta (\"Employee\"), effective as of April 1, 2026",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "2",
+          "anchor": "§1#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            256
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "This Employment Agreement is entered into between Sandbourne Industries Inc., a corporation incorporated under the laws of Alberta (\"Employer\"), and Jordan Fairweather, an individual residing in Calgary, Alberta (\"Employee\"), effective as of April 1, 2026",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "2",
+          "anchor": "§1#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            256
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "The Employer shall employ the Employee as Director of Operations",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "4",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Position and Duties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            65
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Position and Duties"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "id": "E0004",
+        "snippet": "The Employee shall report directly to the Chief Executive Officer of Sandbourne Industries Inc. and shall perform such duties as are assigned by the Chief Executive Officer from time to time",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "4",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Position and Duties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            66,
+            257
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Position and Duties"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "The Employee shall devote substantially all of the Employee's working time and attention to the performance of duties under this Agreement and shall not, without the prior written consent of the Employer, engage in any outside employment or business activities that conflict with the Employee's obligations hereunder",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "5",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Position and Duties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            317
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Position and Duties"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "4",
+          "6"
+        ]
+      },
+      {
+        "id": "E0006",
+        "snippet": "The Employer shall pay the Employee a base salary of $185,000 per annum, payable in equal semi-monthly instalments in accordance with the Employer's payroll practices",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "7",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            167
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "The Employer shall pay the Employee a base salary of $185,000 per annum, payable in equal semi-monthly instalments in accordance with the Employer's payroll practices",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "7",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            167
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.8,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0008",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.76,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0009",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.57,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0011",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.7,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "The Employer shall provide the Employee with group benefits coverage, including extended health, dental, and life insurance, in accordance with Sandbourne Industries Inc.'s standard benefits plan as amended from time to time",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "9",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            225
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "This Agreement shall commence on April 1, 2026, and shall continue until terminated in accordance with this Article",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "11",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            116
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "The Employer may terminate the Employee's employment without cause by providing the Employee with working notice or pay in lieu of notice equal to",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "13",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            147
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination Without Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.73,
+        "neighboring_context_ids": [
+          "12",
+          "14"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "15",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            137
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination Without Cause"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.91,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0016",
+        "snippet": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "15",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            137
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination Without Cause"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "15",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            137
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination Without Cause"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            125
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Resignation by Employee"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0019",
+        "snippet": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            125
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Resignation by Employee"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.79,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            125
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Resignation by Employee"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "During the notice period, the Employee shall continue to perform the Employee's duties and shall cooperate with the transition of the Employee's responsibilities",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            126,
+            288
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Resignation by Employee"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.75,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "19",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "19",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.73,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0024",
+        "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.91,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.83,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0030",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.65,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0032",
+        "snippet": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            328,
+            435
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0033",
+        "snippet": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            328,
+            435
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.79,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0034",
+        "snippet": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            328,
+            435
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.65,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0035",
+        "snippet": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "22",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            291
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Non-Solicitation"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.84,
+        "neighboring_context_ids": [
+          "21",
+          "23"
+        ]
+      },
+      {
+        "id": "E0036",
+        "snippet": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "22",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            291
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Non-Solicitation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "21",
+          "23"
+        ]
+      },
+      {
+        "id": "E0037",
+        "snippet": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "23",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Non-Solicitation"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.84,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0038",
+        "snippet": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "23",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Non-Solicitation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0039",
+        "snippet": "The Employee agrees to keep confidential all Confidential Information of Sandbourne Industries Inc. both during and after the term of employment",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "25",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.81,
+        "neighboring_context_ids": [
+          "24",
+          "26"
+        ]
+      },
+      {
+        "id": "E0040",
+        "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0041",
+        "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.49,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0042",
+        "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0043",
+        "snippet": "The obligation of confidentiality shall survive termination of this Agreement indefinitely with respect to trade secrets and for 5 years with respect to other Confidential Information",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "27",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            184
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.65,
+        "neighboring_context_ids": [
+          "26",
+          "28"
+        ]
+      },
+      {
+        "id": "E0044",
+        "snippet": "The Employer shall make all deductions required by law, including income tax, Canada Pension Plan contributions, and Employment Insurance premiums, from amounts payable to the Employee under this Agreement",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "29",
+          "anchor": "§10#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Deductions and Source Deductions"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Deductions and Source Deductions"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "28",
+          "30"
+        ]
+      },
+      {
+        "id": "E0045",
+        "snippet": "Any disputes arising from this Agreement shall be subject to the exclusive jurisdiction of the courts of the Province of Alberta",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "32",
+          "anchor": "§11#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Governing Law"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            129
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Governing Law"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.51,
+        "neighboring_context_ids": [
+          "31",
+          "33"
+        ]
+      },
+      {
+        "id": "E0046",
+        "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            88
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0047",
+        "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            88
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0048",
+        "snippet": "The Employee agrees to keep confidential all Confidential Information of Sandbourne Industries Inc. both during and after the term of employment",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "25",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "24",
+          "26"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "id": "C0000",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Sandbourne Industries Inc",
+          "role": "employer",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match",
+          "ner_corroboration"
+        ],
+        "anti_signals": [],
+        "confidence": 0.98,
+        "evidence_ids": [
+          "E0000",
+          "E0001"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            88
+          ]
+        }
+      },
+      {
+        "id": "C0002",
+        "target_field": "events",
+        "frame_type": "transaction_event",
+        "normalized_value": {
+          "date_or_timing": "April 1, 2026",
+          "description": "This Employment Agreement is entered into between Sandbourne Industries Inc., a corporation incorporated under the laws of Alberta (\"Employer\"), and Jordan Fairweather, an individual residing in Calgary, Alberta (\"Employee\"), effective as of April 1, 2026",
+          "actor": null
+        },
+        "signals": [
+          "transaction_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0002"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "2",
+          "anchor": "§1#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            256
+          ]
+        }
+      },
+      {
+        "id": "C0003",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employer",
+          "description": "The Employer shall employ the Employee as Director of Operations",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0003"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "4",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Position and Duties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            65
+          ]
+        }
+      },
+      {
+        "id": "C0004",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "The Employee shall report directly to the Chief Executive Officer of Sandbourne Industries Inc. and shall perform such duties",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0004"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "4",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Position and Duties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            66,
+            257
+          ]
+        }
+      },
+      {
+        "id": "C0005",
+        "target_field": "obligations",
+        "frame_type": "negative_obligation",
+        "normalized_value": {
+          "party": "unspecified",
+          "description": "The Employee shall devote substantially all of the Employee's working time and attention to the performance of duties under this Agreement and shall not, without the prior written consent of the Employer, engage in any outside employment or business activities that conflict with the Employee's obligations hereunder",
+          "kind": "negative_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "negative_obligation",
+          "obligation_strength",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0005"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "5",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Position and Duties"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            317
+          ]
+        }
+      },
+      {
+        "id": "C0006",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employer",
+          "description": "The Employer shall pay the Employee a base salary of $185,000 per annum, payable in equal semi-monthly instalments",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0006"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "7",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            167
+          ]
+        }
+      },
+      {
+        "id": "C0007",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "Employer",
+          "to_party": "unspecified",
+          "amount_text": "$185,000",
+          "description": "The Employer shall pay the Employee a base salary of $185,000 per annum, payable in equal semi-monthly instalments in accordance with the Employer's payroll practices",
+          "timing": null
+        },
+        "signals": [
+          "payment_signal",
+          "known_party_subject"
+        ],
+        "anti_signals": [],
+        "confidence": 0.8,
+        "evidence_ids": [
+          "E0007"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "7",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            167
+          ]
+        }
+      },
+      {
+        "id": "C0008",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.76,
+        "evidence_ids": [
+          "E0008"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        }
+      },
+      {
+        "id": "C0009",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+          "responsible_party": "Employee"
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0009"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        }
+      },
+      {
+        "id": "C0010",
+        "target_field": "conditions",
+        "frame_type": "dependency",
+        "normalized_value": {
+          "description": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+          "responsible_party": "Employee"
+        },
+        "signals": [
+          "dependency",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.57,
+        "evidence_ids": [
+          "E0010"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        }
+      },
+      {
+        "id": "C0011",
+        "target_field": "deadlines",
+        "frame_type": "hard_deadline",
+        "normalized_value": {
+          "date_or_timing": "no later than March 31 of each calendar year following the performance year",
+          "description": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+          "party": "Employee"
+        },
+        "signals": [
+          "hard_deadline",
+          "deadline_signal",
+          "trigger_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.7,
+        "evidence_ids": [
+          "E0011"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        }
+      },
+      {
+        "id": "C0012",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employer",
+          "description": "The Employer shall provide the Employee with group benefits coverage, including extended health, dental, and life insurance",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [
+          "including_example"
+        ],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0012"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "9",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            225
+          ]
+        }
+      },
+      {
+        "id": "C0013",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "April 1, 2026",
+          "description": "This Agreement shall commence on April 1, 2026, and shall continue until terminated in accordance with this Article"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0013"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "11",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            116
+          ]
+        }
+      },
+      {
+        "id": "C0014",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "The Employer may terminate the Employee's employment without cause by providing the Employee with working notice or pay in lieu of notice equal to",
+          "responsible_party": "Employer"
+        },
+        "signals": [
+          "default_remedy_signal",
+          "legal_action_object",
+          "known_party_subject"
+        ],
+        "anti_signals": [],
+        "confidence": 0.73,
+        "evidence_ids": [
+          "E0014"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "13",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            147
+          ]
+        }
+      },
+      {
+        "id": "C0015",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employer",
+          "description": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.91,
+        "evidence_ids": [
+          "E0015"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "15",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            137
+          ]
+        }
+      },
+      {
+        "id": "C0016",
+        "target_field": "deadlines",
+        "frame_type": "hard_deadline",
+        "normalized_value": {
+          "date_or_timing": "no later than the effective date of termination",
+          "description": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+          "party": "Employer"
+        },
+        "signals": [
+          "hard_deadline",
+          "deadline_signal",
+          "trigger_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0016"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "15",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            137
+          ]
+        }
+      },
+      {
+        "id": "C0017",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0017"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "15",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            137
+          ]
+        }
+      },
+      {
+        "id": "C0018",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+          "kind": "positive_obligation",
+          "deadline": "30 days prior written notice"
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0018"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            125
+          ]
+        }
+      },
+      {
+        "id": "C0019",
+        "target_field": "deadlines",
+        "frame_type": "notice_period",
+        "normalized_value": {
+          "date_or_timing": "30 days prior written notice",
+          "description": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+          "party": "Employee"
+        },
+        "signals": [
+          "notice_period",
+          "deadline_signal",
+          "trigger_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.79,
+        "evidence_ids": [
+          "E0019"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            125
+          ]
+        }
+      },
+      {
+        "id": "C0020",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0020"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            125
+          ]
+        }
+      },
+      {
+        "id": "C0021",
+        "target_field": "obligations",
+        "frame_type": "continuing_duty",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "During the notice period, the Employee shall continue to perform the Employee's duties and shall cooperate with the transition of the Employee's responsibilities",
+          "kind": "continuing_duty",
+          "deadline": null
+        },
+        "signals": [
+          "continuing_duty",
+          "obligation_strength",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.75,
+        "evidence_ids": [
+          "E0021"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            126,
+            288
+          ]
+        }
+      },
+      {
+        "id": "C0022",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+          "responsible_party": "Employer"
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0022"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "19",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0023",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+          "responsible_party": "Employer"
+        },
+        "signals": [
+          "default_remedy_signal",
+          "legal_action_object",
+          "known_party_subject"
+        ],
+        "anti_signals": [],
+        "confidence": 0.73,
+        "evidence_ids": [
+          "E0023"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "19",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        }
+      },
+      {
+        "id": "C0024",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employer",
+          "description": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.91,
+        "evidence_ids": [
+          "E0024"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        }
+      },
+      {
+        "id": "C0025",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0025"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        }
+      },
+      {
+        "id": "C0026",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0026"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        }
+      },
+      {
+        "id": "C0027",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.83,
+        "evidence_ids": [
+          "E0027"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        }
+      },
+      {
+        "id": "C0028",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+          "responsible_party": "Employee"
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0028"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        }
+      },
+      {
+        "id": "C0029",
+        "target_field": "deadlines",
+        "frame_type": "relative_deadline",
+        "normalized_value": {
+          "date_or_timing": "15 business days after receipt of such written notice to cure the deficiency to th",
+          "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+          "party": "Employee"
+        },
+        "signals": [
+          "relative_deadline",
+          "deadline_signal",
+          "trigger_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0029"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        }
+      },
+      {
+        "id": "C0030",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+          "responsible_party": "Employee"
+        },
+        "signals": [
+          "default_remedy_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.65,
+        "evidence_ids": [
+          "E0030"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        }
+      },
+      {
+        "id": "C0031",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0031"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        }
+      },
+      {
+        "id": "C0032",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0032"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            328,
+            435
+          ]
+        }
+      },
+      {
+        "id": "C0033",
+        "target_field": "deadlines",
+        "frame_type": "cure_period",
+        "normalized_value": {
+          "date_or_timing": "15 business days cure period",
+          "description": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+          "party": null
+        },
+        "signals": [
+          "cure_period",
+          "deadline_signal",
+          "trigger_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.79,
+        "evidence_ids": [
+          "E0033"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            328,
+            435
+          ]
+        }
+      },
+      {
+        "id": "C0034",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.65,
+        "evidence_ids": [
+          "E0034"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            328,
+            435
+          ]
+        }
+      },
+      {
+        "id": "C0035",
+        "target_field": "obligations",
+        "frame_type": "negative_obligation",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+          "kind": "negative_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "negative_obligation",
+          "obligation_strength",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.84,
+        "evidence_ids": [
+          "E0035"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "22",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            291
+          ]
+        }
+      },
+      {
+        "id": "C0036",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0036"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "22",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            291
+          ]
+        }
+      },
+      {
+        "id": "C0037",
+        "target_field": "obligations",
+        "frame_type": "negative_obligation",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+          "kind": "negative_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "negative_obligation",
+          "obligation_strength",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.84,
+        "evidence_ids": [
+          "E0037"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "23",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      },
+      {
+        "id": "C0038",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.55,
+        "evidence_ids": [
+          "E0038"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "23",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      },
+      {
+        "id": "C0039",
+        "target_field": "obligations",
+        "frame_type": "continuing_duty",
+        "normalized_value": {
+          "party": "Employee agrees to",
+          "description": "The Employee agrees to keep confidential all Confidential Information of Sandbourne Industries Inc. both during and after the term of employment",
+          "kind": "continuing_duty",
+          "deadline": null
+        },
+        "signals": [
+          "continuing_duty",
+          "obligation_strength",
+          "legal_action_object",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.81,
+        "evidence_ids": [
+          "E0039"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "25",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        }
+      },
+      {
+        "id": "C0040",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employee",
+          "description": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0040"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        }
+      },
+      {
+        "id": "C0041",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+          "responsible_party": "Employee"
+        },
+        "signals": [
+          "trigger_condition",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.49,
+        "evidence_ids": [
+          "E0041"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        }
+      },
+      {
+        "id": "C0042",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0042"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        }
+      },
+      {
+        "id": "C0043",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "The obligation of confidentiality shall survive termination of this Agreement indefinitely with respect to trade secrets and for 5 years with respect to other Confidential Information",
+          "responsible_party": "obligation of confidentiality"
+        },
+        "signals": [
+          "default_remedy_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.65,
+        "evidence_ids": [
+          "E0043"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "27",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            184
+          ]
+        }
+      },
+      {
+        "id": "C0044",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Employer",
+          "description": "The Employer shall make all deductions required by law, including income tax, Canada Pension Plan contributions, and Employment Insurance premiums, from amounts payable to the Employee under this Agreement",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "deadline_signal"
+        ],
+        "anti_signals": [
+          "including_example"
+        ],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0044"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "29",
+          "anchor": "§10#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Deductions and Source Deductions"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      },
+      {
+        "id": "C0045",
+        "target_field": "conditions",
+        "frame_type": "dependency",
+        "normalized_value": {
+          "description": "Any disputes arising from this Agreement shall be subject to the exclusive jurisdiction of the courts of the Province of Alberta",
+          "responsible_party": "Any disputes arising from this Agreement"
+        },
+        "signals": [
+          "dependency",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.51,
+        "evidence_ids": [
+          "E0045"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "32",
+          "anchor": "§11#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Governing Law"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            129
+          ]
+        }
+      },
+      {
+        "id": "C0046",
+        "target_field": "parties",
+        "frame_type": "freeform_mention",
+        "normalized_value": {
+          "mention": "Sandbourne Industries Inc",
+          "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+          "type": "party"
+        },
+        "signals": [
+          "ner_mention",
+          "ner_role_word",
+          "ner_doc_frequency"
+        ],
+        "anti_signals": [],
+        "confidence": 0.5,
+        "evidence_ids": [
+          "E0046",
+          "E0047",
+          "E0048"
+        ],
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            88
+          ]
+        }
+      }
+    ],
+    "promotion_decisions": [
+      {
+        "candidate_id": "C0000",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0000"
+      },
+      {
+        "candidate_id": "C0002",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0002"
+      },
+      {
+        "candidate_id": "C0003",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0001"
+      },
+      {
+        "candidate_id": "C0004",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0002"
+      },
+      {
+        "candidate_id": "C0005",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0003"
+      },
+      {
+        "candidate_id": "C0006",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0004"
+      },
+      {
+        "candidate_id": "C0007",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0007"
+      },
+      {
+        "candidate_id": "C0008",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0005"
+      },
+      {
+        "candidate_id": "C0009",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0010",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0011",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0011"
+      },
+      {
+        "candidate_id": "C0012",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0006"
+      },
+      {
+        "candidate_id": "C0013",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0014",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0001"
+      },
+      {
+        "candidate_id": "C0015",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0007"
+      },
+      {
+        "candidate_id": "C0016",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0016"
+      },
+      {
+        "candidate_id": "C0017",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0018",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0008"
+      },
+      {
+        "candidate_id": "C0019",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0019"
+      },
+      {
+        "candidate_id": "C0020",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0021",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0009"
+      },
+      {
+        "candidate_id": "C0022",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0023",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0002"
+      },
+      {
+        "candidate_id": "C0024",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0010"
+      },
+      {
+        "candidate_id": "C0025",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0026",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0027",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0011"
+      },
+      {
+        "candidate_id": "C0028",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0029",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0029"
+      },
+      {
+        "candidate_id": "C0030",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0003"
+      },
+      {
+        "candidate_id": "C0031",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0032",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0033",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0033"
+      },
+      {
+        "candidate_id": "C0034",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0004"
+      },
+      {
+        "candidate_id": "C0035",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0012"
+      },
+      {
+        "candidate_id": "C0036",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0037",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0013"
+      },
+      {
+        "candidate_id": "C0038",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0039",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0014"
+      },
+      {
+        "candidate_id": "C0040",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0015"
+      },
+      {
+        "candidate_id": "C0041",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0042",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0043",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0005"
+      },
+      {
+        "candidate_id": "C0044",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0016"
+      },
+      {
+        "candidate_id": "C0045",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0046",
+        "action": "hint",
+        "reason": "NER freeform mention capped at hint tier",
+        "final_entity_id": null
+      }
+    ]
+  },
+  "llm_enrichment": {
+    "mode": "json_patch_only",
+    "read_policy": {
+      "high_confidence": "no_reread",
+      "medium_confidence": "snippet_only",
+      "low_confidence": "snippet_plus_neighboring_block",
+      "contradiction_or_missing_role_date": "heading_section_window"
+    },
+    "evidence_packets": [
+      {
+        "id": "E0009",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "The Employee shall be eligible to participate in the Employer's annual performance bonus plan, with a target bonus of 20% of base salary, payable no later than March 31 of each calendar year following the performance year, subject to the Employee remaining employed as of the payment date",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "8",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Compensation and Benefits"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            289
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Compensation and Benefits"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.57,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "This Agreement shall commence on April 1, 2026, and shall continue until terminated in accordance with this Article",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "11",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            116
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "The Employer shall provide the Employee with written notice of termination without cause no later than the effective date of termination",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "15",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination Without Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            137
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination Without Cause"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "The Employee shall provide the Employer with no less than 30 days prior written notice of the Employee's intention to resign",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Resignation by Employee"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            125
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Resignation by Employee"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "The Employer may terminate this Agreement immediately for cause without notice or payment in lieu of notice upon: (i) material breach of this Agreement by the Employee",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "19",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            168
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "If the Employer alleges cause based on performance-related conduct, the Employer shall first provide the Employee with written notice specifying the alleged deficiency in detail",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            178
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "The Employee shall have 15 business days after receipt of such written notice to cure the deficiency to the reasonable satisfaction of the Employer",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            179,
+            327
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0032",
+        "snippet": "If the Employee fails to cure within the 15-business-day cure period, the Employer may terminate for cause",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "20",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Term and Termination",
+            "Termination for Cause"
+          ],
+          "table_coords": null,
+          "char_span": [
+            328,
+            435
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Term and Termination",
+          "Termination for Cause"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0036",
+        "snippet": "During the term of employment and for a period of 12 months following termination, the Employee shall not, directly or indirectly, solicit or attempt to solicit any customer of Sandbourne Industries Inc. with whom the Employee had material contact during the 24 months preceding termination",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "22",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            291
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Non-Solicitation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "21",
+          "23"
+        ]
+      },
+      {
+        "id": "E0038",
+        "snippet": "During the term of employment and for a period of 6 months following termination, the Employee shall not, directly or indirectly, solicit, hire, or attempt to hire any employee of Sandbourne Industries Inc",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "23",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Non-Solicitation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            206
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Non-Solicitation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.55,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0041",
+        "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.49,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0042",
+        "snippet": "The Employee must immediately notify the Employer in writing upon becoming aware of any actual or suspected unauthorized disclosure of Confidential Information",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "26",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            160
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0045",
+        "snippet": "Any disputes arising from this Agreement shall be subject to the exclusive jurisdiction of the courts of the Province of Alberta",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "32",
+          "anchor": "§11#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Governing Law"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            129
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Governing Law"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.51,
+        "neighboring_context_ids": [
+          "31",
+          "33"
+        ]
+      },
+      {
+        "id": "E0046",
+        "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            88
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0047",
+        "snippet": "**Parties:** Sandbourne Industries Inc. (\"Employer\") and Jordan Fairweather (\"Employee\")",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            88
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0048",
+        "snippet": "The Employee agrees to keep confidential all Confidential Information of Sandbourne Industries Inc. both during and after the term of employment",
+        "source_ref": {
+          "source": "en_employment.md",
+          "block_id": "25",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Employment Agreement",
+            "Confidentiality"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            145
+          ]
+        },
+        "heading_path": [
+          "Employment Agreement",
+          "Confidentiality"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "24",
+          "26"
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0009",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0009"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0010",
+        "field": "conditions",
+        "frame_type": "dependency",
+        "confidence": 0.57,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0010"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0013",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0013"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0017",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0017"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0020",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0020"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0022",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0022"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0025",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0025"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0026",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0026"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0028",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0028"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0031",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0031"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0032",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0032"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0036",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0036"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0038",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.55,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0038"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0041",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.49,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0041"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0042",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0042"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0045",
+        "field": "conditions",
+        "frame_type": "dependency",
+        "confidence": 0.51,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0045"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0046",
+        "field": "parties",
+        "frame_type": "freeform_mention",
+        "confidence": 0.5,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0046",
+          "E0047",
+          "E0048"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "targets": [
+          "OBL-0001",
+          "OBL-0002",
+          "OBL-0003",
+          "OBL-0004",
+          "OBL-0005",
+          "OBL-0006",
+          "OBL-0007",
+          "OBL-0008",
+          "OBL-0009",
+          "OBL-0010",
+          "OBL-0011",
+          "OBL-0012",
+          "OBL-0013",
+          "OBL-0014",
+          "OBL-0015",
+          "OBL-0016"
+        ],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "null_field_classification",
+        "field": "obligations[].risk_level",
+        "instruction": "Classify each obligation high/medium/low from language."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H0"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §3#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H1"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §3#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H2"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §4#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H3"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §5#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H4"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §6#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H5"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H6"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H7"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H8"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H9"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H10"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H11"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §8#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H12"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §8#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H13"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §9#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H14"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §9#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H15"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §11#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H16"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "parties",
+        "instruction": "Resolve hint into parties from snippet at §1#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "implicit_inference",
+        "field": "decision_points",
+        "instruction": "Scan obligations, conditions, and process_steps for if/then logic."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "directed_inference",
+        "field": "data_flows",
+        "instruction": "Profile 'privacy' active (score 0.67); 'data_flows' is absent. Populate data_flows from a bounded read of the source around supporting spans only; every added entity carries evidence_id and source_ref. No textual support: leave empty and add an extraction_warning."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "directed_inference",
+        "field": "risk_items",
+        "instruction": "Profile 'privacy' active (score 0.67); 'risk_items' is absent. Populate risk_items from a bounded read of the source around supporting spans only; every added entity carries evidence_id and source_ref. No textual support: leave empty and add an extraction_warning."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "directed_inference",
+        "field": "controls",
+        "instruction": "Profile 'privacy' active (score 0.67); 'controls' is absent. Populate controls from a bounded read of the source around supporting spans only; every added entity carries evidence_id and source_ref. No textual support: leave empty and add an extraction_warning."
+      }
+    ]
+  },
+  "profile_signals": {
+    "privacy": 0.67,
+    "litigation": 0.33,
+    "governance": 0.33,
+    "risk_assessment": 0.0
+  },
+  "language_profile": {
+    "dominant": "en",
+    "override": null,
+    "blocks": {
+      "en": 21,
+      "fr": 0,
+      "und": 12
+    },
+    "char_share": {
+      "en": 1.0,
+      "fr": 0.0
+    }
+  }
+}

@@ -48,7 +48,7 @@ Pour chaque point de droit identifié dans le document :
 - Distinguer : arrêts fondateurs (à conserver) vs. arrêts illustratifs (remplaçables si plus récent et plus pertinent)
 
 **3c. Recherche doctrinale** via HAL + web_search :
-- `scripts/hal_search.py` → doctrine récente sur les thèmes du document
+- `scripts/doctrine_search.py` → doctrine récente sur les thèmes du document (multi-sources, identifiant vérifiable) ; `scripts/hal_search.py` en complément ciblé
 - web_search → Cairn, Dalloz Actualité, Persée
 - Identifier les évolutions doctrinales majeures, les nouveaux débats
 

@@ -1,0 +1,1 @@
+Read, search, and download emails and attachments from Microsoft Outlook via OAuth2. Use when the user asks to check, read, or fetch emails, search by keyword or sender, download attachments, or chain email content into other skills.

@@ -1,0 +1,3 @@
+# Overview
+
+Assistant académique pour enseignants-chercheurs en droit. Six tâches : (1) recherche juridique approfondie avec accent doctrinal, (2) relecture de documents avec vérification des références, commentaires Word, détection d'indices de plagiat/IA et cohérence argumentative, (3) création de sujets et corrigés d'exercices juridiques universitaires, (4) mise à jour de cours, ouvrages et documents juridiques, (5) création de cours avec support docx et PPTX, (6) préparation de fiches de TD. MCP : OpenLegi, Themia, LegalDataHunter. Déclencher pour toute demande liée à l'enseignement ou la recherche en droit : cours, TD, fiches de TD, examens, sujets, corrigés, relecture, mise à jour, recherche doctrinale. NE PAS déclencher pour les QCM (utiliser qcm-generator).

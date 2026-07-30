@@ -1,0 +1,5299 @@
+{
+  "extraction_result": {
+    "matter_name": "fr_judgment",
+    "matter_type": "litigation",
+    "input_source": "fr_judgment.md",
+    "truncated": false,
+    "extraction_warnings": [],
+    "signal_map": {
+      "extractor.parties.litigation_caption": 0.6,
+      "extractor": 0.88,
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor.events.dated_event": 0.66,
+      "extractor.conditions.default_remedy": 0.58,
+      "extractor.communications.notice_communication": 0.44,
+      "extractor.legal_authorities.statutory_reference": 0.78,
+      "extractor.legal_authorities.neutral_citation": 0.86,
+      "extractor.conditions.exception_carveout": 0.48,
+      "extractor.deadlines.notice_period": 0.72,
+      "extractor.obligations.positive_obligation": 0.85,
+      "extractor.transfers.payment_flow": 0.72
+    },
+    "hierarchy": [
+      {
+        "id": "H-tremblaycgagnontransportltee",
+        "label": "Tremblay c. Gagnon Transport Ltée",
+        "parent": null,
+        "depth": 0,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-tremblaycgagnontransportltee-introduction",
+        "label": "Introduction",
+        "parent": "H-tremblaycgagnontransportltee",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-tremblaycgagnontransportltee-historiqueprocedural",
+        "label": "Historique procédural",
+        "parent": "H-tremblaycgagnontransportltee",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-tremblaycgagnontransportltee-cadrejuridique",
+        "label": "Cadre juridique",
+        "parent": "H-tremblaycgagnontransportltee",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-tremblaycgagnontransportltee-conclusionsdefait",
+        "label": "Conclusions de fait",
+        "parent": "H-tremblaycgagnontransportltee",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-tremblaycgagnontransportltee-analyse",
+        "label": "Analyse",
+        "parent": "H-tremblaycgagnontransportltee",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-tremblaycgagnontransportltee-analyse-responsabilite",
+        "label": "Responsabilité",
+        "parent": "H-tremblaycgagnontransportltee-analyse",
+        "depth": 2,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-tremblaycgagnontransportltee-dispositif",
+        "label": "Dispositif",
+        "parent": "H-tremblaycgagnontransportltee",
+        "depth": 1,
+        "source": "deterministic"
+      }
+    ],
+    "extraction_hints": [
+      {
+        "hint_type": "litigation_caption",
+        "suggested_field": "parties",
+        "snippet": "**Référence :** Tremblay c. Gagnon Transport Ltée, 2026 QCCS 1234",
+        "confidence": 0.6,
+        "anchor": "§1#1",
+        "span": [
+          1,
+          1
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée",
+        "docx_style": null,
+        "matched_signals": [
+          "litigation_caption"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "**Date du jugement :** le 10 janvier 2026",
+        "confidence": 0.42,
+        "anchor": "§1#3",
+        "span": [
+          3,
+          3
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Le demandeur réclame 180 000,00 $ en factures impayées et 60 000,00 $ en perte de profits à la suite de la résiliation fautive d’un contrat de transport, ainsi qu’une injonction interdisant à la défenderesse d’utiliser ses listes de clients",
+        "confidence": 0.58,
+        "anchor": "§2#2",
+        "span": [
+          8,
+          8
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Introduction",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+        "confidence": 0.44,
+        "anchor": "§3#2",
+        "span": [
+          11,
+          11
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Historique procédural",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "litigation_caption",
+        "suggested_field": "parties",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "confidence": 0.6,
+        "anchor": "§4#2",
+        "span": [
+          16,
+          16
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique",
+        "docx_style": null,
+        "matched_signals": [
+          "litigation_caption"
+        ]
+      },
+      {
+        "hint_type": "litigation_caption",
+        "suggested_field": "parties",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "confidence": 0.6,
+        "anchor": "§4#2",
+        "span": [
+          16,
+          16
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique",
+        "docx_style": null,
+        "matched_signals": [
+          "litigation_caption"
+        ]
+      },
+      {
+        "hint_type": "litigation_caption",
+        "suggested_field": "parties",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "confidence": 0.6,
+        "anchor": "§4#2",
+        "span": [
+          16,
+          16
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique",
+        "docx_style": null,
+        "matched_signals": [
+          "litigation_caption"
+        ]
+      },
+      {
+        "hint_type": "litigation_caption",
+        "suggested_field": "parties",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "confidence": 0.6,
+        "anchor": "§4#2",
+        "span": [
+          16,
+          16
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique",
+        "docx_style": null,
+        "matched_signals": [
+          "litigation_caption"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "confidence": 0.58,
+        "anchor": "§4#2",
+        "span": [
+          16,
+          16
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "confidence": 0.58,
+        "anchor": "§5#2",
+        "span": [
+          19,
+          19
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "confidence": 0.44,
+        "anchor": "§5#2",
+        "span": [
+          19,
+          19
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "exception_carveout",
+        "suggested_field": "conditions",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "confidence": 0.48,
+        "anchor": "§5#3",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait",
+        "docx_style": null,
+        "matched_signals": [
+          "exception_carveout"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "confidence": 0.44,
+        "anchor": "§5#3",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "confidence": 0.42,
+        "anchor": "§5#3",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "confidence": 0.58,
+        "anchor": "§7#1",
+        "span": [
+          23,
+          23
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "confidence": 0.42,
+        "anchor": "§7#1",
+        "span": [
+          23,
+          23
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+        "confidence": 0.58,
+        "anchor": "§7#2",
+        "span": [
+          24,
+          24
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+        "confidence": 0.44,
+        "anchor": "§7#2",
+        "span": [
+          24,
+          24
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Cet arrêt de la Cour d’appel confirme qu’une partie ne peut résilier un contrat à durée déterminée que conformément à ses modalités expresses",
+        "confidence": 0.58,
+        "anchor": "§7#3",
+        "span": [
+          25,
+          25
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "confidence": 0.58,
+        "anchor": "§9#2",
+        "span": [
+          31,
+          31
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Dispositif",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024, ainsi que les frais de justice",
+        "confidence": 0.42,
+        "anchor": "§9#3",
+        "span": [
+          32,
+          32
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Dispositif",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+        "confidence": 0.58,
+        "anchor": "§9#4",
+        "span": [
+          33,
+          33
+        ],
+        "context_heading": "Tremblay c. Gagnon Transport Ltée > Dispositif",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "name": "Gagnon Transport Ltée",
+        "role": "défenderesse",
+        "type": "party"
+      },
+      {
+        "name": "Marc Tremblay",
+        "role": "demandeur",
+        "type": "party"
+      }
+    ],
+    "entities": [],
+    "events": [
+      {
+        "date": "2023-02-01",
+        "description": "Les parties ont conclu un contrat de transport le 1er février 2023 pour une durée de trente-six mois",
+        "actor": null,
+        "anchor": null
+      },
+      {
+        "date": "2024-03-05",
+        "description": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+        "actor": null,
+        "anchor": null
+      },
+      {
+        "date": "2024-06-12",
+        "description": "Le 12 juin 2024, le demandeur a déposé une requête introductive d’instance devant la Cour supérieure du Québec",
+        "actor": null,
+        "anchor": null
+      },
+      {
+        "date": "2024-08-08",
+        "description": "La défenderesse a déposé sa défense le 8 août 2024, et l’audience a eu lieu du 2 au 4 décembre 2025",
+        "actor": null,
+        "anchor": null
+      },
+      {
+        "date": "2024-09-15",
+        "description": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "actor": null,
+        "anchor": null
+      },
+      {
+        "date": "2026-01-10",
+        "description": "La Cour a rendu son jugement le 10 janvier 2026 et statue comme suit",
+        "actor": null,
+        "anchor": null
+      },
+      {
+        "date": "2026-01-10",
+        "description": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+        "actor": null,
+        "anchor": null
+      }
+    ],
+    "deadlines": [
+      {
+        "date": "2024-09-15",
+        "description": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "party": "unspecified",
+        "consequence": null
+      }
+    ],
+    "phases": [],
+    "tasks": [],
+    "obligations": [
+      {
+        "id": "OBL-0001",
+        "description": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées",
+        "party": "La défenderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0002",
+        "description": "La défenderesse doit des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "party": "La défenderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0003",
+        "description": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024",
+        "party": "La défenderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": "2024-03-05"
+      },
+      {
+        "id": "OBL-0004",
+        "description": "La défenderesse doit les frais de justice",
+        "party": "La défenderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      }
+    ],
+    "controls": [],
+    "conditions": [],
+    "relationships": [],
+    "ownership_links": [],
+    "states": [],
+    "transitions": [],
+    "decision_points": [],
+    "process_steps": [],
+    "investigation_steps": [],
+    "communications": [],
+    "concepts": [],
+    "risk_items": [],
+    "negotiation_issues": [],
+    "transfers": [
+      {
+        "from_party": "unspecified",
+        "to_party": "unspecified",
+        "description": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "amount": 180000.0,
+        "sequence_order": null,
+        "mechanism": null,
+        "triggered_by": null
+      }
+    ],
+    "claim_classes": [],
+    "data_flows": [],
+    "witnesses": [],
+    "legal_authorities": [
+      {
+        "citation": "art. 1458 C.c.Q",
+        "authority_type": "statute",
+        "jurisdiction": null,
+        "hierarchy_level": null,
+        "cites": [],
+        "anchor": null
+      },
+      {
+        "citation": "art. 1457 C.c.Q",
+        "authority_type": "statute",
+        "jurisdiction": null,
+        "hierarchy_level": null,
+        "cites": [],
+        "anchor": null
+      },
+      {
+        "citation": "Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415",
+        "authority_type": "case",
+        "jurisdiction": null,
+        "hierarchy_level": null,
+        "cites": [],
+        "anchor": null
+      },
+      {
+        "citation": "Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "authority_type": "case",
+        "jurisdiction": null,
+        "hierarchy_level": null,
+        "cites": [],
+        "anchor": null
+      }
+    ],
+    "ip_assets": [],
+    "documents": []
+  },
+  "extraction_hints": [
+    {
+      "id": "H0",
+      "hint_type": "litigation_caption",
+      "suggested_field": "parties",
+      "snippet": "**Référence :** Tremblay c. Gagnon Transport Ltée, 2026 QCCS 1234",
+      "confidence": 0.6,
+      "anchor": "§1#1",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée"
+    },
+    {
+      "id": "H1",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "**Date du jugement :** le 10 janvier 2026",
+      "confidence": 0.42,
+      "anchor": "§1#3",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée"
+    },
+    {
+      "id": "H2",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Le demandeur réclame 180 000,00 $ en factures impayées et 60 000,00 $ en perte de profits à la suite de la résiliation fautive d’un contrat de transport, ainsi qu’une injonction interdisant à la défenderesse d’utiliser ses listes de clients",
+      "confidence": 0.58,
+      "anchor": "§2#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Introduction"
+    },
+    {
+      "id": "H3",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+      "confidence": 0.44,
+      "anchor": "§3#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Historique procédural"
+    },
+    {
+      "id": "H4",
+      "hint_type": "litigation_caption",
+      "suggested_field": "parties",
+      "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+      "confidence": 0.6,
+      "anchor": "§4#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique"
+    },
+    {
+      "id": "H5",
+      "hint_type": "litigation_caption",
+      "suggested_field": "parties",
+      "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+      "confidence": 0.6,
+      "anchor": "§4#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique"
+    },
+    {
+      "id": "H6",
+      "hint_type": "litigation_caption",
+      "suggested_field": "parties",
+      "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+      "confidence": 0.6,
+      "anchor": "§4#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique"
+    },
+    {
+      "id": "H7",
+      "hint_type": "litigation_caption",
+      "suggested_field": "parties",
+      "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+      "confidence": 0.6,
+      "anchor": "§4#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique"
+    },
+    {
+      "id": "H8",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+      "confidence": 0.58,
+      "anchor": "§4#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Cadre juridique"
+    },
+    {
+      "id": "H9",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+      "confidence": 0.58,
+      "anchor": "§5#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait"
+    },
+    {
+      "id": "H10",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+      "confidence": 0.44,
+      "anchor": "§5#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait"
+    },
+    {
+      "id": "H11",
+      "hint_type": "exception_carveout",
+      "suggested_field": "conditions",
+      "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+      "confidence": 0.48,
+      "anchor": "§5#3",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait"
+    },
+    {
+      "id": "H12",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+      "confidence": 0.44,
+      "anchor": "§5#3",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait"
+    },
+    {
+      "id": "H13",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+      "confidence": 0.42,
+      "anchor": "§5#3",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Conclusions de fait"
+    },
+    {
+      "id": "H14",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+      "confidence": 0.58,
+      "anchor": "§7#1",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité"
+    },
+    {
+      "id": "H15",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+      "confidence": 0.42,
+      "anchor": "§7#1",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité"
+    },
+    {
+      "id": "H16",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+      "confidence": 0.58,
+      "anchor": "§7#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité"
+    },
+    {
+      "id": "H17",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+      "confidence": 0.44,
+      "anchor": "§7#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité"
+    },
+    {
+      "id": "H18",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Cet arrêt de la Cour d’appel confirme qu’une partie ne peut résilier un contrat à durée déterminée que conformément à ses modalités expresses",
+      "confidence": 0.58,
+      "anchor": "§7#3",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Analyse > Responsabilité"
+    },
+    {
+      "id": "H19",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+      "confidence": 0.58,
+      "anchor": "§9#2",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Dispositif"
+    },
+    {
+      "id": "H20",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024, ainsi que les frais de justice",
+      "confidence": 0.42,
+      "anchor": "§9#3",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Dispositif"
+    },
+    {
+      "id": "H21",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+      "confidence": 0.58,
+      "anchor": "§9#4",
+      "context_heading": "Tremblay c. Gagnon Transport Ltée > Dispositif"
+    }
+  ],
+  "coverage": {
+    "populated_fields": [
+      "parties",
+      "events",
+      "deadlines",
+      "obligations",
+      "transfers",
+      "legal_authorities"
+    ],
+    "hint_only_fields": [
+      "communications",
+      "conditions"
+    ],
+    "absent_fields": [
+      "entities",
+      "phases",
+      "tasks",
+      "controls",
+      "relationships",
+      "ownership_links",
+      "states",
+      "transitions",
+      "decision_points",
+      "process_steps",
+      "investigation_steps",
+      "concepts",
+      "risk_items",
+      "negotiation_issues",
+      "claim_classes",
+      "data_flows",
+      "witnesses",
+      "ip_assets",
+      "documents"
+    ],
+    "signal_map": {
+      "extractor.parties.litigation_caption": 0.6,
+      "extractor": 0.88,
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor.events.dated_event": 0.66,
+      "extractor.conditions.default_remedy": 0.58,
+      "extractor.communications.notice_communication": 0.44,
+      "extractor.legal_authorities.statutory_reference": 0.78,
+      "extractor.legal_authorities.neutral_citation": 0.86,
+      "extractor.conditions.exception_carveout": 0.48,
+      "extractor.deadlines.notice_period": 0.72,
+      "extractor.obligations.positive_obligation": 0.85,
+      "extractor.transfers.payment_flow": 0.72
+    }
+  },
+  "matter_type_evidence": {
+    "candidates": {
+      "litigation": 0.3
+    },
+    "signals": []
+  },
+  "candidate_manifest": {
+    "schema_version": "legal-diagram-candidates",
+    "structure_metrics": {
+      "headings": 9,
+      "lists": 0,
+      "tables": 0,
+      "paragraphs": 27,
+      "blocks": 36,
+      "table_rows": 0
+    },
+    "warning_codes": [],
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "**Référence :** Tremblay c. Gagnon Transport Ltée, 2026 QCCS 1234",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0001",
+        "snippet": "**Référence :** Tremblay c. Gagnon Transport Ltée, 2026 QCCS 1234",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "**Date du jugement :** le 10 janvier 2026",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "3",
+          "anchor": "§1#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            41
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "Marc Tremblay (ci-après le « demandeur ») exploite une entreprise de distribution alimentaire établie à Trois-Rivières",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "7",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Introduction"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            119
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Introduction"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0004",
+        "snippet": "Gagnon Transport Ltée (ci-après la « défenderesse ») est une société de transport routier constituée en vertu des lois du Québec",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "7",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Introduction"
+          ],
+          "table_coords": null,
+          "char_span": [
+            120,
+            249
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Introduction"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "Le demandeur réclame 180 000,00 $ en factures impayées et 60 000,00 $ en perte de profits à la suite de la résiliation fautive d’un contrat de transport, ainsi qu’une injonction interdisant à la défenderesse d’utiliser ses listes de clients",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "8",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Introduction"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            241
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Introduction"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0006",
+        "snippet": "Les parties ont conclu un contrat de transport le 1er février 2023 pour une durée de trente-six mois",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "10",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            101
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Historique procédural"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "9",
+          "11"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "11",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            121
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Historique procédural"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0008",
+        "snippet": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "11",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            121
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Historique procédural"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0009",
+        "snippet": "Le 12 juin 2024, le demandeur a déposé une requête introductive d’instance devant la Cour supérieure du Québec",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "12",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            111
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Historique procédural"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "La défenderesse a déposé sa défense le 8 août 2024, et l’audience a eu lieu du 2 au 4 décembre 2025",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "13",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            100
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Historique procédural"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "12",
+          "14"
+        ]
+      },
+      {
+        "id": "E0011",
+        "snippet": "La responsabilité contractuelle de la défenderesse est engagée en vertu de l’art. 1458 C.c.Q., et la faute extracontractuelle s’apprécie selon l’art. 1457 C.c.Q",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "15",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            161
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "legal_authorities"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "La responsabilité contractuelle de la défenderesse est engagée en vertu de l’art. 1458 C.c.Q., et la faute extracontractuelle s’apprécie selon l’art. 1457 C.c.Q",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "15",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            161
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "legal_authorities"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0016",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            284
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            284
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "legal_authorities"
+        ],
+        "confidence": 0.86,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0019",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            284
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "legal_authorities"
+        ],
+        "confidence": 0.86,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0024",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0030",
+        "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "Cet arrêt de la Cour d’appel confirme qu’une partie ne peut résilier un contrat à durée déterminée que conformément à ses modalités expresses",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "25",
+          "anchor": "§7#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "24",
+          "26"
+        ]
+      },
+      {
+        "id": "E0032",
+        "snippet": "La Cour a rendu son jugement le 10 janvier 2026 et statue comme suit",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "30",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            69
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "29",
+          "31"
+        ]
+      },
+      {
+        "id": "E0033",
+        "snippet": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0034",
+        "snippet": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0035",
+        "snippet": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0036",
+        "snippet": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0037",
+        "snippet": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024, ainsi que les frais de justice",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "32",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "31",
+          "33"
+        ]
+      },
+      {
+        "id": "E0038",
+        "snippet": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024, ainsi que les frais de justice",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "32",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "31",
+          "33"
+        ]
+      },
+      {
+        "id": "E0039",
+        "snippet": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024, ainsi que les frais de justice",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "32",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "31",
+          "33"
+        ]
+      },
+      {
+        "id": "E0040",
+        "snippet": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "33",
+          "anchor": "§9#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            135
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "32",
+          "34"
+        ]
+      },
+      {
+        "id": "E0041",
+        "snippet": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "33",
+          "anchor": "§9#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            135
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "32",
+          "34"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "id": "C0000",
+        "target_field": "parties",
+        "frame_type": "litigation_caption",
+        "normalized_value": {
+          "name": "Tremblay",
+          "role": "party",
+          "type": "party"
+        },
+        "signals": [
+          "litigation_caption"
+        ],
+        "anti_signals": [],
+        "confidence": 0.6,
+        "evidence_ids": [
+          "E0000"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée"
+          ],
+          "table_coords": null,
+          "char_span": null
+        }
+      },
+      {
+        "id": "C0004",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Gagnon Transport Ltée",
+          "role": "défenderesse",
+          "type": "party"
+        },
+        "signals": [
+          "litigation_caption",
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0001",
+          "E0004"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "7",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Introduction"
+          ],
+          "table_coords": null,
+          "char_span": [
+            120,
+            249
+          ]
+        }
+      },
+      {
+        "id": "C0002",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-01-10",
+          "description": "**Date du jugement :** le 10 janvier 2026"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0002"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "3",
+          "anchor": "§1#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            41
+          ]
+        }
+      },
+      {
+        "id": "C0003",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Marc Tremblay",
+          "role": "demandeur",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0003"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "7",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Introduction"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            119
+          ]
+        }
+      },
+      {
+        "id": "C0005",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Le demandeur réclame 180 000,00 $ en factures impayées et 60 000,00 $ en perte de profits à la suite de la résiliation fautive d’un contrat de transport, ainsi qu’une injonction interdisant à la défenderesse d’utiliser ses listes de clients",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0005"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "8",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Introduction"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            241
+          ]
+        }
+      },
+      {
+        "id": "C0006",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2023-02-01",
+          "description": "Les parties ont conclu un contrat de transport le 1er février 2023 pour une durée de trente-six mois",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0006"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "10",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            101
+          ]
+        }
+      },
+      {
+        "id": "C0007",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0007"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "11",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            121
+          ]
+        }
+      },
+      {
+        "id": "C0008",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2024-03-05",
+          "description": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0008"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "11",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            121
+          ]
+        }
+      },
+      {
+        "id": "C0009",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2024-06-12",
+          "description": "Le 12 juin 2024, le demandeur a déposé une requête introductive d’instance devant la Cour supérieure du Québec",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0009"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "12",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            111
+          ]
+        }
+      },
+      {
+        "id": "C0010",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2024-08-08",
+          "description": "La défenderesse a déposé sa défense le 8 août 2024, et l’audience a eu lieu du 2 au 4 décembre 2025",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0010"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "13",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            100
+          ]
+        }
+      },
+      {
+        "id": "C0011",
+        "target_field": "legal_authorities",
+        "frame_type": "statutory_reference",
+        "normalized_value": {
+          "citation": "art. 1458 C.c.Q",
+          "authority_type": "statute",
+          "jurisdiction": null
+        },
+        "signals": [
+          "statutory_reference",
+          "citation_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0011"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "15",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            161
+          ]
+        }
+      },
+      {
+        "id": "C0012",
+        "target_field": "legal_authorities",
+        "frame_type": "statutory_reference",
+        "normalized_value": {
+          "citation": "art. 1457 C.c.Q",
+          "authority_type": "statute",
+          "jurisdiction": null
+        },
+        "signals": [
+          "statutory_reference",
+          "citation_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0012"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "15",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            161
+          ]
+        }
+      },
+      {
+        "id": "C0013",
+        "target_field": "parties",
+        "frame_type": "litigation_caption",
+        "normalized_value": {
+          "name": "Lavergne",
+          "role": "party",
+          "type": "party"
+        },
+        "signals": [
+          "litigation_caption"
+        ],
+        "anti_signals": [],
+        "confidence": 0.6,
+        "evidence_ids": [
+          "E0013"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        }
+      },
+      {
+        "id": "C0014",
+        "target_field": "parties",
+        "frame_type": "litigation_caption",
+        "normalized_value": {
+          "name": "Transport Boisclair Ltée",
+          "role": "party",
+          "type": "party"
+        },
+        "signals": [
+          "litigation_caption"
+        ],
+        "anti_signals": [],
+        "confidence": 0.6,
+        "evidence_ids": [
+          "E0014"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        }
+      },
+      {
+        "id": "C0015",
+        "target_field": "parties",
+        "frame_type": "litigation_caption",
+        "normalized_value": {
+          "name": "Morin",
+          "role": "party",
+          "type": "party"
+        },
+        "signals": [
+          "litigation_caption"
+        ],
+        "anti_signals": [],
+        "confidence": 0.6,
+        "evidence_ids": [
+          "E0015"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        }
+      },
+      {
+        "id": "C0016",
+        "target_field": "parties",
+        "frame_type": "litigation_caption",
+        "normalized_value": {
+          "name": "Entreprises Casgrain",
+          "role": "party",
+          "type": "party"
+        },
+        "signals": [
+          "litigation_caption"
+        ],
+        "anti_signals": [],
+        "confidence": 0.6,
+        "evidence_ids": [
+          "E0016"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        }
+      },
+      {
+        "id": "C0017",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0017"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            284
+          ]
+        }
+      },
+      {
+        "id": "C0018",
+        "target_field": "legal_authorities",
+        "frame_type": "neutral_citation",
+        "normalized_value": {
+          "citation": "Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415",
+          "authority_type": "case",
+          "jurisdiction": null
+        },
+        "signals": [
+          "case_citation",
+          "neutral_citation",
+          "citation_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.86,
+        "evidence_ids": [
+          "E0018"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            284
+          ]
+        }
+      },
+      {
+        "id": "C0019",
+        "target_field": "legal_authorities",
+        "frame_type": "neutral_citation",
+        "normalized_value": {
+          "citation": "Morin c. Entreprises Casgrain, 2026 QCCA 217",
+          "authority_type": "case",
+          "jurisdiction": null
+        },
+        "signals": [
+          "case_citation",
+          "neutral_citation",
+          "citation_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.86,
+        "evidence_ids": [
+          "E0019"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            284
+          ]
+        }
+      },
+      {
+        "id": "C0020",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0020"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        }
+      },
+      {
+        "id": "C0021",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0021"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        }
+      },
+      {
+        "id": "C0022",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2024-09-15",
+          "description": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0022"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        }
+      },
+      {
+        "id": "C0023",
+        "target_field": "conditions",
+        "frame_type": "exception_carveout",
+        "normalized_value": {
+          "description": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+          "responsible_party": null
+        },
+        "signals": [
+          "exception_carveout"
+        ],
+        "anti_signals": [],
+        "confidence": 0.48,
+        "evidence_ids": [
+          "E0023"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        }
+      },
+      {
+        "id": "C0024",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0024"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        }
+      },
+      {
+        "id": "C0025",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2023-09-01",
+          "description": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0025"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        }
+      },
+      {
+        "id": "C0026",
+        "target_field": "deadlines",
+        "frame_type": "notice_period",
+        "normalized_value": {
+          "date_or_timing": "2024-09-15",
+          "description": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+          "party": null
+        },
+        "signals": [
+          "notice_period",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.72,
+        "evidence_ids": [
+          "E0026"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        }
+      },
+      {
+        "id": "C0027",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0027"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        }
+      },
+      {
+        "id": "C0028",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2024-09-15",
+          "description": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0028"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        }
+      },
+      {
+        "id": "C0029",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0029"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        }
+      },
+      {
+        "id": "C0030",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0030"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        }
+      },
+      {
+        "id": "C0031",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Cet arrêt de la Cour d’appel confirme qu’une partie ne peut résilier un contrat à durée déterminée que conformément à ses modalités expresses",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0031"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "25",
+          "anchor": "§7#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        }
+      },
+      {
+        "id": "C0032",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-01-10",
+          "description": "La Cour a rendu son jugement le 10 janvier 2026 et statue comme suit",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0032"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "30",
+          "anchor": "§9#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            69
+          ]
+        }
+      },
+      {
+        "id": "C0033",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La défenderesse",
+          "description": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "ainsi_que_split",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0033"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        }
+      },
+      {
+        "id": "C0034",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La défenderesse",
+          "description": "La défenderesse doit des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "ainsi_que_split",
+          "known_party_subject",
+          "explicit_modal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0034"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        }
+      },
+      {
+        "id": "C0035",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "amount_text": "180 000,00 $",
+          "description": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+          "timing": null,
+          "amount": 180000.0
+        },
+        "signals": [
+          "payment_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.72,
+        "evidence_ids": [
+          "E0035"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        }
+      },
+      {
+        "id": "C0036",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0036"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        }
+      },
+      {
+        "id": "C0037",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La défenderesse",
+          "description": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024",
+          "kind": "positive_obligation",
+          "deadline": "2024-03-05"
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "ainsi_que_split",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0037"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "32",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        }
+      },
+      {
+        "id": "C0038",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La défenderesse",
+          "description": "La défenderesse doit les frais de justice",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "ainsi_que_split",
+          "known_party_subject",
+          "explicit_modal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0038"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "32",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        }
+      },
+      {
+        "id": "C0039",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2024-03-05",
+          "description": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024, ainsi que les frais de justice"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0039"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "32",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        }
+      },
+      {
+        "id": "C0040",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0040"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "33",
+          "anchor": "§9#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            135
+          ]
+        }
+      },
+      {
+        "id": "C0041",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-01-10",
+          "description": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0041"
+        ],
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "33",
+          "anchor": "§9#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            135
+          ]
+        }
+      }
+    ],
+    "promotion_decisions": [
+      {
+        "candidate_id": "C0000",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0004",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0004"
+      },
+      {
+        "candidate_id": "C0002",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0003",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0003"
+      },
+      {
+        "candidate_id": "C0005",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0006",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0006"
+      },
+      {
+        "candidate_id": "C0007",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0008",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0008"
+      },
+      {
+        "candidate_id": "C0009",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0009"
+      },
+      {
+        "candidate_id": "C0010",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0010"
+      },
+      {
+        "candidate_id": "C0011",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0011"
+      },
+      {
+        "candidate_id": "C0012",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0012"
+      },
+      {
+        "candidate_id": "C0013",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0014",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0015",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0016",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0017",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0018",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0018"
+      },
+      {
+        "candidate_id": "C0019",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0019"
+      },
+      {
+        "candidate_id": "C0020",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0021",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0022",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0022"
+      },
+      {
+        "candidate_id": "C0023",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0024",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0025",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0026",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0026"
+      },
+      {
+        "candidate_id": "C0027",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0028",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0029",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0030",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0031",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0032",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0032"
+      },
+      {
+        "candidate_id": "C0033",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0001"
+      },
+      {
+        "candidate_id": "C0034",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0002"
+      },
+      {
+        "candidate_id": "C0035",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0035"
+      },
+      {
+        "candidate_id": "C0036",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0037",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0003"
+      },
+      {
+        "candidate_id": "C0038",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0004"
+      },
+      {
+        "candidate_id": "C0039",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0040",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0041",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0041"
+      }
+    ]
+  },
+  "llm_enrichment": {
+    "mode": "json_patch_only",
+    "read_policy": {
+      "high_confidence": "no_reread",
+      "medium_confidence": "snippet_only",
+      "low_confidence": "snippet_plus_neighboring_block",
+      "contradiction_or_missing_role_date": "heading_section_window"
+    },
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "**Référence :** Tremblay c. Gagnon Transport Ltée, 2026 QCCS 1234",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "1",
+          "anchor": "§1#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "0",
+          "2"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "**Date du jugement :** le 10 janvier 2026",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "3",
+          "anchor": "§1#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            41
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "Le demandeur réclame 180 000,00 $ en factures impayées et 60 000,00 $ en perte de profits à la suite de la résiliation fautive d’un contrat de transport, ainsi qu’une injonction interdisant à la défenderesse d’utiliser ses listes de clients",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "8",
+          "anchor": "§2#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Introduction"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            241
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Introduction"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "7",
+          "9"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "Le 5 mars 2024, le demandeur a signifié à la défenderesse une mise en demeure exigeant le paiement des factures impayées",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "11",
+          "anchor": "§3#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Historique procédural"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            121
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Historique procédural"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "10",
+          "12"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0016",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.6,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "Le critère applicable à la résiliation fautive d’un contrat à durée déterminée est énoncé dans l’arrêt de principe, Lavergne c. Transport Boisclair Ltée, [1994] 2 RCS 415, et il a été appliqué par la Cour d’appel dans une affaire récente, Morin c. Entreprises Casgrain, 2026 QCCA 217",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "16",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Cadre juridique"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            284
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Cadre juridique"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "15",
+          "17"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "La résiliation du contrat a été signifiée au demandeur le 15 septembre 2024 avec effet immédiat, la défenderesse invoquant des difficultés d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "19",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            154
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.48,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0024",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "Des factures totalisant 180 000,00 $ pour la période du 1er septembre 2023 au 30 août 2024 sont demeurées impayées malgré la mise en demeure",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "20",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Conclusions de fait"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Conclusions de fait"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "Le tribunal conclut que la résiliation du 15 septembre 2024 était fautive, le contrat exigeant un préavis écrit de 90 jours avant toute résiliation pour motif d’exploitation",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            174
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0030",
+        "snippet": "La défenderesse n’a produit aucun avis écrit ni aucune évaluation contemporaine des difficultés alléguées, et sa résiliation a été décidée sans consultation du demandeur",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            170
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "Cet arrêt de la Cour d’appel confirme qu’une partie ne peut résilier un contrat à durée déterminée que conformément à ses modalités expresses",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "25",
+          "anchor": "§7#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Analyse",
+            "Responsabilité"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Analyse",
+          "Responsabilité"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "24",
+          "26"
+        ]
+      },
+      {
+        "id": "E0036",
+        "snippet": "La défenderesse doit verser au demandeur la somme de 180 000,00 $ à titre de factures impayées, ainsi que des dommages-intérêts de 60 000,00 $ pour la résiliation fautive du contrat",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "31",
+          "anchor": "§9#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            182
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "30",
+          "32"
+        ]
+      },
+      {
+        "id": "E0039",
+        "snippet": "La défenderesse doit payer l’intérêt au taux légal majoré de l’indemnité additionnelle depuis le 5 mars 2024, ainsi que les frais de justice",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "32",
+          "anchor": "§9#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            141
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "31",
+          "33"
+        ]
+      },
+      {
+        "id": "E0040",
+        "snippet": "Une injonction permanente est prononcée le 10 janvier 2026 interdisant à la défenderesse d’utiliser les listes de clients du demandeur",
+        "source_ref": {
+          "source": "fr_judgment.md",
+          "block_id": "33",
+          "anchor": "§9#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Tremblay c. Gagnon Transport Ltée",
+            "Dispositif"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            135
+          ]
+        },
+        "heading_path": [
+          "Tremblay c. Gagnon Transport Ltée",
+          "Dispositif"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "32",
+          "34"
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0000",
+        "field": "parties",
+        "frame_type": "litigation_caption",
+        "confidence": 0.6,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0000"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0002",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0002"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0005",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0005"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0007",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0007"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0013",
+        "field": "parties",
+        "frame_type": "litigation_caption",
+        "confidence": 0.6,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0013"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0014",
+        "field": "parties",
+        "frame_type": "litigation_caption",
+        "confidence": 0.6,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0014"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0015",
+        "field": "parties",
+        "frame_type": "litigation_caption",
+        "confidence": 0.6,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0015"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0016",
+        "field": "parties",
+        "frame_type": "litigation_caption",
+        "confidence": 0.6,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0016"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0017",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0017"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0020",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0020"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0021",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0021"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0023",
+        "field": "conditions",
+        "frame_type": "exception_carveout",
+        "confidence": 0.48,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0023"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0024",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0024"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0025",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0025"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0027",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0027"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0028",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0028"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0029",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0029"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0030",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0030"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0031",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0031"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0036",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0036"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0039",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0039"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0040",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0040"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "targets": [
+          "OBL-0001",
+          "OBL-0002",
+          "OBL-0003",
+          "OBL-0004"
+        ],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "null_field_classification",
+        "field": "obligations[].risk_level",
+        "instruction": "Classify each obligation high/medium/low from language."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H0"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "parties",
+        "instruction": "Resolve hint into parties from snippet at §1#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H1"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §1#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H2"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §2#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H3"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §3#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H4"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "parties",
+        "instruction": "Resolve hint into parties from snippet at §4#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H5"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "parties",
+        "instruction": "Resolve hint into parties from snippet at §4#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H6"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "parties",
+        "instruction": "Resolve hint into parties from snippet at §4#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H7"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "parties",
+        "instruction": "Resolve hint into parties from snippet at §4#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H8"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §4#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H9"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §5#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H10"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §5#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H11"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §5#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H12"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §5#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H13"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §5#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H14"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H15"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H16"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H17"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H18"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H19"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §9#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H20"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §9#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H21"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §9#4."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "implicit_inference",
+        "field": "decision_points",
+        "instruction": "Scan obligations, conditions, and process_steps for if/then logic."
+      }
+    ]
+  },
+  "profile_signals": {
+    "privacy": 0.0,
+    "litigation": 0.33,
+    "governance": 0.0,
+    "risk_assessment": 0.0
+  },
+  "language_profile": {
+    "dominant": "fr",
+    "override": null,
+    "blocks": {
+      "en": 0,
+      "fr": 21,
+      "und": 15
+    },
+    "char_share": {
+      "en": 0.0,
+      "fr": 1.0
+    }
+  }
+}

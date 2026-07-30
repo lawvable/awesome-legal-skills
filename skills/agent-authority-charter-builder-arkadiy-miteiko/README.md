@@ -1,0 +1,1 @@
+Creates an Agent Authority Charter for enterprise or regulated AI agents before deployment. Use this Skill when a user needs to define what an AI agent is allowed to do, who delegated authority to it, what actions are permitted or prohibited, when human approval is required, what evidence must be preserved, and how the agent can be suspended, revoked, or escalated.

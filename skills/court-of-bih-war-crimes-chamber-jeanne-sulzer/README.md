@@ -1,0 +1,1 @@
+Verification-first methodology for Section I (War Crimes) of the Court of Bosnia and Herzegovina. Citations are verified against the Court of BiH, the ICTY/IRMCT archives and OSCE. Distinguishes ICTY-referred (Rule 11 bis) cases from locally-initiated ones; covers Stanković, Janković and the Maktouf lex mitior ruling. Research aid, not legal advice.

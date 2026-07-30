@@ -21,6 +21,8 @@ Chaque étape produit un livrable distinct. L'utilisateur peut demander une seul
 
 ## ÉTAPE 1 — Relecture linguistique et structurelle
 
+> Pour une relecture purement linguistique et stylistique (sans dimension de vérification de références juridiques), la compétence dédiée `relecture-texte-francais` est plus spécialisée et peut être préférée. La présente étape vise la relecture intégrée à un travail juridique, dont la vérification des références (étape 2) est indissociable.
+
 ### Catégories d'analyse
 
 **1. Orthographe et grammaire** : accords, conjugaisons, homophones, participes passés.
@@ -71,7 +73,7 @@ Proposer ensuite d'intégrer les corrections comme commentaires Word dans le doc
 
 ### Phase 2.1 — Extraction exhaustive
 
-Parcourir l'intégralité du document. Extraire **toutes** les références juridiques (corps du texte, notes de bas de page, bibliographie, annexes).
+Parcourir l'intégralité du document. Extraire **toutes** les références juridiques (corps du texte, notes de bas de page, bibliographie, annexes). En modes COWORK / CHAT_CU, amorcer l'extraction par `scripts/extract_references.py --file [document]`, qui détecte automatiquement les références (jurisprudence, articles de codes, lois/décrets, doctrine) et leur localisation, puis compléter manuellement les références non capturées par les motifs.
 
 Pour chaque référence extraite :
 - **Localisation** : note n°X, corps p. Y, bibliographie
@@ -170,7 +172,7 @@ Pour les documents académiques substantiels (articles, mémoires, thèses) :
 **Indices de plagiat** :
 - Passages stylistiquement hétérogènes (changement brutal de registre, de qualité, de vocabulaire)
 - Références dont le format change brusquement au milieu du document
-- web_search de passages suspects (entre guillemets) pour rechercher des similitudes textuelles
+- web_search de **n-grammes distinctifs** (6-10 mots, en mots-clés, sans guillemets ni opérateur exact — cf. `references/methode-detection-plagiat-ia.md`) puis comparaison du texte des sources retrouvées
 - Incohérences entre le niveau de rédaction et le niveau d'analyse
 
 **Indices de génération par IA** :

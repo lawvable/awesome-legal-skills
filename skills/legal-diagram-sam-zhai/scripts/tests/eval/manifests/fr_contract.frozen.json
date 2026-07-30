@@ -1,0 +1,6220 @@
+{
+  "extraction_result": {
+    "matter_name": "fr_contract",
+    "matter_type": "deal",
+    "input_source": "fr_contract.md",
+    "truncated": false,
+    "extraction_warnings": [],
+    "signal_map": {
+      "extractor.obligations.positive_obligation": 0.85,
+      "extractor": 0.93,
+      "extractor.events.dated_event": 0.66,
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor.transfers.payment_flow": 0.72,
+      "extractor.relationships.control_authority": 0.58,
+      "extractor.entities.acquisition_target": 0.72,
+      "extractor.deadlines.hard_deadline": 0.77,
+      "extractor.conditions.condition_precedent": 0.71,
+      "extractor.conditions.dependency": 0.49,
+      "extractor.decision_points.waiver": 0.71,
+      "extractor.deadlines.pre_closing_deadline": 0.44,
+      "extractor.obligations.procurement_duty": 0.87,
+      "extractor.relationships.procurement_edge": 0.87,
+      "extractor.obligations.negative_obligation": 0.93,
+      "extractor.decision_points.consent_required": 0.71,
+      "extractor.deadlines.post_closing_deadline": 0.68,
+      "extractor.conditions.trigger_condition": 0.42,
+      "extractor.deadlines.relative_deadline": 0.71,
+      "extractor.conditions.default_remedy": 0.58,
+      "extractor.communications.notice_communication": 0.44,
+      "extractor.deadlines.notice_period": 0.79,
+      "extractor.parties.freeform_mention": 0.5
+    },
+    "hierarchy": [
+      {
+        "id": "H-conventiondachatdactions",
+        "label": "Convention d’achat d’actions",
+        "parent": null,
+        "depth": 0,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-conventiondachatdactions-achatetvente",
+        "label": "Achat et vente",
+        "parent": "H-conventiondachatdactions",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-conventiondachatdactions-partiesetentreeenvigueur",
+        "label": "Parties et entrée en vigueur",
+        "parent": "H-conventiondachatdactions",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-conventiondachatdactions-cloture",
+        "label": "Clôture",
+        "parent": "H-conventiondachatdactions",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-conventiondachatdactions-conditionsprealablesalacloture",
+        "label": "Conditions préalables à la clôture",
+        "parent": "H-conventiondachatdactions",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-conventiondachatdactions-engagements",
+        "label": "Engagements",
+        "parent": "H-conventiondachatdactions",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-conventiondachatdactions-indemnisation",
+        "label": "Indemnisation",
+        "parent": "H-conventiondachatdactions",
+        "depth": 1,
+        "source": "deterministic"
+      },
+      {
+        "id": "H-conventiondachatdactions-avisetresiliation",
+        "label": "Avis et résiliation",
+        "parent": "H-conventiondachatdactions",
+        "depth": 1,
+        "source": "deterministic"
+      }
+    ],
+    "extraction_hints": [
+      {
+        "hint_type": "control_authority",
+        "suggested_field": "relationships",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "confidence": 0.58,
+        "anchor": "§3#1",
+        "span": [
+          4,
+          4
+        ],
+        "context_heading": "Convention d’achat d’actions > Achat et vente",
+        "docx_style": null,
+        "matched_signals": [
+          "control_authority_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "confidence": 0.42,
+        "anchor": "§3#3",
+        "span": [
+          6,
+          6
+        ],
+        "context_heading": "Convention d’achat d’actions > Achat et vente",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "La clôture des opérations prévues aux présentes (la « Clôture ») aura lieu le 30 juin 2026 à 10 h aux bureaux des conseillers juridiques de la Venderesse, ou à toute autre date dont les parties peuvent convenir par écrit",
+        "confidence": 0.42,
+        "anchor": "§4#1",
+        "span": [
+          9,
+          9
+        ],
+        "context_heading": "Convention d’achat d’actions > Clôture",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "dependency",
+        "suggested_field": "conditions",
+        "snippet": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+        "confidence": 0.49,
+        "anchor": "§5#1",
+        "span": [
+          12,
+          12
+        ],
+        "context_heading": "Convention d’achat d’actions > Conditions préalables à la clôture",
+        "docx_style": null,
+        "matched_signals": [
+          "dependency",
+          "heading_prior"
+        ]
+      },
+      {
+        "hint_type": "dated_event",
+        "suggested_field": "events",
+        "snippet": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+        "confidence": 0.42,
+        "anchor": "§5#2",
+        "span": [
+          13,
+          13
+        ],
+        "context_heading": "Convention d’achat d’actions > Conditions préalables à la clôture",
+        "docx_style": null,
+        "matched_signals": [
+          "date_signal"
+        ]
+      },
+      {
+        "hint_type": "pre_closing_deadline",
+        "suggested_field": "deadlines",
+        "snippet": "aucun changement défavorable important ne doit survenir relativement aux activités de Technologies Malouin Ltée avant la Clôture",
+        "confidence": 0.44,
+        "anchor": "§5#4",
+        "span": [
+          15,
+          15
+        ],
+        "context_heading": "Convention d’achat d’actions > Conditions préalables à la clôture",
+        "docx_style": null,
+        "matched_signals": [
+          "pre_closing_deadline",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "pre_closing_deadline",
+        "suggested_field": "deadlines",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "confidence": 0.44,
+        "anchor": "§6#2",
+        "span": [
+          18,
+          18
+        ],
+        "context_heading": "Convention d’achat d’actions > Engagements",
+        "docx_style": null,
+        "matched_signals": [
+          "pre_closing_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ]
+      },
+      {
+        "hint_type": "control_authority",
+        "suggested_field": "relationships",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "confidence": 0.58,
+        "anchor": "§6#2",
+        "span": [
+          18,
+          18
+        ],
+        "context_heading": "Convention d’achat d’actions > Engagements",
+        "docx_style": null,
+        "matched_signals": [
+          "control_authority_signal"
+        ]
+      },
+      {
+        "hint_type": "post_closing_deadline",
+        "suggested_field": "deadlines",
+        "snippet": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+        "confidence": 0.44,
+        "anchor": "§6#3",
+        "span": [
+          19,
+          19
+        ],
+        "context_heading": "Convention d’achat d’actions > Engagements",
+        "docx_style": null,
+        "matched_signals": [
+          "post_closing_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ]
+      },
+      {
+        "hint_type": "post_closing_deadline",
+        "suggested_field": "deadlines",
+        "snippet": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+        "confidence": 0.44,
+        "anchor": "§6#4",
+        "span": [
+          20,
+          20
+        ],
+        "context_heading": "Convention d’achat d’actions > Engagements",
+        "docx_style": null,
+        "matched_signals": [
+          "post_closing_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+        "confidence": 0.42,
+        "anchor": "§6#5",
+        "span": [
+          21,
+          21
+        ],
+        "context_heading": "Convention d’achat d’actions > Engagements",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition"
+        ]
+      },
+      {
+        "hint_type": "condition_precedent",
+        "suggested_field": "conditions",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "confidence": 0.66,
+        "anchor": "§7#1",
+        "span": [
+          23,
+          23
+        ],
+        "context_heading": "Convention d’achat d’actions > Indemnisation",
+        "docx_style": null,
+        "matched_signals": [
+          "condition_precedent"
+        ]
+      },
+      {
+        "hint_type": "relative_deadline",
+        "suggested_field": "deadlines",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "confidence": 0.64,
+        "anchor": "§7#1",
+        "span": [
+          23,
+          23
+        ],
+        "context_heading": "Convention d’achat d’actions > Indemnisation",
+        "docx_style": null,
+        "matched_signals": [
+          "relative_deadline",
+          "deadline_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "confidence": 0.58,
+        "anchor": "§7#1",
+        "span": [
+          23,
+          23
+        ],
+        "context_heading": "Convention d’achat d’actions > Indemnisation",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "payment_flow",
+        "suggested_field": "transfers",
+        "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+        "confidence": 0.5,
+        "anchor": "§7#2",
+        "span": [
+          24,
+          24
+        ],
+        "context_heading": "Convention d’achat d’actions > Indemnisation",
+        "docx_style": null,
+        "matched_signals": [
+          "payment_signal"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+        "confidence": 0.58,
+        "anchor": "§7#2",
+        "span": [
+          24,
+          24
+        ],
+        "context_heading": "Convention d’achat d’actions > Indemnisation",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+        "confidence": 0.44,
+        "anchor": "§8#1",
+        "span": [
+          26,
+          26
+        ],
+        "context_heading": "Convention d’achat d’actions > Avis et résiliation",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "trigger_condition",
+        "suggested_field": "conditions",
+        "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "confidence": 0.42,
+        "anchor": "§8#2",
+        "span": [
+          27,
+          27
+        ],
+        "context_heading": "Convention d’achat d’actions > Avis et résiliation",
+        "docx_style": null,
+        "matched_signals": [
+          "trigger_condition"
+        ]
+      },
+      {
+        "hint_type": "default_remedy",
+        "suggested_field": "conditions",
+        "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "confidence": 0.58,
+        "anchor": "§8#2",
+        "span": [
+          27,
+          27
+        ],
+        "context_heading": "Convention d’achat d’actions > Avis et résiliation",
+        "docx_style": null,
+        "matched_signals": [
+          "default_remedy_signal"
+        ]
+      },
+      {
+        "hint_type": "notice_communication",
+        "suggested_field": "communications",
+        "snippet": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+        "confidence": 0.44,
+        "anchor": "§8#3",
+        "span": [
+          28,
+          28
+        ],
+        "context_heading": "Convention d’achat d’actions > Avis et résiliation",
+        "docx_style": null,
+        "matched_signals": [
+          "notice_signal"
+        ]
+      },
+      {
+        "hint_type": "freeform_mention",
+        "suggested_field": "parties",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "confidence": 0.5,
+        "anchor": "§3#1",
+        "span": [
+          4,
+          4
+        ],
+        "context_heading": "Convention d’achat d’actions > Achat et vente",
+        "docx_style": null,
+        "matched_signals": [
+          "ner_mention",
+          "ner_role_word",
+          "ner_doc_frequency"
+        ]
+      }
+    ],
+    "parties": [
+      {
+        "name": "Placements Beauchemin Ltée",
+        "role": "venderesse",
+        "type": "party"
+      },
+      {
+        "name": "Groupe Faucher",
+        "role": "acheteur",
+        "type": "party"
+      },
+      {
+        "name": "Financière Dorval Ltée",
+        "role": "garante",
+        "type": "party"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Technologies Malouin Ltée",
+        "type": "entity",
+        "jurisdiction": null,
+        "entity_type": null,
+        "system_type": null,
+        "attributes": {},
+        "anchor": null
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-15",
+        "description": "La présente convention d’achat d’actions (la « Convention ») est conclue entre les parties désignées ci-dessous et prend effet le 15 mars 2026",
+        "actor": null,
+        "anchor": null
+      }
+    ],
+    "deadlines": [
+      {
+        "date": "2026-06-01",
+        "description": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "party": "unspecified",
+        "consequence": null
+      },
+      {
+        "date": "au plus tard à la Clôture",
+        "description": "La Venderesse doit remettre à l’Acheteur, au plus tard à la Clôture, les certificats d’actions, les registres des procès-verbaux et un certificat de conformité signé par un dirigeant",
+        "party": "unspecified",
+        "consequence": null
+      },
+      {
+        "date": "2026-06-20",
+        "description": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+        "party": "unspecified",
+        "consequence": null
+      },
+      {
+        "date": "18 mois suivant la date de Clôture",
+        "description": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "party": "unspecified",
+        "consequence": null
+      },
+      {
+        "date": "moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un m",
+        "description": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "party": "unspecified",
+        "consequence": null
+      },
+      {
+        "date": "dans les 10 jours suivant la réception de toute réclamation d’un tiers visant le",
+        "description": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+        "party": "unspecified",
+        "consequence": null
+      }
+    ],
+    "phases": [],
+    "tasks": [],
+    "obligations": [
+      {
+        "id": "OBL-0001",
+        "description": "L’Acheteur doit payer un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "party": "L’Acheteur",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": "2026-06-01"
+      },
+      {
+        "id": "OBL-0002",
+        "description": "L’Acheteur doit payer le solde de 11 111 111,01 $ payable à la clôture par virement de fonds immédiatement disponibles",
+        "party": "L’Acheteur",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0003",
+        "description": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "party": "La Venderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0004",
+        "description": "La Venderesse doit remettre à l’Acheteur, au plus tard à la Clôture, les certificats d’actions, les registres des procès-verbaux et un certificat de conformité signé par un dirigeant",
+        "party": "La Venderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0005",
+        "description": "Entre la date des présentes et la Clôture, la Venderesse doit faire en sorte que Technologies Malouin Ltée exploite son entreprise dans le cours normal des affaires, conformément aux pratiques antérieures",
+        "party": "la Venderesse doit",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0006",
+        "description": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "party": "La Venderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0007",
+        "description": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+        "party": "et la Venderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0008",
+        "description": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+        "party": "L’Acheteur",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0009",
+        "description": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+        "party": "La Garante",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0010",
+        "description": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "party": "La Venderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0011",
+        "description": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+        "party": "Tout avis requis en vertu de la présente Convention",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      },
+      {
+        "id": "OBL-0012",
+        "description": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+        "party": "La Venderesse",
+        "source_law": null,
+        "risk_level": null,
+        "verify_method": null,
+        "status": null,
+        "deadline": null
+      }
+    ],
+    "controls": [],
+    "conditions": [
+      {
+        "id": "COND-0001",
+        "description": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+        "responsible_party": null,
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      },
+      {
+        "id": "COND-0002",
+        "description": "la Clôture n’aura lieu qu’à condition que la Venderesse ait remis tous les documents de clôture requis",
+        "responsible_party": null,
+        "evidence_needed": null,
+        "satisfied": false,
+        "satisfaction_date": null
+      }
+    ],
+    "relationships": [
+      {
+        "from_entity": "la Venderesse doit",
+        "to_entity": "controlled party",
+        "type": "shall_cause",
+        "description": "Entre la date des présentes et la Clôture, la Venderesse doit faire en sorte que Technologies Malouin Ltée exploite son entreprise dans le cours normal des affaires, conformément aux pratiques antérieures",
+        "cardinality_from": null,
+        "cardinality_to": null
+      }
+    ],
+    "ownership_links": [],
+    "states": [],
+    "transitions": [],
+    "decision_points": [
+      {
+        "question": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+        "yes_path": "permitted/approved",
+        "no_path": "blocked/not approved"
+      },
+      {
+        "question": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "yes_path": "permitted/approved",
+        "no_path": "blocked/not approved"
+      }
+    ],
+    "process_steps": [],
+    "investigation_steps": [],
+    "communications": [],
+    "concepts": [],
+    "risk_items": [],
+    "negotiation_issues": [],
+    "transfers": [
+      {
+        "from_party": "unspecified",
+        "to_party": "unspecified",
+        "description": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "amount": 12345678.9,
+        "sequence_order": null,
+        "mechanism": null,
+        "triggered_by": null
+      },
+      {
+        "from_party": "unspecified",
+        "to_party": "unspecified",
+        "description": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "amount": 1234567.89,
+        "sequence_order": null,
+        "mechanism": null,
+        "triggered_by": null
+      },
+      {
+        "from_party": "unspecified",
+        "to_party": "unspecified",
+        "description": "le solde de 11 111 111,01 $ payable à la clôture par virement de fonds immédiatement disponibles",
+        "amount": 11111111.01,
+        "sequence_order": null,
+        "mechanism": null,
+        "triggered_by": null
+      }
+    ],
+    "claim_classes": [],
+    "data_flows": [],
+    "witnesses": [],
+    "legal_authorities": [],
+    "ip_assets": [],
+    "documents": []
+  },
+  "extraction_hints": [
+    {
+      "id": "H0",
+      "hint_type": "control_authority",
+      "suggested_field": "relationships",
+      "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+      "confidence": 0.58,
+      "anchor": "§3#1",
+      "context_heading": "Convention d’achat d’actions > Achat et vente"
+    },
+    {
+      "id": "H1",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+      "confidence": 0.42,
+      "anchor": "§3#3",
+      "context_heading": "Convention d’achat d’actions > Achat et vente"
+    },
+    {
+      "id": "H2",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "La clôture des opérations prévues aux présentes (la « Clôture ») aura lieu le 30 juin 2026 à 10 h aux bureaux des conseillers juridiques de la Venderesse, ou à toute autre date dont les parties peuvent convenir par écrit",
+      "confidence": 0.42,
+      "anchor": "§4#1",
+      "context_heading": "Convention d’achat d’actions > Clôture"
+    },
+    {
+      "id": "H3",
+      "hint_type": "dependency",
+      "suggested_field": "conditions",
+      "snippet": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+      "confidence": 0.49,
+      "anchor": "§5#1",
+      "context_heading": "Convention d’achat d’actions > Conditions préalables à la clôture"
+    },
+    {
+      "id": "H4",
+      "hint_type": "dated_event",
+      "suggested_field": "events",
+      "snippet": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+      "confidence": 0.42,
+      "anchor": "§5#2",
+      "context_heading": "Convention d’achat d’actions > Conditions préalables à la clôture"
+    },
+    {
+      "id": "H5",
+      "hint_type": "pre_closing_deadline",
+      "suggested_field": "deadlines",
+      "snippet": "aucun changement défavorable important ne doit survenir relativement aux activités de Technologies Malouin Ltée avant la Clôture",
+      "confidence": 0.44,
+      "anchor": "§5#4",
+      "context_heading": "Convention d’achat d’actions > Conditions préalables à la clôture"
+    },
+    {
+      "id": "H6",
+      "hint_type": "pre_closing_deadline",
+      "suggested_field": "deadlines",
+      "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+      "confidence": 0.44,
+      "anchor": "§6#2",
+      "context_heading": "Convention d’achat d’actions > Engagements"
+    },
+    {
+      "id": "H7",
+      "hint_type": "control_authority",
+      "suggested_field": "relationships",
+      "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+      "confidence": 0.58,
+      "anchor": "§6#2",
+      "context_heading": "Convention d’achat d’actions > Engagements"
+    },
+    {
+      "id": "H8",
+      "hint_type": "post_closing_deadline",
+      "suggested_field": "deadlines",
+      "snippet": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+      "confidence": 0.44,
+      "anchor": "§6#3",
+      "context_heading": "Convention d’achat d’actions > Engagements"
+    },
+    {
+      "id": "H9",
+      "hint_type": "post_closing_deadline",
+      "suggested_field": "deadlines",
+      "snippet": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+      "confidence": 0.44,
+      "anchor": "§6#4",
+      "context_heading": "Convention d’achat d’actions > Engagements"
+    },
+    {
+      "id": "H10",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+      "confidence": 0.42,
+      "anchor": "§6#5",
+      "context_heading": "Convention d’achat d’actions > Engagements"
+    },
+    {
+      "id": "H11",
+      "hint_type": "condition_precedent",
+      "suggested_field": "conditions",
+      "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+      "confidence": 0.66,
+      "anchor": "§7#1",
+      "context_heading": "Convention d’achat d’actions > Indemnisation"
+    },
+    {
+      "id": "H12",
+      "hint_type": "relative_deadline",
+      "suggested_field": "deadlines",
+      "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+      "confidence": 0.64,
+      "anchor": "§7#1",
+      "context_heading": "Convention d’achat d’actions > Indemnisation"
+    },
+    {
+      "id": "H13",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+      "confidence": 0.58,
+      "anchor": "§7#1",
+      "context_heading": "Convention d’achat d’actions > Indemnisation"
+    },
+    {
+      "id": "H14",
+      "hint_type": "payment_flow",
+      "suggested_field": "transfers",
+      "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+      "confidence": 0.5,
+      "anchor": "§7#2",
+      "context_heading": "Convention d’achat d’actions > Indemnisation"
+    },
+    {
+      "id": "H15",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+      "confidence": 0.58,
+      "anchor": "§7#2",
+      "context_heading": "Convention d’achat d’actions > Indemnisation"
+    },
+    {
+      "id": "H16",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+      "confidence": 0.44,
+      "anchor": "§8#1",
+      "context_heading": "Convention d’achat d’actions > Avis et résiliation"
+    },
+    {
+      "id": "H17",
+      "hint_type": "trigger_condition",
+      "suggested_field": "conditions",
+      "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+      "confidence": 0.42,
+      "anchor": "§8#2",
+      "context_heading": "Convention d’achat d’actions > Avis et résiliation"
+    },
+    {
+      "id": "H18",
+      "hint_type": "default_remedy",
+      "suggested_field": "conditions",
+      "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+      "confidence": 0.58,
+      "anchor": "§8#2",
+      "context_heading": "Convention d’achat d’actions > Avis et résiliation"
+    },
+    {
+      "id": "H19",
+      "hint_type": "notice_communication",
+      "suggested_field": "communications",
+      "snippet": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+      "confidence": 0.44,
+      "anchor": "§8#3",
+      "context_heading": "Convention d’achat d’actions > Avis et résiliation"
+    },
+    {
+      "id": "H20",
+      "hint_type": "freeform_mention",
+      "suggested_field": "parties",
+      "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+      "confidence": 0.5,
+      "anchor": "§3#1",
+      "context_heading": "Convention d’achat d’actions > Achat et vente"
+    }
+  ],
+  "coverage": {
+    "populated_fields": [
+      "parties",
+      "entities",
+      "events",
+      "deadlines",
+      "obligations",
+      "conditions",
+      "relationships",
+      "decision_points",
+      "transfers"
+    ],
+    "hint_only_fields": [
+      "communications"
+    ],
+    "absent_fields": [
+      "phases",
+      "tasks",
+      "controls",
+      "ownership_links",
+      "states",
+      "transitions",
+      "process_steps",
+      "investigation_steps",
+      "concepts",
+      "risk_items",
+      "negotiation_issues",
+      "claim_classes",
+      "data_flows",
+      "witnesses",
+      "legal_authorities",
+      "ip_assets",
+      "documents"
+    ],
+    "signal_map": {
+      "extractor.obligations.positive_obligation": 0.85,
+      "extractor": 0.93,
+      "extractor.events.dated_event": 0.66,
+      "extractor.parties.defined_party_alias": 0.88,
+      "extractor.transfers.payment_flow": 0.72,
+      "extractor.relationships.control_authority": 0.58,
+      "extractor.entities.acquisition_target": 0.72,
+      "extractor.deadlines.hard_deadline": 0.77,
+      "extractor.conditions.condition_precedent": 0.71,
+      "extractor.conditions.dependency": 0.49,
+      "extractor.decision_points.waiver": 0.71,
+      "extractor.deadlines.pre_closing_deadline": 0.44,
+      "extractor.obligations.procurement_duty": 0.87,
+      "extractor.relationships.procurement_edge": 0.87,
+      "extractor.obligations.negative_obligation": 0.93,
+      "extractor.decision_points.consent_required": 0.71,
+      "extractor.deadlines.post_closing_deadline": 0.68,
+      "extractor.conditions.trigger_condition": 0.42,
+      "extractor.deadlines.relative_deadline": 0.71,
+      "extractor.conditions.default_remedy": 0.58,
+      "extractor.communications.notice_communication": 0.44,
+      "extractor.deadlines.notice_period": 0.79,
+      "extractor.parties.freeform_mention": 0.5
+    }
+  },
+  "matter_type_evidence": {
+    "candidates": {
+      "corporate": 0.3
+    },
+    "signals": []
+  },
+  "candidate_manifest": {
+    "schema_version": "legal-diagram-candidates",
+    "structure_metrics": {
+      "headings": 9,
+      "lists": 5,
+      "tables": 0,
+      "paragraphs": 17,
+      "blocks": 31,
+      "table_rows": 0
+    },
+    "warning_codes": [],
+    "evidence_packets": [
+      {
+        "id": "E0000",
+        "snippet": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0001",
+        "snippet": "le solde de 11 111 111,01 $ payable à la clôture par virement de fonds immédiatement disponibles",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "7",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": null
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0002",
+        "snippet": "La présente convention d’achat d’actions (la « Convention ») est conclue entre les parties désignées ci-dessous et prend effet le 15 mars 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Parties et entrée en vigueur"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0003",
+        "snippet": "Placements Beauchemin Ltée (ci-après la « Venderesse ») est une société par actions exerçant des activités de placement",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            144,
+            264
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Parties et entrée en vigueur"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0004",
+        "snippet": "Groupe Faucher (ci-après l’« Acheteur ») est une société de gestion exerçant ses activités au Canada",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            265,
+            366
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Parties et entrée en vigueur"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0005",
+        "snippet": "Financière Dorval Ltée (ci-après la « Garante ») intervient aux présentes à titre de caution des obligations de l’Acheteur",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            367,
+            490
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Parties et entrée en vigueur"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.88,
+        "neighboring_context_ids": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "id": "E0006",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "id": "E0007",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "id": "E0008",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "id": "E0009",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "entities"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "id": "E0010",
+        "snippet": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            68
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.7,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0011",
+        "snippet": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            68
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            68
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0013",
+        "snippet": "le solde de 11 111 111,01 $ payable à la clôture par virement de fonds immédiatement disponibles",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "7",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            97
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.72,
+        "neighboring_context_ids": [
+          "6",
+          "8"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "La clôture des opérations prévues aux présentes (la « Clôture ») aura lieu le 30 juin 2026 à 10 h aux bureaux des conseillers juridiques de la Venderesse, ou à toute autre date dont les parties peuvent convenir par écrit",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "9",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            221
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Clôture"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0015",
+        "snippet": "La Venderesse doit remettre à l’Acheteur, au plus tard à la Clôture, les certificats d’actions, les registres des procès-verbaux et un certificat de conformité signé par un dirigeant",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "10",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            183
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Clôture"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "9",
+          "11"
+        ]
+      },
+      {
+        "id": "E0016",
+        "snippet": "La Venderesse doit remettre à l’Acheteur, au plus tard à la Clôture, les certificats d’actions, les registres des procès-verbaux et un certificat de conformité signé par un dirigeant",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "10",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            183
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Clôture"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "9",
+          "11"
+        ]
+      },
+      {
+        "id": "E0017",
+        "snippet": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "12",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            176
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "12",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            176
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.49,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0019",
+        "snippet": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "12",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            176
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "decision_points"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0020",
+        "snippet": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "13",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            100
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.7,
+        "neighboring_context_ids": [
+          "12",
+          "14"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "13",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            100
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "12",
+          "14"
+        ]
+      },
+      {
+        "id": "E0022",
+        "snippet": "la Clôture n’aura lieu qu’à condition que la Venderesse ait remis tous les documents de clôture requis",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "14",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            104
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "13",
+          "15"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "aucun changement défavorable important ne doit survenir relativement aux activités de Technologies Malouin Ltée avant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "15",
+          "anchor": "§5#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            129
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0024",
+        "snippet": "Entre la date des présentes et la Clôture, la Venderesse doit faire en sorte que Technologies Malouin Ltée exploite son entreprise dans le cours normal des affaires, conformément aux pratiques antérieures",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            205
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.87,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0025",
+        "snippet": "Entre la date des présentes et la Clôture, la Venderesse doit faire en sorte que Technologies Malouin Ltée exploite son entreprise dans le cours normal des affaires, conformément aux pratiques antérieures",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            205
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.87,
+        "neighboring_context_ids": [
+          "16",
+          "18"
+        ]
+      },
+      {
+        "id": "E0026",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.93,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0028",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "decision_points"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0030",
+        "snippet": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "19",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            212
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.93,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "19",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            212
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0032",
+        "snippet": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "20",
+          "anchor": "§6#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0033",
+        "snippet": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "20",
+          "anchor": "§6#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0034",
+        "snippet": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "21",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            114
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "20",
+          "22"
+        ]
+      },
+      {
+        "id": "E0035",
+        "snippet": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "21",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            114
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "20",
+          "22"
+        ]
+      },
+      {
+        "id": "E0036",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.78,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0037",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0038",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.64,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0039",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.68,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0040",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0041",
+        "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            159
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0042",
+        "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            159
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0043",
+        "snippet": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "26",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            164
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.77,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0044",
+        "snippet": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "26",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            164
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0045",
+        "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "26",
+          "28"
+        ]
+      },
+      {
+        "id": "E0046",
+        "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.79,
+        "neighboring_context_ids": [
+          "26",
+          "28"
+        ]
+      },
+      {
+        "id": "E0047",
+        "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "26",
+          "28"
+        ]
+      },
+      {
+        "id": "E0048",
+        "snippet": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "28",
+          "anchor": "§8#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            144
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "obligations"
+        ],
+        "confidence": 0.85,
+        "neighboring_context_ids": [
+          "27",
+          "29"
+        ]
+      },
+      {
+        "id": "E0049",
+        "snippet": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "28",
+          "anchor": "§8#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            144
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.71,
+        "neighboring_context_ids": [
+          "27",
+          "29"
+        ]
+      },
+      {
+        "id": "E0050",
+        "snippet": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "28",
+          "anchor": "§8#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            144
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "27",
+          "29"
+        ]
+      },
+      {
+        "id": "E0051",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "id": "C0000",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "L’Acheteur",
+          "description": "L’Acheteur doit payer un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+          "kind": "positive_obligation",
+          "deadline": "2026-06-01"
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object",
+          "list_split"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0000"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": null
+        }
+      },
+      {
+        "id": "C0001",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "L’Acheteur",
+          "description": "L’Acheteur doit payer le solde de 11 111 111,01 $ payable à la clôture par virement de fonds immédiatement disponibles",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object",
+          "list_split"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0001"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "7",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": null
+        }
+      },
+      {
+        "id": "C0002",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-03-15",
+          "description": "La présente convention d’achat d’actions (la « Convention ») est conclue entre les parties désignées ci-dessous et prend effet le 15 mars 2026",
+          "actor": null
+        },
+        "signals": [
+          "dated_event",
+          "date_signal",
+          "event_verb"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0002"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            143
+          ]
+        }
+      },
+      {
+        "id": "C0003",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Placements Beauchemin Ltée",
+          "role": "venderesse",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0003"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            144,
+            264
+          ]
+        }
+      },
+      {
+        "id": "C0004",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Groupe Faucher",
+          "role": "acheteur",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0004"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            265,
+            366
+          ]
+        }
+      },
+      {
+        "id": "C0005",
+        "target_field": "parties",
+        "frame_type": "defined_party_alias",
+        "normalized_value": {
+          "name": "Financière Dorval Ltée",
+          "role": "garante",
+          "type": "party"
+        },
+        "signals": [
+          "defined_term",
+          "alias_match"
+        ],
+        "anti_signals": [],
+        "confidence": 0.88,
+        "evidence_ids": [
+          "E0005"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "2",
+          "anchor": "§2#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Parties et entrée en vigueur"
+          ],
+          "table_coords": null,
+          "char_span": [
+            367,
+            490
+          ]
+        }
+      },
+      {
+        "id": "C0006",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La Venderesse",
+          "description": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0006"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        }
+      },
+      {
+        "id": "C0007",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "amount_text": "12 345 678,90 $",
+          "description": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+          "timing": null,
+          "amount": 12345678.9
+        },
+        "signals": [
+          "payment_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.72,
+        "evidence_ids": [
+          "E0007"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        }
+      },
+      {
+        "id": "C0008",
+        "target_field": "relationships",
+        "frame_type": "control_authority",
+        "normalized_value": {
+          "from_entity": "unspecified",
+          "to_entity": "unspecified",
+          "type": "control_or_authority",
+          "description": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)"
+        },
+        "signals": [
+          "control_authority_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0008"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        }
+      },
+      {
+        "id": "C0009",
+        "target_field": "entities",
+        "frame_type": "acquisition_target",
+        "normalized_value": {
+          "name": "Technologies Malouin Ltée",
+          "type": "entity"
+        },
+        "signals": [
+          "acquisition_target"
+        ],
+        "anti_signals": [],
+        "confidence": 0.72,
+        "evidence_ids": [
+          "E0009"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        }
+      },
+      {
+        "id": "C0010",
+        "target_field": "deadlines",
+        "frame_type": "hard_deadline",
+        "normalized_value": {
+          "date_or_timing": "2026-06-01",
+          "description": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+          "party": null
+        },
+        "signals": [
+          "hard_deadline",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.7,
+        "evidence_ids": [
+          "E0010"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            68
+          ]
+        }
+      },
+      {
+        "id": "C0011",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "amount_text": "1 234 567,89 $",
+          "description": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+          "timing": "2026-06-01",
+          "amount": 1234567.89
+        },
+        "signals": [
+          "payment_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.72,
+        "evidence_ids": [
+          "E0011"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            68
+          ]
+        }
+      },
+      {
+        "id": "C0012",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-06-01",
+          "description": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0012"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            68
+          ]
+        }
+      },
+      {
+        "id": "C0013",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "amount_text": "11 111 111,01 $",
+          "description": "le solde de 11 111 111,01 $ payable à la clôture par virement de fonds immédiatement disponibles",
+          "timing": null,
+          "amount": 11111111.01
+        },
+        "signals": [
+          "payment_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.72,
+        "evidence_ids": [
+          "E0013"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "7",
+          "anchor": "§3#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            97
+          ]
+        }
+      },
+      {
+        "id": "C0014",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-06-30",
+          "description": "La clôture des opérations prévues aux présentes (la « Clôture ») aura lieu le 30 juin 2026 à 10 h aux bureaux des conseillers juridiques de la Venderesse, ou à toute autre date dont les parties peuvent convenir par écrit"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0014"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "9",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            221
+          ]
+        }
+      },
+      {
+        "id": "C0015",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La Venderesse",
+          "description": "La Venderesse doit remettre à l’Acheteur, au plus tard à la Clôture, les certificats d’actions, les registres des procès-verbaux et un certificat de conformité signé par un dirigeant",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0015"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "10",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            183
+          ]
+        }
+      },
+      {
+        "id": "C0016",
+        "target_field": "deadlines",
+        "frame_type": "hard_deadline",
+        "normalized_value": {
+          "date_or_timing": "au plus tard à la Clôture",
+          "description": "La Venderesse doit remettre à l’Acheteur, au plus tard à la Clôture, les certificats d’actions, les registres des procès-verbaux et un certificat de conformité signé par un dirigeant",
+          "party": null
+        },
+        "signals": [
+          "hard_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0016"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "10",
+          "anchor": "§4#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            183
+          ]
+        }
+      },
+      {
+        "id": "C0017",
+        "target_field": "conditions",
+        "frame_type": "condition_precedent",
+        "normalized_value": {
+          "description": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+          "responsible_party": null
+        },
+        "signals": [
+          "condition_precedent",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0017"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "12",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            176
+          ]
+        }
+      },
+      {
+        "id": "C0018",
+        "target_field": "conditions",
+        "frame_type": "dependency",
+        "normalized_value": {
+          "description": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+          "responsible_party": null
+        },
+        "signals": [
+          "dependency",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.49,
+        "evidence_ids": [
+          "E0018"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "12",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            176
+          ]
+        }
+      },
+      {
+        "id": "C0019",
+        "target_field": "decision_points",
+        "frame_type": "waiver",
+        "normalized_value": {
+          "question": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+          "yes_path": "permitted/approved",
+          "no_path": "blocked/not approved"
+        },
+        "signals": [
+          "waiver",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0019"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "12",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            176
+          ]
+        }
+      },
+      {
+        "id": "C0020",
+        "target_field": "deadlines",
+        "frame_type": "hard_deadline",
+        "normalized_value": {
+          "date_or_timing": "2026-06-20",
+          "description": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+          "party": null
+        },
+        "signals": [
+          "hard_deadline",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.7,
+        "evidence_ids": [
+          "E0020"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "13",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            100
+          ]
+        }
+      },
+      {
+        "id": "C0021",
+        "target_field": "events",
+        "frame_type": "dated_event",
+        "normalized_value": {
+          "date_or_timing": "2026-06-20",
+          "description": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026"
+        },
+        "signals": [
+          "date_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0021"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "13",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            100
+          ]
+        }
+      },
+      {
+        "id": "C0022",
+        "target_field": "conditions",
+        "frame_type": "condition_precedent",
+        "normalized_value": {
+          "description": "la Clôture n’aura lieu qu’à condition que la Venderesse ait remis tous les documents de clôture requis",
+          "responsible_party": null
+        },
+        "signals": [
+          "condition_precedent",
+          "heading_prior"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0022"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "14",
+          "anchor": "§5#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            104
+          ]
+        }
+      },
+      {
+        "id": "C0023",
+        "target_field": "deadlines",
+        "frame_type": "pre_closing_deadline",
+        "normalized_value": {
+          "date_or_timing": "avant la Clôture",
+          "description": "aucun changement défavorable important ne doit survenir relativement aux activités de Technologies Malouin Ltée avant la Clôture",
+          "party": null
+        },
+        "signals": [
+          "pre_closing_deadline",
+          "deadline_signal"
+        ],
+        "anti_signals": [
+          "closing_relative_no_duration"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0023"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "15",
+          "anchor": "§5#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            129
+          ]
+        }
+      },
+      {
+        "id": "C0024",
+        "target_field": "obligations",
+        "frame_type": "procurement_duty",
+        "normalized_value": {
+          "party": "la Venderesse doit",
+          "description": "Entre la date des présentes et la Clôture, la Venderesse doit faire en sorte que Technologies Malouin Ltée exploite son entreprise dans le cours normal des affaires, conformément aux pratiques antérieures",
+          "kind": "procurement_duty",
+          "deadline": null
+        },
+        "signals": [
+          "procurement_duty",
+          "obligation_strength",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.87,
+        "evidence_ids": [
+          "E0024"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            205
+          ]
+        }
+      },
+      {
+        "id": "C0025",
+        "target_field": "relationships",
+        "frame_type": "procurement_edge",
+        "normalized_value": {
+          "from_entity": "la Venderesse doit",
+          "to_entity": "controlled party",
+          "type": "shall_cause",
+          "description": "Entre la date des présentes et la Clôture, la Venderesse doit faire en sorte que Technologies Malouin Ltée exploite son entreprise dans le cours normal des affaires, conformément aux pratiques antérieures"
+        },
+        "signals": [
+          "procurement_duty",
+          "obligation_strength",
+          "legal_action_object",
+          "shall_cause_edge"
+        ],
+        "anti_signals": [],
+        "confidence": 0.87,
+        "evidence_ids": [
+          "E0025"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "17",
+          "anchor": "§6#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            205
+          ]
+        }
+      },
+      {
+        "id": "C0026",
+        "target_field": "obligations",
+        "frame_type": "negative_obligation",
+        "normalized_value": {
+          "party": "La Venderesse",
+          "description": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+          "kind": "negative_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "negative_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.93,
+        "evidence_ids": [
+          "E0026"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        }
+      },
+      {
+        "id": "C0027",
+        "target_field": "deadlines",
+        "frame_type": "pre_closing_deadline",
+        "normalized_value": {
+          "date_or_timing": "avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+          "description": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+          "party": null
+        },
+        "signals": [
+          "pre_closing_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [
+          "closing_relative_no_duration"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0027"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        }
+      },
+      {
+        "id": "C0028",
+        "target_field": "decision_points",
+        "frame_type": "consent_required",
+        "normalized_value": {
+          "question": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+          "yes_path": "permitted/approved",
+          "no_path": "blocked/not approved"
+        },
+        "signals": [
+          "consent_required",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0028"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        }
+      },
+      {
+        "id": "C0029",
+        "target_field": "relationships",
+        "frame_type": "control_authority",
+        "normalized_value": {
+          "from_entity": "unspecified",
+          "to_entity": "unspecified",
+          "type": "control_or_authority",
+          "description": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur"
+        },
+        "signals": [
+          "control_authority_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0029"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        }
+      },
+      {
+        "id": "C0030",
+        "target_field": "obligations",
+        "frame_type": "negative_obligation",
+        "normalized_value": {
+          "party": "et la Venderesse",
+          "description": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+          "kind": "negative_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "negative_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.93,
+        "evidence_ids": [
+          "E0030"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "19",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            212
+          ]
+        }
+      },
+      {
+        "id": "C0031",
+        "target_field": "deadlines",
+        "frame_type": "post_closing_deadline",
+        "normalized_value": {
+          "date_or_timing": "suivant la Clôture",
+          "description": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+          "party": null
+        },
+        "signals": [
+          "post_closing_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [
+          "closing_relative_no_duration"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0031"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "19",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            212
+          ]
+        }
+      },
+      {
+        "id": "C0032",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "L’Acheteur",
+          "description": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0032"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "20",
+          "anchor": "§6#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        }
+      },
+      {
+        "id": "C0033",
+        "target_field": "deadlines",
+        "frame_type": "post_closing_deadline",
+        "normalized_value": {
+          "date_or_timing": "suivant la Clôture",
+          "description": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+          "party": null
+        },
+        "signals": [
+          "post_closing_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [
+          "closing_relative_no_duration"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0033"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "20",
+          "anchor": "§6#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        }
+      },
+      {
+        "id": "C0034",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La Garante",
+          "description": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0034"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "21",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            114
+          ]
+        }
+      },
+      {
+        "id": "C0035",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0035"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "21",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            114
+          ]
+        }
+      },
+      {
+        "id": "C0036",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La Venderesse",
+          "description": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.78,
+        "evidence_ids": [
+          "E0036"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        }
+      },
+      {
+        "id": "C0037",
+        "target_field": "conditions",
+        "frame_type": "condition_precedent",
+        "normalized_value": {
+          "description": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+          "responsible_party": null
+        },
+        "signals": [
+          "condition_precedent"
+        ],
+        "anti_signals": [],
+        "confidence": 0.66,
+        "evidence_ids": [
+          "E0037"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        }
+      },
+      {
+        "id": "C0038",
+        "target_field": "deadlines",
+        "frame_type": "relative_deadline",
+        "normalized_value": {
+          "date_or_timing": "18 mois suivant la date de Clôture",
+          "description": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+          "party": null
+        },
+        "signals": [
+          "relative_deadline",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.64,
+        "evidence_ids": [
+          "E0038"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        }
+      },
+      {
+        "id": "C0039",
+        "target_field": "deadlines",
+        "frame_type": "post_closing_deadline",
+        "normalized_value": {
+          "date_or_timing": "18 mois suivant la date de Clôture",
+          "description": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+          "party": null
+        },
+        "signals": [
+          "post_closing_deadline",
+          "deadline_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.68,
+        "evidence_ids": [
+          "E0039"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        }
+      },
+      {
+        "id": "C0040",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0040"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        }
+      },
+      {
+        "id": "C0041",
+        "target_field": "transfers",
+        "frame_type": "payment_flow",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "amount_text": "1,5 M$",
+          "description": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+          "timing": null,
+          "amount": 1500000.0
+        },
+        "signals": [
+          "payment_signal"
+        ],
+        "anti_signals": [
+          "conditional_transfer_trigger"
+        ],
+        "confidence": 0.5,
+        "evidence_ids": [
+          "E0041"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            159
+          ]
+        }
+      },
+      {
+        "id": "C0042",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0042"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            159
+          ]
+        }
+      },
+      {
+        "id": "C0043",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "Tout avis requis en vertu de la présente Convention",
+          "description": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.77,
+        "evidence_ids": [
+          "E0043"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "26",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            164
+          ]
+        }
+      },
+      {
+        "id": "C0044",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0044"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "26",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            164
+          ]
+        }
+      },
+      {
+        "id": "C0045",
+        "target_field": "conditions",
+        "frame_type": "trigger_condition",
+        "normalized_value": {
+          "description": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+          "responsible_party": null
+        },
+        "signals": [
+          "trigger_condition"
+        ],
+        "anti_signals": [],
+        "confidence": 0.42,
+        "evidence_ids": [
+          "E0045"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        }
+      },
+      {
+        "id": "C0046",
+        "target_field": "deadlines",
+        "frame_type": "notice_period",
+        "normalized_value": {
+          "date_or_timing": "moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un m",
+          "description": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+          "party": null
+        },
+        "signals": [
+          "notice_period",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.79,
+        "evidence_ids": [
+          "E0046"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        }
+      },
+      {
+        "id": "C0047",
+        "target_field": "conditions",
+        "frame_type": "default_remedy",
+        "normalized_value": {
+          "description": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+          "responsible_party": null
+        },
+        "signals": [
+          "default_remedy_signal"
+        ],
+        "anti_signals": [],
+        "confidence": 0.58,
+        "evidence_ids": [
+          "E0047"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        }
+      },
+      {
+        "id": "C0048",
+        "target_field": "obligations",
+        "frame_type": "positive_obligation",
+        "normalized_value": {
+          "party": "La Venderesse",
+          "description": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+          "kind": "positive_obligation",
+          "deadline": null
+        },
+        "signals": [
+          "positive_obligation",
+          "obligation_strength",
+          "known_party_subject",
+          "explicit_modal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.85,
+        "evidence_ids": [
+          "E0048"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "28",
+          "anchor": "§8#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            144
+          ]
+        }
+      },
+      {
+        "id": "C0049",
+        "target_field": "deadlines",
+        "frame_type": "relative_deadline",
+        "normalized_value": {
+          "date_or_timing": "dans les 10 jours suivant la réception de toute réclamation d’un tiers visant le",
+          "description": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+          "party": null
+        },
+        "signals": [
+          "relative_deadline",
+          "deadline_signal",
+          "legal_action_object"
+        ],
+        "anti_signals": [],
+        "confidence": 0.71,
+        "evidence_ids": [
+          "E0049"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "28",
+          "anchor": "§8#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            144
+          ]
+        }
+      },
+      {
+        "id": "C0050",
+        "target_field": "communications",
+        "frame_type": "notice_communication",
+        "normalized_value": {
+          "from_party": "unspecified",
+          "to_party": "unspecified",
+          "comm_type": "notice",
+          "description": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+          "delivery_method": null
+        },
+        "signals": [
+          "notice_signal"
+        ],
+        "anti_signals": [
+          "notice_without_sender_recipient_or_method"
+        ],
+        "confidence": 0.44,
+        "evidence_ids": [
+          "E0050"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "28",
+          "anchor": "§8#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            144
+          ]
+        }
+      },
+      {
+        "id": "C0051",
+        "target_field": "parties",
+        "frame_type": "freeform_mention",
+        "normalized_value": {
+          "mention": "Technologies Malouin Ltée",
+          "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+          "type": "party"
+        },
+        "signals": [
+          "ner_mention",
+          "ner_role_word",
+          "ner_doc_frequency"
+        ],
+        "anti_signals": [],
+        "confidence": 0.5,
+        "evidence_ids": [
+          "E0051"
+        ],
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        }
+      }
+    ],
+    "promotion_decisions": [
+      {
+        "candidate_id": "C0000",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0001"
+      },
+      {
+        "candidate_id": "C0001",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0002"
+      },
+      {
+        "candidate_id": "C0002",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0002"
+      },
+      {
+        "candidate_id": "C0003",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0003"
+      },
+      {
+        "candidate_id": "C0004",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0004"
+      },
+      {
+        "candidate_id": "C0005",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0005"
+      },
+      {
+        "candidate_id": "C0006",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0003"
+      },
+      {
+        "candidate_id": "C0007",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0007"
+      },
+      {
+        "candidate_id": "C0008",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0009",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0009"
+      },
+      {
+        "candidate_id": "C0010",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0010"
+      },
+      {
+        "candidate_id": "C0011",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0011"
+      },
+      {
+        "candidate_id": "C0012",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0013",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0013"
+      },
+      {
+        "candidate_id": "C0014",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0015",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0004"
+      },
+      {
+        "candidate_id": "C0016",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0016"
+      },
+      {
+        "candidate_id": "C0017",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0001"
+      },
+      {
+        "candidate_id": "C0018",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0019",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0019"
+      },
+      {
+        "candidate_id": "C0020",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0020"
+      },
+      {
+        "candidate_id": "C0021",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0022",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "COND-0002"
+      },
+      {
+        "candidate_id": "C0023",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0024",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0005"
+      },
+      {
+        "candidate_id": "C0025",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "candidate:C0025"
+      },
+      {
+        "candidate_id": "C0026",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0006"
+      },
+      {
+        "candidate_id": "C0027",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0028",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0028"
+      },
+      {
+        "candidate_id": "C0029",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0030",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0007"
+      },
+      {
+        "candidate_id": "C0031",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0032",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0008"
+      },
+      {
+        "candidate_id": "C0033",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0034",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0009"
+      },
+      {
+        "candidate_id": "C0035",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0036",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0010"
+      },
+      {
+        "candidate_id": "C0037",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0038",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0039",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0039"
+      },
+      {
+        "candidate_id": "C0040",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0041",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0042",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0043",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "OBL-0011"
+      },
+      {
+        "candidate_id": "C0044",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0045",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0046",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0046"
+      },
+      {
+        "candidate_id": "C0047",
+        "action": "hint",
+        "reason": "below promotion threshold; send compact evidence to LLM",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0048",
+        "action": "promote",
+        "reason": "confidence >= 0.85",
+        "final_entity_id": "OBL-0012"
+      },
+      {
+        "candidate_id": "C0049",
+        "action": "promote",
+        "reason": "medium confidence with corroborating signals",
+        "final_entity_id": "candidate:C0049"
+      },
+      {
+        "candidate_id": "C0050",
+        "action": "hint",
+        "reason": "sparse extraction fallback",
+        "final_entity_id": null
+      },
+      {
+        "candidate_id": "C0051",
+        "action": "hint",
+        "reason": "NER freeform mention capped at hint tier",
+        "final_entity_id": null
+      }
+    ]
+  },
+  "llm_enrichment": {
+    "mode": "json_patch_only",
+    "read_policy": {
+      "high_confidence": "no_reread",
+      "medium_confidence": "snippet_only",
+      "low_confidence": "snippet_plus_neighboring_block",
+      "contradiction_or_missing_role_date": "heading_section_window"
+    },
+    "evidence_packets": [
+      {
+        "id": "E0008",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      },
+      {
+        "id": "E0012",
+        "snippet": "un acompte de 1 234 567,89 $ payable au plus tard le 1er juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "6",
+          "anchor": "§3#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            68
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "5",
+          "7"
+        ]
+      },
+      {
+        "id": "E0014",
+        "snippet": "La clôture des opérations prévues aux présentes (la « Clôture ») aura lieu le 30 juin 2026 à 10 h aux bureaux des conseillers juridiques de la Venderesse, ou à toute autre date dont les parties peuvent convenir par écrit",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "9",
+          "anchor": "§4#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            221
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Clôture"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "id": "E0018",
+        "snippet": "Les obligations de l’Acheteur de procéder à la Clôture sont sous réserve de la satisfaction de chacune des conditions suivantes, auxquelles l’Acheteur peut renoncer par écrit",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "12",
+          "anchor": "§5#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            176
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.49,
+        "neighboring_context_ids": [
+          "11",
+          "13"
+        ]
+      },
+      {
+        "id": "E0021",
+        "snippet": "toutes les approbations réglementaires requises doivent être obtenues au plus tard le 20 juin 2026",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "13",
+          "anchor": "§5#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            100
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "events"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "12",
+          "14"
+        ]
+      },
+      {
+        "id": "E0023",
+        "snippet": "aucun changement défavorable important ne doit survenir relativement aux activités de Technologies Malouin Ltée avant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "15",
+          "anchor": "§5#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Conditions préalables à la clôture"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            129
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Conditions préalables à la clôture"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "14",
+          "16"
+        ]
+      },
+      {
+        "id": "E0027",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0029",
+        "snippet": "La Venderesse ne doit pas vendre, transférer ni grever les Actions visées avant la Clôture sans le consentement préalable écrit de l’Acheteur",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "18",
+          "anchor": "§6#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            142
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "relationships"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "17",
+          "19"
+        ]
+      },
+      {
+        "id": "E0031",
+        "snippet": "L’Acheteur s’engage à payer les droits de mutation applicables, et la Venderesse s’engage à ne pas solliciter les employés de Technologies Malouin Ltée pendant une période de vingt-quatre mois suivant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "19",
+          "anchor": "§6#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            212
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "18",
+          "20"
+        ]
+      },
+      {
+        "id": "E0033",
+        "snippet": "L’Acheteur s’engage à maintenir en vigueur les polices d’assurance de Technologies Malouin Ltée pendant une période de douze mois suivant la Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "20",
+          "anchor": "§6#4",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            149
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "19",
+          "21"
+        ]
+      },
+      {
+        "id": "E0035",
+        "snippet": "La Garante devra exécuter les obligations de paiement de l’Acheteur advenant que celui-ci omette d’y donner suite",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "21",
+          "anchor": "§6#5",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Engagements"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            114
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Engagements"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "20",
+          "22"
+        ]
+      },
+      {
+        "id": "E0037",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.66,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0038",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "deadlines"
+        ],
+        "confidence": 0.64,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0040",
+        "snippet": "La Venderesse doit indemniser l’Acheteur de toutes les pertes découlant de la violation des engagements prévus aux présentes, à condition que toute réclamation soit transmise dans les 18 mois suivant la date de Clôture",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "23",
+          "anchor": "§7#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            219
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "22",
+          "24"
+        ]
+      },
+      {
+        "id": "E0041",
+        "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            159
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "transfers"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0042",
+        "snippet": "Advenant un manquement aux déclarations de la Venderesse, celle-ci rembourse à l’Acheteur les pertes subies, jusqu’à concurrence d’un plafond global de 1,5 M$",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "24",
+          "anchor": "§7#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Indemnisation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            159
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Indemnisation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "23",
+          "25"
+        ]
+      },
+      {
+        "id": "E0044",
+        "snippet": "Tout avis requis en vertu de la présente Convention doit être transmis par courrier recommandé ou par courriel à l’attention des représentants désignés des parties",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "26",
+          "anchor": "§8#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            164
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "25",
+          "27"
+        ]
+      },
+      {
+        "id": "E0045",
+        "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.42,
+        "neighboring_context_ids": [
+          "26",
+          "28"
+        ]
+      },
+      {
+        "id": "E0047",
+        "snippet": "Chaque partie peut résilier la présente Convention moyennant un préavis écrit de 60 jours si l’autre partie omet de remédier à un manquement important dans le délai imparti",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "27",
+          "anchor": "§8#2",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            173
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "conditions"
+        ],
+        "confidence": 0.58,
+        "neighboring_context_ids": [
+          "26",
+          "28"
+        ]
+      },
+      {
+        "id": "E0050",
+        "snippet": "La Venderesse doit aviser l’Acheteur par écrit dans les 10 jours suivant la réception de toute réclamation d’un tiers visant les Actions visées",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "28",
+          "anchor": "§8#3",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Avis et résiliation"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            144
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Avis et résiliation"
+        ],
+        "candidate_fields": [
+          "communications"
+        ],
+        "confidence": 0.44,
+        "neighboring_context_ids": [
+          "27",
+          "29"
+        ]
+      },
+      {
+        "id": "E0051",
+        "snippet": "La Venderesse doit céder et transférer à l’Acheteur la totalité des actions émises et en circulation de Technologies Malouin Ltée (les « Actions visées »), libres de toute charge, pour un prix d’achat global de 12 345 678,90 $ (le « Prix d’achat »)",
+        "source_ref": {
+          "source": "fr_contract.md",
+          "block_id": "4",
+          "anchor": "§3#1",
+          "page": null,
+          "slide": null,
+          "sheet": null,
+          "heading_path": [
+            "Convention d’achat d’actions",
+            "Achat et vente"
+          ],
+          "table_coords": null,
+          "char_span": [
+            0,
+            249
+          ]
+        },
+        "heading_path": [
+          "Convention d’achat d’actions",
+          "Achat et vente"
+        ],
+        "candidate_fields": [
+          "parties"
+        ],
+        "confidence": 0.5,
+        "neighboring_context_ids": [
+          "3",
+          "5"
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0008",
+        "field": "relationships",
+        "frame_type": "control_authority",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0008"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0012",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0012"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0014",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0014"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0018",
+        "field": "conditions",
+        "frame_type": "dependency",
+        "confidence": 0.49,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0018"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0021",
+        "field": "events",
+        "frame_type": "dated_event",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0021"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0023",
+        "field": "deadlines",
+        "frame_type": "pre_closing_deadline",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0023"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0027",
+        "field": "deadlines",
+        "frame_type": "pre_closing_deadline",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0027"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0029",
+        "field": "relationships",
+        "frame_type": "control_authority",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0029"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0031",
+        "field": "deadlines",
+        "frame_type": "post_closing_deadline",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0031"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0033",
+        "field": "deadlines",
+        "frame_type": "post_closing_deadline",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0033"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0035",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0035"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0037",
+        "field": "conditions",
+        "frame_type": "condition_precedent",
+        "confidence": 0.66,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0037"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0038",
+        "field": "deadlines",
+        "frame_type": "relative_deadline",
+        "confidence": 0.64,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0038"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0040",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0040"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0041",
+        "field": "transfers",
+        "frame_type": "payment_flow",
+        "confidence": 0.5,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0041"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0042",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0042"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0044",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0044"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0045",
+        "field": "conditions",
+        "frame_type": "trigger_condition",
+        "confidence": 0.42,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0045"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0047",
+        "field": "conditions",
+        "frame_type": "default_remedy",
+        "confidence": 0.58,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0047"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0050",
+        "field": "communications",
+        "frame_type": "notice_communication",
+        "confidence": 0.44,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0050"
+        ],
+        "read_policy": "snippet_plus_neighboring_block",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "type": "resolve_candidate",
+        "candidate_id": "C0051",
+        "field": "parties",
+        "frame_type": "freeform_mention",
+        "confidence": 0.5,
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [
+          "E0051"
+        ],
+        "read_policy": "snippet_only",
+        "instruction": "Resolve only from supplied evidence. Return JSON Patch operations with evidence_id and source_ref, or add an extraction_warning if unsupported."
+      },
+      {
+        "targets": [
+          "OBL-0001",
+          "OBL-0002",
+          "OBL-0003",
+          "OBL-0004",
+          "OBL-0005",
+          "OBL-0006",
+          "OBL-0007",
+          "OBL-0008",
+          "OBL-0009",
+          "OBL-0010",
+          "OBL-0011",
+          "OBL-0012"
+        ],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "null_field_classification",
+        "field": "obligations[].risk_level",
+        "instruction": "Classify each obligation high/medium/low from language."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H0"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "relationships",
+        "instruction": "Resolve hint into relationships from snippet at §3#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H1"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §3#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H2"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §4#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H3"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §5#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H4"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "events",
+        "instruction": "Resolve hint into events from snippet at §5#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H5"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "deadlines",
+        "instruction": "Resolve hint into deadlines from snippet at §5#4."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H6"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "deadlines",
+        "instruction": "Resolve hint into deadlines from snippet at §6#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H7"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "relationships",
+        "instruction": "Resolve hint into relationships from snippet at §6#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H8"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "deadlines",
+        "instruction": "Resolve hint into deadlines from snippet at §6#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H9"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "deadlines",
+        "instruction": "Resolve hint into deadlines from snippet at §6#4."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H10"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §6#5."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H11"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H12"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "deadlines",
+        "instruction": "Resolve hint into deadlines from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H13"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H14"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "transfers",
+        "instruction": "Resolve hint into transfers from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H15"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §7#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H16"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §8#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H17"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §8#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H18"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "conditions",
+        "instruction": "Resolve hint into conditions from snippet at §8#2."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H19"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "communications",
+        "instruction": "Resolve hint into communications from snippet at §8#3."
+      },
+      {
+        "targets": [],
+        "hint_ids": [
+          "H20"
+        ],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "hint_resolution",
+        "field": "parties",
+        "instruction": "Resolve hint into parties from snippet at §3#1."
+      },
+      {
+        "targets": [],
+        "hint_ids": [],
+        "evidence_ids": [],
+        "read_policy": "",
+        "type": "implicit_inference",
+        "field": "decision_points",
+        "instruction": "Scan obligations, conditions, and process_steps for if/then logic."
+      }
+    ]
+  },
+  "profile_signals": {
+    "privacy": 0.33,
+    "litigation": 0.0,
+    "governance": 0.0,
+    "risk_assessment": 0.0
+  },
+  "language_profile": {
+    "dominant": "fr",
+    "override": null,
+    "blocks": {
+      "en": 0,
+      "fr": 20,
+      "und": 11
+    },
+    "char_share": {
+      "en": 0.0,
+      "fr": 1.0
+    }
+  }
+}

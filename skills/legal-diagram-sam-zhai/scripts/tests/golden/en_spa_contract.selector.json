@@ -1,0 +1,27 @@
+{
+  "no_intent": {
+    "recommended_type": "flowchart",
+    "rationale": "flowchart selected based on: entities, documents, obligations, conditions, transfers, concepts, legal authorities, parties.",
+    "alternatives": [
+      "requirementDiagram",
+      "gantt"
+    ],
+    "confidence": 0.58,
+    "grouping_suggested": false,
+    "grouping_axis": null
+  },
+  "with_intent": {
+    "intent": "deal timeline phases and deadlines",
+    "result": {
+      "recommended_type": "gantt",
+      "rationale": "gantt selected based on: events, deadlines.",
+      "alternatives": [
+        "flowchart",
+        "requirementDiagram"
+      ],
+      "confidence": 0.54,
+      "grouping_suggested": false,
+      "grouping_axis": null
+    }
+  }
+}

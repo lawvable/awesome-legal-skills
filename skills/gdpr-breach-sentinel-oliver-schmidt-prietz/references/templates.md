@@ -151,8 +151,15 @@ We are prepared to assist your assessment by providing:
 IMPORTANT DISCLAIMER
 As Processor, we provide this information to assist your assessment
 under GDPR Article 33. Final risk determination and notification
-decisions rest with you as Controller. We have not assessed the
-severity of this incident for your notification purposes.
+decisions rest with you as Controller. Any severity indication we
+attach (see Handoff Package) is a provisional, informational view
+prepared as controller support — it is not binding and does not
+constitute our assessment of your notification obligations.
+
+NOTE ON YOUR 72-HOUR CLOCK
+Per EDPB Guidelines 9/2022, you as Controller should be considered
+"aware" of this breach upon receipt of this notice. Your Art. 33(1)
+72-hour period therefore starts now.
 
 CONTACT
 [Processor DPO/Security Contact]
@@ -161,6 +168,8 @@ CONTACT
 
 Available for calls: [Hours/Timezone]
 ```
+
+**Always accompany this notice with the Processor → Controller Handoff Package (template 13).**
 
 ---
 
@@ -231,6 +240,16 @@ SE = ([DPC] × [EI]) + [CB]
 SE = [Final Score]
 
 Severity Level: [LOW / MEDIUM / HIGH / VERY HIGH]
+
+LEGAL TEST BRIDGE (Art. 33/34):
+• Key facts: [what happened, to whose data, at what scale]
+• Safeguards: [in place before / applied after]
+• Likely impact on individuals: [likelihood & severity reasoning]
+• Art. 33(1) conclusion: [NOTIFY SA / NO — unlikely to result in a
+  risk, because ...]
+• Art. 34(1) conclusion: [NOTIFY SUBJECTS / NO — no high risk,
+  because ... / NO — exception Art. 34(3)(a)/(b)/(c), because ...]
+• Divergence from ENISA presumption: [NONE / explained]
 
 EDPB Case Comparison:
 • Most Similar Case: [Case XX - Description]
@@ -354,10 +373,19 @@ Breach Type: [C/I/A]
 RISK ASSESSMENT
 ═══════════════════════════════════════════════════════════════
 ENISA Severity Score: [Score] (LOW - below threshold of 2)
+(The score is decision support; the decision rests on the
+Art. 33(1) legal test below.)
 
 DPC: [Score] - [Reasoning]
 EI: [Score] - [Reasoning]
 CB: [Score] - [Reasoning]
+
+LEGAL TEST BRIDGE (Art. 33(1)):
+• Key facts: [summary]
+• Safeguards: [in place / applied after]
+• Likely impact on individuals: [reasoning]
+• Conclusion: the breach is UNLIKELY to result in a risk to the
+  rights and freedoms of natural persons, because: [reasoning]
 
 ═══════════════════════════════════════════════════════════════
 JUSTIFICATION FOR NON-NOTIFICATION
@@ -541,6 +569,8 @@ This output does not constitute legal advice.
 
 ## 9. Hybrid Scenario Dashboard (Track A + B)
 
+For **processor-only** (pure Track B) cases, use the Track B block below on its own — the controller-shaped main Assessment Dashboard fields ("Notify SA", 72h clock) are then marked as downstream controller duties, never as the processor's.
+
 ```
 ╔═══════════════════════════════════════════════════════════════╗
 ║                    TRACK A: INTERNAL DATA                      ║
@@ -558,11 +588,268 @@ This output does not constitute legal advice.
 ╔═══════════════════════════════════════════════════════════════╗
 ║                    TRACK B: CLIENT DATA                        ║
 ╠═══════════════════════════════════════════════════════════════╣
+║ Processor Awareness (T0-P): [timestamp]                        ║
+║ Statutory Duty: Notify controller WITHOUT UNDUE DELAY          ║
+║   (Art. 33(2)) — no statutory 72h applies to the processor     ║
+║ Contractual Deadline: [per client DPA + time remaining]        ║
 ║ Clients Affected: [list/count]                                 ║
 ║ Notification Status: [Pending/Sent per client]                 ║
-║ Contractual Deadlines: [per client DPA]                        ║
-║ Risk Assessment: NOT PERFORMED (Controller responsibility)     ║
+║ Handoff Package: [Complete / items outstanding]                ║
+║ Risk Assessment: Informational ENISA view provided as          ║
+║   controller support — final Art. 33/34 determination          ║
+║   rests with the controller                                    ║
+║ Controller 72h Clock: starts when each controller is informed  ║
+║   (downstream controller duty, not the processor's)            ║
 ╚═══════════════════════════════════════════════════════════════╝
 ```
 
 **Never conflate Track A and Track B documentation.**
+
+---
+
+## 10. Follow-Up Notification (Supplementing or Completing)
+
+```
+FOLLOW-UP PERSONAL DATA BREACH NOTIFICATION
+Pursuant to Article 33(4) GDPR
+
+Type: FOLLOW-UP — [COMPLETE (closing an incomplete notification) /
+                   INCOMPLETE (further supplement to follow)]
+ID of previously notified breach: [SA-issued reference]
+Controller internal reference: [ID]
+Date of this follow-up: [Date]
+
+1. WHAT CHANGED SINCE THE PREVIOUS NOTIFICATION
+   [New facts, revised scope, completed forensics — itemised]
+
+2. UPDATED FIELDS
+   | Field | Previously reported | Now | Basis for revision |
+   |-------|--------------------|----|--------------------|
+   | [e.g., subjects affected] | [old] | [new] | [evidence] |
+
+3. UPDATED RISK ASSESSMENT (if changed)
+   [Revised ENISA score + revised Art. 33/34 Legal Bridge]
+
+4. UPDATED MEASURES
+   [Containment/mitigation/prevention progress since last filing]
+
+5. OUTSTANDING ITEMS (if still incomplete)
+   [Open fields + committed timeframe for the next supplement]
+```
+
+---
+
+## 11. Withdrawal of a Notification
+
+```
+WITHDRAWAL OF PERSONAL DATA BREACH NOTIFICATION
+
+Type: FOLLOW-UP — WITHDRAW
+ID of previously notified breach: [SA-issued reference]
+Controller internal reference: [ID]
+Date: [Date]
+
+REASON FOR WITHDRAWAL
+[e.g., duplicate notification; full assessment established that no
+personal data breach occurred; completed risk assessment concluded
+the breach is unlikely to result in a risk — with reasoning]
+
+SUPPORTING ANALYSIS
+• Established facts that changed the assessment: [list with sources]
+• Art. 33(1) legal test conclusion: [reasoning]
+• Internal record: the Art. 33(5) internal documentation of the
+  incident and of this withdrawal decision is retained.
+
+[Note: withdrawal cancels the notification, not the documentation
+duty. The internal breach record remains mandatory.]
+```
+
+---
+
+## 12. Late Notification Explanation (>72h)
+
+```
+REASONS FOR NOTIFICATION AFTER 72 HOURS
+Annex to breach notification [reference]
+
+Controller awareness (T0): [timestamp]
+Notification filed: [timestamp] ([X] hours after T0)
+
+CHRONOLOGY OF THE DELAY
+| From | To | What happened | Why notification was not yet possible |
+|------|----|---------------|----------------------------------------|
+| [t]  | [t]| [event]       | [reason]                               |
+
+REASONS
+[e.g., scope determination required forensic analysis; competing
+emergency containment; coordination with law enforcement — be
+specific and honest; generic workload arguments will not persuade]
+
+MEASURES TAKEN DURING THE DELAY PERIOD
+[Containment and mitigation actions that protected data subjects
+while notification was pending]
+
+PROCESS IMPROVEMENT
+[What changes prevent recurrence of the delay]
+```
+
+---
+
+## 13. Processor → Controller Handoff Package
+
+```
+PROCESSOR HANDOFF PACKAGE
+[Processor Name] → [Controller Name]
+Accompanies the Art. 33(2) notice dated [date] | Reference: [ID]
+
+═══════════════════════════════════════════════════════════════
+1. INCIDENT FACTS (established only — assumptions labelled)
+═══════════════════════════════════════════════════════════════
+• Processor awareness (T0-P): [timestamp + triggering event]
+• Nature of the incident: [EDPB taxonomy term + description]
+• Cause: [internal/external, malicious/non-malicious, root cause
+  if known]
+• Systems/services involved: [scoped list with locations]
+
+═══════════════════════════════════════════════════════════════
+2. DATA SCOPE (for the controller's risk assessment)
+═══════════════════════════════════════════════════════════════
+• Data categories affected: [list]
+• Data subject categories: [list]
+• Records / individuals (estimate + methodology): [numbers]
+• Safeguards applied to the data: [encryption status, key status,
+  pseudonymisation, access controls]
+
+═══════════════════════════════════════════════════════════════
+3. PROVISIONAL INFORMATIONAL RISK VIEW (NON-BINDING)
+═══════════════════════════════════════════════════════════════
+Provided solely as controller support. The Art. 33/34 assessment
+and all notification decisions are the controller's.
+• Informational ENISA view: DPC [x] · EI [x] · CB [x] · SE [x]
+• Factors the controller will likely weigh: [list]
+
+═══════════════════════════════════════════════════════════════
+4. EVIDENCE INVENTORY
+═══════════════════════════════════════════════════════════════
+• Preserved: [logs, images, access records — with hashes/dates]
+• Available on request: [forensic report, timeline exports]
+• Not yet available: [items + expected date]
+
+═══════════════════════════════════════════════════════════════
+5. WHAT THE CONTROLLER STILL NEEDS TO DO / DECIDE
+═══════════════════════════════════════════════════════════════
+□ Confirm receipt (starts your Art. 33(1) 72h clock — EDPB
+  Guidelines 9/2022)
+□ Perform the Art. 33/34 risk assessment (we will support)
+□ Decide SA notification + subject communication
+□ Tell us which additional artefacts you need, and by when
+
+CONTACTS & AVAILABILITY
+[Processor incident lead + DPO, response-time commitment]
+```
+
+---
+
+## 14. Art. 34 Decision Memo
+
+```
+ARTICLE 34 DECISION MEMO
+Communication to data subjects — documented decision
+Incident Reference: [ID] | Date: [Date] | Prepared by: [Name, Role]
+
+1. HIGH-RISK ANALYSIS (Art. 34(1))
+   [Legal Bridge: facts → safeguards → likely impact →
+   "likely to result in a high risk": YES / NO, because ...]
+
+2. EXCEPTIONS CONSIDERED (Art. 34(3)) — all three, in order
+   (a) Protection measures applied (e.g., encryption, key secure):
+       [AVAILABLE / NOT AVAILABLE — reasoning incl. key status]
+   (b) Subsequent measures ensure high risk no longer likely:
+       [AVAILABLE / NOT AVAILABLE — measure, evidence it worked]
+   (c) Disproportionate effort → public communication instead:
+       [APPLICABLE / NOT APPLICABLE — effort comparison; if
+       applicable: the equally effective public measure chosen]
+
+3. DECISION
+   [COMMUNICATE (direct) / COMMUNICATE (public, under (c)) /
+   NO COMMUNICATION — exception (a)/(b) applies]
+   Timing: [without undue delay — planned date(s), phasing]
+
+4. STRATEGY (if communicating)
+   Channels: [direct/public/both] | Languages: [list]
+   Vulnerable subjects prioritised: [how]
+   Support channel: [line/mailbox/FAQ + staffing]
+   Fraud/phishing warning included: [YES — wording reference]
+
+5. APPROVAL
+   DPO: [name/date] | Legal counsel: [name/date or N/A]
+   SA backstop noted: the SA may require communication (Art. 34(4)).
+```
+
+---
+
+## 15. Attachment Inventory (EDPB Evidence File §7)
+
+```
+ATTACHMENT INVENTORY
+Incident Reference: [ID] | Compiled: [Date]
+
+| # | Attachment (dated copy of …) | Exists | Date | Location/owner |
+|---|------------------------------|--------|------|----------------|
+| a | Communication to data subjects | ☐ | | |
+| b | Risk assessment | ☐ | | |
+| c | Forensic / research report (cyber incidents) | ☐ | | |
+| d | Ransomware note | ☐ | | |
+| e | Phishing message | ☐ | | |
+| f | Internal breach-notification procedure | ☐ | | |
+| g | Internal deletion/destruction policy | ☐ | | |
+| h | Communication to wrong recipient(s) | ☐ | | |
+| i | External notification/message of the breach | ☐ | | |
+| j | Other: [specify] | ☐ | | |
+
+Phishing cases — categorise affected communications three ways:
+mailbox owner · recipients of the phishing mail · subjects whose
+data was inside the compromised mailbox.
+```
+
+---
+
+## 16. Country-by-Country Affected Subjects Table
+
+```
+AFFECTED DATA SUBJECTS BY COUNTRY
+Incident Reference: [ID] | As of: [Date] | Basis: [exact/estimate
++ methodology]
+
+| Country (EEA) | Affected subjects | SA concerned | Notified? |
+|---------------|-------------------|--------------|-----------|
+| [DE]          | [n]               | [SA name]    | [via lead SA /
+|               |                   |              |  direct / date] |
+| [FR]          | [n]               | [SA name]    | [...]     |
+| TOTAL         | [n]               |              |           |
+
+One-stop-shop: [YES — lead SA [name]; concerned SAs informed via
+cooperation / NO — non-EU controller: each SA notified directly]
+```
+
+---
+
+## 17. Other-Authority Notification Log
+
+```
+OTHER AUTHORITIES & BODIES — NOTIFICATION LOG
+Incident Reference: [ID]
+
+| Authority/Body | Regime | Required/Voluntary | Deadline | Notified
+  (date) | Their case ID |
+|----------------|--------|--------------------|----------|---------|---|
+| [Police/prosecutor] | Criminal | Voluntary | — | | |
+| [National cyber security centre / CSIRT] | NIS2 | [Required?] |
+  [24h/72h] | | |
+| [Financial supervisor] | DORA | [Required?] | [...] | | |
+| [Market surveillance authority] | AI Act Art. 73 | [Required?
+  from 2026-08-02] | [15d/10d/2d] | | |
+| [Insurer] | Policy | Contractual | [window] | | |
+
+Feed completed rows into §6.1 of the EDPB evidence file.
+```

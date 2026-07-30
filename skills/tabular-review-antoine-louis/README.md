@@ -1,0 +1,1 @@
+Guide to analyze multiple documents (PDF, DOCX) against user-defined columns and produce a structured Excel output with citations. Use when the user wants to: (1) Extract specific information from multiple documents into a table, (2) Compare clauses or provisions across contracts, (3) Create a document review matrix with source citations.

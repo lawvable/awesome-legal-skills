@@ -1,0 +1,1 @@
+Verification-first methodology for the Special Panels for Serious Crimes of the Dili District Court (UNTAET, 2000–2006). Citations are verified against JSMP, the UN archives and legal-tools.org. Covers the Los Palos case, the Serious Crimes Unit caseload (391 indicted; about 88 tried) and the SPSC-vs-Jakarta distinction. Research aid, not legal advice.

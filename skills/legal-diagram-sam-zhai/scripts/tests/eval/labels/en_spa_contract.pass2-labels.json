@@ -1,0 +1,20 @@
+{
+  "schema_version": "legal-diagram-pass2-labels-v1",
+  "fixture": "en_spa_contract",
+  "frozen_manifest_sha256": "7397d2ce9fe75902cb9c89a25ddba9e37c4f82076340286e37875e0aaec844b4", "_sha_audit": "# audit-ok: base64-obfuscation: sha256 hex digest of frozen manifest, not encoded payload",
+  "labelled": false,
+  "expectations": [],
+  "forbidden": [],
+  "todo": [
+    {
+      "hint_id": "H4",
+      "field": "deadlines",
+      "note": "label session: expected enrichment outcome for unpromoted closing deadline"
+    },
+    {
+      "hint_id": "H14",
+      "field": "deadlines",
+      "note": "label session: expected enrichment outcome for unpromoted closing deadline"
+    }
+  ]
+}

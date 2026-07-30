@@ -6,7 +6,7 @@
 
 Préparer des fiches de TD pour un enseignement de droit, fondées sur des recherches réelles préalables. Chaque fiche comporte trois exercices complémentaires : connaissance, approfondissement, mise en pratique.
 
-**Règle anti-hallucination absolue** : les arrêts, textes, articles de doctrine utilisés dans les exercices doivent avoir été trouvés par une recherche réelle via OpenLegi, HAL ou web_search. Aucun arrêt, article ou texte inventé ou reconstitué de mémoire.
+**Règle anti-hallucination absolue** : les arrêts, textes, articles de doctrine utilisés dans les exercices doivent avoir été trouvés par une recherche réelle via OpenLegi, `doctrine_search.py`/HAL ou web_search. Aucun arrêt, article ou texte inventé ou reconstitué de mémoire.
 
 ---
 
@@ -31,7 +31,7 @@ Demander à l'utilisateur :
 
 ### Étape 3 — Production des fiches
 
-Pour chaque thème validé, appliquer la **Variante B** ci-dessous.
+Pour chaque thème validé, exécuter d'abord le **playbook (tâche 0)** sur ce thème (le playbook s'exécute thème par thème, après la validation du découpage à l'étape 2, et non en amont), puis appliquer la **Variante B** ci-dessous.
 
 ---
 
@@ -55,7 +55,7 @@ Séquence de recherche (§3 du SKILL.md) adaptée aux besoins pédagogiques :
    - Identifier les revirements ou évolutions notables
    - Pour chaque arrêt : noter la juridiction, la date, le numéro de pourvoi, le principe dégagé
 
-3. **Doctrine** (HAL + web_search) :
+3. **Doctrine** (`scripts/doctrine_search.py` multi-sources + web_search) :
    - Trouver au moins 2-3 articles doctrinaux pertinents sur le thème
    - Identifier les controverses doctrinales si elles existent
 

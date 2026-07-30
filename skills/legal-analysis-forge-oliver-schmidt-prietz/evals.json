@@ -1,0 +1,215 @@
+{
+  "skill_name": "legal-analysis-forge",
+  "_note": "Iteration-1 eval set for v0.9 → v1.0 promotion sweep. 10 cases × ~10 assertions ≈ 100+ assertions, mirroring the ai-act-high-risk methodology. Cases cover the major outcome types (consultation response, internal/external memo, public commentary EN+DE, comparative, horizon-scan, litigation, conference, skill input) and the major instrument types (Commission Guidelines draft, CJEU judgment, EDPB Guidelines, Regulation + Directive comparative, national DPA decision, draft delegated act, harmonised standard, code of conduct). Includes deliberate tests for: the automatic freshness check on drafts (case 5), the routing-to-sibling integration (case 8), the live research opt-in (case 6), and the plain-English explainer (every case).",
+  "evals": [
+    {
+      "id": 0,
+      "name": "consultation-response-on-commission-draft-bilingual",
+      "prompt": "Hi, I want to submit a stakeholder consultation response to the European Commission's draft guidelines on Article 6(5) of the AI Act (high-risk classification under Article 6). The draft was published for public consultation in 2026. Our company position is that the Commission's worked example on smart thermostats (paragraphs 48-49 of the draft) is too narrow and risks creating uncertainty for borderline IoT products. Please prepare the consultation response. Audience is the Commission; stance is challenging the specific worked example while remaining constructive. Output in English. The deliverable is due in 2 weeks.",
+      "expected_output": "Characterisation of the document (draft Commission Guidelines under Art. 6(5) AI Act, non-binding interpretive instrument, under consultation), automatic freshness check triggered. Tailored expert prompt assembled with the nine required blocks. Consultation-response output structure (problem statement, our position, reasoning grounded in the Act, drafting suggestion). Plain-English explainer alongside. Optional execution.",
+      "assertions": [
+        "Identifies the document as draft Commission Guidelines (non-binding interpretive instrument) under Art. 6(5) AI Act",
+        "Triggers the automatic freshness check for the draft before proceeding and surfaces it to the user",
+        "Names the binding force as non-binding (interpretive; cannot extend the underlying Act)",
+        "Identifies status as under consultation",
+        "Asks at most three elicitation questions, skipping any already answered in the prompt",
+        "Generates a tailored expert prompt with the nine required blocks (Role, Context, Task, Analytical framework, Specific provisions warranting scrutiny, Citation conventions, Register constraints, Output structure, Self-check protocol)",
+        "Includes a consultation-response-specific role marker and output structure",
+        "Cites Art. 6 AI Act and references the specific paragraphs (48-49) the user is challenging",
+        "Applies the dry-practitioner register (no marketing fillers, no banned vocabulary)",
+        "Produces a plain-English explainer in 150-300 words alongside the formal output",
+        "Offers the user a choice on how to integrate the explainer (executive summary, sidebar, annex, cover note, standalone)",
+        "Does not invent paragraph numbers beyond those provided by the user (anti-hallucination protocol applied)"
+      ],
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "internal-memo-on-cjeu-judgment",
+      "prompt": "I need an internal compliance memo on a recent CJEU judgment under the GDPR — Case C-300/21 (Österreichische Post AG) on non-material damages under Art. 82 GDPR. Audience is our internal management and our data protection team. Stance is neutral analysis: what does the judgment mean for our claims-handling and risk appetite? Output in English, ~1500 words.",
+      "expected_output": "Characterisation of the CJEU judgment (binding interpretation, ratio vs obiter distinguished). Tailored expert prompt for an internal memo. Citations to the judgment using ECLI format and paragraph anchors from the judgment itself only. Self-check protocol applied. Plain-English explainer.",
+      "assertions": [
+        "Identifies the document as a CJEU judgment (binding interpretation; only the CJEU can give authoritative interpretation)",
+        "Cites the case using ECLI:EU:C: format or equivalent CJEU citation convention",
+        "Instructs the prompt to distinguish ratio decidendi from obiter dicta",
+        "Identifies the legal basis (Art. 82 GDPR) and the operative question (non-material damage threshold and de minimis)",
+        "Generates a tailored expert prompt with the nine required blocks including an internal-memo role marker",
+        "Includes the internal-memo output structure (issue, holding, reasoning, implications, action items, or equivalent)",
+        "Cites paragraph numbers from the judgment only as provided or as live-verified, not invented",
+        "Applies the dry-practitioner register and the 12-point self-check protocol",
+        "Produces a plain-English explainer in 150-300 words alongside the formal output",
+        "Suggests routing to a sibling skill (breach-sentinel or dpa-art28) if the analysis surfaces a downstream operational task, after the analysis is delivered"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "linkedin-post-german-on-edpb-guideline",
+      "prompt": "Ich möchte einen LinkedIn-Beitrag auf Deutsch zu den neuen EDPB-Leitlinien 02/2024 zu Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) verfassen. Zielgruppe ist die deutsche Datenschutz-Community (DPOs, Syndikus-Anwälte). Tonalität: neutral-analytisch, ohne Marketing-Sprache. Länge ca. 250 Wörter. Bitte den Prompt erstellen und auch direkt ausführen.",
+      "expected_output": "Characterisation of the EDPB Guidelines (non-binding, under Art. 70 GDPR). All elicitation answers detected in prompt (outcome, audience, stance, language) — skip elicitation. Tailored prompt with public-commentary role and lighter citations. Executed in-session per user request. German register constraints applied. Plain-English explainer in English (default) alongside.",
+      "assertions": [
+        "Identifies the document as EDPB Guidelines (non-binding interpretive instrument under Art. 70 GDPR)",
+        "Detects that the user has provided all elicitation answers in the prompt and skips the elicitation step",
+        "Generates a tailored expert prompt with the nine required blocks including the public-commentary role marker",
+        "Applies the public-commentary citation depth (lighter citations with source links, not full Article/Recital/CELEX)",
+        "Applies the German register constraints (forbids Selbstverständlich, Im Ergebnis lässt sich festhalten, marketing fillers)",
+        "Uses the correct German legal terminology (berechtigtes Interesse, Verantwortlicher, Auftragsverarbeiter, Art. 6 Abs. 1 lit. f DSGVO)",
+        "Executes the prompt in-session as requested (Step 5 not skipped)",
+        "Produces a German LinkedIn post of approximately 250 words conforming to the register constraints",
+        "Produces a plain-English explainer (in English by default) of 150-300 words alongside the German post",
+        "Saves outputs to the user's current working directory (does not use /mnt/user-data/outputs/)",
+        "Does not invent paragraph numbers, recitals, or case law not in the EDPB guideline itself"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "comparative-analysis-gdpr-art22-vs-ai-act-art50",
+      "prompt": "I'm preparing a thought-leadership briefing for our partners on the overlap between Article 22 GDPR (right not to be subject to automated individual decision-making) and Article 50 AI Act (transparency obligations for AI systems interacting with natural persons, including deepfake disclosure). I want a structured comparative analysis: scope of each provision, the obligations each imposes, where they overlap, where they diverge, and what a controller deploying an AI-driven decisioning system needs to do under both. Audience is our partner-level lawyers. English, ~2000 words. Please prepare the prompt and execute it.",
+      "expected_output": "Characterisation of two instruments side by side. Tailored prompt for a comparative analysis. Applies the cross-instrument coherence interpretive rule. Identifies the legal bases of each provision (GDPR: Art. 16 TFEU plus Art. 114 TFEU per its preamble; AI Act: Art. 114 TFEU plus Art. 16 TFEU in respect of processing of personal data) and the consequences for scope and interpretation, the controller/operator distinction, the deployer obligations under Art. 26 AI Act that interact with GDPR controller duties, and the FRIA (Fundamental Rights Impact Assessment) requirement under Art. 27 AI Act where it applies. Executes in-session and produces plain-English explainer.",
+      "assertions": [
+        "Characterises Art. 22 GDPR (binding) and Art. 50 AI Act (binding) as parallel operative provisions of two Regulations",
+        "Identifies the legal bases of each provision (GDPR grounded in Art. 16 TFEU + Art. 114 TFEU; AI Act grounded in Art. 114 TFEU + Art. 16 TFEU for personal-data processing aspects) and the consequences for scope/interpretation — does NOT treat Art. 16 and Art. 114 as mutually exclusive alternatives",
+        "Generates a tailored expert prompt with the comparative-analysis output structure (scope, obligations, overlap, divergence, practical implications)",
+        "Applies the cross-instrument coherence interpretive rule from the analytical canon",
+        "Identifies the controller (GDPR) vs deployer (AI Act, Art. 26) terminological distinction and flags the translation risk",
+        "Cites Art. 26 AI Act deployer obligations explicitly — including Art. 26(1) instruction-following, Art. 26(7) Art. 22 GDPR information duty (where the deployer makes Art. 22 GDPR decisions), and Art. 27 FRIA where applicable — and explains how Art. 26 deployer duties interact with GDPR controller duties when the deployer is also a controller",
+        "Cites Art. 22 GDPR with its three-stage test (decision based solely on automated processing → legal effect or similarly significant → exceptions in Art. 22(2)) and the safeguards in Art. 22(3)",
+        "Cites Art. 50 AI Act including the deepfake disclosure obligation under Art. 50(4) and the broader transparency obligations in Art. 50(1)-(3)",
+        "Executes the prompt in-session and produces a comparative analysis of approximately 2000 words",
+        "Produces a plain-English explainer of 150-300 words alongside (hard upper bound)",
+        "Does not conflate the GDPR's data subject rights framework with the AI Act's transparency framework; surfaces the divergence"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "external-client-memo-on-national-dpa-decision",
+      "prompt": "Our client (a multinational SaaS provider with EU operations) has been contacted by a national supervisory authority. The authority has issued a public decision interpreting Art. 6(1)(f) GDPR in the context of AI-training datasets harvested from publicly accessible web sources. I have a copy of the decision (national DPA, German text, dated April 2026, 28 pages). I need an external client memo: what the decision says, what it means for the client's operations, and what we recommend. Audience is the client's General Counsel. Output in English, ~3000 words.",
+      "expected_output": "Characterisation of the document (national DPA decision, binding on the addressee but persuasive elsewhere, German source language). Tailored prompt for external client memo. Bilingual handling (DE source, EN output). Identification of EDPB-equivalent and CJEU references that might supersede or qualify the decision. Plain-English explainer alongside.",
+      "assertions": [
+        "Identifies the document as a national DPA decision (binding on addressee; persuasive but not binding on other controllers or supervisory authorities)",
+        "Notes the legal basis (Art. 58(2) GDPR enforcement powers of the supervisory authority)",
+        "Flags the appeal route (national administrative courts; potential CJEU preliminary reference)",
+        "Generates a tailored expert prompt with the external-client-memo role marker and output structure (executive summary, facts, decision analysis, implications, recommended actions)",
+        "Specifies bilingual handling: DE source language → EN output language; key German terminology preserved in parentheses where load-bearing",
+        "Applies the live research opt-in for related EDPB guidance, CJEU jurisprudence on Art. 6(1)(f), and any pending cases on AI-training data",
+        "Calls out the relationship with Art. 5 GDPR (lawfulness, fairness, transparency, purpose limitation) since AI training touches multiple principles",
+        "Executes the prompt and produces a client memo of approximately 3000 words",
+        "Produces a plain-English explainer of 150-300 words alongside",
+        "Offers integration of the explainer as a client-facing cover note (an option in the integration menu)"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "horizon-scan-entry-on-draft-delegated-act",
+      "prompt": "Add a horizon-scan entry for our regulatory tracker. The document is a Commission draft Delegated Regulation under Art. 35(4) DSA on the methodology for assessing systemic risks. Date: March 2024. I have the PDF. Audience: our partners and senior associates following the DSA. Keep it short — ~400 words, factual, with the operative dates and the comment-window deadline. Just the prompt — I'll run it later.",
+      "expected_output": "Characterisation of the document (draft delegated act, status: under consultation, binding force on adoption: binding secondary instrument). Triggers automatic freshness check (March 2024 draft may have a later or final version). Tailored prompt for horizon-scan entry with short, factual register and operative-dates emphasis. Step 5 (execute) skipped per user instruction.",
+      "assertions": [
+        "Identifies the document as a draft delegated act under Art. 35(4) DSA, status: under consultation",
+        "Identifies the binding-force trajectory (non-binding while draft; binding on adoption as a delegated act)",
+        "Triggers the automatic freshness check (draft from March 2024 may have been superseded or finalised by 2026)",
+        "Surfaces the freshness check result to the user and asks whether to proceed with the user's version, the later version, or both",
+        "Identifies the legal basis (Art. 35(4) DSA empowering the Commission to adopt delegated acts)",
+        "Notes the intra vires constraint (delegated acts cannot exceed the empowering provision)",
+        "Generates a tailored expert prompt with the horizon-scan-entry output structure (instrument, status, key dates, scope, practical implications, our take, links)",
+        "Applies the horizon-scan register (factual, ~400 words, operative-dates emphasis)",
+        "Step 5 (Execute) is skipped because the user said 'I'll run it later'",
+        "Produces a plain-English explainer alongside the prompt (mandatory in all cases; for prompt-only outputs the explainer accompanies the prompt rather than an executed analysis)"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "litigation-brief-input-on-transfer-challenge",
+      "prompt": "I'm drafting litigation brief input for a national court challenge to a third-country transfer arrangement under Art. 46 GDPR. The transfer relies on the EU-US Data Privacy Framework adequacy decision and supplementary contractual clauses. Our client argues the framework does not satisfy the essential equivalence test articulated in Schrems II (C-311/18). I need: (1) the operative test from Schrems II with the relevant paragraph anchors, (2) the EDPB Recommendations 01/2020 on supplementary measures, (3) how the framework decision (C(2023) 4745) addresses the deficiencies and where it does not. Audience is the court. Output in English. Citation-heavy. Please prepare the prompt — execution will happen separately under counsel review.",
+      "expected_output": "Characterisation of the analysis (litigation brief input for an Art. 46 GDPR transfer challenge). Tailored prompt with the litigation-brief role marker, citation-heavy depth, and the requirement to live-verify Schrems II paragraph anchors before citing. Step 5 (execute) skipped per user instruction (separate counsel review). Plain-English explainer alongside.",
+      "assertions": [
+        "Identifies the deliverable as litigation brief input for a national court (not a memo or commentary)",
+        "Cites Schrems II using the ECLI format and notes the operative test (essential equivalence of protection)",
+        "Requires the prompt to live-verify Schrems II paragraph anchors (the analytical canon's anti-hallucination rule applied to live legal authority)",
+        "References EDPB Recommendations 01/2020 on supplementary measures and identifies them as non-binding interpretive instrument",
+        "References the EU-US Data Privacy Framework adequacy decision (C(2023) 4745) by its Commission decision number",
+        "Generates a tailored expert prompt with the litigation-brief output structure (issue, applicable law, doctrinal analysis, application to facts, alternative arguments, requested order)",
+        "Applies full-citation depth (Article, Recital, ECLI, CELEX, paragraph anchors) appropriate for litigation",
+        "Step 5 (Execute) is skipped per user instruction (separate counsel review)",
+        "Surfaces uncertainty around any contested interpretive moves and flags them rather than papering over them",
+        "Produces a plain-English explainer alongside the prompt"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "conference-talk-prep-german-data-act",
+      "prompt": "Ich halte einen Vortrag bei der Datenschutzkonferenz im Herbst 2026 zum Stichtag-Regime des Data Act (Verordnung (EU) 2023/2854) und den Auswirkungen auf B2B-Datenteilung. Zielgruppe: Vertreter der deutschen Aufsichtsbehörden und Datenschutzbeauftragte. 30 Minuten plus Q&A. Bitte den Prompt für die Vortragsvorbereitung erstellen — ich brauche eine Gliederung, die wichtigsten Stichtage, drei zentrale Streitfragen, und drei Beispielsätze, die ich auf der Bühne sagen kann. Auf Deutsch.",
+      "expected_output": "Characterisation of the deliverable (conference talk prep, German audience, 30-min slot). All elicitation answers detected (outcome: conference prep; audience: DPA representatives + DPOs; language: DE; format: outline + key dates + 3 contested issues + 3 speakable lines). Tailored prompt with conference-talk role marker, speakable register, and the Data Act application/effective-date timeline. German register constraints applied.",
+      "assertions": [
+        "Identifies the deliverable as conference talk preparation (not a written memo)",
+        "Detects all elicitation answers in the prompt and skips elicitation",
+        "Identifies the Data Act by its CELEX (Regulation (EU) 2023/2854) and its key application dates",
+        "Generates a tailored expert prompt with the conference-talk output structure (outline, key dates, contested issues, speakable lines)",
+        "Applies the German speakable-register constraints (no marketing fillers; no banned phrases; sentences that read aloud cleanly)",
+        "Uses the correct German legal terminology for the Data Act (Datenverordnung; Dateninhaber; Datennutzer; B2B-Datenteilung; vernetzte Produkte)",
+        "Produces three concrete contested issues that a DPA audience would care about (e.g. interface with GDPR; trade secrets; Data Act enforcement architecture)",
+        "Produces three concrete speakable lines in German",
+        "Step 5 (Execute) is skipped because the user only asked for the prompt",
+        "Produces a plain-English explainer alongside the prompt"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "routing-test-dpa-contract-routing-only",
+      "prompt": "We have a draft Data Processing Agreement under Art. 28 GDPR sent to us by a SaaS provider. I want a structured legal analysis of the DPA — does it meet Art. 28(3)(a)–(h), what are the risks for us as controller, and how should we respond? 25 pages, German. Output in English. Memo-style.",
+      "expected_output": "Characterisation distinguishes this as a contract review (operational compliance task) rather than legal analysis of a regulatory instrument. The skill routes the user to the dpa-art28 sibling skill rather than absorbing the task. Routing is delivered cleanly, with rationale grounded in the SKILL.md integration rule. The skill does not attempt to do the dpa-art28 work itself. Companion eval-10 covers the explicit-override case where the user accepts the routing but asks for strategic-level analysis from the forge anyway.",
+      "assertions": [
+        "Recognises that the document (Art. 28 DPA contract) is a contractual instrument, not an interpretive legal instrument from the EU digital regulation stack",
+        "Recognises that the user's request (does the DPA meet Art. 28(3)(a)-(h), risk assessment, response strategy) is operational compliance, not interpretive analysis",
+        "Routes the user to the dpa-art28 sibling skill explicitly (named by exact slug)",
+        "Explains why the routing suggestion is being made (the integration rule in SKILL.md: route to operational compliance skills rather than absorbing the task; out-of-scope per the document taxonomy)",
+        "Notes the bilingual handling implication: DE source contract, EN output memo — the routing target dpa-art28 handles bilingual contract review natively",
+        "Does not attempt to do a clause-by-clause redline or a Art. 28(3)(a)-(h) coverage assessment (that is dpa-art28's job)"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "skill-input-on-ai-act-art99-penalty-regime",
+      "prompt": "I'm building a new skill that helps users assess potential exposure under the AI Act's penalty regime (Art. 99). I want the legal-analysis-forge to produce structured input on Art. 99 that my new skill can consume: the three-tier penalty structure, the calculation mechanics, the procedural safeguards, the interaction with national supervisory authority enforcement powers, and the relationship with Art. 101 (penalties for providers of general-purpose AI models). Output: a structured analysis suitable as reference material in another skill. ~1500 words. English. Please prepare the prompt and execute it.",
+      "expected_output": "Characterisation of the deliverable (skill input — reference material for downstream skill consumption). Tailored prompt with skill-input role marker, structured-output format (no rhetorical prose, dense and citation-anchored), and explicit fields the downstream skill needs (penalty tiers, calculation, procedural safeguards, SA interaction, Art. 101 relationship). Executed in-session. Plain-English explainer alongside.",
+      "assertions": [
+        "Identifies the deliverable as skill input (reference material consumed by another skill), not a memo or commentary",
+        "Generates a tailored expert prompt with the skill-input output structure (structured fields, citation-anchored, no rhetorical prose)",
+        "Identifies Art. 99 AI Act and its three-tier penalty structure (prohibited practices; high-risk obligations; supply of incorrect information) with the exact percentage and absolute-amount caps",
+        "Identifies the calculation mechanics (whichever is higher; turnover-based; SME and start-up considerations under Art. 99(6))",
+        "Identifies the procedural safeguards (right to be heard; reasoned decision; judicial review)",
+        "Identifies the interaction with national supervisory authority enforcement (Member State designation; cross-border cooperation)",
+        "Identifies the relationship with Art. 101 AI Act (penalties for providers of general-purpose AI models) including the different cap structure",
+        "Executes the prompt in-session and produces structured analysis of approximately 1500 words",
+        "Produces a plain-English explainer of 150-300 words alongside (note: even when the deliverable is downstream skill input, the human-using-the-skill needs the explainer)",
+        "Cites the AI Act application dates and any Omnibus-postponed dates relevant to enforcement"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "name": "routing-test-dpa-contract-explicit-override",
+      "prompt": "We have a draft Data Processing Agreement under Art. 28 GDPR sent to us by a SaaS provider. I know dpa-art28 exists and we will use it for the clause-by-clause redline separately. What I want from YOU is the strategic-level interpretive analysis: what are the load-bearing legal questions a controller should be asking about this kind of arrangement under Art. 28 GDPR, what are the current EDPB and CJEU developments that shape how Art. 28 is being interpreted in 2026, and what are the cross-instrument frictions (with the AI Act where the processor is also a deployer; with the DSA where the SaaS provider is a hosting service). 25 pages, German contract. Output in English. Memo-style, ~2000 words. Please prepare the prompt and execute it.",
+      "expected_output": "User has explicitly acknowledged the dpa-art28 routing and is asking for a different task — strategic-level interpretive analysis of Art. 28 GDPR as a regulatory provision, not contract review. The forge proceeds with the strategic-level analysis, citing EDPB Guidelines 07/2020 and relevant CJEU cases (Bundesverband C-319/20; cross-instrument friction with AI Act Art. 26 deployer duties and DSA hosting-service obligations). Produces an executed analysis (~2000 words) plus plain-English explainer (150-300 words, hard upper bound). Plain-English explainer is included because Step 5 ran.",
+      "assertions": [
+        "Recognises the explicit user override: the user knows dpa-art28 exists and has scoped a different task (strategic-level analysis, not contract review)",
+        "Does NOT re-route to dpa-art28 — proceeds with the strategic-level analysis the user requested",
+        "Characterises the deliverable as interpretive analysis of Art. 28 GDPR as a regulatory provision (not as a contract review)",
+        "Generates a tailored expert prompt with the strategic-analysis output structure (load-bearing legal questions, EDPB/CJEU developments, cross-instrument frictions)",
+        "Cites EDPB Guidelines 07/2020 on controller-processor concepts and at least one CJEU case shaping Art. 28 interpretation (e.g. C-319/20 Bundesverband or C-272/19 Land Hessen) — flagged for live verification per the anti-hallucination protocol",
+        "Identifies the cross-instrument friction with AI Act Art. 26 (deployer obligations) and DSA (where the SaaS provider is a hosting service or intermediary)",
+        "Executes the prompt in-session and produces a strategic-level analysis of approximately 2000 words",
+        "Produces a plain-English explainer of 150-300 words (hard upper bound) alongside the executed analysis",
+        "Notes the bilingual handling: DE source contract, EN output memo",
+        "Does not attempt a clause-by-clause redline (that remains dpa-art28's job; the user has already said they will use that skill separately)"
+      ],
+      "files": []
+    }
+  ]
+}
