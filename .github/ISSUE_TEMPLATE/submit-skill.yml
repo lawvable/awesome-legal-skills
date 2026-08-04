@@ -1,5 +1,5 @@
 name: 🚀 Submit New Skill
-description: Submit a new skill to be featured in the curated list of Lawvable
+description: Submit a new skill to be featured in the curated list of Lawve AI
 title: "[Skill]: "
 labels: ["skill-submission", "pending-validation"]
 
@@ -152,4 +152,4 @@ body:
         1. **Review**: A maintainer will review your submission as soon as possible
         2. **Result**: If approved, your skill will be added to the curated list. Either way, we'll let you know the outcome in the comments of this issue.
 
-        Thank you for contributing to Lawvable! 🎉
+        Thank you for contributing to Lawve AI! 🎉

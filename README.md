@@ -1,61 +1,54 @@
 <picture>
-  <a href="https://lawvable.com/en"><img src="assets/hero-animated.svg" alt="AI Agent Skills for Legal Professionals" width="100%"></a>
+  <a href="https://lawve.ai"><img src="assets/lawve-logo.png" alt="AI Agent Skills for Legal Professionals" width="100%"></a>
 </picture>
 
 <p align="center">
-  <a target="_blank" href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-  <a href="#contributing"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
-  <a href="#license"><img src="https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey.svg" alt="License" /></a>
-  <a href="#browse"><img src="https://img.shields.io/badge/Skills-238-yellow.svg" alt="License" /></a>
+  <a href="#table-of-contents"><img src="https://img.shields.io/badge/Skills-238-yellow.svg" alt="Browse" /></a>
+  <a href="#contributing"><img src="https://img.shields.io/badge/Contributions-welcome-brightgreen.svg" alt="Contributions welcome" /></a>
+  <a href="#license"><img src="https://img.shields.io/badge/Access-Open--source-lightgrey.svg" alt="Access" /></a>
 </p>
 <p align="center">
-  <a target="_blank" href="https://www.linkedin.com/company/lawvable/"><img src="https://img.shields.io/badge/Follow on LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Follow on LinkedIn" /></a>
+  <a target="_blank" href="https://www.linkedin.com/company/lawve-ai/"><img src="https://img.shields.io/badge/Follow on LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Follow on LinkedIn" /></a>
 </p>
 
-## What are Agent Skills?
-
-Agent Skills are portable instructions that teach AI agents how to perform specific tasks your way. For legal professionals, this means encoding your expertise into reusable AI workflows. Draft GDPR-compliant privacy policies. Review NDAs using your firm's methodology. Create due diligence checklists that match your standards.
-
-<img src="assets/demo-vscode-tabular-review.gif" alt="Demo" width="100%" />
-
-## Get Started
+*A curated collection of the finest open-source agent skills for legal work, bringing together contributions from practicing lawyers, in-house counsel, academics, and legal technologists. Built on portable, open standards rather than proprietary agent formats, it aims to make AI accessible and practical for legal professionals.*
 
 > [!IMPORTANT]
-> **Write once, use anywhere** — Skills are an open standard for AI agents, with adoption growing across the industry. Use them with your favorite AI tool.
-
-<div align="center">
-  <br>
-  <p>
-    <a target="_blank" href="https://claude.com/product/overview"><img src="assets/claude-web.svg" alt="Claude.ai" height="40"></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="https://claude.com/product/cowork"><img src="assets/claude-cowork.svg" alt="Claude Cowork" height="40"></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="https://claude.com/product/claude-code"><img src="assets/claude-code.svg" alt="Claude Code" height="40"></a>
-  </p>
-  <br>
-  <p>
-    <a target="_blank" href="https://openai.com/codex/"><img src="assets/openai-codex.svg" alt="OpenAI Codex" height="40"></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://geminicli.com/"><img src="assets/gemini-cli.svg" alt="Gemini CLI" height="40"></a>
-  </p>
-  <br>
-  <p>
-    <a target="_blank" href="https://manus.im/features/agent-skills"><img src="assets/manus.svg" alt="Manus" height="40"></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a target="_blank" href="https://mistral.ai/products/vibe"><img src="assets/mistral-vibe.svg" alt="Mistral Vibe" height="40"></a>
-  </p>
-</div>
+> **What are Agent Skills?** — Skills are organized collections of files that package composable procedural knowledge for AI agents. For legal professionals, this means encoding your expertise into reusable AI workflows: draft GDPR-compliant privacy policies, review NDAs using your firm's methodology, create due diligence checklists that match your standards, etc.
 
 <!-- LAWVE_SYNC_START -->
-## Browse
+# Table of Contents
 
-Browse 238 skills by category. Each entry links to the skill folder.
+- [Adobe Acrobat](#adobe-acrobat)
+- [Banking Finance](#banking-finance)
+- [Commercial Law](#commercial-law)
+- [Compliance](#compliance)
+- [Corporate Law](#corporate-law)
+- [Data Protection](#data-protection)
+- [Employment Law](#employment-law)
+- [Environmental Law](#environmental-law)
+- [Health Law](#health-law)
+- [Human Rights](#human-rights)
+- [Intellectual Property](#intellectual-property)
+- [International Law](#international-law)
+- [Legal Drafting](#legal-drafting)
+- [Legal Education](#legal-education)
+- [Legal Operations](#legal-operations)
+- [Legal Research](#legal-research)
+- [Litigation](#litigation)
+- [Media Entertainment Sports](#media-entertainment-sports)
+- [Microsoft Office](#microsoft-office)
+- [Public Law](#public-law)
+- [Skill Authoring](#skill-authoring)
+- [Technology Law](#technology-law)
+- [Transport Maritime](#transport-maritime)
+- [Vibe Coding](#vibe-coding)
 
-### Adobe Acrobat
+## Adobe Acrobat
 
 - 🇬🇧 [pdf-editor-openai](<skills/pdf-editor-openai>) - Toolkit for comprehensive PDF reading and creation with visual quality control. Use to work with PDFs (.pdf files) for: (1) Reading or extracting content from existing PDFs, (2) Creating new PDF documents with professional formatting, (3...
 
-### Banking Finance
+## Banking Finance
 
 - 🇬🇧 [agent-authority-charter-builder-arkadiy-miteiko](<skills/agent-authority-charter-builder-arkadiy-miteiko>) - Creates an Agent Authority Charter for enterprise or regulated AI agents before deployment. Use this Skill when a user needs to define what an AI agent is allowed to do, who delegated authority to it, what actions are permitted or prohib...
 - 🇬🇧 [dora-tanaji-hemant-naik](<skills/dora-tanaji-hemant-naik>) - Expert DORA (Regulation (EU) 2022/2554 — Digital Operational Resilience Act) compliance advisor for EU financial entities. Use this skill whenever a user asks about DORA compliance, ICT risk management frameworks, ICT incident classifica...
@@ -65,7 +58,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [runtime-admissibility-review-arkadiy-miteiko](<skills/runtime-admissibility-review-arkadiy-miteiko>) - Determines whether a specific AI-agent action, output, recommendation, or proposed commitment remains admissible for execution or institutional reliance under current authority, delegated scope, evidence, facts, policy, risk, escalation,...
 - 🇬🇧 [swift-csp-tanaji-hemant-naik](<skills/swift-csp-tanaji-hemant-naik>) - Expert SWIFT Customer Security Programme (CSP) advisor covering the Customer Security Controls Framework (CSCF v2026). Use this skill whenever a user asks about SWIFT CSP, CSCF controls, SWIFT security attestation, KYC-SA portal, SWIFT a...
 
-### Commercial Law
+## Commercial Law
 
 - 🇬🇧 [arbitration-clause-design-and-review-hafez-virjee](<skills/arbitration-clause-design-and-review-hafez-virjee>) - Draft, review and stress-test arbitration clauses in commercial contracts, with guidance on seat, institution, rules, confidentiality, governing law and commercial fit. In more detail, this workflow helps users identify drafting issues,...
 - 🇬🇧 [climate-aligned-contracts-tclp](<skills/climate-aligned-contracts-tclp>) - Draft, adapt, and review contracts and clauses aligned with The Chancery Lane Project's methodology for reducing carbon emissions through legal agreements. Use when Claude needs to: (1) Draft new climate-aligned clauses (e.g., net zero c...
@@ -80,7 +73,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [tech-contract-review-parth-desai](<skills/tech-contract-review-parth-desai>) - Jurisdiction-aware review of technology and commercial contracts — MSA, DPA, SOW, LOE, NDA, SLA, EULA, IP assignment, vendor/supplier, and API/platform ToS. Classifies every clause (acceptable / negotiate / red-flag / missing), proposes...
 - 🇬🇧 [yc-saas-drafter-victor-wang](<skills/yc-saas-drafter-victor-wang>) - Drafts a customized SaaS Customer Agreement starting from the Y Combinator standard form SaaS template. Runs a structured intake covering fee structure, data handling, ML/AI rights, implementation services, SLA, and governing law, then a...
 
-### Compliance
+## Compliance
 
 - 🇬🇧 [ai-audit-trail-larissa-meredith-flister](<skills/ai-audit-trail-larissa-meredith-flister>) - This skill builds a structured audit trail of an AI-assisted task: what the tool was asked to do, what materials it was given, what it produced, how the output was verified, and what was ultimately relied upon. It documents the workflow...
 - 🇬🇧 [ai-governance-reviewer-carl-ditzler](<skills/ai-governance-reviewer-carl-ditzler>) - Conduct AI governance, legal-risk, privacy, compliance, procurement, or vendor-risk reviews of internal AI use cases, AI product features, LLM workflows, or third-party AI vendors. The skill runs a structured intake process, identifies r...
@@ -128,14 +121,14 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [vendor-due-diligence-patrick-munro](<skills/vendor-due-diligence-patrick-munro>) - Framework for assessing IT service providers, technology vendors, and third-party partners. Creates structured risk assessments across financial, operational, compliance, security, and reputational dimensions with regulatory checklists (...
 - 🇬🇧 [whistleblower-policy-advisor-malik-taiar](<skills/whistleblower-policy-advisor-malik-taiar>) - Guide for (a) auditing an existing whistleblower system or (b) drafting a compliant reporting policy from a provided template. Covers EU Directive 2019/1937, the amended Sapin II law (Waserman 2022), Decree 2022-1284, CNIL guidelines, pu...
 
-### Corporate Law
+## Corporate Law
 
 - 🇫🇷 [assignation-refere-communication-associe-selim-brihi](<skills/assignation-refere-communication-associe-selim-brihi>) - Rédaction d'assignations en référé pour obtenir la communication forcée de documents sociaux à un associé sur le fondement de l'article L. 238-1 du code de commerce. À utiliser quand un associé se voit refuser l'accès aux comptes annuels...
 - 🇫🇷 [gouvernance-societes-cotees-gillan-saleh](<skills/gouvernance-societes-cotees-gillan-saleh>) - Skill open source d'analyse documentaire à vocation scientifique sur la gouvernance des sociétés cotées françaises (SBF 120). Il agrège, sous forme d'index sourcés à la page près, le corpus réglementaire et doctrinal 2020-2025 — rapports...
 - 🇬🇧 [icelandic-company-formation-magnus-smarason](<skills/icelandic-company-formation-magnus-smarason>) - Use this skill when asked about forming, registering, or structuring a company in Iceland. Triggers on questions about Icelandic business entities (ehf, hf, sf, svf, ses), capital requirements, registration with Fyrirtækjaskrá, governanc...
 - 🇬🇧 [indian-foreign-investment-approval-assessment-siddhi-kudalkar](<skills/indian-foreign-investment-approval-assessment-siddhi-kudalkar>) - Assess whether Government of India approval is required for foreign investment in an Indian company under Foreign Exchange Management Act, 1999 and the Non-Debt Instruments Rules, 2019. The skill systematically gathers transaction detail...
 
-### Data Protection
+## Data Protection
 
 - 🇫🇷 [analyse-rgpd-de-dpa-fournisseur-hugo-salard](<skills/analyse-rgpd-de-dpa-fournisseur-hugo-salard>) - Analyse systématique d'un Data Processing Agreement (DPA) au regard de l'article 28 RGPD, des lignes directrices EDPB 07/2020 et 02/2024, des Clauses Contractuelles Types 2021 et du Règlement (UE) 2024/1689. Produit un rapport structuré...
 - 🇫🇷 [audit-conformite-rgpd-site-internet-hugo-salard](<skills/audit-conformite-rgpd-site-internet-hugo-salard>) - Audit de conformité RGPD d'un site internet par un praticien RGPD/DPO. Observation systématique selon une checklist en 10 sections (mentions légales, hébergeur, formulaires, newsletter, politique de confidentialité, cookies, mots de pass...
@@ -159,22 +152,22 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [transfer-impact-assessment-tia-oliver-schmidt-prietz](<skills/transfer-impact-assessment-tia-oliver-schmidt-prietz>) - GDPR Transfer Impact Assessment for Chapter V transfers under the EDPB Recommendations 01/2020 six-step methodology, the CNIL TIA Guide (January 2025), and EDPB essential guarantees. Handles transfer qualification, Art. 45 adequacy fast-...
 - 🇬🇧 [vn-pdpl-tanaji-hemant-naik](<skills/vn-pdpl-tanaji-hemant-naik>) - Expert Vietnam Personal Data Protection Law (PDPL) compliance advisor for Law No. 91/2025/QH15 and implementing Decree 356/2025/ND-CP (effective January 1, 2026). Use this skill for gap analysis against the Vietnam PDPL, data subject rig...
 
-### Employment Law
+## Employment Law
 
 - 🇬🇧 [icelandic-labour-law-magnus-smarason](<skills/icelandic-labour-law-magnus-smarason>) - Use this skill when asked about Icelandic employment law, labour relations, workplace rights, or collective agreements. Triggers on questions about hiring, termination, working conditions, parental leave, trade unions, collective bargain...
 - 🇫🇷 [notification-licenciement-selim-brihi](<skills/notification-licenciement-selim-brihi>) - Guide pour la rédaction de notifications de licenciement conformes au droit du travail français. Utiliser ce skill quand l'utilisateur demande de rédiger, préparer, créer ou éditer une lettre de notification de licenciement, notamment po...
 - 🇬🇧 [settlement-agreement-review-andrew-bird](<skills/settlement-agreement-review-andrew-bird>) - Reviews or drafts the agreement that pays an employee to settle their claims — and flags the statutory conditions that decide whether it actually binds them. Works under s.203 ERA 1996 for England & Wales. Flags apparent s.203 condition...
 - 🇬🇧 [unfair-dismissal-screener-andrew-bird](<skills/unfair-dismissal-screener-andrew-bird>) - Screens a dismissal — proposed or already done — against the unfair dismissal framework for England & Wales, and shows where it is exposed. Structures the qualifying-service question, the automatically-unfair categories (no qualifying pe...
 
-### Environmental Law
+## Environmental Law
 
 - 🇬🇧 [csrd-tanaji-hemant-naik](<skills/csrd-tanaji-hemant-naik>) - Expert CSRD (Corporate Sustainability Reporting Directive, EU 2022/2464) compliance advisor. Use this skill whenever a user asks about CSRD, European Sustainability Reporting Standards (ESRS), double materiality assessment, sustainabilit...
 
-### Health Law
+## Health Law
 
 - 🇬🇧 [hipaa-compliance-tanaji-hemant-naik](<skills/hipaa-compliance-tanaji-hemant-naik>) - Expert HIPAA compliance assistant for healthcare and software contexts. Use this skill whenever the user mentions HIPAA, PHI (Protected Health Information), ePHI, covered entities, business associates, healthcare data privacy, medical re...
 
-### Human Rights
+## Human Rights
 
 - 🇫🇷 [central-african-special-criminal-court-jeanne-sulzer](<skills/central-african-special-criminal-court-jeanne-sulzer>) - “Verification-first” methodology for the Special Criminal Court of the Central African Republic, a hybrid court seated in Bangui. Every citation is verified against JusticeInfo, FIDH, HRW, and legal-tools.org; the official sites often re...
 - 🇬🇧 [court-of-bih-war-crimes-chamber-jeanne-sulzer](<skills/court-of-bih-war-crimes-chamber-jeanne-sulzer>) - Verification-first methodology for Section I (War Crimes) of the Court of Bosnia and Herzegovina. Citations are verified against the Court of BiH, the ICTY/IRMCT archives and OSCE. Distinguishes ICTY-referred (Rule 11 bis) cases from loc...
@@ -191,17 +184,17 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [unmik-regulation-64-panels-jeanne-sulzer](<skills/unmik-regulation-64-panels-jeanne-sulzer>) - Verification-first methodology for the UNMIK Regulation 64 Panels of the Kosovo district courts (2000–2008). Citations are verified against UNMIK/EULEX archives and legal-tools.org. Keeps the Reg. 64 Panels distinct from the Kosovo Speci...
 - 🇬🇧 [wcag-tanaji-hemant-naik](<skills/wcag-tanaji-hemant-naik>) - Expert WCAG (Web Content Accessibility Guidelines) advisor covering WCAG 2.0, 2.1, and 2.2 — the W3C international accessibility standards. Use this skill whenever a user asks about WCAG success criteria, conformance levels (A/AA/AAA), a...
 
-### Intellectual Property
+## Intellectual Property
 
 - 🇬🇧 [originality-in-european-copyright-joris-deene](<skills/originality-in-european-copyright-joris-deene>) - Determines whether a given subject matter qualifies for copyright protection under EU law by applying the Cofemel two-step test (concept of work + originality), grounded in fifteen CJEU judgments (including the most recent Mio/Konektra a...
 - 🇬🇧 [trademark-search-robb-miller](<skills/trademark-search-robb-miller>) - Run an attorney-facing knockout/availability trademark search across the United States and Canada. Use whenever a user (founder, client, or attorney) asks whether a brand, mark, name, logo, slogan, or product name is "available," "free t...
 
-### International Law
+## International Law
 
 - 🇬🇧 [customs-trade-law-onur-kafkas](<skills/customs-trade-law-onur-kafkas>) - U.S. customs and trade-law research assistant for HTS classification, CROSS ruling research, CIT/CAFC decision briefing, duty compilation (General + Special + Chapter 99 + AD/CVD + MPF/HMF), country of origin determination, FTA qualifica...
 - 🇬🇧 [icelandic-eea-gap-analysis-magnus-smarason](<skills/icelandic-eea-gap-analysis-magnus-smarason>) - Use this skill when asked to analyze how Iceland has implemented an EU directive or regulation into national law, identify gaps between EU/EEA law and Icelandic implementation, or assess Iceland's compliance with EEA obligations. Trigger...
 
-### Legal Drafting
+## Legal Drafting
 
 - 🇬🇧 [canned-response-generator-anthropic](<skills/canned-response-generator-anthropic>) - Generate templated responses for common legal inquiries and identify when situations require individualized attention. Use when responding to routine legal questions — data subject requests, vendor inquiries, NDA requests, discovery hold...
 - 🇬🇧 [client-explanation-translator-larissa-meredith-flister](<skills/client-explanation-translator-larissa-meredith-flister>) - Turn complex legal analysis into clear, commercially useful client-facing advice. Use this whenever the user has dense legal material — drafting, internal analysis, counsel notes, research memos, pleadings, a case update, or corresponden...
@@ -219,7 +212,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [source-locked-verification-larissa-meredith-flister](<skills/source-locked-verification-larissa-meredith-flister>) - Forces Claude to answer only from user-provided materials and online sources it has actually accessed. No inference, no assumptions, no gap-filling. Every factual, legal, numerical, or procedural claim must be anchored to a cited source,...
 - 🇬🇧 [tabular-review-antoine-louis](<skills/tabular-review-antoine-louis>) - Guide to analyze multiple documents (PDF, DOCX) against user-defined columns and produce a structured Excel output with citations. Use when the user wants to: (1) Extract specific information from multiple documents into a table, (2) Com...
 
-### Legal Education
+## Legal Education
 
 - 🇬🇧 [case-briefer-seth-chandler](<skills/case-briefer-seth-chandler>) - Produces detailed law-school case briefs of United States judicial opinions in a fixed nine-section structure: memory jogger, facts, procedural history, judicial votes, holding, opinion-by-opinion analysis, five future-application hypoth...
 - 🇬🇧 [legal-ai-simulator-patrick-munro](<skills/legal-ai-simulator-patrick-munro>) - Framework for demonstrating AI capabilities in legal contexts. Provides detailed personas across tenant law, business contracts, startup disputes, employment claims, and consumer protection with progressive complexity scenarios. Use when...
@@ -229,7 +222,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇫🇷 [relecteur-christophe-quezel-ambrunaz](<skills/relecteur-christophe-quezel-ambrunaz>) - Optimise Claude pour la relecture des textes en français, qu'ils soient littéraires, techniques, professionnels... Vérification de la grammaire, de l'orthographe, traque des barbarismes, suggestions de modifications stylistiques.
 - 🇫🇷 [sujet-crfpa-allison-fiorentino](<skills/sujet-crfpa-allison-fiorentino>) - Ce skill génère des sujets d'entraînement pour les deux épreuves écrites de consultation du CRFPA : l'épreuve de droit des obligations (tronc commun) et l'épreuve de spécialité (civil, affaires, social, pénal, administratif, internationa...
 
-### Legal Operations
+## Legal Operations
 
 - 🇬🇧 [agentic-delegation-audit-adrian-lerer](<skills/agentic-delegation-audit-adrian-lerer>) - Use when a lawyer, legal team, or client needs to assess AI agents that can act on someone's behalf: send messages, search, draft, file, pay, delete, connect to accounts, use tools, or rely on external data. Produces a practical delegati...
 - 🇬🇧 [ambiguity-report-seth-chandler](<skills/ambiguity-report-seth-chandler>) - Turn an interpretive-ambiguity audit of a legal text — contract, statute, regulation, or judicial opinion — into a polished deliverable. Produces a multi-page website (default), a single-page site, a self-contained single-file HTML page,...
@@ -266,7 +259,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [status-report-drafter-scott-margetts](<skills/status-report-drafter-scott-margetts>) - Draft matter status reports from emails, call notes, and updates. Internal and client-facing formats, RAG logic, variance commentary, escalation flags. Use when asked to draft a status report, write a project update, summarise matter pro...
 - 🇬🇧 [timeline-generator-scott-margetts](<skills/timeline-generator-scott-margetts>) - Build dependency network and critical path from a matter plan. Produce an interactive Gantt, flag near-critical tasks, and run what-if cascade scenarios when delays occur — showing programme impact and drafting communications. Produces f...
 
-### Legal Research
+## Legal Research
 
 - 🇫🇷 [assistant-juridique-christophe-quezel-ambrunaz](<skills/assistant-juridique-christophe-quezel-ambrunaz>) - Assistant juridique expert couvrant le droit français, européen (UE et CEDH) et étranger via LegalDataHunter, pour professionnels et chercheurs. Couvre dix tâches : cadrage, recherche juridique, consultation, rédaction d'actes, analyse d...
 - 🇬🇧 [employment-law-research-yue-deng-wu](<skills/employment-law-research-yue-deng-wu>) - This Skill creates a research brief for an area of US employment law. The brief can address a specific question or be a multi-state survey. It'll include citations to primary sources (e.g. statutes, rule, government guidance), and reputa...
@@ -290,7 +283,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [statute-analyzer-rafal-fryc](<skills/statute-analyzer-rafal-fryc>) - Guide for reading, interpreting, and applying statutes, regulations, and rules in legal and compliance contexts. Use when the user asks about (1) how to read and interpret statutes, regulations, or rules, (2) statutory interpretation met...
 - 🇬🇧 [swiss-legal-source-and-authority-triage-enrique-g-zbinden](<skills/swiss-legal-source-and-authority-triage-enrique-g-zbinden>) - Swiss legal source and authority triage. Use when a user asks a Swiss legal, regulatory, compliance, contract, employment, corporate, litigation, IP, tax, privacy, public-law, fintech, register, or cantonal-law question; when Swiss law m...
 
-### Litigation
+## Litigation
 
 - 🇬🇧 [ambiguity-stress-test-seth-chandler](<skills/ambiguity-stress-test-seth-chandler>) - Adversarially stress-tests a legal text — a contract, statute, regulation, or judicial opinion — for interpretive ambiguity: it finds the seams where the people governed by it will later disagree about what it means and turns each into a...
 - 🇫🇷 [assignation-refere-recouvrement-creance-selim-brihi](<skills/assignation-refere-recouvrement-creance-selim-brihi>) - Rédaction d'assignations en référé devant le tribunal de commerce ou des activités économiques pour le recouvrement de créances commerciales. Utiliser ce skill quand l'utilisateur demande de rédiger, préparer ou créer une assignation en...
@@ -311,11 +304,11 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [sustainable-opposing-counsel-review-seth-chandler](<skills/sustainable-opposing-counsel-review-seth-chandler>) - Produces an adversarial attack on a legal argument that survives reply. Runs the opposing-counsel discipline twice: an unrestrained first pass, then the same instrument turned on that pass to cut every point that collapses under challeng...
 - 🇬🇧 [without-prejudice-drafter-andrew-bird](<skills/without-prejudice-drafter-andrew-bird>) - Writes a settlement letter on the right footing — and warns you when marking it 'without prejudice' won't actually keep it out of court. A genuine settlement letter is normally protected (the judge can't see it), but only if the substanc...
 
-### Media Entertainment Sports
+## Media Entertainment Sports
 
 - 🇬🇧 [nil-contract-reviewer-samir-patel](<skills/nil-contract-reviewer-samir-patel>) - NIL (Name, Image, and Likeness) contract analysis for NCAA student-athletes from the athlete's perspective. Use when user says 'review this NIL contract', 'analyze this NIL deal', 'check this athlete agreement', 'review my NIL agreement'...
 
-### Microsoft Office
+## Microsoft Office
 
 - 🇬🇧 [excel-editor-openai](<skills/excel-editor-openai>) - Toolkit for comprehensive Spreadsheet reading, creation, editing, and analysis with visual quality control. Use to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv) for: (1) Creating new spreadsheets with formulas and formatting, (2) Rea...
 - 🇫🇷 [normalisation-juridique-christophe-quezel-ambrunaz](<skills/normalisation-juridique-christophe-quezel-ambrunaz>) - La compétence Normalisation juridique FR nettoie un document Word rédigé en français juridique. Elle distingue deux régimes : les corrections déterministes (apostrophes courbes, guillemets français, espaces insécables, insécables des réf...
@@ -324,7 +317,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [word-editor-openai](<skills/word-editor-openai>) - Toolkit for comprehensive document reading and creation with visual quality control. Use to work with Word documents (.docx files) for: (1) Reading or extracting content from existing DOCX files, (2) Creating new Word documents with prof...
 - 🇬🇧 [word-editor-superdoc](<skills/word-editor-superdoc>) - Searches, replaces, and reads text in Word documents from the command line. Use when the user asks to edit, search, or extract text from .docx files.
 
-### Public Law
+## Public Law
 
 - 🇬🇧 [fedramp-tanaji-hemant-naik](<skills/fedramp-tanaji-hemant-naik>) - Expert guidance for FedRAMP certification and compliance under CR26 (FedRAMP Consolidated Rules for 2026). Use this skill whenever a user asks about FedRAMP authorization, ATO (Authority to Operate), cloud security for federal government...
 - 🇬🇧 [ism-tanaji-hemant-naik](<skills/ism-tanaji-hemant-naik>) - Expert Australian Information Security Manual (ISM) advisor for government entities and their supply chains. Use for ISM control selection, gap analysis, system authorisation, IRAP assessment preparation, security documentation, and ASD...
@@ -332,7 +325,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [nzism-tanaji-hemant-naik](<skills/nzism-tanaji-hemant-naik>) - Expert New Zealand Information Security Manual (NZISM) advisor for NZ government agencies and their supply chains. Use for NZISM control guidance, gap analysis, agency security obligations, classification framework (Unclassified through...
 - 🇬🇧 [section-508-tanaji-hemant-naik](<skills/section-508-tanaji-hemant-naik>) - Expert Section 508 compliance advisor for US federal ICT accessibility. Use this skill whenever a user asks about Section 508, WCAG 2.0/2.1 AA for federal systems, VPAT or Accessibility Conformance Reports (ACR), accessibility audits, re...
 
-### Skill Authoring
+## Skill Authoring
 
 - 🇬🇧 [law-expertise-to-skill-adrian-lerer](<skills/law-expertise-to-skill-adrian-lerer>) - Turn a lawyer's bounded expertise, workflow, review standard, or legal judgment pattern into a safe, inspectable legal AI skill. Use when a user provides legal memos, comments, checklists, negotiation notes, review habits, compliance pla...
 - 🇬🇧 [skill-creation-openai](<skills/skill-creation-openai>) - Guide for creating effective skills. Use when users want to create a new skill (or update an existing skill) that extends the model's capabilities with specialized knowledge, workflows, or tool integrations.
@@ -340,7 +333,7 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [skill-injection-defense-adrian-lerer](<skills/skill-injection-defense-adrian-lerer>) - Audits legal AI skills, prompts, workflows, MCP/tool instructions, and agent packages before they are trusted or installed. It detects prompt injection, hidden or hostile instructions, unsafe scripts, suspicious frontmatter, credential e...
 - 🇬🇧 [skill-security-auditor-lawve](<skills/skill-security-auditor-lawve>) - Audit an AI agent skill before installing it. Use proactively whenever the user is about to add, install, enable, or evaluate an unfamiliar skill — including phrases like "audit this skill", "is this skill safe", "scan skill before insta...
 
-### Technology Law
+## Technology Law
 
 - 🇬🇧 [az-eu-website-privacy-audit-mirza-chiragov](<skills/az-eu-website-privacy-audit-mirza-chiragov>) - Audits a website for compliance with Azerbaijan's Law on Personal Data No. 998-IIIQ and, where applicable, EU GDPR plus ePrivacy/cookie consent rules. Inventories the privacy documents present (privacy policy, cookie policy, cookie banne...
 - 🇬🇧 [cis-controls-tanaji-hemant-naik](<skills/cis-controls-tanaji-hemant-naik>) - Expert CIS Controls v8 (CIS Top 18) advisor — implementation group scoping (IG1/IG2/IG3), control gap assessments, safeguard-level guidance, asset inventory, software inventory, data protection, secure configuration, account management,...
@@ -352,29 +345,37 @@ Browse 238 skills by category. Each entry links to the skill folder.
 - 🇬🇧 [nist-ai-rmf-tanaji-hemant-naik](<skills/nist-ai-rmf-tanaji-hemant-naik>) - Expert NIST AI Risk Management Framework (AI RMF 1.0) advisor covering all four functions: GOVERN, MAP, MEASURE, MANAGE. Use this skill whenever a user asks about NIST AI RMF, AI risk management, AI trustworthiness, GOVERN function, MAP...
 - 🇬🇧 [nist-csf-tanaji-hemant-naik](<skills/nist-csf-tanaji-hemant-naik>) - Expert NIST Cybersecurity Framework (CSF) advisor covering CSF 2.0 and CSF 1.1. Use this skill whenever a user asks about NIST CSF, cybersecurity risk management, the six CSF functions (Govern, Identify, Protect, Detect, Respond, Recover...
 
-### Transport Maritime
+## Transport Maritime
 
 - 🇬🇧 [tsa-compliance-tanaji-hemant-naik](<skills/tsa-compliance-tanaji-hemant-naik>) - Expert TSA cybersecurity compliance advisor for critical infrastructure owners and operators. Use this skill whenever a user asks about TSA Security Directives for pipelines, freight railroads, passenger rail, public transit, or bus oper...
 
-### Vibe Coding
+## Vibe Coding
 
 - 🇬🇧 [code-security-review-openai](<skills/code-security-review-openai>) - Perform language and framework specific security best-practice reviews and suggest improvements. Covers Python, JavaScript/TypeScript, and Go. Use when the user requests security best practices guidance, a security review or report, or s...
 - 🇬🇧 [vs-code-extension-antoine-louis](<skills/vs-code-extension-antoine-louis>) - Build VS Code extensions from scratch or convert existing JS/React/Vue apps. Supports commands, webviews (React/Vue), custom editors, tree views, and AI agent integration via file-bridge IPC. Use when user wants to create a VS Code exten...
 
 <!-- LAWVE_SYNC_END -->
 
-## Contributing
+# Contributing
 
-Submit a skill with the [GitHub issue template](https://github.com/lawvable/awesome-legal-skills/issues/new?template=submit-skill.yml). See [CONTRIBUTING.md](CONTRIBUTING.md) for review criteria.
+It's easy! Visit <a target="_blank" href="https://lawve.ai/new/skill">lawve.ai/new/skill</a> and fill out the form. No Git knowledge required. 
 
-## License
+Once approved, submitted skills are automatically synced to this repository. Note that every skill goes through a manual review before it is added to the list. We assess whether it offers real, practical value to legal professionals and screen it for security concerns.
 
-This list is licensed under [Creative Commons CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Each skill may have its own license terms.
+# Support
 
-## Disclaimer
+Lawve AI is the first-ever open hub dedicated to AI agent skills for law and it's growing every day thanks to the incredible contributors sharing their work and the community showing its support. If you find this list useful, consider giving it a ⭐ (it helps others discover it too).
 
-These are third-party resources. Review each skill before using it with confidential, regulated, or professionally sensitive work.
+# License
 
-## Acknowledgments
+This list is licensed under the [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license. This means you are welcome to fork, clone, copy and redistribute the list, provided you include appropriate attribution; however you are not permitted to distribute any modified versions or use it for commercial purposes. This is to prevent unlawful appropriation of the work of the authors whose resources are listed here. 
 
-Thanks to every contributor sharing legal AI workflows with the community, and to the Anthropic team for the original Skills standard and examples.
+Please note that **all resources included in this list have their own license terms**. If you wish to incorporate those authors' works into your _own_ product, you need to do so according to the terms that _those authors_ have set out.
+
+# Disclaimer
+
+Although we take strong measures to uphold the quality and safety of this list, we take no responsibility or liability for anything bad that might happen as a result of these third-party resources. Make sure the skills you download are aligned with your firm's confidentiality policies and professional responsibility obligations.
+
+# Acknowledgments
+
+Huge thanks to every contributor who has shared their work here, you're the reason this list keeps growing. And to everyone who has starred, forked, or simply bookmarked this repo: your support means more than you think. Finally, a hat tip to the Anthropic team, who developed the Skills standard and published the examples that got us all started.
