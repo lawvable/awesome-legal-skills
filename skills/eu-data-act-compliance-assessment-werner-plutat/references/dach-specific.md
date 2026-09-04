@@ -1,351 +1,141 @@
-# DACH-Specific Considerations - Germany, Austria, Switzerland
+# DACH Verification Framework
 
-## Overview
+Use this reference after the EU-level assessment. Germany and Austria are EU Member States. Switzerland is not. Authority designations, procedures, and penalty rules can change, so verify them from current official sources for every engagement.
 
-The Data Act is an **EU Regulation** - directly applicable in all Member States without national transposition. However, **enforcement**, **designated authorities**, and **national implementation measures** vary.
+## Contents
 
-This reference covers Germany, Austria, and Switzerland (DACH region) specifics.
+1. Common DACH intake
+2. Germany
+3. Austria
+4. Switzerland
+5. Authority verification record
+6. National penalty verification
+7. Employment and works-council track
+8. Cross-border contracting
+9. Required output
 
-## Germany
+## 1. Common DACH Intake
 
-### Designated Authorities
+Record:
 
-**Market Surveillance Authority (Article 37-38):**
-- **Bundeskartellamt (Federal Cartel Office)** - expected lead authority for Data Act enforcement under the draft German approach
-  - Expertise in competition, market fairness, B2B contract regulation
-  - Already enforces Digital Markets Act (DMA) in Germany
-  - Likely competent for unfair contract terms (Chapter IV) and general data access obligations
+- each legal entity and establishment;
+- location of users and cloud customers;
+- Union market placement of each connected product;
+- contracting party and governing law;
+- data locations and transfer paths;
+- employee and works-council implications;
+- sector licenses, secrecy duties, and regulator;
+- current competent authority, complaint route, and national penalty source.
 
-**Sector-Specific Authorities:**
-- **BNetzA (Federal Network Agency - Bundesnetzagentur):**
-  - Telecommunications, energy, postal services
-  - May have concurrent jurisdiction for data processing services in regulated sectors
-  - Cloud switching and portability (Chapters VI-VII) for telecom/energy-adjacent services
-- **BfDI (Federal Commissioner for Data Protection - Bundesbeauftragter für den Datenschutz und die Informationsfreiheit):**
-  - GDPR-Data Act overlaps, especially personal data access rights and B2G requests involving personal data
-  - Not primary Data Act authority, but coordination role where GDPR applies
-- **Landesdatenschutzbehörden (State Data Protection Authorities):**
-  - GDPR enforcement at state level
-  - Relevant for B2G requests involving personal data at state/municipal level
+Do not use a group headquarters location as a substitute for role-by-role territorial analysis under Article 1(3).
 
-**Coordination:**
-- **Bundesregierung (Federal Government)** may issue implementing ordinances (Rechtsverordnungen) to clarify competences, penalties, or sector-specific rules
+## 2. Germany
 
-### Enforcement and Penalties
+The Data Act is directly applicable. Separately verify current German rules and designations for:
 
-**Legal basis for penalties:**
-- **Article 40 Data Act** requires Member States to establish effective, proportionate, and dissuasive penalties
-- Germany is expected to implement this through a **Datendurchführungsgesetz (DADG)** or equivalent national implementing framework
+- Article 37 competent authorities and data coordinator;
+- Article 40 penalty rules and procedure;
+- data-protection authority competence for personal-data processing;
+- civil-law and standard-term controls, including BGB rules where applicable;
+- trade-secret protection under the GeschGehG;
+- works-council participation under the BetrVG where implementation affects employee monitoring, work methods, or technical systems;
+- sector law, professional secrecy, critical-infrastructure, public-procurement, and security obligations.
 
-**Germany's draft DADG approach:**
-- **Administrative fines** up to **€5 million** for standard infringements
-- Up to **2% of worldwide annual turnover** for entities designated as **DMA gatekeepers** in the relevant cases
-- **Warning, cease-and-desist orders, corrective measures, and injunctions** for less severe or ongoing violations
-- **Private enforcement:** Affected parties (users, data recipients, competitors) can bring claims in civil courts
+Use official federal legislation, the Commission's Article 37/40 registers, and official authority pages. A draft German implementation act is not enacted law. State legislative status and verification date.
 
-**Critical correction:**
-- The Data Act itself does **not** set an EU-wide 4% turnover cap
-- Any turnover-based maximum comes from **national law**, not directly from the Regulation
+## 3. Austria
 
-**Criminal liability:**
-- Unlikely for Data Act violations per se (administrative offense, not criminal)
-- **Trade secret misuse** (if data holder or recipient violates confidentiality) may trigger criminal liability under **Geschäftsgeheimnisgesetz (GeschGehG)** - German Trade Secrets Act
+The Data Act is directly applicable. Separately verify:
 
-### Unfair Contract Terms - National Law Overlay
+- Article 37 competent authorities and data coordinator;
+- Article 40 penalty and procedure rules;
+- Austrian data-protection authority competence for personal-data issues;
+- ABGB and KSchG contract/consumer overlays where applicable;
+- UWG, trade-secret, employment, sector, and public-law requirements;
+- works-council and employee-data implications.
 
-**AGB-Recht (Standard Terms Control - BGB §§ 305 ff.):**
-- Germany has **well-developed case law** on unfair terms in B2B contracts
-- **Data Act Chapter IV** (unfair terms) will be interpreted in light of existing German AGB-Recht principles
-- **§ 307 BGB** (general unfairness test): terms that unreasonably disadvantage the other party contrary to good faith are void
+Use the federal legal information system, the Commission's registers, and official authority pages. Record consolidated version and access date.
 
-**Practical implication:**
-- German courts may apply **stricter scrutiny** than Data Act minimum - if a term passes Data Act unfairness test but fails BGB § 307, it's still void
-- **Data Act safe harbor** (individually negotiated or model terms) aligns with BGB § 305(1) exception for individually negotiated terms
+## 4. Switzerland
 
-### B2G Data Sharing - National Legal Basis
+The Data Act is not directly applicable merely because an entity is Swiss. Article 1(3) can nevertheless bring a Swiss entity within scope where, for example, it:
 
-**Emergency requests (Article 15):**
-- **Katastrophenschutzgesetze** (state-level disaster protection laws) provide legal basis
-- **IfSG (Infektionsschutzgesetz - Infection Protection Act)** for public health emergencies (e.g., pandemic data requests)
-- **BBK (Federal Office for Civil Protection and Disaster Assistance)** coordinates federal emergency response
+- places connected products on the Union market;
+- provides related services to users in the Union;
+- makes data available to recipients in the Union;
+- provides data-processing services to customers in the Union;
+- performs an in-scope smart-contract activity.
 
-**Public interest requests (Article 17):**
-- Requires specific statutory authorization beyond general administrative powers
-- **Anticipated implementation:** Bundestag may enact **Data Act Implementation Act** (Datengesetz-Durchführungsgesetz) specifying which authorities can make public interest requests for which purposes
+An in-scope non-EU entity that makes connected products available or offers services in the Union must assess the Article 37(11) to (13) legal-representative duty.
 
-**Trade secret protection:**
-- **GeschGehG** (implementing EU Trade Secrets Directive) applies
-- Data holders can invoke trade secret protection under Data Act + GeschGehG
-- Public bodies must comply with GeschGehG confidentiality and safeguard obligations
+Separately assess Swiss law, including:
 
-### Works Council Involvement (BetrVG)
+- Federal Act on Data Protection and implementing ordinance;
+- contract, competition, unfair-competition, employment, and trade-secret law;
+- sector secrecy and regulatory duties;
+- Swiss governmental-access and cross-border-disclosure restrictions.
 
-**When works council consultation required:**
-- **BetrVG § 87(1) No. 6** - co-determination on introduction of technical systems for monitoring employee behavior or performance
-- If connected product data or B2G data sharing involves **employee data** (e.g., fleet vehicle telematics, workplace IoT sensors), works council has **co-determination rights**
+EU GDPR scope and Data Act scope are separate tests. A GDPR representative does not automatically satisfy the Data Act representative duty.
 
-**Practical scenarios requiring BetrVG compliance:**
-1. **Connected products in workplace** (e.g., smart manufacturing equipment generating operator performance data)
-2. **Employee-used connected products** (e.g., company smartphones, wearables)
-3. **B2G sharing of employee-related data** (e.g., public authority requests workplace mobility data for traffic planning)
+## 5. Authority Verification Record
 
-**Process:**
-- **Inform and consult** works council before implementing data access mechanisms
-- If works council objects, **mediation** or **arbitration board (Einigungsstelle)** may be required
-- **Failure to consult** can render data access agreements void or trigger injunction from works council
+Complete this table rather than relying on a static skill statement:
 
-### Public Procurement Implications
+| Jurisdiction | Function | Authority | Official source | Legal basis | Status/date checked |
+|---|---|---|---|---|---|
+| Germany | Data Act coordinator |  |  | Article 37 plus national law |  |
+| Germany | Personal-data issues |  |  | Article 37(3), GDPR, national law |  |
+| Austria | Data Act coordinator |  |  | Article 37 plus national law |  |
+| Austria | Personal-data issues |  |  | Article 37(3), GDPR, national law |  |
+| Switzerland | Relevant Swiss overlay |  |  | Swiss law |  |
 
-**Connected products in public procurement:**
-- German public bodies procuring connected products (e.g., smart city infrastructure, government fleet vehicles) must ensure:
-  - **Compliance with Data Act transparency obligations** (Article 3) - tender specs should require vendors to disclose data access capabilities
-  - **Access-by-design** for products designed after 12 Sept 2026
-  - **Unfair contract terms** - procurement contracts cannot impose Data Act-violating terms on vendors, and vendors cannot impose them on contracting authority
+If the official designation is incomplete or contested, mark the issue unresolved and identify the interim escalation route. Do not guess.
 
-**Vergaberecht (public procurement law):**
-- Data Act compliance may be a **technical specification** or **contract performance condition** in tenders
-- **GWB Part 4** (Vergaberecht) and **VgV (Procurement Ordinance)** govern federal/state procurement
+## 6. National Penalty Verification
 
-### German Constitutional Overlay (Grundgesetz)
+Article 40 requires Member States to set effective, proportionate, and dissuasive penalties. The Data Act itself does not create one general EU-wide turnover cap for all infringements.
 
-**Fundamental rights analysis:**
-- While Data Act is EU regulation (no Grundgesetz conformity review by BVerfG - Constitutional Court), **application in Germany** engages fundamental rights:
-  - **Article 12 GG (freedom of occupation)** - data access obligations and contract fairness rules affect commercial freedom
-  - **Article 14 GG (property and trade secrets)** - trade secret protection under Data Act must be proportionate to GG Article 14
-  - **Article 2(1) GG (general freedom of action) + Article 1(1) GG (human dignity)** - right to informational self-determination (personal data)
+For a national penalty statement, capture:
 
-**Practical implication:**
-- Courts interpreting Data Act obligations (e.g., proportionality of trade secret refusals, reasonableness of B2G requests) will apply **Grundgesetz proportionality test** as an additional lens
-- Higher standard than EU Charter alone in some cases
-
-### Key Contacts and Resources
-
-| Authority | Jurisdiction | Website |
-|-----------|-------------|---------|
-| **Bundeskartellamt** | Competition, unfair terms, data access | bundeskartellamt.de |
-| **BNetzA** | Telecom, energy, postal (potential cloud oversight) | bundesnetzagentur.de |
-| **BfDI** | GDPR-Data Act personal data overlaps | bfdi.bund.de |
-| **BBK** | Emergency management, B2G requests (emergencies) | bbk.bund.de |
-
----
-
-## Austria
-
-### Designated Authorities
-
-**Market Surveillance Authority:**
-- **Bundeswettbewerbsbehörde (BWB - Federal Competition Authority)** - likely lead Data Act authority
-  - Competition law enforcement, market fairness
-  - Parallel to Bundeskartellamt in Germany
-
-**Sector-Specific Authorities:**
-- **RTR (Rundfunk und Telekom Regulierungs-GmbH)** - telecom/media regulator, potential role for telecom data services
-- **DSB (Datenschutzbehörde - Data Protection Authority)** - GDPR overlaps
-- **E-Control** - energy regulator, relevant for smart grid/energy data
-
-**Coordination:**
-- Austrian **Federal Chancellery** (Bundeskanzleramt) or **Ministry of Justice** may issue implementation guidance
-
-### Enforcement and Penalties
-
-**Legal framework:**
-- Austria expected to enact **national penalty provisions** under Article 44 Data Act
-- Likely amendment to **UWG (Unfair Competition Act - Gesetz gegen den unlauteren Wettbewerb)** or **KartG (Cartel Act)**
-
-**Penalty levels:**
-- Comparable to GDPR penalties - up to **4% of turnover** for serious violations
-- BWB can impose fines, issue cease-and-desist orders, require compliance measures
-
-### Unfair Contract Terms - National Law
-
-**ABGB (Austrian Civil Code - Allgemeines Bürgerliches Gesetzbuch):**
-- **§ 879 ABGB** - contracts contrary to good morals (gute Sitten) are void
-- **KSchG (Consumer Protection Act - Konsumentenschutzgesetz)** applies to B2C, but ABGB § 879 also relevant for B2B fairness
-
-**Interaction with Data Act:**
-- Austrian courts may interpret Data Act unfairness (Chapter IV) in light of § 879 ABGB
-- **Sittenwidrigkeit (immorality)** test may provide additional protection beyond Data Act minimum
-
-### B2G Data Sharing
-
-**Emergency requests:**
-- **Katastrophenmanagementgesetz (Disaster Management Act)** provides legal basis
-- **State-level** crisis management authorities (Landesregierungen) coordinate regional emergencies
-- **Federal Ministry of Interior** (BMI) for national emergencies
-
-**Public interest requests:**
-- Specific statutory authorization required - Austria may enact **Data Act Implementation Act** (Datengesetz-Durchführungsgesetz)
-
-**Health emergencies:**
-- **Epidemiegesetz** (Epidemic Act) for infectious disease emergencies
-- **AGES (Austrian Agency for Health and Food Safety)** may request health-related data
-
-### Key Contacts and Resources
-
-| Authority | Jurisdiction | Website |
-|-----------|-------------|---------|
-| **Bundeswettbewerbsbehörde (BWB)** | Competition, Data Act enforcement | bwb.gv.at |
-| **DSB (Datenschutzbehörde)** | GDPR-Data Act personal data overlaps | dsb.gv.at |
-| **RTR** | Telecom, media | rtr.at |
-
----
-
-## Switzerland
-
-### Direct Applicability - Switzerland is NOT an EU Member State
-
-**Critical point:**
-- **Data Act does NOT apply directly** in Switzerland (not EU/EEA member)
-- However, Swiss entities and Swiss operations **may be affected**:
-
-### When Data Act Applies to Swiss Entities
-
-**Extraterritorial application (Article 2(2)):**
-- Data Act applies to entities **not established in the EU** where:
-  - They **offer connected products or related services** to users in the EU, OR
-  - They **provide data processing services** to customers in the EU, OR
-  - They are **data recipients** receiving data from EU-based data holders
-
-**Practical scenarios:**
-
-1. **Swiss IoT manufacturer sells products in EU:**
-   - Must comply with Data Act transparency (Article 3), user access (Article 4), access-by-design (Article 3(2) post-Sept 2026)
-   - Must designate **EU representative** (Article 39)
-
-2. **Swiss cloud provider offers services to EU customers:**
-   - Must comply with cloud switching and portability obligations (Chapters VI-VII)
-   - Must designate **EU representative**
-
-3. **Swiss company receives data from EU data holders:**
-   - Subject to Data Act use limitations (Article 5), GDPR compliance (if personal data)
-
-**EU representative obligation (Article 39):**
-- Natural or legal person **established in one EU Member State**
-- Authorized to act on behalf of Swiss entity
-- Addressable by EU authorities and users
-- Contact details must be publicly available and communicated to users
-
-### Swiss Legal Framework - Voluntary Compliance and Best Practice
-
-**No direct enforcement in Switzerland, but:**
-
-**revFADP (revised Swiss Federal Act on Data Protection):**
-- In force since **1 September 2023**
-- Aligns with GDPR (data subject rights, security, DPIAs)
-- Does **not** cover non-personal data or Data Act-type access rights
-
-**Swiss competition law:**
-- **Kartellgesetz (KG - Cartel Act)** - no specific data access obligations, but unfair competition and abuse of dominance rules may apply
-
-**Contractual incorporation:**
-- Swiss entities may **voluntarily adopt Data Act standards** in contracts with EU partners to ensure compliance and avoid EU enforcement
-- EU customers may **require Data Act compliance** as contract condition
-
-### Cross-Border Data Flows - EU-Switzerland
-
-**GDPR adequacy decision:**
-- Switzerland has **adequacy status** under GDPR for personal data transfers
-- Data Act-triggered personal data sharing between EU and Switzerland subject to GDPR + revFADP
-
-**Non-personal data:**
-- **No EU-Switzerland framework** equivalent to Data Act for non-personal data
-- Contractual arrangements govern cross-border non-personal data sharing
-
-### Swiss Authorities - Coordination with EU
-
-**EDÖB (Federal Data Protection and Information Commissioner - Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter):**
-- Enforces revFADP
-- Coordinates with EU DPAs on GDPR-related matters
-- **Not competent for Data Act enforcement** (no Swiss legal basis)
-
-**WEKO (Competition Commission - Wettbewerbskommission):**
-- Swiss competition authority
-- May examine unfair trading practices, but no Data Act-specific mandate
-
-**No Swiss authority enforces Data Act** - enforcement is via **EU Member State authorities** for Swiss entities' EU operations.
-
-### Practical Guidance for Swiss Entities
-
-**Checklist for Swiss companies:**
-
-1. **Assess EU exposure:**
-   - [ ] Do you offer connected products or cloud services to EU customers?
-   - [ ] Do you receive data from EU-based data holders?
-   - [ ] Do you have EU subsidiaries or branches?
-
-2. **If YES to any - determine Data Act obligations:**
-   - [ ] Identify which Data Act chapters apply (user access, cloud switching, unfair terms)
-   - [ ] Designate EU representative (Article 39)
-   - [ ] Ensure transparency and access mechanisms for EU users
-   - [ ] Review contracts for Data Act unfair terms compliance
-
-3. **Integrate with GDPR/revFADP compliance:**
-   - [ ] Personal data from EU: comply with GDPR
-   - [ ] Personal data of Swiss residents: comply with revFADP
-   - [ ] Non-personal data from EU: comply with Data Act
-
-4. **Consider voluntary adoption for Swiss operations:**
-   - [ ] Even for purely Swiss customers, Data Act standards may be best practice
-   - [ ] Competitive advantage: "We meet EU Data Act standards"
-
-### Key Contacts and Resources
-
-| Authority | Jurisdiction | Website |
-|-----------|-------------|---------|
-| **EDÖB** | Swiss data protection (revFADP) | edoeb.admin.ch |
-| **WEKO** | Swiss competition law | weko.admin.ch |
-
----
-
-## DACH Comparison Table
-
-| Aspect | Germany | Austria | Switzerland |
-|--------|---------|---------|-------------|
-| **Data Act applicability** | Direct (EU Member) | Direct (EU Member) | Extraterritorial only (non-EU) |
-| **Lead enforcement authority** | Bundeskartellamt | Bundeswettbewerbsbehörde (BWB) | None (EU authorities for EU operations) |
-| **GDPR/data protection authority** | BfDI + Landesdatenschutzbehörden | DSB | EDÖB (revFADP) |
-| **Unfair terms national law** | BGB §§ 305 ff. (AGB-Recht) | ABGB § 879 (good morals) | KG (competition law, limited) |
-| **Works council co-determination** | BetrVG (strong rights) | ArbVG (similar to BetrVG) | No statutory works council system |
-| **B2G legal basis (emergency)** | Katastrophenschutzgesetze, IfSG | Katastrophenmanagementgesetz, Epidemiegesetz | N/A (no Data Act application) |
-| **EU representative required** | No (EU Member State) | No (EU Member State) | Yes (if offering in EU) |
-
----
-
-## Common DACH Compliance Pitfalls
-
-1. **Assuming uniform enforcement across DACH:**
-   - Germany, Austria, Switzerland have **different authorities, penalty levels, and national law overlays**
-   - **Tailor compliance** to each jurisdiction
-
-2. **Forgetting Switzerland is not EU:**
-   - Swiss entities must assess **extraterritorial application** and designate EU representative
-
-3. **Ignoring works council in Germany/Austria:**
-   - Employee data access triggers **co-determination rights** - failure to consult can block implementation
-
-4. **Underestimating national unfair terms law:**
-   - BGB (Germany) and ABGB (Austria) may provide **stricter protection** than Data Act minimum
-
-5. **Unclear B2G legal basis:**
-   - Public interest requests require **specific statutory authorization** - generic administrative powers insufficient
-
----
-
-## Key Takeaways
-
-### Germany
-- **Bundeskartellamt** lead authority, BNetzA for telecom/energy, BfDI for GDPR overlaps
-- **BetrVG works council** rights for employee data
-- **AGB-Recht** stricter than Data Act unfair terms minimum
-- **GeschGehG** trade secret protection aligns with Data Act
-
-### Austria
-- **BWB** lead authority, DSB for GDPR overlaps
-- **ABGB § 879** unfairness test may exceed Data Act
-- **Katastrophenmanagementgesetz** for emergency B2G requests
-
-### Switzerland
-- **Extraterritorial application** for EU operations only
-- **EU representative required** for Swiss entities offering in EU
-- **revFADP** for personal data, no Data Act equivalent for non-personal data
-- **Voluntary adoption** as best practice or contractual requirement
+- enacted instrument and exact provision;
+- commencement date;
+- infringement category;
+- maximum amount or calculation method;
+- competent authority and procedure;
+- appeal route;
+- interaction with Article 40(4) and (5) for specified personal-data matters.
+
+Never present a bill, ministerial announcement, or consultation paper as the operative penalty regime.
+
+## 7. Employment and Works-Council Track
+
+Where product or service data concern workers or implementation changes technical monitoring, access, or work processes:
+
+1. map employee personal data and GDPR basis;
+2. identify employee representatives and participation rights;
+3. review collective agreements and works agreements;
+4. separate worker rights from the Article 2(12) user analysis;
+5. control access, purpose, retention, and recipient permissions;
+6. document national employment-law advice.
+
+## 8. Cross-Border Contracting
+
+Review:
+
+- which entity bears each Data Act duty;
+- whether upstream contracts provide required data, metadata, assistance, and rights;
+- whether governing-law and forum terms conflict with mandatory protections;
+- whether the Union legal representative is properly mandated;
+- whether Swiss and EU confidentiality, secrecy, and disclosure rules can be satisfied together;
+- whether cloud and subcontractor locations create Article 28 or 32 concerns.
+
+## 9. Required Output
+
+Add a national-overlay annex containing:
+
+- verified authority and complaint route;
+- verified penalty source and status;
+- contract-law, trade-secret, employment, and sector overlays;
+- Swiss extraterritorial analysis where relevant;
+- sources and access dates;
+- open national-law questions requiring local counsel.

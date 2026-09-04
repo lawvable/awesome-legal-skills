@@ -1,478 +1,276 @@
 ---
 name: eu-data-act-compliance
-description: Assess compliance obligations under the EU Data Act (Regulation (EU) 2023/2854) for connected products, IoT devices, data sharing, cloud switching, B2B fairness, B2G data access, dispute resolution, and international data transfers. Covers scope assessment (manufacturer, data holder, data recipient roles), user data access rights, pre-sale transparency, unfair contract terms, public authority data requests, cloud portability, dispute settlement mechanisms, international transfer restrictions, access-by-design obligations, trade secret protection, and cross-regulation mapping with GDPR, AI Act, and CRA. Use when assessing Data Act obligations, designing connected products, drafting data sharing contracts, responding to B2G requests, planning cloud switching capabilities, or evaluating dispute resolution options.
+description: Assess obligations under Regulation (EU) 2023/2854 for connected products, related services, statutory B2B data sharing, unfair data-contract terms, exceptional-need B2G requests, data-processing-service switching, international governmental access, interoperability, smart contracts, enforcement, and non-EU representatives. Use for Data Act scope analysis, gap assessments, product and service design, request handling, contract review, cloud exit planning, or cross-regulation mapping.
 ---
 
 # EU Data Act Compliance Assessment
 
-Assess your organization's obligations under the EU Data Act (Regulation (EU) 2023/2854) for connected products, data sharing, cloud services, and B2G data requests.
+Perform a source-grounded assessment under Regulation (EU) 2023/2854. Separate enacted legal requirements from guidance, national law, contractual choices, and implementation recommendations.
 
-**Important:** This skill supports a structured legal-compliance workflow. It does **not** replace legal judgment. Data Act obligations are context-dependent and interact with GDPR, sector regulations, and national implementation measures. Always identify assumptions, open questions, and contested interpretations explicitly.
+This skill is not legal advice. Escalate unresolved interpretation, national enforcement, trade-secret refusal, personal-data processing, and authority-response decisions to qualified counsel.
 
-**Key Dates:**
-- **Entered into force:** 11 January 2024
-- **Main requirements apply from:** 12 September 2025
-- **Access-by-design obligations apply from:** 12 September 2026
-- **Cloud switching fee phase-out:** 12 January 2027
+## Source and Evidence Protocol
 
-## Data Act Compliance Workflow
+1. Start with the current consolidated text on EUR-Lex. Record the ELI/CELEX identifier, consolidation date, language, and access date.
+2. Cite the controlling article and paragraph for each legal conclusion. Read the full provision before asserting that a duty, exception, right, or remedy does not exist.
+3. Label every proposition as one of:
+   - **Law:** binding text in Regulation (EU) 2023/2854 or another identified legal act.
+   - **Official guidance:** Commission or competent-authority material, not the Regulation itself.
+   - **National overlay:** applicable national legislation, authority designation, procedure, or penalty.
+   - **Implementation recommendation:** operational advice, not a statutory requirement.
+   - **Open question:** missing fact or unresolved interpretation.
+4. Never infer a legal rule from a heading, recital, search miss, summary page, draft bill, or template alone.
+5. Quote sparingly. Prefer an accurate paraphrase tied to the exact provision.
 
-Follow this sequence in order. Do not skip the scope assessment.
+Authoritative starting points:
 
-### Step 1 - Scope Assessment: Which Data Act role(s) does your organization have?
+- Regulation (EU) 2023/2854, ELI: `http://data.europa.eu/eli/reg/2023/2854/oj`
+- Commission Data Act page: `https://digital-strategy.ec.europa.eu/en/policies/data-act`
+- Commission register of competent authorities and national penalty measures, where available
 
-The Data Act imposes different obligations depending on your role in the data ecosystem.
+## Controlling Dates
 
-Assess whether your organization is:
+| Event | Date | Authority |
+|---|---:|---|
+| Entry into force | 11 January 2024 | Article 50 |
+| General application | 12 September 2025 | Article 50 |
+| Article 3(1) design obligation for connected products and related services placed on the market after this date | 12 September 2026 | Article 50 |
+| Chapter IV applies to qualifying legacy contracts | 12 September 2027 | Article 50 |
+| Switching charges prohibited | 12 January 2027 | Article 29(1) |
 
-1. **Manufacturer of a connected product** - entity placing a connected product on the market under its name or trademark under the Regulation's product-related definitions. Assess providers of related services separately rather than folding them into the manufacturer role.
-2. **Provider of a related service** - assess separately where a digital service is incorporated in or inter-connected with the product in a way that affects Data Act access obligations.
-3. **Data holder** - legal or natural person with the right or obligation to make data available (Article 2(6))
-4. **User** - natural or legal person that owns, rents, or leases a connected product or receives a related service (Article 2(7))
-5. **Data recipient** - legal or natural person to whom the data holder makes data available (Article 2(8))
-6. **Data processing service provider** - provider of commercial data processing services (cloud, edge computing) (Article 2(11))
-7. **Public body** - authority that may request data under emergency or public interest grounds (Chapter V)
+Do not rewrite the 12 September 2026 rule as a product-design date. It is tied to when the connected product or related service is placed on the market.
 
-**Critical exclusions:**
-- **Gatekeeper platforms** under the Digital Markets Act have separate obligations
-- **SMEs** (< 50 employees, < €10M turnover) as manufacturers may benefit from simplified obligations
+## Assessment Workflow
 
-**Boundary note:** Importers and distributors are not automatically equivalent to manufacturers, but may be relevant depending on who places the product on the market, under whose name, and what contractual / technical control exists.
+Follow the steps in order. Stop and identify missing evidence instead of filling factual gaps with assumptions.
 
-Ask:
-- Do you manufacture or import IoT devices, smart products, or connected equipment?
-- Do you operate services that generate data from product use?
-- Do you hold data generated by products you don't manufacture?
-- Do you offer cloud computing, data storage, or processing services commercially?
-- Are you a public authority that might need data for emergency response or public interest tasks?
+### 1. Fix the unit of analysis
 
-→ For detailed role definitions and boundary cases, read references/scope-assessment.md.
+Identify:
 
-### Step 1b - Data Scope Triage
+- legal entity and establishment;
+- product, related service, data-processing service, contract, or request being assessed;
+- relevant market and user location;
+- assessment date and legal-text version;
+- data flows, contractual chain, technical control, and actual data availability.
 
-Before proceeding, triage the data in question to avoid misapplication:
+Do not assess an enterprise in the abstract when different products or services create different roles.
 
-**Ask:**
-- **Data nature:** Personal / non-personal / mixed?
-- **Availability:** Readily available to the data holder, or requires new processing?
-- **Data type:** Raw / observed / derived / inferred?
-- **Sensitivity:** Trade secret / commercially sensitive / non-sensitive?
-- **Sector constraints:** Subject to sector-specific secrecy (e.g., banking, health) or security restrictions?
+### 2. Assign roles using Article 2 and Article 1(3)
 
-Most Data Act misapplication errors stem from failing to correctly scope the data at the outset. Derived analytics, inferred insights, and proprietary enrichment layers are not automatically subject to the same access obligations as raw product telemetry.
+Assess each role independently:
 
-### Step 2 - Connected Product Data Access Rights (Chapters II-III)
+| Role | Anchor | Core test |
+|---|---|---|
+| User | Article 2(12) | Owns the connected product, has temporary contractual use rights, or receives related services |
+| Data holder | Article 2(13) | Has a legal right or obligation to use and make data available |
+| Data recipient | Article 2(14) | Receives data in a professional capacity and is not the user |
+| Provider of a related service | Articles 2(6), 3(3) | Provides qualifying software or digital service linked to product functions |
+| Provider of a data processing service | Article 2(8) | Provides qualifying on-demand network access to scalable and elastic computing resources |
+| Public sector body | Article 2(28) | Qualifying Member State authority, public-law body, or association |
+| Smart-contract vendor or deployer for others | Articles 1(3)(g), 36 | Supplies or professionally deploys a smart contract used to execute a data-sharing agreement |
 
-If your organization is a **data holder** for connected product data, you must enable **user access** and **third-party sharing** on user request.
+The Regulation does not define “manufacturer” in Article 2. For product-facing duties, identify who designs or manufactures the connected product and who is the seller, rentor, lessor, or related-service provider under Article 3.
 
-**User access rights (Article 4):**
-- Users have access rights to data generated by the use of the connected product or related service **that are readily available to the data holder** under the Regulation. Do **not** assume this automatically includes all **inferred, derived, or proprietary analytics** created by the manufacturer or service provider.
-- Access must be provided **without undue delay**. Where relevant and technically feasible, the data shall be made available **continuously and in real time**.
-- Data must be provided in a **structured, commonly used, machine-readable format**
-- Access must be **free of charge, easy, and secure**
-- The Data Act restricts certain uses of product and related service data by data holders and data recipients. Where the shared or accessible data includes **personal data**, any further processing must also comply with the **GDPR**, which may rely on a lawful basis other than consent. Do **not** assume consent is the only legal basis.
+Apply territorial scope from Article 1(3). Non-EU establishment does not by itself remove an entity from scope. Check the legal-representative duty in Article 37(11) to (13).
 
-**Third-party sharing rights (Article 5-7):**
-- Users can instruct the data holder to make data available to a **third party** (data recipient)
-- The data recipient may use the data to provide a **value-added service** to the user
-- Data holders must respond **without undue delay** and enable direct access or provide data copy
-- A data holder may restrict or refuse sharing only on grounds expressly recognized by the Regulation, including in particular where **trade secrets** would be jeopardized despite protective measures, where the requesting third party is a **DMA gatekeeper** or a party acting on its behalf, or where other Article 6 protections apply. Do **not** rely on a generic "lack of resources" rationale unless it is tied to a specific legal ground in the Regulation.
-- **Gatekeeper exclusion (Article 6(2)(e)):** Data holders may NOT be compelled to share data with DMA-designated gatekeepers
-- **SME exemption (Article 7(1)):** Micro and small enterprises (< 10 employees, < €2M turnover) are EXEMPT from data sharing obligations when acting as data holders
-- **Compensation / charges:** assess Articles **8 and 9** carefully. The Data Act does **not** create a general rule that fees may be charged merely because requests are "frequent" or "complex." Any compensation mechanism must be checked against the specific role of the requesting party, the applicable chapter, and the Regulation's limits on what may be charged.
+Read `references/scope-assessment.md`.
 
-**Key obligations for data holders:**
-1. Establish technical means for data access (APIs, interfaces, secure channels)
-2. Document what data is available, in what format, and how to request it
-3. Respond to user/third-party requests within reasonable time
-4. Apply proportionate security and authentication
-5. Notify users of refusals with reasons
+### 3. Classify the data and applicable chapter
 
-Ask:
-- What connected products does your organization manufacture or operate?
-- What data is generated by product use?
-- Can users access their data in real-time today?
-- Are there APIs or interfaces for third-party data recipients?
-- What justifications exist for refusing data access (trade secrets, security)?
+Record:
 
-→ For detailed access obligations, technical requirements, and refusal grounds, read references/data-access-rights.md.
+- personal, non-personal, or mixed data;
+- product data under Article 2(15), related service data under Article 2(16), and relevant metadata;
+- readily available data under Article 2(17);
+- content versus data concerning performance, use, or environment;
+- raw or pre-processed data versus inferred or derived information;
+- trade-secret status and identity of the trade-secret holder;
+- security, intellectual-property, confidentiality, and sector restrictions.
 
-### Step 3 - Pre-Sale Transparency (Article 3)
+Chapter II covers product and related-service data within Article 1(2)(a), not every record associated with a product. Do not assume all analytics or inferred information are readily available data.
 
-If your organization is a **manufacturer**, you must provide **information to users before purchase or lease**.
+For personal data, the GDPR and ePrivacy rules continue to apply and prevail in a conflict under Article 1(5). A Data Act access right is not itself a universal GDPR lawful basis.
 
-Before concluding a contract or placing an order, inform the user:
-1. **What data** is generated by use of the connected product or related service
-2. **Whether the data is accessible** to the user and, if so, how
-3. **Whether the data is accessible** to third parties at the user's request and, if so, how
-4. If access is subject to **fees**, the basis for calculating them
+### 4. Test the Chapter II product and service duties
 
-**Note:** The Article 3 information items are broader than listed above - verify the exact Article 3 list rather than treating this as exhaustive.
+#### Access by design and pre-contract information
 
-The information must be:
-- **Clear, comprehensible, and easily accessible**
-- Provided in a **prominent manner**, not buried in terms
-- Available **before** the user is bound by the contract
+- Article 3(1): design and provide connected products and related services so relevant data and metadata are, by default, easily, securely, and free of charge available in the required format and, where relevant and technically feasible, directly accessible.
+- Article 3(2): seller, rentor, or lessor gives the listed information before a purchase, rent, or lease contract.
+- Article 3(3): related-service provider gives the listed information before the related-service contract.
 
-Ask:
-- Do product descriptions, spec sheets, or pre-sale materials explain what data is generated?
-- Is it clear whether users can access their data, and through which channels?
-- Are fee structures for data access disclosed upfront?
-- Is the information understandable to non-technical users?
+#### User access
 
-This is a **transparency obligation**, not a full consent requirement, but it enables informed purchasing decisions.
+If direct access is unavailable, Article 4(1) requires the data holder, on a simple request where technically feasible, to make readily available data and relevant metadata accessible without undue delay, at the same quality available to the holder, easily, securely, free of charge, and in a comprehensive, structured, commonly used, machine-readable format. Continuous and real-time access applies only where relevant and technically feasible.
 
-### Step 4 - Unfair Contract Terms in B2B Data Sharing Contracts (Chapter IV)
+#### User-directed third-party sharing
 
-If your organization enters **B2B contracts for data access or use**, assess whether contract terms are **unfair** under Articles 13-14.
+Article 5(1) requires comparable access for an eligible third party requested by the user, subject to Articles 8 and 9. A DMA gatekeeper is not an eligible third party under Article 5(3). Article 6 governs how the recipient may use and further disclose the data.
 
-The Data Act establishes a **two-tier unfairness test** for contracts between enterprises:
+#### Exceptions and safeguards
 
-**Unfair terms control (Article 13):** do **not** reduce Article 13 to a short homemade blacklist. The Regulation contains:
-- a set of terms that are **not binding** where imposed in a take-it-or-leave-it B2B context under Article 13(1), and
-- a separate set of terms that are **presumed unfair** under Article 13(2) unless the relying party proves otherwise.
+- Security restrictions: Article 4(2), with the required competent-authority notification.
+- User trade secrets: Article 4(6) to (9).
+- Third-party trade secrets: Article 5(9) to (12).
+- Personal data: Articles 4(12) and 5(7).
+- Chapter II enterprise exception: Article 7(1). This is tied to data generated by products manufactured or designed, or related services provided, by qualifying micro or small enterprises, subject to linked-enterprise and subcontracting conditions. It is not a general exemption for every small data holder.
 
-For legal review, compare the clause text **directly** against Article 13(1) and 13(2), rather than relying on shorthand labels.
+Read `references/data-access-rights.md`.
 
-**Important caution on Article 13(3):** do **not** present it as a broad "safe harbor." Individual negotiation and use of model terms may be relevant in the fairness analysis, but they do **not** automatically immunize a clause from Article 13 review.
+### 5. Test B2B data-sharing conditions
 
-**Model Contractual Terms (MCTs):**
-- Article 41 required the Commission to develop non-binding MCTs by September 2025
-- Draft expert report published 1 April 2025, Commission Recommendation issued 20 November 2025
-- Four sets: (1) Data Holder to User, (2) User to Data Recipient, (3) Data Holder to Data Recipient, (4) Data Sharer to Data Recipient (voluntary sharing)
-- MCTs are **non-binding model terms** that can serve as a drafting benchmark, but they do **not** create a blanket statutory safe harbor. Contract terms should still be tested against **Article 13** on their own wording, negotiation history, and commercial context.
+Where a data holder must make data available to a business recipient under Article 5 or other qualifying law:
 
-Ask:
-- Are you the data holder or data recipient in B2B data sharing agreements?
-- Do your standard terms contain unilateral termination, interpretation, or liability exclusions?
-- Are data access rights or remedies restricted?
-- Were terms individually negotiated, or are they take-it-or-leave-it?
-- Is the counterparty an SME, making unfairness more likely?
+- use fair, reasonable, non-discriminatory, and transparent terms under Article 8;
+- do not impose contractual terms that Article 8(2), Article 12(2), or Article 13 makes non-binding;
+- assess compensation under Article 9, not under a fabricated frequent-or-complex-request rule;
+- for an SME or qualifying not-for-profit research recipient without non-SME linked or partner enterprises, compensation cannot exceed the Article 9(2)(a) making-available costs;
+- provide the calculation basis in sufficient detail under Article 9(7).
 
-→ For the full catalogue of unfair terms with examples and safe harbor guidance, read references/unfair-terms-catalogue.md.
+Article 9 governs B2B compensation between data holder and data recipient. It does not permit charging the user for Article 4 or Article 5 access.
 
-### Step 5 - B2G Data Sharing: Public Authority Requests (Chapter V)
+### 6. Review unilaterally imposed B2B data terms
 
-If your organization is a **data holder**, you may in strictly limited cases be required to provide data to a **public sector body, the Commission, the ECB, or a Union body** where the Regulation's **exceptional need** conditions are met.
+Article 13 applies to specified data-access, data-use, liability, and remedy terms unilaterally imposed by one enterprise on another.
 
-**Note:** Chapter V is not a workaround around GDPR. Where personal data is involved in B2G requests, GDPR compliance remains mandatory.
+Use the correct structure:
 
-**Two grounds for B2G data requests:**
+- Article 13(1): an unfair, unilaterally imposed term is not binding.
+- Article 13(2): terms reflecting mandatory or default Union law are not unfair.
+- Article 13(3): general unfairness standard.
+- Article 13(4): terms that are unfair.
+- Article 13(5): terms presumed unfair.
+- Article 13(6): unilateral-imposition test and burden of proof.
+- Article 13(7) to (9): severability, exclusions, and non-derogation.
 
-**Emergency requests (Article 15):**
-- Public emergency (e.g., public health crisis, natural disaster, major accident)
-- Data is necessary to respond to the emergency
-- No other means available in time
-- Request must specify necessity, purpose, data scope, urgency
-- **No compensation** for emergency provision
+There is no Article 13 safe harbor. Commission model terms under Article 41 are non-binding.
 
-**Requests based on an exceptional need other than a public emergency (Article 17):**
-- Exceptional need to prevent public emergency or assist recovery
-- Data cannot be obtained from other sources
-- Must be proportionate and time-limited
-- **Compensation** for costs, including reasonable margin (Article 20)
+Read `references/unfair-terms-catalogue.md`.
 
-**Data holder obligations:**
-1. Respond to requests **without undue delay**
-2. Apply reasonable technical, organizational, and financial effort
-3. Any refusal or limitation must be tied to a **specific ground and procedure in Chapter V**, including the Regulation's rules on **trade secrets, confidentiality, protection against abuse, proportionality, and available review mechanisms**. Do **not** use a generic "commercial interests" objection as a standalone rule without checking the exact statutory basis.
-4. Notify refusals with reasons
-5. Maintain confidentiality unless public body permits publication
+### 7. Validate exceptional-need B2G requests
 
-Ask:
-- Does your organization hold data that could be relevant for emergency response (health, infrastructure, mobility, environmental)?
-- What is the process for receiving and evaluating B2G data requests?
-- Are there mechanisms to assess proportionality and protect trade secrets?
-- Who is the designated contact for public authority requests?
+Use the sequence in Articles 14 to 22:
 
-→ For detailed B2G request procedures, proportionality tests, and compensation rules, read references/b2g-data-sharing.md.
+1. Article 14: confirm the requester and data holder are covered.
+2. Article 15: identify the exceptional need.
+3. Article 17: validate the request’s content, specificity, proportionality, legal-task basis, deadline, and publication/notification steps.
+4. Article 18: calculate the response or challenge deadline and test only the listed grounds to decline or seek modification.
+5. Articles 19 and 21: control use, security, erasure, trade secrets, and permitted onward sharing.
+6. Article 20: determine compensation.
 
-### Step 6 - Cloud Switching and Portability (Chapters VI-VII)
+For a public emergency, qualifying non-micro and non-small data holders provide data free of charge under Article 20(1). Micro and small enterprises can claim compensation through Article 20(3). For Article 15(1)(b) requests, Article 20(2) generally allows technical and organisational costs plus a reasonable margin, subject to the official-statistics exception in Article 20(4).
 
-If your organization is a **data processing service provider** (cloud/edge provider), you have **switching facilitation** and **interoperability** obligations.
+Read `references/b2g-data-sharing.md`.
 
-**Customer switching rights (Article 23-25):**
-1. **Exit without penalty** - customers can switch provider or move to on-premises at contract end
-2. **Switching charges:** the charging regime is subject to a **transitional phase-out** under the Regulation. Do **not** reduce this to a simple "new contracts vs existing contracts" rule unless you have checked the exact text of **Article 25** and the applicable transitional provisions for the contract in question.
-3. **Termination and switching process:** check **Article 24** directly for the permitted maximum notice / transition mechanics. Do **not** summarize it as a universal "minimum 2 months" rule.
-4. **No minimum contract duration** beyond what is objectively justified
-5. **Data export assistance** - provider must enable export of customer data, applications, and digital assets in a structured, commonly used, machine-readable format
-6. **Functional equivalence** - assess whether the exported data and metadata are sufficient for the customer to continue using equivalent services elsewhere, recognizing that this is a compliance assessment lens, not a blanket obligation to guarantee service substitutability or migration parity across all contexts
+### 8. Assess data-processing-service switching
 
-**Interoperability obligations (Article 26):**
-- Develop and implement **self-regulatory codes of conduct** or standards
-- Enable portability across cloud platforms
-- Facilitate switching between cloud and edge, and hybrid deployments
+For services within Article 2(8) and Article 1(3)(f):
 
-**International data transfer restrictions (Article 32):**
-- Cloud providers must take adequate **technical, organizational, and legal measures** to prevent international/third-country governmental access to non-personal data held in the EU where it would conflict with EU/national law
-- **Exceptions:** (a) court order from third country with international agreement, or (b) urgency with safeguards
-- Applies to same actors as switching obligations but separate compliance domain (Chapter VII)
+- Articles 23 and 24: identify covered services and obstacles;
+- Article 25: check written contract terms, maximum two-month notice, maximum 30-calendar-day transition, exceptions, minimum 30-calendar-day retrieval period, erasure, exportable-data categories, and assistance;
+- Article 26: check switching information and online register;
+- Article 27: check good-faith cooperation;
+- Article 28: check website disclosure on international access and transfer;
+- Article 29: apply the switching-charge timeline;
+- Article 30: assess technical duties by service type;
+- Article 31: test custom-built and non-production exceptions;
+- Article 32: assess third-country governmental access to non-personal data held in the Union.
 
-Ask:
-- Do you offer commercial cloud computing, storage, or data processing services?
-- What are your current contract termination notice periods?
-- Do you charge switching, exit, or data export fees?
-- Can customers export their data in standard formats without losing functionality?
-- Are interoperability standards or codes of conduct applicable to your services?
+Article 24 does not set a notice period. The maximum two-month notice and the transition rules are in Article 25.
 
-→ For switching timelines, technical export requirements, and interoperability roadmaps, read references/cloud-switching.md.
+Read `references/cloud-switching.md`.
 
-### Step 7 - Trade Secret Protection (Articles 5(4), 6, 15(3))
+### 9. Assess smart contracts
 
-When sharing data under user access, third-party sharing, or B2G requests, data holders may **withhold trade secrets** if specific conditions are met.
+Article 36 applies to smart contracts used to execute data-sharing agreements. Check:
 
-**Trade secret safeguards:**
-1. **Proportionality** - refusal must be proportionate to the legitimate interest in protecting the secret
-2. **Detailed explanation** - data holder must explain which data contains trade secrets and why disclosure would harm commercial interests
-3. **Technical/organizational measures** - where possible, apply measures (anonymization, aggregation, access restrictions) to enable sharing while protecting secrets. Protective measures should be explored before outright refusal.
-4. **Recipient safeguards** - data recipients and public bodies must maintain confidentiality and use data only for specified purposes
-5. Cross-reference: see the burden of justification under Article 6 for third-party sharing refusals and Chapter V for B2G refusals.
+- robustness and access control;
+- safe termination and interruption;
+- data archiving and continuity;
+- governance-layer and smart-contract-layer access control;
+- consistency with the data-sharing agreement;
+- conformity assessment and EU declaration of conformity.
 
-**Data holder obligations:**
-- Do not claim trade secret protection as a blanket refusal
-- Identify the specific data elements or subsets that contain trade secrets
-- Consider whether redaction, aggregation, or contractual safeguards allow partial disclosure
-- Apply the least restrictive measure to achieve protection
+Do not cite Articles 30 or 31 for these duties.
 
-Ask:
-- What data elements contain proprietary algorithms, business logic, or commercially sensitive information?
-- Can trade secrets be protected through aggregation, filtering, or use restrictions rather than full refusal?
-- Are confidentiality agreements or technical access controls in place for data recipients?
+### 10. Map enforcement and remedies
 
-Trade secret protection is a **legitimate ground for limitation**, but not an automatic exemption.
+- Article 10: certified dispute settlement for specified disputes. Decisions bind only with prior explicit consent.
+- Article 37: competent authorities, data coordinator, jurisdiction, legal representative, and authority powers.
+- Article 38: complaint.
+- Article 39: effective judicial remedy.
+- Article 40: Member State penalties and specified GDPR-linked fine powers.
+- Article 41: non-binding Commission model terms and cloud clauses.
 
-### Step 8 - Dispute Resolution (Article 10)
+Verify current authority designations and national penalties from official sources at the assessment date. Do not state a draft bill as enacted law.
 
-Users, data holders, and data recipients have access to **certified dispute settlement bodies** for Data Act disputes.
+### 11. Integrate adjacent regimes
 
-**Dispute resolution mechanism:**
-1. **Certified bodies** - Member States must certify dispute settlement bodies (Article 10(1))
-2. **Disputes covered:**
-   - Data access refusals
-   - Fee disagreements
-   - Compensation terms
-   - Trade secret claims
-3. **Effect of the procedure:** check **Article 10** and the relevant national framework for the legal effect of decisions or outcomes of certified dispute settlement bodies. Do **not** assume in all cases that the result is purely non-binding.
-4. **Access for all parties** - users, data holders, and data recipients can initiate
+Map, do not merge:
 
-Ask:
-- What is the process for escalating disputes before resorting to courts?
-- Which certified bodies operate in your jurisdiction?
-- Are dispute resolution clauses included in data sharing contracts?
+- GDPR and ePrivacy for personal data and terminal-equipment access;
+- sector data-access law and Article 43 priority rules;
+- Trade Secrets Directive and Data Act-specific safeguards;
+- Digital Markets Act gatekeeper status;
+- Cyber Resilience Act and sector security law;
+- AI Act where data feeds an AI system;
+- consumer, competition, intellectual-property, employment, and secrecy law;
+- Data Governance Act where an intermediary or data-altruism structure is used.
 
-→ For dispute resolution escalation templates and procedures, read references/templates.md.
+Check current consolidated texts and application dates for every adjacent regime. Read `references/cross-regulation-mapping.md` and `references/dach-specific.md`.
 
-### Step 9 - Smart Contracts for Automated Data Sharing (Chapter IX)
+## Mandatory Output
 
-If your organization uses or offers **smart contracts** to automate data access or sharing, specific obligations apply (Article 30-31).
+Deliver one assessment with these sections:
 
-**Smart contract requirements:**
-1. **Robustness and safety** - must meet the highest standards of security, resilience, and fault tolerance
-2. **Interruptibility** - must include mechanisms to **stop or interrupt execution** in case of error, fraud, or unforeseen outcomes
-3. **Auditability and accountability** - must allow third-party evaluation and testing
-4. **Legal compliance** - smart contract logic must respect data access rights, unfair terms prohibitions, and trade secret protections
+1. **Executive conclusion:** in scope, out of scope, or unresolved, with the three most material risks.
+2. **Facts and assumptions:** entity, product/service, data, geography, contracts, and missing facts.
+3. **Role and chapter matrix:** each role, factual basis, article, confidence, and evidence.
+4. **Requirement matrix:** provision, binding rule, present state, evidence, gap, owner, due date, and confidence.
+5. **Request or contract findings:** exact clause/request, legal test, result, and remediation.
+6. **Cross-regulation conflicts:** GDPR and other overlays, with separate legal bases.
+7. **Action plan:** prioritized remediation, validation step, and decision owner.
+8. **Source register:** official URL, instrument/version, provision, access date, and proposition supported.
 
-**Scope note:** Distinguish between smart contracts specifically used to execute data-sharing agreements under the Regulation, and broader general-purpose blockchain or automation tooling that may fall outside the specific obligation framing.
+Use confidence labels:
 
-Ask:
-- Do you deploy smart contracts for data transactions, access control, or conditional data sharing?
-- Are interrupt mechanisms, circuit breakers, or emergency stop functions implemented?
-- Can the smart contract logic be audited for compliance with Data Act obligations?
-- Is there human oversight or governance over automated execution?
+- **High:** controlling text and material facts are clear.
+- **Medium:** law is clear but a material fact or national overlay is incomplete.
+- **Low:** interpretation, scope, or evidence is genuinely unresolved.
 
-This is a **design and governance obligation**, not just a technical implementation detail.
+Use `references/templates.md` for reusable matrices and response structures.
 
-### Step 10 - Access-by-Design Obligations for New Products (from 12 September 2026)
+## Quality Gate
 
-If your organization is a **manufacturer of connected products**, products where the **access-by-design obligations** are triggered (anchored to the Regulation's application mechanics, not a simple design-date formula) must meet **access-by-design** requirements.
+Before finalizing, confirm:
 
-**Design obligations (Article 3(2)):**
-1. Data must be **easily, securely, and, where relevant, directly accessible** to the user by default
-2. Manufacturers must design products and related services in a way that facilitates data access and portability
-3. Technical architecture should avoid unnecessary barriers to third-party data access on user instruction
-
-Ask:
-- Are you currently designing new connected products or IoT devices?
-- When will these products be placed on the market (before or after Sept 2026)?
-- Do product specifications include default user data access mechanisms?
-- Are APIs, data interfaces, or export functions part of the initial design, not afterthoughts?
-
-**Access-by-design is mandatory** for products where the Regulation's application rules trigger the obligation - verify application dates and transitional rules under the Regulation and avoid reducing this to a simple design-date formula.
-
-### Step 11 - Cross-Regulation Mapping: GDPR, AI Act, CRA Interaction
-
-The Data Act operates **alongside** existing EU regulations. Do not treat it in isolation.
-
-**GDPR interaction:**
-- **Personal data** continues to be protected under GDPR
-- Data Act access rights **do not override GDPR** - where data contains personal data, both regimes apply
-- Data minimization, purpose limitation, and lawful basis rules still apply
-- Data recipients must comply with GDPR when processing personal data shared under Data Act rights
-- Data holders may need to anonymize or pseudonymize data to comply with both frameworks
-- **Where personal data of multiple persons is involved**, access rights must be reconciled with the rights and freedoms of others
-- **Friction point:** Data Act access rights may create tension with GDPR data minimization - where data holders are required to retain or make available data that minimization principles would otherwise permit deletion of, a proportionality assessment is required
-
-**AI Act interaction:**
-- Data shared under Data Act may be used to **train, test, or validate AI systems**
-- AI Act obligations on data quality, transparency, and documentation apply to AI training data
-- High-risk AI systems may process Data Act-sourced data - ensure lawfulness under both frameworks
-- **Friction point:** AI Act transparency requirements for high-risk systems (e.g., documentation of training data sources, model logic) may conflict with trade secret protections under Data Act Article 6 - protective measures must be designed to satisfy both regimes where possible
-
-**Cyber Resilience Act (CRA) interaction:**
-- CRA imposes cybersecurity obligations on products with digital elements
-- Data Act data access obligations must be implemented **securely** (authentication, encryption, access logging)
-- Security vulnerabilities in data access interfaces create CRA compliance risks
-- Coordinated incident response across Data Act and CRA frameworks
-- **Friction point:** CRA security-by-design requirements may impose technical constraints (e.g., access logging, authentication strength, update mechanisms) that limit the feasibility or format of real-time data access under Data Act Article 4, requiring a balancing exercise between access and security
-
-**Data Governance Act (DGA) interaction:**
-- DGA regulates data intermediaries and data altruism - complementary to Data Act user access rights
-- Data cooperatives may act as data recipients on behalf of users
-
-Ask:
-- Does the data in question contain personal data subject to GDPR?
-- Will data be used for AI training or high-risk AI systems?
-- Are cybersecurity measures for data access aligned with CRA requirements?
-- Are there overlapping obligations that require integrated compliance?
-
-→ For detailed interaction analysis and compliance integration strategies, read references/cross-regulation-mapping.md.
-
-### Step 12 - DACH-Specific Considerations
-
-If your organization operates in **Germany, Austria, or Switzerland**, consider national implementation and enforcement nuances.
-
-**Germany:**
-- **Designated authority:** Verify the authority designation against the **current German implementing legislation and administrative practice**. Do **not** assume a lead authority unless it has been formally designated.
-- **State authorities:** Landesdatenschutzbehörden for GDPR-Data Act overlaps
-- **BNetzA** (Federal Network Agency) may have sector-specific roles (telecommunications, energy)
-- **BetrVG** (Works Constitution Act) may require works council consultation where employee data is involved
-- **GWB** (Competition Act) interaction with B2B fairness provisions
-
-**Austria:**
-- **Designated authority:** Verify the authority designation against the **current Austrian implementing legislation and administrative practice**. Do **not** assume a lead authority unless it has been formally designated.
-- **DSB** (Datenschutzbehörde) for data protection overlaps
-
-**When enforcement designation is unsettled:**
-- Check the current implementing statute in the relevant Member State
-- Check sector regulator guidance (if sector-specific rules apply)
-- Check whether GDPR overlap routes enforcement to the Data Protection Authority
-- Record enforcement uncertainty as a risk assumption in the compliance assessment
-
-**Switzerland:**
-- **Not directly applicable** (non-EU), but may apply via contractual incorporation or as market best practice
-- **Swiss Federal Data Protection Act (revFADP)** applies to personal data
-- Cross-border data flows between EU and Swiss entities subject to equivalence regime
-
-Ask:
-- Which national authority will enforce Data Act obligations in your jurisdiction?
-- Are there sector-specific authorities (energy, telecoms, finance) with overlapping mandates?
-- Are works councils involved where employee data access is at stake?
-- For Swiss entities: is voluntary compliance or contractual incorporation appropriate?
-
-→ For DACH authority mapping, national implementation status, and enforcement approaches, read references/dach-specific.md.
-
-### Step 13 - EU Representative for Non-EU Businesses (Article 39)
-
-If your organization is **established outside the EU** but offers products or services in scope of the Data Act within the EU, you must designate an **EU representative**.
-
-**Representative obligations:**
-1. Natural or legal person established in the EU
-2. Authorized to act on behalf of the non-EU entity
-3. Addressable by market surveillance authorities and users
-4. Must cooperate with authorities and provide documentation on request
-
-Ask:
-- Is your organization established outside the EU but selling connected products or cloud services in the EU?
-- Have you designated an EU representative with appropriate authority and resources?
-- Is the representative's contact information publicly available and communicated to users?
-
-This is a **gateway compliance obligation** for non-EU entities to ensure enforceability.
-
-## Quick Question Set
-
-Use these questions at intake before conducting a full compliance assessment:
-
-**Scope and Role**
-1. Does your organization manufacture connected products, IoT devices, or smart equipment?
-2. Do you hold data generated by products or services (whether you manufactured them or not)?
-3. Do you provide commercial cloud computing, data storage, or processing services?
-4. Are you a public authority that might request data for emergency or public interest purposes?
-5. Do you receive data from data holders at users' request to provide value-added services?
-
-**Product and Service Context**
-6. What connected products or services are in scope?
-7. What data is generated by product use or service operation?
-8. Is the data accessible to users today? In what format and through what channels?
-9. Are there third-party data sharing mechanisms in place?
-10. When were the products designed, and when will they be placed on the market?
-
-**Contractual and Commercial**
-11. Do you enter B2B contracts for data access or sharing?
-12. Are your contract terms individually negotiated or based on standard templates?
-13. Do you charge fees for data access, switching, or export?
-14. What are your current contract termination notice periods and exit fee structures?
-
-**Technical and Security**
-15. What APIs, interfaces, or technical mechanisms exist for data access?
-16. How is data formatted, and is it machine-readable?
-17. Are security, authentication, and access logging in place?
-18. Do you use smart contracts for automated data transactions?
-
-**Cross-Regulation and Enforcement**
-19. Does the data contain personal data subject to GDPR?
-20. Is the data used for AI system training or high-risk AI applications?
-21. Are cybersecurity obligations under the Cyber Resilience Act applicable?
-22. Which national authority (Germany, Austria, Switzerland, other) has jurisdiction?
-
-If key answers are missing, state assumptions and identify them as compliance gaps or implementation blockers.
+- [ ] Every role uses the correct Article 2 definition or a clearly described functional duty.
+- [ ] Article 3(1), (2), and (3) are not reversed.
+- [ ] Article 7 is not stated as a general small-data-holder exemption.
+- [ ] Article 9 compensation is not based on request frequency or complexity.
+- [ ] Article 13 uses paragraphs 3, 4, and 5 correctly and no safe harbor is claimed.
+- [ ] B2G grounds, response deadlines, and compensation match Articles 15, 18, and 20.
+- [ ] Cloud notice, transition, retrieval, and charge dates match Articles 25 and 29.
+- [ ] Smart-contract duties cite Article 36.
+- [ ] Authorities, complaints, remedies, and representatives cite Articles 37, 38, and 39 correctly.
+- [ ] Personal-data processing has a separately identified GDPR basis.
+- [ ] Negative legal claims are based on the full provision, not a failed search.
+- [ ] National-law and guidance statements have current official sources and dates.
 
 ## Reference Files
 
-Load these as needed during the assessment:
-
-| File | When to read |
-|------|-------------|
-| references/scope-assessment.md | Determining which Data Act roles apply - manufacturer, data holder, user, data recipient, cloud provider, public body |
-| references/data-access-rights.md | User access and third-party sharing rights, technical requirements, refusal grounds, fee structures |
-| references/unfair-terms-catalogue.md | B2B contract fairness - unfair per se vs presumptively unfair terms, safe harbor conditions, examples |
-| references/cloud-switching.md | Cloud portability, switching timelines, fee phase-out, export formats, interoperability standards |
-| references/b2g-data-sharing.md | Public authority requests, emergency vs public interest grounds, proportionality, compensation |
-| references/cross-regulation-mapping.md | GDPR, AI Act, CRA, DGA interaction analysis and integrated compliance strategies |
-| references/dach-specific.md | Germany/Austria/Switzerland authorities, national enforcement, works council, sector overlays |
-| references/templates.md | Compliance checklists, data access request response templates, contract review checklists, gap analysis |
-
-## Output Format
-
-Every Data Act compliance engagement should produce these deliverables:
-
-1. **Scope Assessment Memo** - determination of which Data Act roles apply to the organization, products/services in scope, and key obligations triggered.
-
-2. **Compliance Gap Analysis** - structured assessment of current vs required state across data access, transparency, contract terms, cloud switching, and access-by-design.
-
-3. **Implementation Roadmap** - timeline for bringing systems, contracts, and processes into compliance, prioritized by application dates (Sept 2025 main requirements, Sept 2026 access-by-design, Jan 2027 fee phase-out).
-
-4. **Data Access Rights Matrix** - table mapping connected products/services, data types, current access mechanisms, required improvements, responsible teams, and deadlines.
-
-5. **Contract Review Checklist** - assessment tool for B2B data sharing agreements against unfair terms catalogue, with recommended revisions.
-
-6. **B2G Request Response Template** - standard process for receiving, evaluating, and responding to public authority data requests.
-
-7. **Cross-Regulation Integration Plan** - mapping of Data Act obligations to GDPR, AI Act, CRA compliance programs to avoid duplication and ensure coherence.
-
-→ For templates and model wording, read references/templates.md.
-
-## Key Compliance Notes
-
-- **Phased application dates:** Main requirements from **12 September 2025**, access-by-design from **12 September 2026**, cloud switching fee elimination by **12 January 2027**.
-- **Role-specific obligations:** Not all obligations apply to all entities - scope assessment is the critical first step.
-- **No GDPR override:** Personal data protections under GDPR remain in force - Data Act and GDPR apply in parallel.
-- **Enforcement:** National market surveillance authorities, data protection authorities (for GDPR overlaps), and potentially competition authorities depending on national implementation. **Penalties:** The EU-level framework under **Article 40** requires Member States to lay down rules on effective, proportionate, and dissuasive penalties. Germany's draft Datendurchführungsgesetz (DADG) provides for penalties up to €5 million, or 2% of global turnover for DMA gatekeepers. No EU-wide percentage cap exists in the Data Act itself.
-- **SME simplifications:** Micro and small enterprises (< 50 employees, < €10M turnover) benefit from simplified obligations as manufacturers. Micro/small enterprises (< 10 employees, < €2M turnover) are exempt from data sharing obligations when acting as data holders (Article 7(1)).
-- **Gatekeeper exclusions:** Digital Markets Act gatekeepers have separate data access obligations - data holders may NOT be compelled to share with DMA gatekeepers (Article 6(2)(e)).
-- **Model Contractual Terms (MCTs):** Commission Recommendation issued November 2025 provides non-binding MCTs for data sharing contracts. MCTs are drafting benchmarks but do **not** create a blanket statutory safe harbor. Contract terms should still be tested against Article 13 on their own wording, negotiation history, and commercial context.
-- **Dispute resolution:** Certified dispute settlement bodies available for data access refusals, fee disagreements, compensation terms, and trade secret claims (Article 10).
+| File | Use |
+|---|---|
+| `references/scope-assessment.md` | Roles, territorial scope, enterprise conditions, chapter routing |
+| `references/data-access-rights.md` | Articles 3 to 12, access, sharing, safeguards, compensation |
+| `references/unfair-terms-catalogue.md` | Article 13 contract review |
+| `references/b2g-data-sharing.md` | Articles 14 to 22 request review |
+| `references/cloud-switching.md` | Articles 23 to 32 cloud switching and international access |
+| `references/cross-regulation-mapping.md` | GDPR and adjacent EU-law mapping |
+| `references/dach-specific.md` | Germany, Austria, and Switzerland verification framework |
+| `references/templates.md` | Assessment, request, contract, and source-register templates |
 
 ## Disclaimer
 
-This skill provides structured workflow support for Regulation (EU) 2023/2854 (EU Data Act). It does not constitute legal advice. Whether an entity qualifies as a manufacturer, data holder, or provider of public services, whether contract terms are unfair, whether trade secret protection is justified, or whether a B2G request is proportionate may depend on national law, sector rules, case law, and supervisory guidance. The analysis should be reviewed by qualified counsel, especially before product launch, contract finalization, authority engagement, or enforcement proceedings.
+This skill supports structured compliance analysis. It does not determine disputed facts, replace qualified legal advice, or guarantee an authority or court outcome. Obtain legal review before refusing access, disclosing trade secrets or personal data, responding to an authority, launching a regulated product, or relying on a national-law position.

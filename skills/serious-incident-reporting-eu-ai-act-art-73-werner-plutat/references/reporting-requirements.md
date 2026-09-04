@@ -7,6 +7,27 @@ This reference translates **Article 73 EU AI Act** into an operational reporting
 ### Providers
 Under **Article 73(1)**, providers of high-risk AI systems placed on the Union market must report any serious incident to the market surveillance authorities of the Member State where the incident occurred.
 
+> **Check the addressee first: the AI Office derogation (Art. 75(1a)).**
+> Since 27 July 2026, providers of high-risk AI systems under the AI Office's exclusive
+> competence report serious incidents **to the AI Office**, by way of derogation from
+> Art. 73. Art. 73(2) to (9) apply mutatis mutandis, and the AI Office forwards the
+> relevant information to the market surveillance authority of the Member State where the
+> provider or its legal representative is situated.
+>
+> The AI Office is exclusively competent (Art. 75(1) as replaced) for: AI systems built on
+> a general-purpose AI model where model and system come from the same provider or the same
+> undertaking; and AI systems that constitute or are integrated into a designated VLOP or
+> VLOSE. Four carve-outs stay national: Annex I product systems; Annex III point 2 systems;
+> systems provided by law-enforcement authorities, border-management authorities and
+> financial institutions in so far as they fall under Art. 74(6); and Annex III point 8
+> systems in the administration of justice.
+>
+> The competence covers providers. It reaches deployers only where the deployer is also the
+> provider or belongs to the same undertaking. Everything below applies to systems outside
+> that competence.
+
+
+
 ### Deployers
 Deployers also matter operationally because **Article 26(5)** requires them to:
 
@@ -96,7 +117,7 @@ There is no one perfect statutory template in the article text, so build a regul
 - whether incident is ongoing or contained
 
 ### D. Harm details
-- death / serious health damage / rights impact / critical infrastructure disruption
+- death or serious harm to health / serious and irreversible critical-infrastructure disruption / infringement of fundamental-rights-protecting obligations / serious harm to property or the environment (all four Art. 3(49) categories)
 - number of affected persons or entities
 - severity and current status
 - whether vulnerable persons, workers, or public services were affected

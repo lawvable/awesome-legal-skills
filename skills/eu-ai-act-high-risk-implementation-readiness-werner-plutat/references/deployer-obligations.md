@@ -22,7 +22,7 @@ A deployer readiness program usually covers:
 - retention of logs/records where required
 - informing affected persons where applicable
 - cooperation with provider obligations where issues arise
-- fundamental rights impact assessment for public bodies in relevant cases
+- fundamental rights impact assessment where the Article 27 scope gates are met
 
 ---
 
@@ -44,7 +44,12 @@ There should be a way to capture errors, anomalies, complaints, override pattern
 Depending on the use case, individuals may need to be informed that they are subject to the use of high-risk AI.
 
 ### 6. Is a FRIA needed?
-For public authorities or public bodies using relevant high-risk systems, a **fundamental rights impact assessment** may be required.
+Apply both Article 27 scope gates:
+
+1. **Deployer gate:** the deployer is a body governed by public law, a private entity providing public services, or an entity deploying an Annex III point 5(b) or 5(c) system.
+2. **Use-case gate:** the deployment concerns an Article 27-covered high-risk system. Annex III point 2 systems are expressly excluded from Article 27(1).
+
+If both gates are met, complete the **fundamental rights impact assessment** before first use. Do not infer a FRIA duty solely from public-body status.
 
 ---
 

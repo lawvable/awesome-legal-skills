@@ -1,302 +1,118 @@
-# Unfair Contract Terms Catalogue - B2B Data Sharing Contracts
+# Unfair B2B Data Terms
 
-## Overview
+Use this reference for Article 13. It concerns specified terms imposed unilaterally by one enterprise on another. It is not a general review of every B2B term.
 
-Chapter IV (Articles 13-14) of the Data Act regulates **fairness of contractual terms** in B2B contracts for data access and use.
+## Contents
 
-This is a **contract law intervention** aimed at preventing stronger parties (typically large data holders) from imposing one-sided terms on smaller enterprises.
+1. Applicability gate
+2. Legal structure
+3. Article 13(4) unfair terms
+4. Article 13(5) presumed-unfair terms
+5. Review method
+6. Drafting controls
+7. Temporal scope
+8. National-law overlay
 
-## Two-Tier Unfairness Test
+## 1. Applicability Gate
 
-### Tier 1: Unfair Per Se (Article 13(1))
+Confirm all elements:
 
-These terms are **automatically void** without case-by-case assessment.
+- both parties act as enterprises;
+- the term concerns data access/use or liability/remedies for breach or termination of data-related obligations;
+- one party supplied the term;
+- the other party could not influence its content despite attempting to negotiate, Article 13(6);
+- the term is not merely a mandatory or default Union-law provision, Article 13(2);
+- the issue is not the main subject matter or price adequacy excluded by Article 13(8).
 
-A contract term is unfair per se if it:
+The supplying party bears the burden of proving the term was not unilaterally imposed. That party cannot invoke Article 13 against its own term.
 
-#### (a) Unilaterally impose, alter, or terminate data access, use, or disclosure obligations
+## 2. Legal Structure
 
-**What this means:**
-- One party can change the scope, format, or availability of data access without the other's consent
-- One party can impose new obligations or restrictions after contract formation
-- One party can unilaterally decide how data may be used
+| Provision | Test | Effect |
+|---|---|---|
+| Article 13(1) | Unilaterally imposed term is unfair | Not binding on the other enterprise |
+| Article 13(3) | Gross deviation from good commercial practice in data access and use, contrary to good faith and fair dealing | General unfairness standard |
+| Article 13(4) | Listed objects or effects | Unfair |
+| Article 13(5) | Listed objects or effects | Presumed unfair, subject to rebuttal |
+| Article 13(6) | Other party could not influence supplied term despite attempt to negotiate | Unilateral imposition; supplier bears proof otherwise |
+| Article 13(7) | Unfair term is severable | Remaining terms remain binding |
+| Article 13(9) | Contract seeks to exclude, derogate from, or vary Article 13 | Not permitted |
 
-**Examples of unfair terms:**
-- "Data Holder may modify the scope of accessible data at any time without notice"
-- "Data Recipient must disclose all derivative insights to Data Holder upon request, as determined solely by Data Holder"
-- "Data Holder reserves the right to suspend data access at its sole discretion"
+Article 13(3) is not a safe harbor. Article 41 model terms are non-binding drafting aids and create no statutory presumption of fairness.
 
-**Fair alternatives:**
-- "Changes to data scope require 30 days' notice and mutual agreement"
-- "Data sharing obligations may be modified only by written amendment signed by both parties"
+## 3. Article 13(4): Unfair Terms
 
-#### (b) Grant one party the exclusive right to interpret contract terms
+Flag a term whose object or effect is to:
 
-**What this means:**
-- One party is the sole arbiter of what contractual obligations mean
-- Other party cannot challenge or seek neutral interpretation
+1. exclude or limit the imposing party's liability for intentional acts or gross negligence;
+2. exclude the other party's remedies for non-performance, or the imposing party's liability for breach;
+3. give the imposing party the exclusive right to decide whether supplied data conform to the contract or to interpret any contractual term.
 
-**Examples of unfair terms:**
-- "In case of ambiguity, Data Holder's interpretation of this Agreement shall be final and binding"
-- "All disputes regarding data scope shall be resolved by Data Holder's Chief Data Officer, whose decision is conclusive"
+Record the exact clause and its practical effect. Labels such as “sole discretion” are evidence, not the legal test by themselves.
 
-**Fair alternatives:**
-- "Disputes regarding interpretation shall be resolved through mediation or arbitration under [neutral rules]"
-- "Ambiguities shall be construed against the drafting party" (standard contract law principle)
+## 4. Article 13(5): Presumed-Unfair Terms
 
-#### (c) Exclude or limit liability for intentional acts or gross negligence
+Flag a term whose object or effect is to:
 
-**What this means:**
-- Party attempting to avoid consequences of deliberate wrongdoing or reckless behavior
+1. inappropriately limit remedies or breach liability, or extend the other enterprise's liability;
+2. let the imposing party access and use the other's data in a way significantly detrimental to the other's legitimate interests, particularly for commercially sensitive, trade-secret, or IP-protected data;
+3. prevent or inadequately limit the other party's use of data it provided or generated during the contract;
+4. prevent termination within a reasonable period;
+5. prevent obtaining a copy of data provided or generated during the contract or within a reasonable period after termination;
+6. permit termination at unreasonably short notice without serious grounds, considering switching possibilities and financial detriment;
+7. permit substantial unilateral price or other substantive changes without a valid reason and termination right.
 
-**Examples of unfair terms:**
-- "Data Holder shall not be liable for any damages, including those caused by intentional misconduct"
-- "Liability is excluded even in cases of gross negligence or willful breach"
+For an indeterminate-duration contract, Article 13(5)'s final subparagraph preserves a limited change mechanism where the contract states a valid reason, requires reasonable advance notice, and allows no-cost termination.
 
-**Fair alternatives:**
-- "Liability limitations do not apply to intentional acts, gross negligence, or fraudulent conduct"
-- Standard limited liability clauses capped at a reasonable multiple of contract value (excluding intentional/gross negligence)
+## 5. Review Method
 
-#### (d) Exclude or limit liability for breach of contractual obligations
+For every candidate clause, produce:
 
-**What this means:**
-- Party trying to disclaim responsibility for failing to perform agreed duties
+| Field | Entry |
+|---|---|
+| Clause and location | exact text or accurate extract |
+| Covered subject | access, use, liability, remedy, breach, or termination |
+| Negotiation evidence | drafts, redlines, correspondence, procurement process |
+| Article test | paragraph and point |
+| Object or effect | factual explanation |
+| Counterevidence | evidence relevant to rebutting a presumption |
+| Result | unfair, presumed unfair, general-test concern, or no Article 13 issue |
+| Consequence | non-binding term, severability, national-law issue |
+| Remediation | revised allocation or negotiation step |
+| Confidence | High, Medium, or Low |
 
-**Examples of unfair terms:**
-- "Data Holder makes no warranties and accepts no liability for failure to provide data access as specified"
-- "Data Recipient's sole remedy for breach is termination; no damages or other relief available"
+Do not add prohibitions that are not in Article 13(4) or presumptions not in Article 13(5). A commercially harsh term may still require analysis under the general standard or national contract law.
 
-**Fair alternatives:**
-- "Each party is liable for direct damages caused by material breach, capped at [reasonable amount]"
-- "Liability limitations do not apply to core obligations such as data access and confidentiality"
+## 6. Drafting Controls
 
-#### (e) Entitle one party to terminate unilaterally without reasonable notice (except for good cause)
+Prefer terms that:
 
-**What this means:**
-- One party can walk away without warning or justification
+- allocate liability by defined fault, control, and foreseeable loss;
+- preserve meaningful remedies for non-performance and breach;
+- use objective conformity criteria and a neutral escalation process;
+- define authorized data purposes, users, retention, and onward sharing;
+- allow each party appropriate use and copies of its contributed or generated data;
+- provide reasonable termination and change notice;
+- preserve confidentiality and trade-secret controls without defeating mandatory access rights;
+- record actual negotiation where terms are negotiated.
 
-**Examples of unfair terms:**
-- "Data Holder may terminate this Agreement immediately without cause"
-- "Either party may terminate at any time; no notice required"
+## 7. Temporal Scope
 
-**Fair alternatives:**
-- "Either party may terminate for convenience with 60 days' prior written notice"
-- "Immediate termination permitted only for material breach, insolvency, or force majeure"
-- Minimum notice period aligned with contract duration (longer contracts = longer notice)
+Under Article 50:
 
-### Tier 2: Presumptively Unfair (Article 13(2))
+- Chapter IV applies to contracts concluded after 12 September 2025;
+- from 12 September 2027, it also applies to contracts concluded on or before 12 September 2025 if they are of indefinite duration or expire at least ten years from 11 January 2024.
 
-These terms are **presumed unfair** unless the party relying on them proves otherwise.
+Record contract date, duration, expiry, amendments, and whether a replacement agreement was concluded. Obtain legal advice for borderline novations and amendments.
 
-#### (a) Inappropriately limit remedies for non-performance
+## 8. National-Law Overlay
 
-**What this means:**
-- Remedies are disproportionately weak relative to the potential harm
-- Victim of breach has no meaningful recourse
+Article 13 does not displace all national contract, consumer, competition, or civil-law rules. Identify separately:
 
-**Examples of presumptively unfair terms:**
-- "Data Recipient's sole remedy for late or incomplete data access is a €100 credit"
-- "No specific performance, injunctive relief, or consequential damages available under any circumstances"
+- formation and incorporation;
+- standard-term controls;
+- interpretation and severability;
+- damages and limitation rules;
+- limitation periods and procedural remedies.
 
-**How to rebut presumption:**
-- Show that the remedy is proportionate to the contract value and potential harm
-- Demonstrate that both parties had equal bargaining power and knowingly agreed
-
-**Fair alternatives:**
-- Standard remedy clauses allowing damages, specific performance where appropriate, and injunctive relief for confidentiality breaches
-
-#### (b) Exclude or limit a party's rights to contract data
-
-**What this means:**
-- One party is denied access to data it contributed or generated
-
-**Examples of presumptively unfair terms:**
-- "All data generated during the term, including Data Recipient's analytics and insights, becomes the exclusive property of Data Holder"
-- "Data Recipient may not retain copies of data after termination, even for archival or compliance purposes"
-
-**How to rebut presumption:**
-- Show legitimate IP protection or confidentiality justification
-- Demonstrate that the data in question was provided by the party restricting access, not generated by the restricted party
-
-**Fair alternatives:**
-- "Each party retains ownership of data it contributed; derivative insights are jointly owned or licensed"
-- "Upon termination, Data Recipient may retain data for legal/regulatory compliance purposes"
-
-#### (c) Permit one party to access or use data of another party in a disproportionate or inadequately remunerated manner
-
-**What this means:**
-- One party gets broad access/use rights without fair compensation or reciprocity
-
-**Examples of presumptively unfair terms:**
-- "Data Holder may use all data provided by Data Recipient for any commercial purpose, without compensation"
-- "Data Recipient grants Data Holder perpetual, irrevocable, royalty-free license to all derivative works"
-
-**How to rebut presumption:**
-- Show that data use is limited to purposes beneficial to both parties (e.g., service improvement, security)
-- Demonstrate fair value exchange (e.g., free data access in exchange for use rights)
-
-**Fair alternatives:**
-- "Data Holder may use aggregated, anonymized data for service improvement; individual customer data use requires consent and compensation"
-- Reciprocal data access and use rights
-
-## Safe Harbor: When Terms Are Presumed Fair (Article 13(3))
-
-A contractual term is **presumed fair** (no unfairness challenge) if:
-
-### (a) Individually Negotiated
-
-**What counts as "individually negotiated":**
-- Parties had genuine opportunity to influence the term
-- Discussions, redlines, or counterproposals occurred
-- Both parties had legal/commercial advice
-- Term is not buried in standard boilerplate
-
-**What does NOT count:**
-- "Take it or leave it" standard terms
-- Minor edits to pre-printed forms while core terms remain fixed
-- Negotiation over commercial terms (price, volume) but not data access/liability terms
-
-**Evidence of negotiation:**
-- Email exchanges proposing changes
-- Redlined drafts with tracked changes
-- Meeting notes discussing specific clauses
-- Legal counsel involvement
-
-### (b) Based on Model Terms Developed by Representative Organizations
-
-**What counts as "model terms":**
-- Terms drafted or endorsed by industry associations, chambers of commerce, or multi-stakeholder groups
-- Represent balanced interests of both data holders and data recipients
-- Publicly available and widely adopted
-- Commission Model Contractual Terms (MCTs) developed under Article 41
-
-**Examples:**
-- Standard data sharing agreements developed by sector-specific trade bodies (e.g., automotive, manufacturing, logistics)
-- Multi-stakeholder frameworks (e.g., GAIA-X, International Data Spaces Association terms)
-- National or EU-level model contracts endorsed by business organizations and consumer/SME advocates
-- Commission MCTs issued by Recommendation in November 2025 under Article 41
-
-**What does NOT count:**
-- Terms drafted unilaterally by one party's law firm
-- Industry standards heavily skewed toward one side (e.g., dominant platform's "standard" terms)
-
-## Model Contractual Terms (Article 41)
-
-Article 41 required the Commission to develop **non-binding Model Contractual Terms (MCTs)** for data sharing by September 2025.
-
-**Timeline:**
-- **April 2025:** Draft expert report published
-- **November 2025:** Commission Recommendation issued with MCTs
-
-**Four MCT sets:**
-1. **Data Holder to User**
-2. **User to Data Recipient**
-3. **Data Holder to Data Recipient**
-4. **Data Sharer to Data Recipient** for voluntary data sharing
-
-**Practical effect under Article 13(3):**
-- MCTs are **non-binding**
-- Contracts aligned with MCTs benefit from a **presumption of fairness** as a benchmark or safe harbor
-- Deviations are possible, but the further a contract moves from MCT structure, the harder it is to defend fairness where terms were not individually negotiated
-
-**Practical use:**
-- Use MCTs as baseline drafting language for standard terms
-- Use MCTs as a review benchmark when assessing third-party templates
-- Document reasons for deviation where sector-specific requirements justify different wording
-
-## Who Can Challenge Unfair Terms?
-
-### Standing to Challenge (Article 13(5))
-
-Unfair terms may be challenged by:
-1. **The disadvantaged party** (typically the smaller enterprise or data recipient)
-2. **Representative organizations** acting on behalf of affected enterprises
-3. **National competition or consumer protection authorities** (ex officio)
-
-### Remedies
-
-- **Void term:** Unfair per se terms are automatically void and unenforceable
-- **Presumptively unfair terms:** Shift burden of proof to the party relying on them; if not rebutted, term is void
-- **Severability:** Remainder of contract generally remains in force unless the unfair term was essential
-
-## Practical Guidance
-
-### For Data Holders (Drafting Contracts)
-
-**Red flags in your standard terms:**
-- "We may change this agreement at any time"
-- "Our interpretation is final"
-- "No liability for any damages"
-- "Terminate immediately without cause"
-- "All your data belongs to us"
-
-**Safer approaches:**
-1. **Mutual obligations** - if you want flexibility, give it to both sides
-2. **Defined change processes** - "with 60 days' notice and opportunity to terminate if unacceptable"
-3. **Reasonable liability caps** - exclude intentional/gross negligence, cap at a multiple of fees
-4. **Transparent data use** - specify purposes, offer opt-outs for non-essential uses
-5. **Use model terms** where available, or have terms reviewed by neutral counsel
-
-### For Data Recipients (Reviewing Contracts)
-
-**Checklist for reviewing data holder terms:**
-
-| Issue | Unfair Indicator | Fair Alternative |
-|-------|------------------|------------------|
-| Unilateral changes | "We can modify scope/terms anytime" | "Changes require mutual consent or notice + opt-out" |
-| Interpretation | "Our decision is final" | "Disputes go to mediation/arbitration" |
-| Liability | "No liability even for breach/negligence" | "Liability capped but not excluded for core duties" |
-| Termination | "Immediate termination without cause" | "Reasonable notice period or cause required" |
-| Data rights | "All data is ours forever" | "You retain your data; we have limited use license" |
-| Fees | "We can change fees anytime" | "Fee changes with notice and renegotiation right" |
-
-**If you spot unfair terms:**
-1. **Flag them explicitly** - point to Article 13(1) or 13(2)
-2. **Propose alternatives** - use model terms or balanced language
-3. **Document refusal to negotiate** - if data holder refuses to budge, this strengthens later challenge
-4. **Seek collective action** - work with trade associations to push back on common unfair terms
-
-### For SMEs
-
-**Additional protections:**
-- Courts and authorities will likely apply heightened scrutiny where one party is significantly larger or more sophisticated
-- **Unequal bargaining power** is a contextual factor even if not explicitly in the unfairness test
-- SME status (< 250 employees, < €50M turnover per Annex to Recommendation 2003/361/EC) may be relevant in assessing fairness
-
-**Practical tip:** If you're an SME data recipient, always note the size/power differential in correspondence - e.g., "As a small enterprise with limited negotiating leverage, we request that [data holder] reconsider this one-sided clause."
-
-## Enforcement and Penalties
-
-**Competent authorities (Article 38):**
-- National **market surveillance authorities** (likely competition authorities in most Member States)
-- In Germany: **Bundeskartellamt** (Federal Cartel Office)
-- In Austria: **Federal Competition Authority**
-
-**Penalties:**
-- Member States must establish effective, proportionate, and dissuasive penalties (Article 44)
-- Potential fines **up to 4% of global annual turnover** (comparable to GDPR) if national law so provides
-- Contractual remedies: voiding unfair terms, damages for losses caused by reliance on void terms
-
-**Private enforcement:**
-- Parties can raise unfairness defenses in contract disputes before national courts
-- Injunctions available to stop use of unfair terms
-
-## Relationship to National Contract Law
-
-The Data Act unfairness provisions are **EU-level minimum protections**.
-
-**Interaction with national law:**
-- **Germany:** Overlaps with **AGB-Recht** (standard terms control under BGB §§ 305 ff.)
-- **Austria:** **ABGB** consumer/B2B fairness rules
-- **All Member States:** National unfair terms legislation and case law may provide **additional** protections beyond Data Act minimum
-
-**Practical implication:** Even if a term passes the Data Act unfairness test, it may still be unenforceable under stricter national law.
-
-## Key Takeaways
-
-1. **Automatic voidness for five categories** - unilateral changes, interpretation monopoly, liability exclusions, termination without notice
-2. **Presumed unfair = rebuttable** - can be saved with evidence of fairness, but burden shifts
-3. **Safe harbors exist** - individually negotiated or model terms get strong presumption of fairness
-4. **SMEs get heightened protection** - power imbalance matters even if not explicit in the test
-5. **Enforcement is both public and private** - authorities can act, and parties can raise defenses in court
-6. **Start with fairness by design** - easier to draft balanced terms than to defend unfair ones later
+Do not attribute a national remedy or enforcement route to Article 13 without an official national source.

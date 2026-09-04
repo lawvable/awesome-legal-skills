@@ -1,0 +1,40 @@
+Thesis Assesor
+Copyright 2026 Seth J. Chandler (https://legaled.ai)
+
+Licensed under the Apache License, Version 2.0. A copy of the License is included
+in the file LICENSE and is also available at:
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+ORIGIN AND ATTRIBUTION
+
+This skill was developed for Seth J. Chandler as an expanded derivative of his local
+"volokh-claim-assessor" skill. It uses the novelty, nonobviousness, utility, soundness,
+and test-suite concepts attributed in SKILL.md to Eugene Volokh's published academic-
+writing work. The Apache-2.0 license covers the original skill instructions and bundled
+resources in this package; it does not license or reproduce Volokh's book or article.
+
+The derivative adds role-specific assessment modes; claim crystallization; capability-
+aware and connector-aware research routing; public-source and no-connector fallbacks;
+preemption mapping; claim-type-specific tests; a sustainable double-pass scholarly red
+team; complete-report delivery requirements; and differentiated revision paths for
+professors, student notes, and seminar papers.
+
+The double-pass adversarial discipline was also influenced by the independently named
+"sustainable-opposing-counsel-review" workflow. That companion skill is optional and is
+not bundled or required; this package contains a self-contained version of the method.
+
+No affiliation with or endorsement by Eugene Volokh, Lawve, any research provider, or
+the authors or operators of cited tools and services is claimed.
+
+BUNDLED CODE
+
+This package contains no executable code. It makes no network calls itself and handles no
+credentials. Research access, if any, is supplied and controlled by the user's host.
+
+DISCLAIMER
+
+This skill provides research and scholarly-development support, not legal advice, a
+licensing opinion, a citator guarantee, or assurance that a thesis is novel, correct, or
+publishable. Users remain responsible for verifying authorities, quotations, source status,
+and publication claims.

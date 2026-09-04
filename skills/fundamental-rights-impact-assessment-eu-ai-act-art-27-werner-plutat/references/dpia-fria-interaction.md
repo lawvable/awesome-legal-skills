@@ -4,12 +4,9 @@ This reference explains how a **Fundamental Rights Impact Assessment (FRIA)** un
 
 ## Core Rule
 
-Article 27(4) AI Act allows a FRIA to be conducted **together with** a DPIA where the conditions for a DPIA are met.
+Where an Article 27 obligation is already met through a DPIA under Article 35 GDPR or Article 27 of Directive (EU) 2016/680, amended Article 27(4) allows the deployer to **cross-reference the relevant DPIA sections** or **include the relevant parts** in the FRIA.
 
-This means:
-- a combined process is permitted,
-- duplication should be avoided where sensible,
-- but the FRIA must still cover its own broader subject matter.
+Running both assessments in a coordinated process may be operationally sensible, but Article 27(4) is a cross-referencing and incorporation rule. The FRIA must still visibly cover every applicable Article 27 element.
 
 A DPIA is **not automatically sufficient** as a FRIA.
 
@@ -113,8 +110,9 @@ This structure keeps the FRIA visible instead of hiding it inside privacy sectio
 If yes, a DPIA may be required independently of the FRIA.
 
 ### Ask whether a FRIA is required
-- Is the system high-risk under the AI Act?
-- Is the deployer a body governed by public law or a private entity providing a public service?
+- Is the system high-risk under Article 6(2), with Annex III point 2 excluded?
+- Is the deployer a body governed by public law or a private entity providing a public service (Gate A)?
+- Independently, is the system an Annex III point 5(b) creditworthiness/credit-scoring or point 5(c) life/health-insurance system, for which every deployer is in scope (Gate B)?
 - Is the system being put into use in a specific deployment context?
 
 If yes, Article 27 may require a FRIA independently of the DPIA.
@@ -127,9 +125,9 @@ Do not confuse the authority pathways.
 Under GDPR, a high residual risk can trigger **prior consultation** with the supervisory authority where the controller cannot sufficiently mitigate the risk.
 
 ### FRIA-side
-Under Article 27(3), identifying a **specific risk** to the rights of natural persons or groups can trigger notification to the **market surveillance authority**, and where relevant, also the competent **data protection authority**.
+Under Article 27(3), every completed FRIA result must be notified to the **market surveillance authority**, together with the filled-out Article 27(5) template, unless the Article 46(1) exemption applies. Any data-protection-authority engagement arises separately under data-protection law.
 
-These are related but not identical triggers.
+These are separate legal pathways with different triggers.
 
 ## Drafting Tips for a Combined Assessment
 

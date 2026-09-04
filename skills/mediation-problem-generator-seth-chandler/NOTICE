@@ -1,0 +1,49 @@
+Mediation Problem Generator
+Copyright 2026 Seth J. Chandler (https://legaled.ai)
+
+Licensed under the Apache License, Version 2.0. A copy of the License is
+included in the file LICENSE and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+ORIGIN
+
+This skill is original work by Seth J. Chandler. It encodes a workflow for
+creating and validating fictional commercial mediation-competition problems,
+including a canonical case model, asymmetric confidential packets, a narrow
+settlement corridor, deterministic checks, and semantic role-limited audits.
+
+The Lawve distribution package reorganizes the original reference materials
+under resources/, adds portable capability fallbacks, catalogue metadata,
+jurisdiction and confidentiality disclosures, and this licence and notice. It
+does not alter the substantive problem-design methodology.
+
+This skill is not affiliated with or endorsed by Lawve, any mediation
+competition, or any dispute-resolution institution.
+
+---
+
+BUNDLED CODE
+
+Three Python 3 scripts are included. Each uses only the Python standard library;
+none makes network calls, spawns subprocesses, handles credentials, or evaluates
+dynamic code.
+
+- scripts/scaffold_case_model.py creates a starter JSON model at a path named by
+  the caller and refuses to overwrite an existing file unless --force is used.
+- scripts/validate_case_model.py reads a case-model JSON file and writes findings
+  only when the caller supplies --report with an output path.
+- scripts/check_information_firewall.py reads the model and packet files and
+  reports possible verbatim confidential-fact leakage; it writes no files.
+
+---
+
+DISCLAIMER
+
+This skill produces educational simulations. It does not provide legal advice,
+determine governing law, predict actual disputes, or replace review by a
+qualified instructor or lawyer. Users remain responsible for protecting
+confidential information, verifying jurisdiction-specific law and commercial
+assumptions, and keeping author-only and participant-facing files separate.

@@ -4,7 +4,7 @@
 
 Article 43 determines how the provider demonstrates conformity before placing a high-risk AI system on the market or putting it into service.
 
-For many Annex III systems, the practical route is **internal control / self-assessment** under Annex VI. In some cases, especially higher-scrutiny biometric scenarios, a **notified body** route under Annex VII may be required.
+The route depends on the exact legal category. Article 43 treats Annex III point 1, Annex III points 2 to 8, and Annex I products differently.
 
 The key question is:
 
@@ -14,8 +14,28 @@ The key question is:
 
 ## Practical assessment routes
 
-### Route 1 - Internal control (Annex VI)
-Typically relevant for many Annex III high-risk systems.
+### Route 1 - Annex III point 1
+
+If the provider has applied all relevant harmonised standards under Article 40 or, where applicable, common specifications under Article 41, it may choose:
+
+- Annex VI internal control, or
+- Annex VII assessment of the quality management system and technical documentation with a notified body.
+
+Annex VII is required where the relevant harmonised standards or common specifications do not exist or are unavailable, are not applied or are only partly applied, or a relevant standard is published with a restriction to the restricted extent.
+
+### Route 2 - Annex III points 2 to 8
+
+Article 43(2) requires Annex VI internal control. That procedure does not involve a notified body.
+
+### Route 3 - Annex I Section A products
+
+Follow the conformity-assessment procedure required by the relevant sectoral Union harmonisation legislation under Article 43(3). The AI Act Section 2 requirements form part of that assessment. A high-risk AI safety component does not by itself force third-party assessment where the sectoral legislation permits a non-third-party route and the Article 43(3) conditions are met.
+
+### Route 4 - Annex I Section B products
+
+Article 2(2), as amended, limits which AI Act provisions apply to these products. Do not apply the full Article 43 framework without first checking that limited scope and the relevant sectoral legislation.
+
+### What internal control means
 
 Practical meaning:
 - the provider self-assesses conformity
@@ -23,8 +43,7 @@ Practical meaning:
 - self-assessment is not “light” compliance
 - the technical file, risk management, QMS, testing, and declarations still need to be robust
 
-### Route 2 - Notified body involvement (Annex VII)
-More likely where the legal framework requires third-party assessment, including certain biometric or specially regulated cases.
+### What notified-body involvement means
 
 Practical meaning:
 - evidence expectations increase in rigor and discipline
@@ -37,24 +56,24 @@ Practical meaning:
 ## Simple decision tree
 
 ### Question 1
-Is the system actually high-risk under Annex III after considering any Art. 6(3) exception argument?
+Is the system high-risk under Annex III after considering any Article 6(3) exception argument, or under Annex I?
 - If no or unclear: resolve that first.
 - If yes: continue.
 
 ### Question 2
-Is the system in a category where internal control is generally available?
-- If yes: prepare for Annex VI-style self-assessment.
-- If no or unclear: assess whether notified body involvement is needed.
+Is it listed in Annex III point 1?
+- If yes: check complete application and availability of relevant harmonised standards/common specifications. Complete application allows a choice between Annex VI and VII; otherwise Annex VII applies.
+- If no: continue.
 
 ### Question 3
-Is the system linked to biometric use cases or another route with higher assessment intensity?
-- If yes: treat notified body analysis as a front-loaded workstream.
-- If no: continue on internal control unless sector rules say otherwise.
+Is it listed in Annex III points 2 to 8?
+- If yes: Annex VI internal control applies without a notified body.
+- If no: continue.
 
 ### Question 4
-Are harmonized standards/common specifications available and being relied on?
-- If yes: reflect them explicitly in the evidence package.
-- If no: the provider needs a clearer reasoning record for how conformity is demonstrated.
+Is it covered by Annex I Section A or Section B?
+- Section A: follow the relevant sectoral conformity-assessment procedure under Article 43(3).
+- Section B: first apply the limited scope in Article 2(2), then follow the relevant sectoral legislation.
 
 ---
 
@@ -80,7 +99,7 @@ If these do not exist, “self-assessment” is not really ready.
 ## When to escalate early
 
 Escalate route analysis early if any of the following is true:
-- biometric identification/categorization/sensitive use is involved
+- Annex III point 1 is involved and the standards/common-specification conditions need analysis
 - sector-specific law adds assessment expectations
 - internal teams disagree on classification or route
 - the organization wants to launch on a compressed timeline

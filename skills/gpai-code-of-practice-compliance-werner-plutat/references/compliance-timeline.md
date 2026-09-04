@@ -26,12 +26,12 @@ All deadlines for GPAI model provider obligations under the EU AI Act and Code o
 | 24 July 2025 | GPAI Training Data Summary Template published | Commission |
 | 1 August 2025 | GPAI Code of Practice formally approved by Commission + AI Board | Commission Opinion |
 | **2 August 2025** | **GPAI model provider obligations apply (Articles 51–56)** | Art. 113(b) |
-| 2 August 2026 | AI Office enforcement actions begin (requests for info, model access, recalls) — **unchanged in 7 May 2026 provisional Digital Omnibus agreement** | GPAI Guidance |
-| 2 August 2026 | High-risk AI system obligations apply (current law) — provisional Digital Omnibus would shift Annex III to **2 December 2027**; Annex I to **2 August 2028**; not yet adopted | Art. 113(c) |
-| **2 August 2027** | **Legacy GPAI models must comply** (models placed on market before 2 Aug 2025) — unchanged in provisional agreement | Art. 113 transitional |
-| 2027+ (TBD) | Harmonised European standards for GPAI expected | Standardisation process |
+| 2 August 2026 | AI Office enforcement actions begin (requests for info, model access, recalls) — **unchanged by the enacted Digital Omnibus (Regulation (EU) 2026/1744)** | GPAI Guidance |
+| 2 August 2026 | High-risk AI system obligations originally scheduled — the enacted Digital Omnibus (Regulation (EU) 2026/1744) defers Annex III to **2 December 2027** and Annex I to **2 August 2028** | Art. 113(c) |
+| **2 August 2027** | **Legacy GPAI models must comply** (models placed on market before 2 Aug 2025) — unchanged by the enacted Digital Omnibus | Art. 111(3) |
+| TBD | Harmonised European standards for GPAI | Track the official standardisation process; do not rely on an estimated adoption date |
 
-> **Note on the Digital Omnibus (status as of 2026-05-08):** The European Commission proposed the Digital Omnibus simplification package in December 2025. On 7 May 2026, the Council and Parliament reached a provisional political agreement on the AI Act amendments. The agreement is **not yet adopted law** — it must still be formally adopted and published in the Official Journal. **GPAI dates above are unchanged in the provisional agreement.** Only high-risk Annex III and Annex I dates would shift if formally adopted. Plan against current law.
+> **Note on the Digital Omnibus:** The Digital Omnibus simplification package amending the EU AI Act was adopted on 8 July 2026 and published in the Official Journal on 24 July 2026 as Regulation (EU) 2026/1744, entering into force on 27 July 2026. **GPAI dates above are unchanged.** Only the high-risk Annex III and Annex I application dates were deferred (see the Art. 113(c) row). The GPAI enforcement and legacy-compliance dates in this timeline remain authoritative.
 
 ---
 
@@ -77,15 +77,14 @@ All deadlines for GPAI model provider obligations under the EU AI Act and Code o
 
 ## Code of Practice Lifecycle
 
-### Current status (as of March 2026):
+### Current status (as of 6 August 2026):
 - Code of Practice is the **primary compliance tool** for demonstrating GPAI obligations compliance
 - Code is voluntary — but non-adherence has practical consequences (increased scrutiny)
-- ~Most prominent GPAI providers are signatories
+- Verify each provider's signatory status against the Commission's current official list
 
 ### Future evolution:
 - The Code will remain in effect **until harmonised European standards are adopted**
-- Standardisation process for GPAI has not yet received a formal Commission request
-- Standards are expected to take 2–3+ years from request to adoption (potentially 2027–2028+)
+- Track the official standardisation process and Commission publications for current status and timing
 - Once standards are adopted, compliance with standards creates a **presumption of conformity**
 - The Code may be revised if it proves inadequate or as the regulatory landscape evolves
 - The Commission may adopt delegated acts to update FLOP thresholds, Annex XI/XII content, or other technical aspects
@@ -102,36 +101,36 @@ All deadlines for GPAI model provider obligations under the EU AI Act and Code o
 
 ## Compliance Roadmap
 
-### Phase 1: Assessment (Q1–Q2 2026)
+### Overdue Baseline Actions: Perform Immediately if Incomplete
 
 | Action | Priority | Target |
 |--------|----------|--------|
 | Determine GPAI model provider status | Critical | Immediate |
 | Assess systemic risk classification | Critical | Immediate |
 | Identify applicable obligations | Critical | Immediate |
-| Gap assessment against Code commitments | High | 4 weeks |
-| Decide on Code of Practice signatory status | High | 6 weeks |
+| Gap assessment against Code commitments | High | Immediate |
+| Decide on Code of Practice signatory status | High | Immediate |
 
-### Phase 2: Implementation (Q2–Q3 2026)
-
-| Action | Priority | Target |
-|--------|----------|--------|
-| Draft/update copyright policy | High | 8 weeks |
-| Complete Model Documentation Form | High | 8 weeks |
-| Publish GPAI Training Data Summary | High | 8 weeks |
-| Establish downstream provider info process | High | 10 weeks |
-| Set up complaints handling | Medium | 10 weeks |
-| For systemic risk: develop Safety & Security Framework | Critical | 12 weeks |
-| For systemic risk: conduct model evaluations | Critical | 12 weeks |
-
-### Phase 3: Readiness for Enforcement (Q3–Q4 2026)
+### Overdue Implementation Actions: Perform Immediately if Incomplete
 
 | Action | Priority | Target |
 |--------|----------|--------|
-| Complete Model Report (systemic risk) | Critical | Before 2 Aug 2026 |
-| Assign organisational responsibilities | High | Before 2 Aug 2026 |
-| Establish incident reporting processes | High | Before 2 Aug 2026 |
-| Test readiness for AI Office information requests | High | Before 2 Aug 2026 |
+| Draft/update copyright policy | High | Immediate |
+| Complete Model Documentation Form | High | Immediate |
+| Publish GPAI Training Data Summary | High | Immediate |
+| Establish downstream provider info process | High | Immediate |
+| Set up complaints handling | Medium | Immediate |
+| For systemic risk: develop Safety & Security Framework | Critical | Immediate |
+| For systemic risk: conduct model evaluations | Critical | Immediate |
+
+### Enforcement Readiness: Effective Since 2 August 2026
+
+| Action | Priority | Target |
+|--------|----------|--------|
+| Complete Model Report (systemic risk) | Critical | Immediate |
+| Assign organisational responsibilities | High | Immediate |
+| Establish incident reporting processes | High | Immediate |
+| Test readiness for AI Office information requests | High | Immediate |
 | Internal audit of compliance measures | Medium | Q4 2026 |
 
 ### Phase 4: Ongoing Compliance (2027+)
@@ -150,9 +149,9 @@ All deadlines for GPAI model provider obligations under the EU AI Act and Code o
 ## DACH-Specific Timeline Considerations
 
 ### Germany:
-- **BNetzA** (Bundesnetzagentur) designated as market surveillance authority for GPAI
-- Expect BNetzA guidance and enforcement priorities to be published during 2026
-- German companies with GPAI models should proactively engage with BNetzA
+- Under Article 88, the Commission has exclusive powers to supervise and enforce Chapter V GPAI obligations, operationally through the AI Office.
+- BNetzA and sector authorities may remain relevant for downstream AI systems, national coordination, cybersecurity, or sector-specific overlays.
+- Direct GPAI supervisory readiness should focus on Commission and AI Office requests; map national interfaces separately for the concrete use case.
 
 ### Austria:
 - Market surveillance authority designation in progress

@@ -1,6 +1,6 @@
 ---
 name: serious-incident-reporting
-description: Serious Incident Reporting (SIR) for high-risk AI systems under Article 73 EU AI Act (Regulation (EU) 2024/1689, KI-Verordnung). Assess, qualify, draft, and submit Article 73 Serious Incident Reporting notifications across the four Art. 3(49) harm categories: death or serious damage to health, critical infrastructure disruption, breach of fundamental rights under Union law, and serious property or environmental damage. Covers Art. 73 deadline buckets (2/10/15 days), market surveillance authority notification, deployer duties under Art. 26(5), cross-regulation mapping with GDPR Art. 33/34 breach notification, NIS2 Art. 23 incident reporting, DORA Art. 19 ICT incident, and MDR vigilance, corrective measures, root-cause analysis, and DACH routing through German market surveillance (BNetzA, BaFin, BSI, BfArM, KBA). Use when asked to evaluate whether an AI incident is reportable, draft a Serious Incident Reporting notification under Art. 73, build an AI incident response playbook, handle an AI failure, AI bias incident, AI discrimination incident or automated decision failure, identify the right market surveillance authority, manage 2/10/15-day Article 73 deadlines, or handle a schwerwiegender Vorfall under the EU AI Act.
+description: Assess, report, and manage serious incidents involving high-risk AI systems under Article 73 EU AI Act. Covers incident qualification, deadline buckets (2/10/15 days), authority notification, deployer duties (Art. 26(5)), cross-regulation mapping (GDPR/NIS2/MDR), corrective measures, and DACH-specific routing. Use when asked to evaluate whether an AI incident is reportable, draft an Article 73 notification, identify the right authority, or build an AI incident response process.
 ---
 
 # Serious Incident Reporting under the EU AI Act (Article 73)
@@ -71,12 +71,11 @@ Keep the first intake short and practical. Ask only what is needed to classify a
    - what the system did or failed to do
    - causal chain as currently understood
 
-4. **What harm occurred or could have occurred?**
-   - death
-   - serious harm to health
-   - serious property damage
-   - serious environmental damage
-   - serious and irreversible disruption of critical infrastructure management
+4. **Which Art. 3(49) outcome occurred?** (The outcome must have materialised, directly or indirectly; potential harm alone goes to post-market monitoring, not Art. 73.)
+   - (a) death, or serious harm to a person's health
+   - (b) serious and irreversible disruption of the management or operation of critical infrastructure
+   - (c) infringement of obligations under Union law intended to protect fundamental rights
+   - (d) serious harm to property or the environment
 
 5. **Where did the incident occur?**
    - Member State(s)
@@ -108,7 +107,7 @@ Keep the first intake short and practical. Ask only what is needed to classify a
 Ask only these four:
 
 - Is the system definitely **high-risk**?
-- Did the event cause or plausibly contribute to **death or serious harm**?
+- Did the event **directly or indirectly lead to** an Art. 3(49) outcome (death or serious health harm, irreversible critical-infrastructure disruption, fundamental-rights infringement, serious property or environmental harm)?
 - In which **Member State** did it occur?
 - When did the provider or deployer first become **aware**?
 
@@ -156,13 +155,14 @@ For deeper logic, use `references/incident-qualification.md`.
 
 Under **Article 3(49)**, this is the legal thresholding step.
 
-For practical purposes, treat the event as a serious incident if it directly or indirectly led, might have led, or plausibly contributed to one of the following:
+Article 3(49) defines a serious incident as an incident or malfunctioning of an AI system that **directly or indirectly leads to** any of the following:
 
-- **death of a person**
-- **serious damage to the health of a person**
-- **serious and irreversible disruption of the management and operation of critical infrastructure**
-- breach of obligations under Union law intended to protect **fundamental rights**, where the breach is serious in effect
-- for operational triage, also treat severe damage to **property** or the **environment** as requiring immediate legal review and likely notification planning where the facts align with the statutory serious-harm threshold or adjacent sector rules
+- **(a) the death of a person, or serious harm to a person's health**
+- **(b) a serious and irreversible disruption of the management or operation of critical infrastructure**
+- **(c) the infringement of obligations under Union law intended to protect fundamental rights** (no additional severity qualifier: the text does not require the breach to be "serious in effect")
+- **(d) serious harm to property or the environment**
+
+All four categories are full statutory categories. An event that *might have* caused one of these outcomes but did not is **not** a serious incident under Art. 3(49); route near misses to post-market monitoring (Art. 72) and the risk management system (Art. 9), and check whether another regime (product safety, NIS2, GDPR) has its own near-miss duty.
 
 #### Decision Tree
 
@@ -170,25 +170,24 @@ For practical purposes, treat the event as a serious incident if it directly or 
    - if **no** → not Article 73
    - if **yes** → continue
 
-2. Is there actual harm, or a sufficiently evidenced near-term harm scenario, connected to the system?
-   - if **no** → record as non-serious incident / post-market issue unless facts change
+2. Did an incident or malfunctioning actually occur, and did an Art. 3(49) outcome actually materialise (directly or indirectly)?
+   - if **no** → not a serious incident; record under post-market monitoring / risk management, and re-qualify if facts change
    - if **yes** → continue
 
-3. Does the harm fall into a severe category?
-   - death
-   - serious health harm
-   - serious fundamental-rights impact
-   - critical-infrastructure disruption
-   - potentially equivalent severe sectoral harm requiring parallel reporting
+3. Which Art. 3(49) category does the outcome fall into?
+   - (a) death or serious harm to health
+   - (b) serious and irreversible disruption of critical infrastructure
+   - (c) infringement of fundamental-rights-protecting Union law obligations
+   - (d) serious harm to property or the environment
 
-4. Is there a causal link or at least a **reasonable likelihood** of one?
-   - if **yes** → reportable timeline starts running
+4. Is there a causal link between the AI system and the serious incident, or at least a **reasonable likelihood** of one?
+   - if **yes** → the Art. 73 reporting clock starts running
    - if **uncertain but plausible** → treat as escalation case; preserve evidence and decide quickly
    - if **clearly no** → document why and monitor
 
 #### Practical rule
 
-Do not wait for perfect forensic proof. **Article 73(2)** is triggered once the provider has established a causal link **or the reasonable likelihood of such a link**.
+Do not wait for perfect forensic proof of causation. **Article 73(2)** starts the reporting clock once the provider has established the causal link between the AI system and the serious incident **or the reasonable likelihood of such a link**. Note what this standard governs: the **causal-link** question in step 4. It does not lower the step 2 threshold, which still requires an Art. 3(49) outcome to have occurred.
 
 Use `references/incident-qualification.md` for examples and edge cases.
 
@@ -274,9 +273,9 @@ Common examples:
 - critical infrastructure or cyber context → NIS2 / BSI or sector-specific channels may run in parallel
 - employment context → add labour, works council, and data-protection analysis
 
-#### 4C. Article 62 reference
+#### 4C. Where the report goes, and what Art. 87 is not
 
-**Article 62** ("Channels for reporting breaches and protection of reporting persons") requires Member States to establish channels for reporting breaches. In practice, these channels also serve as entry points for incident-related questions and operational guidance. The AI Office is expected to provide templates and information tooling. Article 62 is not itself the incident reporting rule, but it matters operationally for identifying the right contact point.
+Serious-incident reports are routed under **Art. 73** (to the market surveillance authority of the Member State where the incident occurred), with **Art. 74** governing market surveillance generally and the new **Art. 75(1a)** redirecting reports to the **AI Office** for systems under its exclusive competence. (Article 62, sometimes miscited here, is "Measures for providers and deployers, in particular SMEs, including start-ups" and has nothing to do with incident reporting. **Art. 87** covers reporting of infringements and protection of reporting persons under Directive (EU) 2019/1937; it is a whistleblowing channel, not the statutory serious-incident route.)
 
 Use `references/dach-specific.md` and `references/reporting-requirements.md`.
 
@@ -455,13 +454,13 @@ Use `references/corrective-measures.md` and `references/templates.md`.
 - No → Article 73 out, check other regimes
 - Yes / likely yes → Q2
 
-**Q2. Does the event fit a serious-incident harm category?**
-- No → record and monitor
-- Yes / maybe → Q3
+**Q2. Did an Art. 3(49)(a)-(d) outcome actually materialise, directly or indirectly?**
+- No → not a serious incident; record under post-market monitoring and reassess if facts change
+- Yes → Q3
 
-**Q3. Is there a causal link or reasonable likelihood?**
-- No → document and reassess as facts develop
-- Yes / plausible → Q4
+**Q3. Is there a causal link between the AI system and that incident, or a reasonable likelihood of one (Art. 73(2))?**
+- No → document why and monitor
+- Yes, or reasonably likely → Q4
 
 **Q4. Which deadline bucket applies?**
 - death → immediate / max 10 days
@@ -517,12 +516,50 @@ Use `references/dach-specific.md`.
 
 ## Omnibus / Timing Caveat
 
-The Digital Omnibus simplification package (Commission proposal December 2025) progressed to a Council/Parliament provisional political agreement on 7 May 2026. That agreement would shift the application date for Annex III high-risk obligations to **2 December 2027** and Annex I high-risk obligations to **2 August 2028** if formally adopted. It is **not yet adopted law** — pending formal adoption and Official Journal publication. For now, do **not** rewrite the legal substance based on the provisional agreement alone.
+The Digital Omnibus simplification package amending the EU AI Act was adopted on 8 July 2026 and published in the Official Journal on 24 July 2026 as Regulation (EU) 2026/1744, entering into force on 27 July 2026. It defers the application date for Annex III high-risk obligations (which include the Article 73 serious-incident reporting obligation) to **2 December 2027** and Annex I high-risk obligations to **2 August 2028**. Article 50 transparency obligations and the start of Commission GPAI enforcement powers were not deferred and continue to apply from 2 August 2026. Article 73 itself was not amended, **but who you report to can now be a different authority**: see the section below.
+
+## Where to report: the AI Office derogation (Article 75(1a))
+
+The same regulation inserted Article 75(1a), which overrides the default reporting route for
+one class of systems. Determine this **before** drafting the notification, because it
+changes the addressee.
+
+**By way of derogation from Article 73**, a provider of a high-risk AI system that falls
+under the AI Office's exclusive competence reports serious incidents **to the AI Office**,
+not to the national market surveillance authority. Article 73(2) to (9) still apply in the
+same way, so the timelines, content and follow-up duties are unchanged. The AI Office then
+promptly passes the relevant information to the market surveillance authority of the Member
+State where the provider or its legal representative is located.
+
+The AI Office is exclusively competent, under the replaced Article 75(1), for:
+
+1. **AI systems built on a general-purpose AI model where the model and the system come from
+   the same provider, or from providers within the same undertaking.** Four carve-outs stay
+   with national authorities: systems related to Annex I products; systems under Annex III
+   point 2; systems provided by law-enforcement authorities, border-management authorities and
+   financial institutions, in so far as they fall under Article 74(6); and Annex III point 8 systems in
+   the administration of justice.
+2. **AI systems that constitute, or are integrated into, a very large online platform or
+   very large online search engine** designated under the Digital Services Act.
+
+The competence covers providers of those systems. It reaches deployers only where the
+deployer is also the provider or belongs to the same undertaking; every other deployer stays
+under national supervision.
+
+Add one question to the intake: *is this system built on a general-purpose model from the
+same provider or undertaking, or embedded in a designated VLOP or VLOSE?* If yes, and none
+of the four carve-outs applies, the notification goes to the AI Office.
+
+Two further points worth knowing when advising on exposure. The AI Office gained its own
+investigation and enforcement powers in the new Articles 75a to 75d, including on-site
+inspections, binding commitments, fines applied mutatis mutandis from Article 99(3) to (7),
+and periodic penalty payments not exceeding 5% of the average daily income or worldwide annual turnover in the preceding financial year per day (Art. 75c(5)). Its
+decisions are reviewable by the Court of Justice, and a five-year limitation period applies.
 
 Practical rule:
 
-- note the provisional agreement as context where timing matters
-- apply the **current law as enacted** unless and until amendments are adopted and in force
+- apply the Act as amended by Regulation (EU) 2026/1744; the deferred dates above are the binding timeline
+- where timing matters, cite the amended application dates, not the pre-amendment ones
 
 ---
 

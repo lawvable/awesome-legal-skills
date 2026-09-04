@@ -1,0 +1,3 @@
+# Overview
+
+Find and quote statutory and regulatory law with the LibreJustice MCP tools — French codes at any date, EU law, treaties and bilateral accords, foreign codes (59 countries), collective agreements, BOFiP, circulaires. Use whenever the user asks what a text says or said at a given date, which version or which text applies to a situation, needs the exact wording of a provision for a brief, or works with foreign or international law in French litigation, even if they never mention LibreJustice.
