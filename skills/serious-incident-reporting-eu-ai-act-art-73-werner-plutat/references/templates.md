@@ -1,5 +1,10 @@
 # Templates
 
+> **Before filling any template below, confirm the addressee.** For systems under the
+> AI Office's exclusive competence (Art. 75(1)), the report goes to the AI Office and not
+> to a national market surveillance authority (Art. 75(1a)). See
+> `reporting-requirements.md` for the competence test.
+
 ## 1. Initial Article 73 Incident Report Template
 
 Use this for the first notification. It can be incomplete if necessary under **Article 73(5)**.

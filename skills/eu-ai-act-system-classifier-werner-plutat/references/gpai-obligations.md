@@ -85,11 +85,11 @@ A GPAI model is classified as having systemic risk if:
 - The cumulative amount of compute used for training exceeds **10^25 FLOPs** (floating point operations)
 - This threshold may be updated by the Commission via delegated acts
 
-**Designation by the EU AI Office:**
-- Based on criteria including: high-impact capabilities, wide reach across the internal market, number of registered users, or specific dangerous capabilities
-- The provider can present arguments against designation
+**Designation by the Commission (Art. 51(1)(b), Art. 52(4)):**
+- The **Commission** may designate a model as having systemic risk, ex officio or following a qualified alert from the scientific panel, based on the Annex XIII criteria (capabilities, reach, users, and comparable factors)
+- The provider can present arguments against designation and request reassessment (Art. 52)
 
-**Current models likely meeting the threshold:** Frontier models from major providers (GPT-4+, Gemini Ultra, Claude Opus-class, etc.)
+Do not infer systemic-risk status from a model name or family. Confirm the documented cumulative training compute or a Commission designation under Article 51.
 
 ### 3.2 Additional Obligations for Systemic Risk Models (Article 55)
 
@@ -116,7 +116,7 @@ The EU AI Office facilitates the drawing up of codes of practice (Article 56) th
 - Applying risk mitigation measures
 - Establishing common evaluation and testing methodologies
 
-Compliance with an approved code of practice creates a presumption of conformity. Providers can demonstrate compliance by alternative means but must demonstrate equivalent protection.
+Codes of practice do **not** create a presumption of conformity: the presumption attaches to harmonised standards, not to codes. Regulation (EU) 2026/1744 made this explicit and removed the Commission's power to approve a code by implementing act and give it general validity. A provider may still rely on a code assessed as adequate under Art. 56(6), via Art. 53(4) and, for systemic-risk models, Art. 55(2). Providers can also demonstrate compliance by alternative adequate means.
 
 ---
 
@@ -154,7 +154,7 @@ Even if you are not a GPAI model provider, you have practical responsibilities:
 ### 5.3 If Building a High-Risk System on GPAI
 
 When you build a high-risk AI system using a GPAI model:
-- You are the provider of the AI *system* (with full Title III obligations)
+- You are the provider of the AI *system* (with full Chapter III obligations where the system is high-risk)
 - The GPAI model provider has GPAI-specific obligations
 - Ensure you can fulfil your system-level obligations (risk management, data governance, transparency) with the information provided by the GPAI model provider
 - If the GPAI provider's documentation is insufficient, this is a compliance risk to flag and address contractually
@@ -167,13 +167,13 @@ When a system uses a GPAI model:
 
 - [ ] Identify the GPAI model(s) used and their provider(s)
 - [ ] Confirm whether the provider is established in the EU or has an authorised representative
-- [ ] Check if the model is classified as systemic risk (compute threshold or AI Office designation)
+- [ ] Check if the model is classified as systemic risk (compute threshold or Commission designation)
 - [ ] Request Article 53 documentation (model card, training data summary, capability docs)
 - [ ] Review the publicly available training data summary
 - [ ] Assess copyright compliance evidence (opt-out policy)
 - [ ] If systemic risk: request evidence of model evaluation, adversarial testing, incident reporting
 - [ ] Update vendor contracts with AI Act compliance clauses
 - [ ] Map downstream obligations — if your system is high-risk, you need the GPAI documentation to meet your own compliance requirements
-- [ ] Monitor for updates — the EU AI Office may reclassify models or update thresholds
+- [ ] Monitor for updates — the Commission may designate or reassess models (Art. 52) and adjust thresholds by delegated act
 
 **Timeline:** GPAI obligations apply from **2 August 2025**. Existing GPAI models placed on the market before this date must comply by **2 August 2027**.

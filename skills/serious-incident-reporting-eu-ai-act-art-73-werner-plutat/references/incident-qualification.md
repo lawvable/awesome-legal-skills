@@ -35,14 +35,14 @@ A company should not assume Article 6(3) applies just because a human still exis
 
 Article 73 relies on the defined concept of a **serious incident** in **Article 3(49)**.
 
-In operational terms, ask whether the event caused, or plausibly contributed to, one of these outcomes:
+Art. 3(49): a serious incident is an incident or malfunctioning of an AI system that **directly or indirectly leads to** one of these outcomes:
 
-- death of a person
-- serious damage to a person’s health
-- serious and irreversible disruption of management/operation of critical infrastructure
-- serious breach of fundamental-rights protections
+- (a) the death of a person, or serious harm to a person's health
+- (b) a serious and irreversible disruption of the management or operation of critical infrastructure
+- (c) the infringement of obligations under Union law intended to protect fundamental rights (the text carries no extra severity qualifier)
+- (d) serious harm to property or the environment
 
-In practical internal triage, also escalate cases involving severe property or environmental harm for immediate legal review, because these often overlap with sector-specific safety regimes and may be framed under the AI Act through the relevant serious-harm/fundamental-rights lens depending on the facts.
+All four are full statutory categories; property and environmental harm is not a lesser, triage-only case. "Plausibly contributed" is not the threshold: the outcome must have occurred, directly or indirectly. The "reasonable likelihood" standard in Art. 73(2) governs the causal link between the AI system and an already-qualifying incident, not whether harm happened. Near misses go to post-market monitoring (Art. 72) and risk management (Art. 9), plus any sector regime with its own near-miss duty.
 
 ## 3. Qualification Decision Tree
 
@@ -61,12 +61,11 @@ In practical internal triage, also escalate cases involving severe property or e
    - No → likely not reportable
    - Yes → continue
 
-4. **Did it cause or plausibly contribute to a severe outcome?**
-   - death
-   - serious health harm
-   - serious fundamental-rights impact
-   - critical infrastructure disruption
-   - potentially equivalent sectoral severe harm
+4. **Did it directly or indirectly lead to an Art. 3(49) outcome?**
+   - (a) death, or serious harm to a person's health
+   - (b) serious and irreversible disruption of the management or operation of critical infrastructure
+   - (c) infringement of obligations under Union law intended to protect fundamental rights
+   - (d) serious harm to property or the environment
 
 5. **Is there a causal link or reasonable likelihood of one?**
    - Yes → reportability analysis active
@@ -142,7 +141,7 @@ No harm happened, but only because a human caught the error seconds before execu
 The deployer ignored instructions for use.
 
 - This does **not automatically eliminate** reporting
-- The question is whether the AI system still plausibly contributed and whether misuse was reasonably foreseeable
+- The question is whether there is a causal link, or a reasonable likelihood of one (Art. 73(2)), between the AI system and the incident, and whether the misuse was reasonably foreseeable
 
 ### Edge case C - Human approved the decision
 A human clicked approve, but in practice relied entirely on the model.

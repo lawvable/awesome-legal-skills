@@ -5,8 +5,8 @@
 1. [Key Dates Overview](#1-key-dates-overview)
 2. [Phase 1: Already in Effect](#2-phase-1-already-in-effect--2-february-2025)
 3. [Phase 2: GPAI & Governance](#3-phase-2-gpai--governance--2-august-2025)
-4. [Phase 3: High-Risk Annex III](#4-phase-3-high-risk-annex-iii--2-august-2026)
-5. [Phase 4: High-Risk Annex I](#5-phase-4-high-risk-annex-i--2-august-2027)
+4. [Phase 3: High-Risk Annex III](#4-phase-3-high-risk-annex-iii--2-december-2027)
+5. [Phase 4: High-Risk Annex I](#5-phase-4-high-risk-annex-i--2-august-2028)
 6. [Practical Planning Guide](#6-practical-planning-guide)
 7. [Compliance Roadmap Template](#7-compliance-roadmap-template)
 
@@ -14,20 +14,21 @@
 
 ## 1. Key Dates Overview
 
-| Date | What Applies | Provisional Digital Omnibus (if adopted) |
+| Date | What Applies | Digital Omnibus amendment (Regulation (EU) 2026/1744) |
 |------|-------------|------------------------------------------|
-| **2 Feb 2025** | Prohibited practices ban (Art. 5) + AI literacy obligation (Art. 4) | Would expand the prohibited-practices list with CSAM and non-consensual intimate content; compliance by 2 Dec 2026 |
+| **2 Feb 2025** | Prohibited practices ban (Art. 5) + AI literacy obligation (Art. 4) | Prohibited-practices list expanded with Art. 5(1)(ba) and (bb) (non-consensual intimate material, CSAM); the ban is widened, not deferred. The two new prohibitions apply from **2 Dec 2026** per Art. 113(3)(a) as amended |
 | **2 Aug 2025** | GPAI model obligations (Arts. 51-56) + governance & penalties framework | Unchanged |
-| **2 Aug 2026** | High-risk AI system obligations (Annex III systems) | Would shift to **2 Dec 2027** |
-| **2 Aug 2026** | Article 50 transparency rules + Commission GPAI enforcement powers | Art. 50 watermarking would shift to 2 Dec 2026; GPAI enforcement unchanged |
-| **2 Aug 2027** | High-risk obligations for Annex I regulated product AI + legacy GPAI | Annex I would shift to **2 Aug 2028**; legacy GPAI unchanged |
+| **2 Aug 2026** | Article 50 transparency rules + Commission GPAI enforcement powers | Not deferred. Art. 50(2) applies from this date; systems already on the market before it have until 2 Dec 2026 to comply (transitional rule, new Art. 111(4)) |
+| **2 Aug 2027** | Legacy GPAI compliance (models placed on the market before 2 Aug 2025) | Unchanged |
+| **2 Dec 2027** | High-risk AI system obligations (Annex III systems) | Deferred from 2 Aug 2026 |
+| **2 Aug 2028** | High-risk obligations for Annex I regulated product AI | Deferred from 2 Aug 2027 |
 
 **Entry into force:** 1 August 2024
-**Full application:** 2 August 2027 (staggered as above; provisional agreement would extend to 2 August 2028 if adopted)
+**Full application:** 2 August 2028 (staggered as above; extended from 2 August 2027 by the Digital Omnibus deferrals)
 
-**Status of the Digital Omnibus (as of 2026-05-08):** The European Commission proposed the Digital Omnibus simplification package in December 2025. On 7 May 2026, the Council and Parliament reached a provisional political agreement on the AI Act amendments. The agreement is **not yet adopted law** — it must still be formally adopted by Council and Parliament and published in the Official Journal. Until then, the **current-law dates** above remain authoritative for compliance advice. Communicate the Provisional column only with explicit "if adopted" framing.
+**Status of the Digital Omnibus:** The Digital Omnibus simplification package amending the EU AI Act was adopted on 8 July 2026 and published in the Official Journal on 24 July 2026 as Regulation (EU) 2026/1744, entering into force on 27 July 2026. It defers the application of high-risk obligations: stand-alone Annex III systems now apply from **2 December 2027** (previously 2 August 2026) and Annex I product-integrated systems from **2 August 2028** (previously 2 August 2027). Article 50 transparency obligations and the start of Commission GPAI enforcement powers were **not** deferred and continue to apply from 2 August 2026. (Art. 50(2) itself applies from 2 August 2026; the new Art. 111(4) gives systems placed on the market before that date until 2 December 2026 to comply.) The dates in the table above are the enacted, binding timeline.
 
-**Before advising on urgency:** Always compare the current date against these milestones. Do not assume which deadlines have passed or are upcoming without checking. Do not communicate the provisional dates as the binding deadline.
+**Before advising on urgency:** Always compare the current date against these milestones. Do not assume which deadlines have passed or are upcoming without checking.
 
 ---
 
@@ -35,12 +36,12 @@
 
 ### Prohibited Practices (Article 5)
 
-All eight prohibited practices are banned. Systems falling under Article 5 must be:
+The original eight prohibited practices have applied since 2 February 2025, with no transition period remaining. The two categories added by Regulation (EU) 2026/1744, Art. 5(1)(ba) non-consensual intimate material and Art. 5(1)(bb) CSAM, together with the scope paragraphs 1a and 1b, apply from **2 December 2026** (Art. 113, third paragraph, point (a) as amended). Systems falling under Article 5 must be:
 - Taken off the market
 - Taken out of service
 - Remediated or discontinued
 
-**No transition period.** Violations risk fines up to €35M or 7% of global annual turnover.
+Violations risk fines up to €35M or 7% of global annual turnover.
 
 **Immediate action items:**
 - [ ] Complete Article 5 assessment for all AI systems in scope
@@ -50,7 +51,7 @@ All eight prohibited practices are banned. Systems falling under Article 5 must 
 
 ### AI Literacy (Article 4)
 
-Providers and deployers must ensure sufficient AI literacy among staff involved in AI system operation and use.
+Providers and deployers must take measures to support the development of AI literacy among staff and others operating or using AI systems on their behalf. Art. 4 was replaced by Regulation (EU) 2026/1744: it now expressly does not require guaranteeing any specific level of AI literacy in any individual.
 
 **Immediate action items:**
 - [ ] Identify staff involved in AI system operation and use
@@ -103,11 +104,11 @@ All GPAI model providers must comply with:
 
 ---
 
-## 4. Phase 3: High-Risk Annex III — 2 August 2026
+## 4. Phase 3: High-Risk Annex III — 2 December 2027
 
 ### High-Risk System Obligations for Annex III Use Cases
 
-Full Title III requirements apply to high-risk AI systems under Annex III:
+Full Chapter III requirements apply to high-risk AI systems under Annex III:
 - Risk management system (Art. 9)
 - Data governance (Art. 10)
 - Technical documentation (Art. 11)
@@ -151,11 +152,11 @@ Full Title III requirements apply to high-risk AI systems under Annex III:
 
 ---
 
-## 5. Phase 4: High-Risk Annex I — 2 August 2027
+## 5. Phase 4: High-Risk Annex I — 2 August 2028
 
 ### High-Risk Obligations for Regulated Product AI
 
-Same Title III requirements as Phase 3, but for AI systems that are products or safety components under EU harmonisation legislation in Annex I (medical devices, machinery, aviation, automotive, etc.).
+Same Chapter III requirements as Phase 3, but for AI systems that are products or safety components under Annex I **Section A** harmonisation legislation (for example medical devices under the MDR and IVDR, or toys). Annex I **Section B** legislation, which since 27 July 2026 includes the Machinery Regulation (EU) 2023/1230 alongside aviation and automotive, is different: per the amended Art. 2(2) only Art. 6(1), Art. 60a and Arts. 102 to 112 apply to those systems, not the full Chapter III regime.
 
 **These systems must integrate AI Act requirements with existing product regulation:**
 - Conformity assessment may be combined with existing product certification

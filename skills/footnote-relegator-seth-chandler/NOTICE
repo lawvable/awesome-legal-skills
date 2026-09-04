@@ -1,0 +1,35 @@
+Footnote Relegator
+Copyright 2026 Seth J. Chandler
+
+Origin
+------
+This package is original work by Seth J. Chandler. It was prepared for public
+distribution on Lawve in August 2026. No third-party skill is incorporated or
+required. The optional tentacle-footnote-finder skill is mentioned only as a
+possible companion and is not bundled.
+
+License
+-------
+Licensed under the Apache License, Version 2.0. See LICENSE in this directory.
+
+Code disclosure
+---------------
+The package includes three Python 3 scripts:
+
+* scripts/ledger.py reads two caller-named Markdown files and reports word
+  accounting, text-conservation, and footnote-reference results.
+* scripts/docx_redline.py edits OOXML files only inside a caller-named unpacked
+  Word-document directory according to a caller-supplied JSON plan.
+* scripts/polish_footnotes.py reads a caller-named Word document, uses a local
+  temporary directory, and writes or replaces only the caller-named output.
+
+All three scripts use only the Python standard library. They make no network
+calls, spawn no subprocesses, perform no dynamic evaluation, and do not handle
+credentials or tokens.
+
+Disclaimer
+----------
+The package provides editorial assistance, not legal advice. Users must review
+all proposed demotions, citations, cross-references, accepted/rejected tracked-
+change views, and final formatting. No contributor or referenced companion-skill
+author endorses any downstream adaptation or output.

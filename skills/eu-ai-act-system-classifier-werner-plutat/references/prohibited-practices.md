@@ -85,7 +85,7 @@
 
 **Article reference:** Article 5(1)(d)
 
-**Prohibited:** AI systems making risk assessments of natural persons to predict the risk of committing a criminal offence, based solely or primarily on profiling or personality/characteristics assessment. Does not affect human-initiated analysis supported by AI based on objective, verifiable facts directly linked to criminal activity.
+**Prohibited:** AI systems making risk assessments of natural persons in order to assess or predict the risk of committing a criminal offence, based **solely** on the profiling of a natural person or on assessing their personality traits and characteristics. Does not affect human-initiated analysis supported by AI based on objective, verifiable facts directly linked to criminal activity.
 
 **Examples:**
 - "Likely offender" lists generated from demographic proxies and neighbourhood data
@@ -93,11 +93,11 @@
 - Gang membership prediction based on social network analysis and postcode
 
 **Edge cases and boundaries:**
-- **Crime hotspot mapping** (location-based, not individual-based) may be permissible but is high-risk at minimum
+- **Crime hotspot mapping** based only on aggregate location data may fall outside Annex III point 6 where it does not assess or predict the risk of a natural person or perform profiling. Assess the actual intended purpose and outputs
 - **Investigation support** using objective case facts is explicitly carved out
-- **Border between predictive policing and investigation support:** If the system predicts individual risk primarily from profiling → prohibited. If it supports an active investigation with objective facts → potentially permissible but likely high-risk under Annex III category 6
+- **Border between predictive policing and investigation support:** If the system predicts individual risk based solely on profiling or personality assessment → prohibited. If objective, verifiable facts directly linked to criminal activity enter the assessment, the prohibition does not bite, but the system is then typically high-risk under Annex III point 6(d), which covers exactly this non-prohibited risk assessment
 
-**Key test:** Is the risk prediction about an *individual* based *solely or primarily* on profiling rather than objective, verifiable facts linked to criminal activity?
+**Key test:** Is the risk prediction about an *individual* based *solely* on profiling or personality traits, with no objective, verifiable facts directly linked to criminal activity in the assessment?
 
 ---
 
@@ -169,13 +169,13 @@
 
 **Prohibited in principle:** Real-time remote biometric identification systems in publicly accessible spaces for law enforcement purposes.
 
-**Narrow exceptions (all require prior authorisation):**
+**Narrow exceptions normally require prior authorisation.** In a duly justified situation of urgency, use may begin while authorisation is requested without undue delay and no later than 24 hours, subject to immediate cessation and deletion if refused:
 - Targeted search for specific victims (abduction, trafficking, sexual exploitation)
 - Prevention of specific, substantial, imminent threat to life or terrorist attack
 - Identification of suspects for specific serious criminal offences (as listed)
 
 **Requirements for exceptions:**
-- Judicial or independent administrative authorisation (prior, or within 48 hours in urgent cases)
+- Prior judicial or independent administrative authorisation. In a duly justified situation of urgency, use may commence without authorisation provided it is requested without undue delay, at the latest within 24 hours; if rejected, use stops immediately and all data, results and outputs are discarded (Art. 5(3))
 - Necessity and proportionality assessment
 - Temporal, geographic, and personal scope limitations
 - Notification to the relevant market surveillance authority
@@ -193,15 +193,61 @@
 
 ---
 
+
+### Art. 5(1)(ba) - Non-consensual intimate material (added by Regulation (EU) 2026/1744)
+
+Placing on the market, putting into service or using an AI system that generates or
+manipulates realistic images, video, audio or similar material of an identifiable natural
+person's intimate parts, or of an identifiable natural person engaged in sexually explicit
+activities, without that person's freely given, specific, informed, unambiguous and
+explicit consent.
+
+**Applies from 2 December 2026** (Art. 113(3)(a) as amended).
+
+Scope limits in Art. 5(1a) and (1b):
+- For providers, placing on the market or putting into service is prohibited only where
+  such generation is the system's intended purpose, or where the design, training,
+  architecture, capabilities or user-facing functionality make it a reasonably foreseeable
+  and reproducible outcome without significant technical modification AND the system lacks
+  reasonable and adequate safeguards to prevent it and correct observed misuse.
+- For deployers, use is prohibited only where the deployer uses the system for that purpose.
+- Manipulation that neither increases the exposure of depicted intimate parts nor alters the
+  nature of depicted sexually explicit activity does not count as manipulation.
+
+Not caught: material that does not depict identifiable natural persons; realistic partially
+nude depictions where intimate parts are not revealed **and** no sexually explicit activity is
+depicted; works that are not realistic, including artistic works only in so far as they do not
+realistically depict an identifiable person; and generation with the person's explicit consent.
+Note that "artistic" alone exempts nothing: realism is the operative element of Art. 5(1)(ba),
+so a realistic depiction of an identifiable person is caught however it is framed.
+
+**Try-on and medical applications are not categorically exempt.** They fall outside the
+prohibition only where intimate parts are not exposed or the specified explicit consent exists.
+Recital 12 of Regulation (EU) 2026/1744 additionally recognises exceptional generation for
+diagnosis or treatment by medical professionals where the person is incapable of giving
+consent, subject to fundamental-rights, data-protection and medical law. A virtual try-on
+feature that exposes intimate parts of an identifiable person without consent is inside the
+prohibition, whatever it is called.
+
+### Art. 5(1)(bb) - Child sexual abuse material (added by Regulation (EU) 2026/1744)
+
+Placing on the market, putting into service or using an AI system that generates or
+manipulates material or a performance within the meaning of Art. 2, points (c) and (e), of
+Directive 2011/93/EU, except where a "without right" defence applies under national law
+(for example law-enforcement use, or red-teaming and evaluation to test compliance).
+
+**Applies from 2 December 2026.** The Art. 5(1a) provider and deployer limits apply here too. Art. 5(1b) does **not**: by its own terms it governs point (ba) only, so there is no equivalent manipulation carve-out for CSAM.
+
+
 ## 9. Assessment Methodology
 
 When evaluating Article 5, apply this structured approach:
 
-1. **Map the system's function** to each of the eight categories above
+1. **Map the system's function** to each of the ten categories above (eight original, plus Art. 5(1)(ba) and (bb) added on 27 July 2026)
 2. **For each potential match**, apply the specific key test
 3. **Document edge cases** — if a system is close to a prohibition boundary, document why it falls on the permissible side with specific factual reasoning
 4. **Check for exceptions** — narrow law enforcement/medical/safety carve-outs exist for some categories
-5. **If prohibited**, the system must be taken off the market or out of service. No grace period — the prohibition has applied since 2 February 2025.
+5. **If prohibited**, the system must be taken off the market or out of service. For the original eight categories there is no grace period: the prohibition has applied since 2 February 2025. The two categories added by Regulation (EU) 2026/1744, Art. 5(1)(ba) and (bb), apply from 2 December 2026.
 6. **If borderline**, escalate to legal counsel with a documented analysis. Err on the side of caution — prohibited practice fines reach €35M or 7% of global turnover.
 
-**Prohibition applies since:** 2 February 2025 — no transition period remains.
+**Prohibition applies since:** 2 February 2025 for the original eight categories, with no transition period remaining. Art. 5(1)(ba) and (bb) apply from 2 December 2026.

@@ -32,7 +32,7 @@
 
 ## 2. High-Risk AI Systems — Provider Obligations
 
-Providers bear the heaviest compliance burden. Core obligations under Title III, Chapter 2:
+Providers bear the heaviest compliance burden. Core obligations under Chapter III, Section 2:
 
 | Obligation | Article | Practical Evidence |
 |-----------|---------|-------------------|
@@ -71,9 +71,11 @@ Deployers have significant but narrower obligations (Article 26):
 
 ### Fundamental Rights Impact Assessment (FRIA) — Article 27
 
-**Who must conduct one:**
-- Public bodies and private entities providing public services using high-risk AI in categories 5(a)–(c) of Annex III (creditworthiness, essential services, certain insurance)
-- Before putting the high-risk system into use
+**Who must conduct one (Art. 27(1)):** before first use of a high-risk AI system referred to in **Art. 6(2)** (Annex III), with the exception of Annex III point 2 (critical infrastructure):
+- deployers that are **bodies governed by public law** or **private entities providing public services**, for any in-scope Annex III system, and
+- **any** deployer of an Annex III **point 5(b)** system (creditworthiness/credit scoring) or **point 5(c)** system (life and health insurance risk assessment and pricing), public or private
+
+Art. 27 does not apply to Art. 6(1) product-safety high-risk systems.
 
 **FRIA contents:**
 - Description of the deployer's processes where the AI system will be used
@@ -81,14 +83,14 @@ Deployers have significant but narrower obligations (Article 26):
 - Categories of affected natural persons and groups
 - Specific risks of harm to those categories
 - Human oversight measures
-- Measures if risks materialise (complaint handling, redress)
-- Notification to relevant data protection authority where applicable
+- Measures if risks materialise, including internal governance arrangements and complaint mechanisms
+- **Notification:** the results of every completed FRIA go to the **market surveillance authority** (Art. 27(3)), submitting the filled-out Art. 27(5) template, with the Art. 46(1) case as the only exemption. Engagement with a data protection authority is a separate data-protection-law question, not part of Art. 27(3)
 
 ---
 
 ## 4. High-Risk AI Systems — Importer & Distributor Obligations
 
-### Importer Obligations (Articles 23–24)
+### Importer Obligations (Article 23)
 
 Before placing a high-risk AI system on the EU market, importers must verify:
 - [ ] Provider has carried out conformity assessment
@@ -103,7 +105,9 @@ Before placing a high-risk AI system on the EU market, importers must verify:
 - Cooperate with market surveillance authorities
 - Take corrective action or withdraw the system if non-compliance is identified
 
-### Distributor Obligations (Article 25)
+### Distributor Obligations (Article 24)
+
+> Article 25 is a different provision: "Responsibilities along the AI value chain", governing when a distributor, importer, deployer or other third party becomes a provider. Cite Art. 24 for distributor duties and Art. 25 for role changes.
 
 Before making a system available on the market:
 - [ ] Verify CE marking and EU declaration of conformity
@@ -119,16 +123,16 @@ Before making a system available on the market:
 
 ## 5. Limited-Risk Systems — Transparency Obligations
 
-**Article 50** obligations shared between providers and deployers:
+**Article 50** allocates each duty to one actor per paragraph:
 
 | Obligation | Responsible Party | Practical Implementation |
 |-----------|------------------|------------------------|
-| AI interaction disclosure | Provider + Deployer (whoever controls the interface) | UI notices, voice disclosures, call scripts |
-| Deepfake/synthetic content labelling | Provider (generation) + Deployer (distribution) | Watermarking, metadata, content provenance |
-| Emotion recognition disclosure | Deployer | Inform exposed individuals before use |
-| Biometric categorisation disclosure | Deployer | Inform exposed individuals before use |
+| Direct-interaction disclosure, Art. 50(1) | **Provider** (design duty) | Design the system so persons are informed they interact with AI |
+| Machine-readable marking of synthetic audio/image/video/text output, Art. 50(2) | **Provider** | Watermarking, metadata, provenance marking, effective and interoperable so far as technically feasible |
+| Emotion recognition and biometric categorisation notice, Art. 50(3) | **Deployer** | Inform exposed individuals before use |
+| Deepfake disclosure, and disclosure of AI-generated or manipulated text published to inform the public on matters of public interest, Art. 50(4) | **Deployer** | Visible disclosure, subject to the stated artistic/satirical and editorial-control carve-outs |
 
-**Exception:** Disclosure not required where AI use is obvious from context for a reasonably well-informed person (e.g., clear AI avatar in a game).
+**Exception:** the "obvious to a reasonably well-informed, observant and circumspect natural person" exception belongs to **Art. 50(1) only**. It does not excuse the marking, notice or deepfake duties in paragraphs 2 to 4.
 
 ---
 
@@ -148,7 +152,7 @@ Before making a system available on the market:
 
 ## 7. Horizontal Obligations (All Roles)
 
-**AI Literacy (Article 4):** All providers and deployers must take measures to ensure that their staff and others involved in the operation and use of AI systems have a sufficient level of AI literacy. Applies since **2 February 2025**.
+**AI Literacy (Article 4):** All providers and deployers must take measures to **support the development** of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account technical knowledge, experience, education and training, the context of use, and the persons or groups on whom the systems are used. Applies since **2 February 2025**. Article 4 was replaced with effect from **27 July 2026** by Regulation (EU) 2026/1744: the duty is now expressly one of supporting development, and it **does not require providers or deployers to guarantee any specific level of AI literacy of any individual**. A new Article 4(2) obliges the Commission and Member States to support that effort, in particular for SMEs, with practical compliance examples to be published on the single information platform. Treat the duty as one of demonstrable effort, not of measured competence.
 
 **Practical implementation:**
 - Training programme for relevant staff
@@ -172,7 +176,7 @@ Before making a system available on the market:
 | QMS (Art. 17) | ✅ | — | — | — |
 | Conformity assessment (Art. 43) | ✅ | — | Verify | Verify |
 | CE marking (Arts. 48–49) | ✅ Affix | — | Verify | Verify |
-| Registration (Art. 49) | ✅ | ✅ (deployer reg.) | — | — |
+| Registration (Art. 49) | ✅ (Annex III except point 2, incl. Art. 6(3) claims under Art. 49(2)) | Only public authorities, Union institutions/bodies, or persons acting on their behalf (Art. 49(3); Annex III point 2 excluded) | — | — |
 | Post-market monitoring (Art. 72) | ✅ | — | — | — |
 | Incident reporting (Art. 73) | ✅ | Escalate | Cooperate | Cooperate |
 | FRIA (Art. 27) | — | ✅ (when required) | — | — |

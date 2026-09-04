@@ -64,6 +64,8 @@ For each Article 5 category, document the assessment:
 | Emotion recognition workplace/education | Yes / No | [Brief reasoning] |
 | Biometric categorisation (sensitive) | Yes / No | [Brief reasoning] |
 | Real-time remote biometric ID (law enforcement) | Yes / No | [Brief reasoning] |
+| Non-consensual intimate material, Art. 5(1)(ba), from 2 Dec 2026; Art. 5(1a) provider/deployer scope and the Art. 5(1b) manipulation carve-out apply to this row only | Yes / No | [Brief reasoning] |
+| Child sexual abuse material, Art. 5(1)(bb), from 2 Dec 2026; Art. 5(1a) applies, Art. 5(1b) does not | Yes / No | [Brief reasoning] |
 
 **Finding:** [Not prohibited / Prohibited under Article 5(1)(x) — stop if prohibited]
 
@@ -114,7 +116,7 @@ For each Article 5 category, document the assessment:
 
 ## Compliance Deadline
 
-[Applicable deadline based on the current-law timeline — e.g., "2 August 2026 for Annex III high-risk systems". If the user is planning long-horizon work, also note the 7 May 2026 provisional Digital Omnibus agreement that would shift Annex III to 2 December 2027 if formally adopted, while making clear the agreement is not yet binding law.]
+[Applicable deadline based on the enacted timeline, e.g. "2 December 2027 for Annex III high-risk systems". The Digital Omnibus (Regulation (EU) 2026/1744, published in the Official Journal on 24 July 2026) deferred Annex III high-risk obligations from 2 August 2026 to 2 December 2027 and Annex I product-integrated high-risk obligations from 2 August 2027 to 2 August 2028. Article 50 transparency obligations and Commission GPAI enforcement powers were not deferred and continue to apply from 2 August 2026.]
 
 ## Assumptions and Gaps
 
@@ -209,7 +211,7 @@ Use this template for leadership communication. One page maximum.
 
 ## What This Means
 
-[2–3 sentences explaining the practical impact. E.g., "As the deployer of a high-risk AI system in the employment category, we must implement human oversight, conduct a fundamental rights impact assessment, and maintain operational logs. The compliance deadline is 2 August 2026 in current law. A 7 May 2026 provisional Digital Omnibus agreement would shift this to 2 December 2027 if formally adopted; not yet adopted, so plan against current law."]
+[2–3 sentences explaining the practical impact. E.g., "As the deployer of a high-risk AI system in the employment category, we must implement human oversight, conduct a fundamental rights impact assessment, and maintain operational logs. The compliance deadline is 2 December 2027 under the EU AI Act as amended by the Digital Omnibus (Regulation (EU) 2026/1744), deferred from the original 2 August 2026 date."]
 
 ## Key Obligations
 
@@ -265,7 +267,7 @@ Use this template for leadership communication. One page maximum.
 ### Quality Checks Before Finalising
 
 - [ ] Every Article citation verified against Regulation (EU) 2024/1689
-- [ ] All eight Article 5 categories explicitly assessed (even if clearly N/A)
+- [ ] All ten Article 5 categories explicitly assessed, including Art. 5(1)(ba) and (bb) applying from 2 December 2026 (even if clearly N/A)
 - [ ] GPAI assessment included even if no GPAI model is used
 - [ ] DACH-specific considerations addressed if deployed in Germany/Austria/Switzerland
 - [ ] Compliance deadline correctly identified per the timeline

@@ -17,21 +17,20 @@ Additional regulatory considerations for GPAI model providers and deployers oper
 
 ## Germany
 
-### Market Surveillance Authority: BNetzA
+### GPAI Supervision: AI Office; National Interfaces for Downstream Systems
 
-The **Bundesnetzagentur (BNetzA)** is designated as the market surveillance authority for AI in Germany, including GPAI model oversight.
+Under Article 88 of the AI Act, the Commission has exclusive powers to supervise and enforce the obligations in Chapter V, operationally through the AI Office. BNetzA may be relevant to downstream AI systems, national coordination, or other German regulatory interfaces, but it is not the primary Chapter V supervisor for GPAI model-provider obligations.
 
 #### Practical implications:
-- BNetzA will be the first point of contact for German GPAI model providers
-- The AI Office (EU level) remains the primary enforcer for GPAI obligations, but works through national authorities
-- BNetzA may issue national guidance, priorities, or supplementary requirements
+- GPAI model providers should prepare for direct Commission and AI Office requests concerning Chapter V
+- BNetzA may issue national guidance or act within its competence for downstream AI systems and national implementation
 - German companies should monitor BNetzA publications for enforcement approach signals
-- BNetzA has existing expertise from telecom and energy regulation — expect structured, process-oriented oversight
+- Map AI Office, BNetzA, BSI, data-protection, and sector-authority interfaces separately for the concrete model and downstream use case
 
 #### What to expect:
-- Requests for information channelled through BNetzA
-- BNetzA may request AI Office to investigate specific providers
-- National competent authority role means BNetzA can request documentation via the AI Office (Article 53(1)(a))
+- Commission and AI Office information, model-access, evaluation, and enforcement powers under Chapter V
+- A market-surveillance authority may request the Commission to exercise its GPAI powers under Article 88(2)
+- National requests concerning downstream systems or sector rules, within the relevant authority's competence
 
 ### BSI (Bundesamt für Sicherheit in der Informationstechnik)
 
@@ -106,9 +105,9 @@ For GPAI models used in financial services:
 ### Regulatory Landscape
 
 #### Market surveillance:
-- **RTR (Rundfunk und Telekom Regulierungs-GmbH)** expected to play a significant role
-- Exact designation and scope still being finalised
-- Austrian providers should monitor Federal Chancellery (BKA) and RTR communications
+- Verify the current Austrian national authority designations and scope against official publications
+- The Commission and AI Office retain Article 88 supervision and enforcement powers for Chapter V GPAI obligations
+- Austrian providers should monitor Federal Chancellery (BKA), RTR, and Commission communications for the applicable national and Union interfaces
 
 #### ArbVG §96a — Works Council:
 - Austrian equivalent of German BetrVG co-determination
@@ -174,7 +173,7 @@ Switzerland is **not an EU/EEA member state** and the AI Act does not directly a
 
 | Scenario | Applicable framework |
 |----------|---------------------|
-| German company, GPAI model on EU market | AI Act + Code of Practice + BNetzA oversight |
+| German company, GPAI model on EU market | AI Act + Code of Practice + Commission/AI Office supervision; BNetzA or sector overlay for downstream systems where applicable |
 | Austrian company, GPAI model on EU market | AI Act + Code of Practice + RTR/TBD oversight |
 | Swiss company, GPAI model on EU market | AI Act + Code of Practice + Authorised representative required |
 | German company deploying US-built GPAI model internally | Works council (BetrVG), BDSG/GDPR, deployer obligations |
@@ -189,7 +188,7 @@ Switzerland is **not an EU/EEA member state** and the AI Act does not directly a
 
 ### Documentation language:
 - AI Office communications are in English
-- BNetzA may require German-language documentation for national proceedings
+- Check the language requirements applicable to any concrete national proceeding; do not assume a general German-language requirement for Chapter V GPAI supervision
 - Practical recommendation: maintain documentation in English with German translations available for key documents
 
 ---

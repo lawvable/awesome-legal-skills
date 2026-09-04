@@ -15,7 +15,7 @@ This skill is designed as a **practical readiness assessment and implementation 
 - Internal legal, compliance, product, engineering, security, risk, procurement, and management teams
 - Especially **DACH-based organizations** preparing for real operational compliance work before the high-risk obligations apply
 
-> Important timing note: The current-law date for Annex III high-risk obligations is **2 August 2026**. The Digital Omnibus simplification package (Commission proposal December 2025) progressed to a Council/Parliament provisional political agreement on 7 May 2026; under that agreement, Annex III would shift to **2 December 2027** and Annex I to **2 August 2028**. The agreement is **not yet adopted law** — pending formal adoption and Official Journal publication. Build for the law as enacted unless and until amendments are formally adopted and in force. If the user explicitly wants scenario planning around potential delays, note the provisional agreement as context but do not rewrite obligations based on it alone.
+> Important timing note: Annex III high-risk obligations apply from **2 December 2027** and Annex I product-integrated high-risk obligations from **2 August 2028**. The Digital Omnibus simplification package amending the EU AI Act was adopted on 8 July 2026 and published in the Official Journal on 24 July 2026 as Regulation (EU) 2026/1744, entering into force on 27 July 2026; it deferred these dates from 2 August 2026 and 2 August 2027 respectively. Article 50 transparency obligations and the start of Commission GPAI enforcement powers were not deferred and continue to apply from 2 August 2026. Build against these enacted dates. The substance also moved in places: the same regulation amended Art. 10 and inserted Art. 4a. Article 4a(1) creates an exceptional bias-detection and correction basis for high-risk providers, subject to six safeguards. Article 4a(2) separately covers providers and deployers of other AI systems and models and deployers of high-risk AI systems, but only where processing is strictly necessary for biases likely to affect health or safety, negatively affect fundamental rights, or cause prohibited discrimination, and all paragraph 1 safeguards are applied; it creates no duty to conduct bias detection or correction. The regulation also amended Art. 11(1) (simplified technical documentation for SMEs and SMCs, which notified bodies must accept), Art. 17(2) and Art. 63(1) (quality-management proportionality and simplification), Art. 25(2) and (4) (provider-switch cooperation), Art. 43(3) (conformity-assessment routing, and sectoral notified bodies must apply for designation by 28 January 2028), Annex VIII Section B points 7 and 9 deleted (Art. 49(2) itself is unamended; the deletion reduces the information submitted for Art. 6(3) registrations), and Art. 72(3) (post-market monitoring template replaced by Commission guidance due 2 September 2027).
 
 ---
 
@@ -107,8 +107,9 @@ Choose one of three modes:
 - **Implementation roadmap** - turn identified gaps into a sequenced action plan with owners, dependencies, and deliverables
 
 ### Step 4 - Determine conformity assessment path
-- Check whether the likely route is **internal control / self-assessment** under Annex VI
-- Or whether a **notified body** path is required, especially where the system falls into higher-scrutiny biometric categories
+- For **Annex III point 1**, Annex VI or Annex VII is available only where all relevant harmonised standards or common specifications are applied; otherwise Annex VII applies.
+- For **Annex III points 2 to 8**, Article 43(2) requires Annex VI internal control with no notified body.
+- For **Annex I Section A** products, follow the sectoral conformity-assessment route under Article 43(3). For **Annex I Section B** products, account for the limited AI Act application stated in Article 2(2).
 - If unclear, flag this early because it changes evidence expectations and timelines
 
 ---
@@ -266,7 +267,7 @@ Ask:
 - Is input data checked for relevance and suitability?
 - Are records maintained during use?
 - Are affected persons informed where required?
-- If the deployer is a public authority or public body, is a **fundamental rights impact assessment** required?
+- Is a **fundamental rights impact assessment** required under Art. 27(1): is the deployer a public-law body or private public-service entity, or is the system an Annex III point 5(b) creditworthiness/credit-scoring or point 5(c) life/health-insurance system (where every deployer owes the FRIA)? Annex III point 2 is excepted.
 
 Evidence examples:
 - deployer SOPs
@@ -517,6 +518,30 @@ Use these deep dives selectively rather than overloading the main response:
 - `references/templates.md`
 
 ---
+
+## Legacy systems: the grace period moved (Article 111(2))
+
+Regulation (EU) 2026/1744 replaced Article 111(2) on 27 July 2026, and this matters
+directly for question 6 of the intake above.
+
+The cut-off is no longer the fixed date of 2 August 2026. It now tracks the date of
+application of Chapter III under Article 113, meaning **2 December 2027** for Annex III
+systems and **2 August 2028** for Annex I systems. A high-risk system already placed on the
+market or put into service before its applicable date falls outside the requirements unless
+it is subject to significant changes in its design from that date onward.
+
+Two qualifications that decide most real cases:
+
+- **The grace period is assessed for systems individually placed on the market or put into
+  service before the applicable date.** Later units of the same type or model that are first
+  supplied after that date are not grandfathered merely because an earlier unit was supplied.
+- **Public-authority deployments have their own hard stop.** Providers and deployers of
+  high-risk systems intended for use by public authorities must comply by **2 August 2030**
+  regardless, and that date did not move.
+
+Practical readiness consequence: record the placement-on-market or putting-into-service
+date for each system or unit relied upon, together with its design baseline. For an existing
+system, also ask whether a significant design change will occur from the applicable date.
 
 ## Disclaimer
 

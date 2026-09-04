@@ -1,0 +1,24 @@
+{
+  "_comment": "Curated disambiguation overlay for isds-arbitrators — our editorial work product (no UNCTAD data ships in this file). merge: variant token -> canonical token (currently NONE). distinct: same-surname tokens confirmed to be DIFFERENT people — never merge. author_overrides: normalized opinion-author full name -> tribunal token where the generic matcher cannot resolve. Signed off by Green 2026-08-02, as corrected: the previously proposed Cheng merge was REFUTED by ICSID profile evidence (cvid=602 Teresa Cheng holds the 'Cheng, T.' cases; 'Cheng, T.-H.' is Tai-Heng Cheng, Levy and Tidhar v. Ethiopia) — initials-prefix similarity is NOT sufficient evidence of identity.",
+  "merge": {},
+  "distinct": [
+    ["Cheng, T.", "Cheng, T.-H."],
+    ["Thomas, C.", "Thomas, J. C."],
+    ["Collins, L.", "Collins, M."],
+    ["Poncet, C.", "Poncet, I."],
+    ["van Houtte, H.", "Van Houtte, V."],
+    ["Schwartz, B.", "Schwartz, E."],
+    ["Martins, D. H.", "Martins, S."],
+    ["Abraham, C. W. M.", "Abraham, R."],
+    ["Smith, F. M.", "Smith, G."],
+    ["Cameron, D. H.", "Cameron, P. D."],
+    ["Hoffmann, A.", "Hoffmann, L."],
+    ["Audit, B.", "Audit, M."],
+    ["Robinson, D. R.", "Robinson, P. L."]
+  ],
+  "distinct_identities_note": {
+    "Cheng, T.": "Teresa Cheng (ICSID cvid 602; verified 2026-08-02)",
+    "Cheng, T.-H.": "Tai-Heng Cheng"
+  },
+  "author_overrides": {}
+}

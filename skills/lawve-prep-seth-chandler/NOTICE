@@ -1,0 +1,39 @@
+Lawve-Prep
+Copyright 2026 Seth J. Chandler (https://legaled.ai)
+
+Licensed under the Apache License, Version 2.0. A copy of the License is included
+in the file LICENSE and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+ORIGIN
+
+This skill is original work. It codifies a packaging pipeline developed while preparing
+six skills for publication on lawve.ai: a gate for suitability, a provenance and licence
+step, a set of standard compliance transforms, programmatic validation, and form-entry
+generation. The requirements it encodes were gathered from lawve.ai's submission form and
+the lawve-ai/awesome-legal-skills contribution guidelines as of July 2026, and are
+recorded as a dated snapshot in resources/requirements.md.
+
+Lawve-Prep is not affiliated with, or endorsed by, Lawve.
+
+---
+
+BUNDLED CODE
+
+One Python script is included, scripts/validate.py. It targets Python 3 and imports only
+from the standard library (os, re, sys). It is read-only: it reads the skill folder it is
+pointed at, writes nothing, makes no network calls, spawns no subprocesses, and evaluates
+no dynamic code.
+
+---
+
+DISCLAIMER
+
+Packages produced by this skill are formatted for a catalogue's submission requirements.
+Passing this skill's gate and validator is an editorial and mechanical check, not legal
+advice, not a licensing opinion, and not a guarantee of acceptance by Lawve's own review.
+Users remain responsible for the truth of their provenance and authorship answers, for
+their licensing choices, and for the substance of the skills they publish.

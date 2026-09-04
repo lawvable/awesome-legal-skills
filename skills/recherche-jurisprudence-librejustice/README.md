@@ -1,0 +1,3 @@
+# Overview
+
+Search and cite French case law and statutes with the LibreJustice MCP tools. Use whenever the user asks about French or European court decisions (Cour de cassation, Conseil d'État, cours d'appel, TJ/TA, CNDA, Conseil constitutionnel, CNIL, CEDH, CJUE), needs authorities for a brief, requête, référé or consultation, wants to check how courts rule on an issue, needs counts of decisions on a point, or asks what a code article says at a given date, even if they never mention LibreJustice.

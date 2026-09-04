@@ -1,0 +1,13 @@
+# The user's own UNCTAD full-data Excel — deliberately NOT redistributed:
+# UNCTAD's Terms of Use permit personal, non-commercial use but bar
+# redistribution. Each user downloads their own copy — see README.
+data/*.xlsx
+
+# User state, not skill code
+user-config.json
+
+# macOS Finder metadata
+.DS_Store
+
+# Python bytecode
+__pycache__/

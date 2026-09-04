@@ -21,9 +21,11 @@ In practice, logs should allow you to answer:
 
 ---
 
-## 2. Minimum logging checklist
+## 2. Recommended risk-based logging fields, not a universal Article 12 minimum
 
-Log at least:
+Article 12(1) and (2) require automatic logging of events relevant to the system's intended purpose and appropriate across its lifetime. The specific minimum fields in Article 12(3) apply only to Annex III point 1(a) remote biometric identification systems. For other high-risk systems, select proportionate fields based on purpose, risk, traceability needs, data minimisation, privacy, and security.
+
+Consider the following where relevant:
 
 ### System identity
 - System name

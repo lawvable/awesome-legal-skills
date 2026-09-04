@@ -1,0 +1,41 @@
+Law Review Editor
+Copyright 2026 Seth J. Chandler (https://legaled.ai)
+
+Licensed under the Apache License, Version 2.0. A copy of the License is included
+in the file LICENSE and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+ORIGIN
+
+This skill is original work.
+
+---
+
+BUNDLED CODE
+
+One Python script is included, scripts/chunk_article.py. It targets Python 3 and imports
+only from the standard library (re, sys, zipfile, typing). It makes no network calls,
+spawns no child processes, evaluates no dynamic code, and writes only chunk files
+alongside the article it is given.
+
+The script reads .docx by treating it as the zip archive it is and extracting paragraph
+text and footnotes from the contained XML, so no third-party document library is needed.
+The optional track-changes production path described in SKILL.md is the only feature that
+requires an outside package (python-docx); it is not exercised by the bundled script.
+
+---
+
+DISCLAIMER
+
+Editorial memos produced by this skill are critique of scholarly writing. They are not
+legal advice, and characterizations of doctrine, precedent, or citation validity are an
+editor's assessment rather than authority.
+
+Citation review checks form, not existence: a correctly formatted citation to a case that
+does not exist, or that does not support the proposition asserted, will pass the Bluebook
+pass. Verification is the job of the fact-check pass and depends on web search being
+available. Authors remain responsible for confirming that every authority cited exists,
+says what it is cited for, and remains good law.

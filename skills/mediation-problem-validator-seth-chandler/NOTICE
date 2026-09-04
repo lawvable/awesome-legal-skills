@@ -1,0 +1,43 @@
+Mediation Problem Validator
+Copyright 2026 Seth J. Chandler (https://legaled.ai)
+
+Licensed under the Apache License, Version 2.0. A copy of the License is
+included in the file LICENSE and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+---
+
+ORIGIN
+
+This skill is original work by Seth J. Chandler. It encodes a method developed
+and tested through mediation-competition packet review: reconstruct the case,
+apply mandatory consistency and confidentiality gates, test mediation utility
+and the settlement corridor, audit role-limited perspectives, forecast
+clarifications, and score quality only after the gates pass.
+
+The Lawve distribution package reorganizes the original reference materials
+under resources/, adds portable document-capability fallbacks, catalogue
+metadata, jurisdiction and confidentiality disclosures, and this licence and
+notice. It does not alter the substantive validation gates or scoring rubric.
+
+This skill is not affiliated with or endorsed by Lawve, any mediation
+competition, or any dispute-resolution institution.
+
+---
+
+BUNDLED CODE
+
+This package contains no executable code. It makes no network calls, spawns no
+subprocesses, handles no credentials, and evaluates no dynamic code.
+
+---
+
+DISCLAIMER
+
+This skill provides pedagogical quality control for fictional mediation
+exercises. It does not provide legal advice, determine governing law, opine on
+enforceability, or predict an actual dispute. Users remain responsible for
+protecting confidential information, verifying jurisdiction-specific law,
+checking source completeness, and keeping author-only findings separate from
+participant-facing packets.

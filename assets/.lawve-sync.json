@@ -151,9 +151,9 @@
       "updated_at": "2026-04-30T12:27:16.622160+02:00"
     },
     "245943a0-ce01-5dda-a244-cdfb1345e2a8": {
-      "digest": "5aff50168f237f76603c2995491dca8811d47c5b8eef9ee72dc8c3c1c825c17e",
+      "digest": "21e07712ad4f51345e40410875bd68544eaab9d6600ff5e61ee2d58f91332bf3",
       "path": "skills/eu-ai-act-system-classifier-werner-plutat",
-      "updated_at": "2026-05-15T12:14:06.532074+02:00"
+      "updated_at": "2026-08-06T14:04:06.093311+02:00"
     },
     "262cc35d-e55a-55b4-a078-d47004cec4a7": {
       "digest": "e5bdca2dbaffe6224e7564d96231e40186e209eb82b0b183ab6cc7cc728434af",
@@ -181,9 +181,9 @@
       "updated_at": "2026-01-30T01:00:00+01:00"
     },
     "2c68e03d-76ec-5995-a726-b06cf8fde3d1": {
-      "digest": "fc559da26d0e8f45b68064a36f5d44c52e06d57d6a528b2ce84b34cbb73e58b7",
+      "digest": "8ab04ef9147a361e7de6c0b92125bb7d252e27274f39c56602bc3f13552dbd34",
       "path": "skills/eu-data-act-compliance-assessment-werner-plutat",
-      "updated_at": "2026-04-02T13:20:17.274000+02:00"
+      "updated_at": "2026-08-06T15:13:40.612176+02:00"
     },
     "2c7343cd-3e7f-52a5-9524-be5accae3336": {
       "digest": "777d5e7511528165505a41a1ae106039b0d3cc76e89c0286e40f26d3c4e73482",
@@ -230,6 +230,11 @@
       "path": "skills/privacy-notice-generator-oliver-schmidt-prietz",
       "updated_at": "2026-04-30T12:27:56.578411+02:00"
     },
+    "37e0ebe5-23d6-4262-9d6b-405b192fa1f8": {
+      "digest": "3da993732cacde6f30753cf08819dee34ab673e594d39cdda4e11b04d3fc7e6b",
+      "path": "skills/legal-risk-assessment-moonshot-ai",
+      "updated_at": "2026-08-07T14:41:42.942759+02:00"
+    },
     "38054772-01bd-5eea-abb8-5a8038637b68": {
       "digest": "8b39aed6cdaf9d9f0868073daeedd93c115aa161d0933e8751a183aade5f7c51",
       "path": "skills/red-team-verifier-patrick-munro",
@@ -251,9 +256,9 @@
       "updated_at": "2026-04-30T12:29:50.918463+02:00"
     },
     "3bffd7e8-97bb-5c2c-bc5d-71cbe8c1a802": {
-      "digest": "6ff31c615e8341c5a27c83256b5d9e82d934b68a4f930431cdacd1d41d6cfbfd",
+      "digest": "d2b56b614c052b875cb84a69e752cb817433bdfb8c81a0e58621d8717ec9bbd3",
       "path": "skills/eu-ai-act-high-risk-implementation-readiness-werner-plutat",
-      "updated_at": "2026-04-14T12:01:29.185108+02:00"
+      "updated_at": "2026-08-06T14:05:18.023661+02:00"
     },
     "3cbdc68a-2717-51f0-aca1-8a43e42721ab": {
       "digest": "07fa92f60bad79bc6adc5209b8b646d8768538a1d1a617aeb208b52f12cbfb77",
@@ -300,6 +305,11 @@
       "path": "skills/excel-editor-openai",
       "updated_at": "2026-01-30T01:00:00+01:00"
     },
+    "411ce151-8e31-4b2a-a40b-676d9537e385": {
+      "digest": "f7f05a25feb6809fee774b050f18feccb6f67edc7247ff3236324e594640cf5d",
+      "path": "skills/thesis-assesor-seth-chandler",
+      "updated_at": "2026-08-29T17:42:01.702751+02:00"
+    },
     "41d9d397-063a-510d-8f8a-4cc687dfa050": {
       "digest": "c728c8af45f396737cec7dc5fc982c40cc2b166c63f3faed0333def5394312bb",
       "path": "skills/eu-ai-act-role-determination-oliver-schmidt-prietz",
@@ -329,6 +339,11 @@
       "digest": "accaf98ea7c78ab379bc8442083f5a1edb58ac224d165b57a040aee02774bf6d",
       "path": "skills/dpia-sentinel-oliver-schmidt-prietz",
       "updated_at": "2026-04-30T12:26:57.979060+02:00"
+    },
+    "461b8cc1-23d9-401e-b7c4-e950a71d935c": {
+      "digest": "23b8122619e40db61e928662bb4d03a1c134affc2188ca465d886cbc32a94988",
+      "path": "skills/law-review-editor-seth-chandler",
+      "updated_at": "2026-07-31T04:58:31.346861+02:00"
     },
     "480ec9b4-590d-54a3-8b41-85d7130cbc09": {
       "digest": "e72445def0e163528daed1a643fdf0a83d5bdae71250441729b8981fe74b21d1",
@@ -429,6 +444,11 @@
       "digest": "5daeba426e2555513df122dd4e46b9b5f6c7be7f26553b9112c9d771219a8b45",
       "path": "skills/swift-csp-tanaji-hemant-naik",
       "updated_at": "2026-07-26T15:36:30.864654+02:00"
+    },
+    "54461ce1-d931-4eaf-85de-23579a42ce8c": {
+      "digest": "1babb1f9823bab5b5a6855365f59a4c24c9384afa7abe9128f5266abf8906069",
+      "path": "skills/extradition-case-law-search-matei-clej-59ff8929",
+      "updated_at": "2026-08-25T22:39:04.959040+02:00"
     },
     "54477ed5-9253-5c06-9dab-9cf3e7b9f2bc": {
       "digest": "37f1d7d89134633d102f541c894208b50c7f13ce135e13f793e5dc9809fbfa47",
@@ -606,9 +626,9 @@
       "updated_at": "2026-05-04T14:51:24.320615+02:00"
     },
     "7759e835-f79e-5205-8f97-d20f97189456": {
-      "digest": "ca74ed95f71c75efb9d2ae9fc0047cd2602ff9ba8c241525a7d08775737ae735",
+      "digest": "d02fc285864abafb49a2f6d2dfd766a01586b07c98df734a57de4bb806f3f281",
       "path": "skills/gpai-code-of-practice-compliance-werner-plutat",
-      "updated_at": "2026-05-13T13:59:30.564166+02:00"
+      "updated_at": "2026-08-06T14:04:55.075628+02:00"
     },
     "7761744b-2e0f-5deb-bab7-257f66b1e68e": {
       "digest": "7335e205ce7131e4c26f437b7c09a749b3dfacb6bb8656579e5731e40616267c",
@@ -630,10 +650,30 @@
       "path": "skills/privacy-policy-stephane-boghossian",
       "updated_at": "2026-06-30T14:34:55.921702+02:00"
     },
+    "78f27820-b5ea-4a17-bfdb-c5335781b9c6": {
+      "digest": "2e9f733f7652b300a7dac798ef66ac7eb68c93fd5f375b0d6de838103c2877ff",
+      "path": "skills/mediation-problem-validator-seth-chandler",
+      "updated_at": "2026-08-07T16:43:01.299052+02:00"
+    },
     "7a0e5de0-be37-5aeb-a552-7d5f2ba3ab7d": {
       "digest": "dea05eac383c40dc60782a195b2770e88961bde46110e87cf0a6936d717ef6c7",
       "path": "skills/gdpr-breach-sentinel-oliver-schmidt-prietz",
       "updated_at": "2026-06-11T20:58:58.848819+02:00"
+    },
+    "7b462bb6-a34b-463e-b1c1-bd57b604ba19": {
+      "digest": "60ee80b413c61b077cfb8042966a19cfc6d76c4151dc0f67ec656eb3ed12b339",
+      "path": "skills/uk-citation-verification-matei-clej-59ff8929",
+      "updated_at": "2026-08-28T19:17:24.767979+02:00"
+    },
+    "7be23529-5acc-40ba-9de7-8022abbe8361": {
+      "digest": "1045ee5614de30ef3051493f4b1c03140fb9ce1e01f01d7cca8012a60cd3751c",
+      "path": "skills/verifica-fonti-michele-loi",
+      "updated_at": "2026-08-05T21:11:19.319877+02:00"
+    },
+    "7c9f6008-38ec-47cf-8790-41160af11c30": {
+      "digest": "14918a7b169bb0677bc46ac13f1cf8d059d697c2d9ddb024433cd60cf7e10d60",
+      "path": "skills/tos-clause-scanner-moonshot-ai",
+      "updated_at": "2026-08-17T13:12:27.858639+02:00"
     },
     "7e54c9a6-fec1-579c-94fa-6b0ee8c68d15": {
       "digest": "8fcc0e9a3fa0f6e6cbaec56462fa55ea20ab4dd090add118d150c8824771493f",
@@ -679,6 +719,11 @@
       "digest": "e0604de1992aa50ceb62bf4ea36c362108abe65b4d8b886af0cc1af1b59a9fa1",
       "path": "skills/sujet-crfpa-allison-fiorentino",
       "updated_at": "2026-06-27T13:54:04.271485+02:00"
+    },
+    "86681ffa-b0d3-40f5-b309-5efa49438dff": {
+      "digest": "262e644a7685ffe04f3c07a7f7bc914b86e6e36d750407499886b3dd6a27ff95",
+      "path": "skills/california-bar-complete-robb-miller",
+      "updated_at": "2026-07-31T23:25:22.838761+02:00"
     },
     "8824818f-daa9-5c2d-82aa-fce854ce383b": {
       "digest": "6bc544517f27da59575f0fbc5f2add272a4180c793476a4f62e90dab98c0e4fe",
@@ -755,6 +800,11 @@
       "path": "skills/runtime-admissibility-review-arkadiy-miteiko",
       "updated_at": "2026-06-29T11:31:23.496994+02:00"
     },
+    "9888736a-aee5-447d-b97d-dd47908bc99e": {
+      "digest": "3f3fa25867a767297ac5d17ae770f55a7197f96d1cc3ef7a7361223e7efed0ab",
+      "path": "skills/recherche-normes-librejustice",
+      "updated_at": "2026-08-06T19:15:53.119235+02:00"
+    },
     "9ad3e9af-1d83-5b06-b59d-2ef2d2642e88": {
       "digest": "aec6a1f043c7cef45fdf720f43b0f1bbe238ec9528ddf4c1fa03b87a5d8e98b6",
       "path": "skills/connecticut-divorce-planner-stephane-boghossian",
@@ -810,6 +860,11 @@
       "path": "skills/cross-regulatory-impact-analyzer-patrick-munro",
       "updated_at": "2026-04-30T12:46:11.529405+02:00"
     },
+    "a58c1ba0-ffb0-4b6b-af6b-d19983687690": {
+      "digest": "790203c77d5120be9b72b0713b5a4ada9b69e765065d831ae6178e980e44f22c",
+      "path": "skills/droit-etrangers-asile-el-ouertani-faouzi",
+      "updated_at": "2026-08-08T18:50:21.302731+02:00"
+    },
     "a6a7290f-8ee0-59e6-a12d-5d4f88747cbb": {
       "digest": "21718d958eab22feef7e2ad48fcbdbf94569021c3074685843d1515adabfd64b",
       "path": "skills/agent-authority-charter-builder-arkadiy-miteiko",
@@ -841,9 +896,9 @@
       "updated_at": "2026-04-30T12:41:12.708347+02:00"
     },
     "b250a385-ef37-5e43-8ec1-84259568314e": {
-      "digest": "7c253f7dcc3ae233109c66e4625380861ba04c26c3b47a85431c6bd1f3ea934c",
+      "digest": "0336adb31ee83864a3f2daae0a89cda5c99b1c3a9398c0b914b4c88dcef0d36a",
       "path": "skills/serious-incident-reporting-eu-ai-act-art-73-werner-plutat",
-      "updated_at": "2026-05-13T14:02:17.702271+02:00"
+      "updated_at": "2026-08-06T14:05:34.404183+02:00"
     },
     "b4aadf57-e730-5d70-87aa-5fac47743d45": {
       "digest": "fcf156145d5d68a74fb26f733fcb6150a701bed28052e9d7a69b9f9d110a84fe",
@@ -922,8 +977,13 @@
     },
     "c4903f39-92b6-5853-91c6-c1c45323e939": {
       "digest": "201284b83e2dc77d32ab5229b3683dedbe3e8376e7df84519d63b33a0727ea30",
-      "path": "skills/climate-aligned-contracts-tclp",
+      "path": "skills/climate-aligned-contracts-the-chancery-lane-project",
       "updated_at": "2026-05-26T15:45:40.328763+02:00"
+    },
+    "c6006b67-1759-45ba-81f8-3e07309fc5fe": {
+      "digest": "ed87d01dff64c5807f3aa2287043c071ea5f824d281cb87dc824e13976247cd1",
+      "path": "skills/mcp-builder-anthropic",
+      "updated_at": "2026-07-31T17:13:32.456553+02:00"
     },
     "c6e33539-1dee-5d71-b4e6-5f121e467d5a": {
       "digest": "0bb6710178c63d98f8d80380bfbe8679e9237e09bfa3c706cab5c216bdc06547",
@@ -960,6 +1020,11 @@
       "path": "skills/normalisation-juridique-christophe-quezel-ambrunaz",
       "updated_at": "2026-06-19T10:28:16.364515+02:00"
     },
+    "cb12f6ae-af63-4373-b783-3030f116f13a": {
+      "digest": "dc493810593815d187c123c782bb9c77207676d2e8bb4e518293305c3aea664b",
+      "path": "skills/regulatory-audit-generator-moonshot-ai",
+      "updated_at": "2026-08-07T14:56:22.578302+02:00"
+    },
     "cc9ce356-43ea-57e2-8fee-88c149046cdc": {
       "digest": "1069ea5842eee204f5590b884aebf56061706bda599acb4b34f43d2403330d30",
       "path": "skills/performance-scorecard-scott-margetts",
@@ -974,6 +1039,11 @@
       "digest": "97885f9b9a2ea5672458c013df183a4cc602d1c1a812d3fdee5619034d0c9f07",
       "path": "skills/notification-licenciement-selim-brihi",
       "updated_at": "2026-01-16T01:00:00+01:00"
+    },
+    "d189bd04-4fac-4e0b-935c-b92f0cffe19a": {
+      "digest": "fde0fc61e9e6bb06a87f59e09bd5a35e046c0321553fd0a0f9860290f502c1e1",
+      "path": "skills/eardraft-seth-chandler",
+      "updated_at": "2026-07-31T04:51:45.526859+02:00"
     },
     "d225a231-48bc-5cea-b08c-5cff7ea7511c": {
       "digest": "79275667cfe84a19b09e123d25bf1d737f3eeb03f4d5a4a5deacd3af6834a2cb",
@@ -1020,6 +1090,11 @@
       "path": "skills/pre-motion-andrew-bird",
       "updated_at": "2026-06-06T16:06:22.045378+02:00"
     },
+    "d8384c67-79bc-484a-ac49-805ee7298c72": {
+      "digest": "23f528b81e02c898ced41d67d78683d2dfe15bf13b50617d2de1371ab179e847",
+      "path": "skills/footnote-relegator-seth-chandler",
+      "updated_at": "2026-08-10T18:18:10.242134+02:00"
+    },
     "d85e5b71-8244-555f-9b54-fe263bacdfe5": {
       "digest": "e32bad1e6ef6c4794d434e9b5214a10d39b149871a927feb5df1d096d1c5812e",
       "path": "skills/sanctions-and-export-analysis-gillan-saleh",
@@ -1035,6 +1110,11 @@
       "path": "skills/word-editor-superdoc",
       "updated_at": "2026-03-25T15:28:26.405000+01:00"
     },
+    "daaf74f9-3990-47cd-941a-6009f72230f6": {
+      "digest": "d857b50d0ccf003b2acf8eb9499f27ce348b68f633ce9f7c39093d6692d5baa2",
+      "path": "skills/lawve-prep-seth-chandler",
+      "updated_at": "2026-07-31T04:53:03.680219+02:00"
+    },
     "dd943c30-a4df-5185-9325-47c46ab5a7ba": {
       "digest": "0795898052f991bc9366c2c97a56c247566017d5649eb09c55cd4cfecade5e96",
       "path": "skills/privilege-sentinel-emily-cabrera",
@@ -1049,6 +1129,11 @@
       "digest": "a38baf942315ef25829a89c78bc061892b9d4276df66e131f4a02958717124a5",
       "path": "skills/judicial-first-impression-larissa-meredith-flister",
       "updated_at": "2026-04-30T12:16:32.222272+02:00"
+    },
+    "de4168e5-1ad3-44e6-ab19-786956515fa8": {
+      "digest": "5bb6eb388fec9fa286631352af025d8b66ef3e36c954396153e179e3a1b3203a",
+      "path": "skills/mediation-problem-generator-seth-chandler",
+      "updated_at": "2026-08-07T16:38:41.161375+02:00"
     },
     "e08ba07c-20a0-5ec3-8841-2fb9241da328": {
       "digest": "fb0f56bda5eff8c5346b197b4cfa3f76aa54b05114f93f5bfaaa7589a6e9bfae",
@@ -1066,9 +1151,9 @@
       "updated_at": "2026-05-21T14:26:24.175045+02:00"
     },
     "e476aacf-b4d1-51a6-a4d0-6a417562b7ba": {
-      "digest": "910c5455e19d405993ca6a0ddcc60cd2f238b89f6157761ebe4949a1b1f70981",
+      "digest": "60151b77886bd486a408f1fb38d5cedf120c8b3d23cdbbbc598ced5658d7ec95",
       "path": "skills/fundamental-rights-impact-assessment-eu-ai-act-art-27-werner-plutat",
-      "updated_at": "2026-05-04T14:54:54.759786+02:00"
+      "updated_at": "2026-08-06T14:04:33.762536+02:00"
     },
     "e5b85d4c-6731-42c7-a465-0afd7420978f": {
       "digest": "99fb5e34c60013165d5a3ee6887b4c02c9f374d44c28c3c1172939f0eea1b2c4",
@@ -1120,6 +1205,11 @@
       "path": "skills/icelandic-privacy-review-magnus-smarason",
       "updated_at": "2026-04-30T12:05:39.635026+02:00"
     },
+    "f154645d-c960-4291-9250-f434fd5ffe52": {
+      "digest": "e63dc171de10c7367293471a20c982f991d167775e683d0bb0bdd332ba78ec12",
+      "path": "skills/recherche-jurisprudence-librejustice",
+      "updated_at": "2026-08-06T19:11:12.378073+02:00"
+    },
     "f1b1506e-c1a0-4164-89d0-8e4e46faf673": {
       "digest": "1d045381c3ba8903c6ffcd8fbdbc1a2ea2147872d82744a638d6de0f3192b717",
       "path": "skills/iso27001-tanaji-hemant-naik",
@@ -1135,10 +1225,20 @@
       "path": "skills/recherche-theses-allison-fiorentino",
       "updated_at": "2026-06-27T13:53:42.452513+02:00"
     },
+    "f33c6cce-fc80-4c7a-966c-77f7d298de94": {
+      "digest": "074691d1101fa2370645c759e0bed3af4c22116b82917606276098a9ea0c9c6c",
+      "path": "skills/archeologue-gallica-allison-fiorentino",
+      "updated_at": "2026-08-19T13:22:50.367014+02:00"
+    },
     "f34bf408-ffd5-58d2-862a-8bab203b4a6e": {
       "digest": "ed092d6e8a5ee6cf5ce48f2d1387513b5bf120b049a9f3850145cf42104f9aca",
       "path": "skills/multi-jurisdictional-research-zacharie-laik",
       "updated_at": "2026-05-08T10:51:48.893201+02:00"
+    },
+    "f386250c-b66c-42c6-84ca-2f034f07ab69": {
+      "digest": "3f44155e8199fef1795ee2cf4c4a56dffed6cac4bb51e7ba04f2ba4342333aaf",
+      "path": "skills/isds-arbitrators-cameron-russell",
+      "updated_at": "2026-08-11T16:49:39.541882+02:00"
     },
     "f5611e12-a7f0-5305-9f6d-ce05c201ceb9": {
       "digest": "f6b3dbf2e7e850240402c520312af8f240bcfbc693e523b0e8f6fcb007bb4595",
