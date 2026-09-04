@@ -1,6 +1,6 @@
 # Copyright Obligations — GPAI Code of Practice
 
-Complete requirements for Copyright chapter (Commitment 1, Measures 1.1–1.7).
+Complete requirements for Copyright chapter (Commitment 1, Measures 1.1–1.5).
 
 **Legal basis:** Article 53(1)(c), referencing Directive (EU) 2019/790 (DSM Directive), particularly Article 4(3) on text and data mining (TDM) rights reservations.
 
@@ -15,11 +15,10 @@ Complete requirements for Copyright chapter (Commitment 1, Measures 1.1–1.7).
 3. [Measure 1.1: Policy Development](#measure-11-policy-development)
 4. [Measure 1.2: Lawful Access](#measure-12-lawful-access)
 5. [Measure 1.3: Rights Reservations](#measure-13-rights-reservations)
-6. [Measure 1.4: Record-Keeping](#measure-14-record-keeping)
-7. [Measure 1.5: Output Safeguards](#measure-15-output-safeguards)
-8. [Measure 1.6: Terms of Service](#measure-16-terms-of-service)
-9. [Measure 1.7: Complaints Handling](#measure-17-complaints-handling)
-10. [Practical Compliance Steps](#practical-compliance-steps)
+6. [Measure 1.4: Output Safeguards and User Controls](#measure-14-output-safeguards-and-user-controls)
+7. [Measure 1.5: Complaints Handling](#measure-15-complaints-handling)
+8. [Recommended Evidence and Record-Keeping](#recommended-evidence-and-record-keeping)
+9. [Practical Compliance Steps](#practical-compliance-steps)
 
 ---
 
@@ -101,7 +100,7 @@ A compliant copyright policy is NOT a generic legal disclaimer. It is an operati
 **Common mistakes:**
 - A one-paragraph statement saying "we respect copyright" — too vague, not operational
 - Policy exists but no one in engineering knows about it — must be implemented, not shelf-ware
-- No designated contact point — required by Measure 1.7
+- No designated contact point — required by Measure 1.5
 - Policy covers training but not output safeguards — must address the full chain
 
 ---
@@ -146,25 +145,12 @@ A compliant copyright policy is NOT a generic legal disclaimer. It is an operati
 
 ---
 
-## Measure 1.4: Record-Keeping
-
-### Requirements:
-- Maintain records of crawling activities and data collection processes
-- Document how rights reservations were identified and complied with
-- Records should be sufficient to demonstrate compliance upon request from the AI Office
-
-### Practical scope:
-- Crawl logs with timestamps and sources
-- Rights reservation checks and outcomes
-- Data filtering and exclusion records
-- Any correspondence with rights holders regarding training data use
-
----
-
-## Measure 1.5: Output Safeguards
+## Measure 1.4: Output Safeguards and User Controls
 
 ### Requirements:
 - Implement **technical safeguards** to minimise the risk of generating copyright-infringing outputs
+- Prohibit copyright-infringing uses in an acceptable-use policy, terms and conditions, or equivalent document
+- For free and open-source models, alert users to that prohibition in the accompanying documentation without prejudicing the licence's free and open-source nature
 - Measures should reduce the likelihood of:
   - Verbatim reproduction of copyrighted material
   - Substantial similarity to specific copyrighted works
@@ -178,12 +164,6 @@ A compliant copyright policy is NOT a generic legal disclaimer. It is an operati
 
 ---
 
-## Measure 1.6: Terms of Service
-
-### Requirements:
-- Terms of service must **clearly prohibit** unauthorised use of generated content in ways that infringe copyright
-- Users must be informed of their own copyright responsibilities when using GPAI model outputs
-
 ### Practical implementation:
 - Include explicit clauses on copyright compliance in user/API agreements
 - Specify that users are responsible for ensuring their use of model outputs complies with applicable copyright law
@@ -191,12 +171,12 @@ A compliant copyright policy is NOT a generic legal disclaimer. It is an operati
 
 ---
 
-## Measure 1.7: Complaints Handling
+## Measure 1.5: Complaints Handling
 
 ### Requirements:
 - **Designate a contact point** for copyright holders to submit complaints
-- Establish **efficient and fair processes** for handling copyright-related complaints
-- Respond to complaints in a reasonable timeframe
+- Provide an electronic mechanism for affected rightsholders and authorised representatives to submit sufficiently precise and adequately substantiated complaints
+- Act on complaints diligently, non-arbitrarily, and within a reasonable time, subject to the Code's manifestly-unfounded and identical-complaint qualifications
 
 ### Practical implementation:
 - Published email address or web form for copyright complaints
@@ -204,6 +184,20 @@ A compliant copyright policy is NOT a generic legal disclaimer. It is an operati
 - Internal escalation process for complex or high-stakes complaints
 - Record-keeping of all complaints and their resolution
 - Regular review of complaint patterns to identify systemic issues
+
+---
+
+## Recommended Evidence and Record-Keeping
+
+Record-keeping is not a separate numbered measure in the final Copyright chapter. Providers should nevertheless retain proportionate evidence showing how the copyright policy and Measures 1.2–1.5 were implemented, including:
+
+- crawl logs and source records,
+- rights-reservation checks and outcomes,
+- data filtering and exclusion records,
+- output-safeguard test results, and
+- complaints and their resolution.
+
+Such records can support responses to Commission or AI Office requests and demonstrate that the copyright policy is operational rather than merely documentary.
 
 ---
 

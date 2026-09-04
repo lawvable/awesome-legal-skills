@@ -25,18 +25,23 @@ This memo assesses whether the deployer is required to conduct a Fundamental Rig
 - Private entity providing a public service? If yes, basis:
 - Role as deployer confirmed? Yes / No
 
-### 4. Article 27 Conclusion
+### 4. High-Risk Use-Case Gate
+- Annex III point 5(b) or 5(c) use case? Yes / No
+- Annex III point 2 use case? Yes / No
+- If point 2 applies, Article 27(1) does not impose a FRIA duty on that basis.
+
+### 5. Article 27 Conclusion
 - FRIA required? Yes / No / Unclear
 - Reasoning:
 - Key assumptions:
 - Open questions:
 
-### 5. Timing
+### 6. Timing
 - First use or existing use?
 - Significant change triggering reassessment? Yes / No
 - Deadline for FRIA completion:
 
-### 6. Immediate Next Steps
+### 7. Immediate Next Steps
 - [ ] Confirm high-risk basis
 - [ ] Gather provider documentation
 - [ ] Identify affected groups
@@ -56,7 +61,7 @@ This memo assesses whether the deployer is required to conduct a Fundamental Rig
 - Article 27 applicability:
 - Key rights engaged:
 - Overall recommendation:
-- Notification required? Yes / No / Under review
+- Article 27(3) notification status: Pending / Submitted / Article 46(1) exemption
 
 ### B. Assessment Scope and Method
 - Assessment date:
@@ -119,11 +124,12 @@ For each material right/group combination, describe:
 - Less intrusive alternatives considered:
 
 ### J. Notification Analysis
-- Specific risk identified? Yes / No / Unclear
-- Reasoning:
+- Summary of specific-risk findings for inclusion in the notification:
+- Article 27(5) template status: Draft / Complete / Submitted
+- Article 46(1) exemption applies? Yes / No
 - Market surveillance authority:
-- Data protection authority (if relevant):
-- Recommended action:
+- Separate data-protection-law authority engagement, if applicable:
+- Submission date / recommended action:
 
 ### K. Final Recommendation
 - Proceed
@@ -184,12 +190,14 @@ We are writing in our capacity as deployer of the high-risk AI system identified
 - Categories affected:
 - Any vulnerable groups involved:
 
-### 5. Specific Risk Identified
+### 5. Specific-Risk Findings
 Describe clearly:
 - the risk scenario,
 - the relevant right(s),
 - who may be affected,
 - why the risk is specific in this deployment context.
+
+These findings form part of the notification content. They do not determine whether notification is required.
 
 ### 6. Safeguards and Mitigation Measures
 - Existing controls:
@@ -215,7 +223,7 @@ A short decision note on whether the planned use of [system] can proceed under A
 
 ### 2. Why this matters
 - Article 27 may require a FRIA before first use.
-- The organisation may need to notify authorities if a specific risk is identified.
+- Every completed FRIA must be notified to the market surveillance authority unless the Article 46(1) exemption applies. Any data-protection-authority engagement is assessed separately.
 - The decision has operational, legal, and reputational consequences.
 
 ### 3. Bottom-Line Assessment
@@ -234,7 +242,7 @@ A short decision note on whether the planned use of [system] can proceed under A
 - [ ] Action 3
 
 ### 6. Authority / DPIA Implications
-- Notification likely? Yes / No / Under review
+- Article 27(3) notification status: Pending / Submitted / Article 46(1) exemption
 - DPIA overlap? Yes / No
 - Works council / procurement / sector issues? [short note]
 

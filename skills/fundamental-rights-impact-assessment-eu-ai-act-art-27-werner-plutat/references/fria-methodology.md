@@ -12,7 +12,7 @@ Use this method to:
 - evaluate proportionality and necessity,
 - define mitigations,
 - support a deployment recommendation,
-- and document whether notification may be required.
+- and prepare the Article 27(3) notification required for every completed FRIA unless the Article 46(1) exemption applies.
 
 ## Assessment Logic
 
@@ -203,15 +203,17 @@ For each recommendation, specify:
 - deadline,
 - and whether reassessment is required before launch.
 
-## Notification Trigger Support
+## Notification Package Support
 
-Where the FRIA identifies a **specific risk** to natural persons or groups, document:
+For every completed FRIA, document:
 - what the specific risk is,
 - who is affected,
 - why existing safeguards are insufficient or conditional,
-- and whether Article 27(3) notification is likely required.
+- the completed assessment result and Article 27(5) template,
+- whether the Article 46(1) exemption case applies,
+- and the planned or completed submission to the market surveillance authority.
 
-The FRIA should not just say "notification may be needed." It should state the factual basis clearly.
+Risk findings affect the notification’s contents, not whether notification is required. The FRIA should state the factual basis clearly.
 
 ## Practical Scoring Example
 

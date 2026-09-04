@@ -42,10 +42,9 @@ Ready-to-use templates for GPAI compliance assessments. Fill in the bracketed fi
 | 1.1 | Copyright policy documented | [Status] | [Gap] | [Priority] | [Action] | [Date] |
 | 1.2 | Lawful access controls | [Status] | [Gap] | [Priority] | [Action] | [Date] |
 | 1.3 | Rights reservation compliance | [Status] | [Gap] | [Priority] | [Action] | [Date] |
-| 1.4 | Record-keeping | [Status] | [Gap] | [Priority] | [Action] | [Date] |
-| 1.5 | Output safeguards | [Status] | [Gap] | [Priority] | [Action] | [Date] |
-| 1.6 | Terms of service | [Status] | [Gap] | [Priority] | [Action] | [Date] |
-| 1.7 | Complaints handling | [Status] | [Gap] | [Priority] | [Action] | [Date] |
+| 1.4 | Output safeguards and acceptable-use/terms controls | [Status] | [Gap] | [Priority] | [Action] | [Date] |
+| 1.5 | Contact point and complaints handling | [Status] | [Gap] | [Priority] | [Action] | [Date] |
+| Evidence | Crawl, rights-reservation, filtering, and complaint records (recommended evidence, not a separate Code measure) | [Status] | [Gap] | [Priority] | [Action] | [Date] |
 
 ### Safety & Security Chapter (Systemic Risk Only)
 
@@ -69,7 +68,8 @@ Ready-to-use templates for GPAI compliance assessments. Fill in the bracketed fi
 | Area | Requirement | Current Status | Gap | Priority | Remediation Action | Target Date |
 |------|------------|----------------|-----|----------|-------------------|-------------|
 | Works council | Co-determination assessment | [Status] | [Gap] | [Priority] | [Action] | [Date] |
-| BNetzA readiness | Engagement with market surveillance | [Status] | [Gap] | [Priority] | [Action] | [Date] |
+| AI Office readiness | Engagement for Chapter V GPAI supervision | [Status] | [Gap] | [Priority] | [Action] | [Date] |
+| National/sector interface | Downstream-system or sector-authority engagement, if applicable | [Status] | [Gap] | [Priority] | [Action] | [Date] |
 | BSI alignment | Cybersecurity framework mapping | [Status] | [Gap] | [Priority] | [Action] | [Date] |
 | Sector-specific | [BaFin / other regulator] | [Status] | [Gap] | [Priority] | [Action] | [Date] |
 
@@ -126,7 +126,7 @@ This memo documents the compliance assessment of [Model Name] against the obliga
 | Weights publicly available? | [Yes / No] |
 | Architecture info publicly available? | [Yes / No] |
 | Systemic risk (negating exemption)? | [Yes / No] |
-| **Exemption applies?** | **[Full exemption / Partial / None]** |
+| **Exemption applies?** | **[Partial exemption under Article 53(2) / None]** |
 
 If partial exemption: Art. 53(1)(a)–(b) obligations waived; Art. 53(1)(c)–(d) remain.
 
@@ -205,7 +205,7 @@ Based on the above analysis:
 
 #### Enforcement Timeline
 - **Now:** GPAI obligations in effect since 2 August 2025
-- **2 August 2026:** AI Office enforcement actions begin (current law; unchanged in 7 May 2026 provisional Digital Omnibus agreement)
+- **2 August 2026:** AI Office enforcement actions begin (unchanged by the enacted Digital Omnibus, Regulation (EU) 2026/1744)
 - **2 August 2027:** Legacy GPAI model compliance deadline (models placed on market before 2 Aug 2025)
 
 #### Top 3 Recommended Actions
@@ -217,9 +217,9 @@ Based on the above analysis:
 | 3 | [Action] | [Owner] | [Date] | [Why this matters] |
 
 #### Risk Exposure
-**Maximum potential fines:**
-- Systemic risk violations: €15M or 3% global annual turnover
-- General GPAI violations: €7.5M or 1% global annual turnover
+**Maximum potential fines (Art. 101(1)):**
+- One ceiling for GPAI providers: 3% of annual total worldwide turnover or €15M, whichever is higher
+- Covers infringements of the GPAI provisions, information failures under Art. 91, non-compliance with Art. 93 measures, and refusing model access for Art. 92 evaluations
 
 **Practical risk:** Non-signatories face increased regulatory scrutiny. Adherence to Code of Practice is a relevant factor in fine determination.
 

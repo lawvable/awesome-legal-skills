@@ -1,0 +1,28 @@
+{
+  "skill_name": "droit-etrangers-asile",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Un monsieur algérien est venu à la permanence. Il vit en France depuis 6 ans, travaille au noir dans le bâtiment, son patron veut le déclarer. Il n'a jamais eu de titre. Qu'est-ce qu'on peut faire pour lui ?",
+      "expected_output": "Identifie que l'accord franco-algérien de 1968 régit exclusivement le séjour et écarte L.435-1/L.435-4 ; ne raisonne pas sur les critères de la circulaire Valls (abrogée en 2025) ; vérifie les textes par les connecteurs avant citation ; produit une fiche de permanence actionnable avec pièces et interlocuteurs.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "OQTF notifiée le 3 août en préfecture, sans délai de départ volontaire, monsieur n'est pas en rétention. Quel délai pour le recours et quels moyens soulever ?",
+      "expected_output": "Qualifie la mesure avant d'annoncer un délai, retient 15 jours pour une OQTF sans DDV hors rétention, vérifie sur source primaire, cite la numérotation L.611-x (jamais L.511-1), distingue légalité externe et interne, et signale les décisions annexes contestables.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Rédige-moi une note sur le régime des conditions matérielles d'accueil des demandeurs d'asile applicable aujourd'hui.",
+      "expected_output": "Signale l'applicabilité des règlements du Pacte européen depuis le 12 juin 2026 et leur primauté sur le CESEDA, vérifie l'état du droit plutôt que de raisonner sur l'ancien régime, cite les articles L.55x-x avec liens Légifrance vérifiés, et distingue clairement ce qui est confirmé de ce qui reste à vérifier.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Ma sœur a eu un refus de visa long séjour conjoint de Français au consulat. Elle veut attaquer directement au tribunal administratif de sa ville. C'est possible ?",
+      "expected_output": "Corrige la prémisse sur deux points : (1) RAPO préalable obligatoire dans les 30 jours devant le sous-directeur des visas ou la Commission selon la nature du visa (D.312-3, D.312-4) ; (2) après rejet du RAPO, recours contentieux dans le délai de droit commun de 2 mois devant le TA de Nantes seul compétent (R.312-6, R.312-18 CJA) — saisine directe irrecevable. Signale en outre, pour un visa conjoint de Français (long séjour), que le jugement du TA est susceptible d'appel devant la CAA de Nantes, à la différence du court séjour jugé en premier et dernier ressort (R.811-1 CJA)."
+    }
+  ]
+}

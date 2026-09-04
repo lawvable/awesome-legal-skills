@@ -4,7 +4,7 @@ Complete requirements for Safety & Security chapter (Commitments 1–10) applyin
 
 **Legal basis:** Article 55 of Regulation (EU) 2024/1689, operationalised through the Code of Practice Safety & Security chapter.
 
-**Applies to:** Providers of GPAI models classified as having systemic risk under Article 51 (>10^25 FLOPs training compute or Commission designation). Currently ~5–15 companies worldwide.
+**Applies to:** Providers of GPAI models classified as having systemic risk under Article 51 (>10^25 FLOPs training compute or Commission designation).
 
 ---
 
@@ -33,13 +33,13 @@ Complete requirements for Safety & Security chapter (Commitments 1–10) applyin
 | Path | Criterion | Threshold |
 |------|-----------|-----------|
 | Automatic presumption | Cumulative training compute | >10^25 FLOPs |
-| Commission designation | High-impact capabilities or equivalent | Annex XIII criteria (capabilities, reach, reversibility, autonomy) |
+| Commission designation | High-impact capabilities or equivalent | Annex XIII criteria: parameters; dataset quality or size; training compute; input/output modalities; benchmarks and evaluations, including autonomy, scalability and access to tools; internal-market reach; and registered end-users |
 
 ### Contesting the presumption:
 The Code of Practice notes that the Commission should establish "a rapid and reliable mechanism for model providers to contest the systemic risk presumption" for models exceeding 10^25 FLOPs. The Commission is also exploring thresholds based on capability-related factors rather than compute alone.
 
-### Current systemic risk models (indicative):
-Models from OpenAI (GPT-4+), Google (Gemini Ultra+), Anthropic (Claude 3+), Meta (Llama 3 405B+), and similar frontier models generally exceed the 10^25 FLOP threshold. The exact list evolves as new models are released and classified.
+### Classification evidence:
+Do not infer systemic-risk status from a brand or model family. Confirm the documented cumulative training compute or a Commission designation under Article 51 and record the evidence used.
 
 ---
 
@@ -223,29 +223,29 @@ A model is **exempt** from this Commitment if its capabilities are inferior to a
 - Architecture, capabilities, intended use
 - Known limitations and failure modes
 
-#### Measure 7.2: Risk Identification Summary
-- Systemic risks identified (from Commitment 2)
-- Risk scenarios developed
+#### Measure 7.2: Reasons for Proceeding
+- Reasons supporting the decision to proceed with development, market placement, or use
+- Conditions and assumptions on which the decision depends
 
-#### Measure 7.3: Risk Analysis Results
-- Evaluation results, risk estimates
-- Confidence levels and methodology
+#### Measure 7.3: Documentation of Systemic Risk Identification, Analysis, and Mitigation
+- Identified risks and scenarios, evaluation and analysis results, and implemented mitigations
+- Confidence levels, methods, limitations, and residual-risk conclusions
 
-#### Measure 7.4: Mitigation Measures
-- Safety and security mitigations implemented
-- Residual risk assessment
+#### Measure 7.4: External Reports
+- Include or reference relevant external evaluations, assessments, and reports
+- Explain how external findings were addressed
 
-#### Measure 7.5: Material Changes to Risk Landscape
+#### Measure 7.5: Material Changes to the Systemic Risk Landscape
 - Any changes since previous reports
 - Emerging risks or new information
 
-#### Measure 7.6: Report Updates
+#### Measure 7.6: Model Report Updates
 - Keep Model Report **up-to-date** throughout model lifecycle
 - Update for material changes in risk profile
 
-#### Measure 7.7: Report Notifications
-- **Notify AI Office** of Model Report before market placement
-- Notify of material updates
+#### Measure 7.7: Model Report Notifications and Access
+- **Notify the AI Office** of the Model Report in accordance with the Code
+- Give the AI Office access to the current Model Report and notify required updates
 
 ### Practical notes:
 - May reference other reports/notifications already provided to AI Office
@@ -321,19 +321,17 @@ A model is **exempt** from this Commitment if its capabilities are inferior to a
 
 ## Risk Categories (Appendix 1)
 
-The Code of Practice identifies these systemic risk categories for structured identification:
+Appendix 1.1 defines five types of risks for structured identification:
 
-| Category | Examples |
-|----------|---------|
-| CBRN risks | Assistance in creating chemical, biological, radiological, or nuclear weapons |
-| Cyber risks | Automated vulnerability discovery, malware generation, attack scaling |
-| Manipulation & disinformation | Large-scale persuasion campaigns, deepfake generation, election interference |
-| Loss of control | Autonomous goal-pursuit, deceptive alignment, self-replication |
-| Discrimination & bias | Systemic bias affecting protected groups at scale |
-| Privacy risks | Training data extraction, re-identification, mass surveillance enablement |
-| Concentration of power | Market concentration, democratic process undermining |
-| Labour market disruption | Rapid displacement without transition support |
-| Environmental risks | Excessive energy consumption, resource depletion |
+1. risks to public health,
+2. risks to safety,
+3. risks to public security,
+4. risks to fundamental rights, and
+5. risks to society as a whole.
+
+Appendix 1.4 separately specifies four systemic risks: chemical, biological, radiological and nuclear risks; loss of control; cyber offence; and harmful manipulation.
+
+Other risks listed in the Code, such as major accidents, critical infrastructure, discrimination, privacy, the environment, democratic processes, concentration of power, and illegal or harmful content, are examples or contributing risks within the five Appendix 1.1 types. They are not additional official top-level categories.
 
 ---
 
